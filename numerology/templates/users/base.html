@@ -1,22 +1,33 @@
 <html>
     <head>
         {% if title %}
-        <title>{{ title }} - microblog</title>
+        <title>{{ title }} - Microblog</title>
         {% else %}
-        <title>microblog</title>
+        <title>Welcome to Microblog</title>
         {% endif %}
     </head>
     <body>
         <div>
-		  Wec:
-		  <a href="{{ url_for('index') }}">Home</a>
-		  {% if current_user.is_anonymous %}
-		  <a href="{{ url_for('login') }}">Login</a>
-		  {% else %}
-		  <a href="{{ url_for('user', username=current_user.username) }}">Profile</a>
-		  <a href="{{ url_for('logout') }}">Logout</a>
-		  {% endif %}
-		</div>
+            Microblog:
+            <a href="{{ url_for('users.users') }}">Home</a>
+            <a href="{{ url_for('users.explore') }}">Explore</a>
+            {% if current_user.is_anonymous %}
+            <a href="{{ url_for('auth.login') }}">Login</a>
+            {% else %}
+			
+			
+			<a href="{{ url_for('users.messages') }}">Messages 0
+				{% if new_messages %}
+				<span class="badge">{{ new_messages }}</span>
+				{% endif %}
+			</a>
+		
+            <a href="{{ url_for('users.user', username=current_user.username) }}">Profile</a>
+            <a href="{{ url_for('auth.logout') }}">Logout</a>
+            {% endif %}
+			
+			
+        </div>
         <hr>
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -28,5 +39,28 @@
         {% endif %}
         {% endwith %}
         {% block content %}{% endblock %}
-    </body>
+		
+		{% block scripts %}
+			<script>
+				// ...
+				{% if current_user.is_authenticated %}
+				$(function() {
+					var since = 0;
+					setInterval(function() {
+						$.ajax('{{ url_for('users.notifications') }}?since=' + since).done(
+							function(notifications) {
+								for (var i = 0; i < notifications.length; i++) {
+									if (notifications[i].name == 'unread_message_count')
+										set_message_count(notifications[i].data);
+									since = notifications[i].timestamp;
+								}
+							}
+						);
+					}, 10000);
+				});
+				{% endif %}
+			</script>
+		{% endblock %}
+  </body>
 </html>
+

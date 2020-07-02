@@ -25,15 +25,16 @@
                 
                 <nav>
                     <ul>
-                        <li><a href="/index" class="current-page">Home</a></li>
+                        <li><a href="{{ url_for('main.index') }}" class="current-page">Home</a></li>
                         <li><a href="">Blogs</a></li>
-                        <li><a href="">Profile</a></li>
+                        <li><a href="{{ url_for('main.profile') }}">Profile</a></li>
                         <li>
                             <select name="menu1" id="menu1">
                                 <option value="">More</option>
-                                <option value="">Login</option>
-                                <option value="">Register</option>
+                                <option value="{{ url_for('auth.login') }}">Login</option>
+                                <option value="{{ url_for('auth.register') }}">Register</option>
                                 <option value="">Newuser</option>
+								<option value="{{ url_for('users.users') }}">Users</option>
                             </select>
                         </li>
                     </ul>
@@ -51,7 +52,7 @@
         
             <aside class="sidebar">
                 <div class="sidebar-widget">
-                <h2 class="widget-title">About Me</h2>
+                <h2 class="widget-title">About Princely</h2>
                 <img alt="about me" class="widget-image" src="{{ url_for('static', filename='img/princelyFbook.jpg') }}" />
                 <p class="widget-body">I am a Tarot Master, Astrologer, Psychic Visionary and developer. 
                 <!--I learned through life experiences and the visions I received from Spirit and 
