@@ -55,7 +55,7 @@ def reset_password(token):
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for('users.users'))
+        return redirect(url_for('main.profile'))
     form = LoginForm()
     
     if form.validate_on_submit():
@@ -66,7 +66,7 @@ def login():
         login_user(user, remember=form.remember_me.data)
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
-            next_page = url_for('users.users')
+            next_page = url_for('main.profile')
         return redirect(next_page)
     
     return render_template('auth/login.html', title='Sign In', form=form)
@@ -74,7 +74,7 @@ def login():
 @bp.route('/register', methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated:
-        return redirect(url_for('users.users'))
+        return redirect(url_for('main.profile'))
     form = RegistrationForm()
     if form.validate_on_submit():
         user = User(firstname=form.firstname.data,middlename=form.middlename.data,lastname=form.lastname.data,

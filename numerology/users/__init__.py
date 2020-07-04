@@ -5,8 +5,8 @@ from flask import render_template, flash, redirect, url_for, request, g,Blueprin
 from numerology.models import Post
 from numerology import db
 
-from numerology.forms import MessageForm
-from numerology.models import Message
+#from numerology.forms import MessageForm
+#from numerology.models import Message
 
 from numerology.forms import RegistrationForm
 from numerology.forms import LoginForm
@@ -20,7 +20,7 @@ from flask_login import login_required
 from flask import request
 from werkzeug.urls import url_parse
 #from datetime import datetime
-from numerology.models import Notification
+#from numerology.models import Notification
 
 from numerology.forms import PostForm,EditProfileForm,EmptyForm,ResetPasswordForm,ResetPasswordRequestForm
 #from .email import send_password_reset_email
@@ -106,7 +106,7 @@ def edit_profile():
     return render_template('users/edit_profile.html', title='Edit Profile',
                            form=form)
 
-
+'''
 @bp.route('/follow/<username>', methods=['POST'])
 @login_required
 def follow(username):
@@ -195,3 +195,5 @@ def notifications():
         'data': n.get_data(),
         'timestamp': n.timestamp
     } for n in notifications])
+    
+'''
