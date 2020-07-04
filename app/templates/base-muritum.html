@@ -31,8 +31,8 @@
                         <li>
                             <select name="menu1" id="menu1">
                                 <option value="">More</option>
-                                <option value="">Login</option>
-                                <option value="">Register</option>
+                                <option value="{{ url_for('auth.login') }}">Login</option>
+                                <option value="{{ url_for('auth.register') }}">Register</option>
                                 <option value="">Newuser</option>
 								<option value="">Users</option>
                             </select>

@@ -74,8 +74,8 @@
     
         <div class="container container-flex">
             <div class="col-1">
-                <h2>Hi, user</h2>
-                <h3>You have 0 questions</h3>
+                <h2>Hi, {{ current_user.username }}</h2>
+                <h3>You have {{ current_user.number_of_questions }} questions</h3>
                 <h4>
                     {{ msg }}
                 </h4>
