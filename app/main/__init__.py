@@ -1,6 +1,8 @@
 from flask import Blueprint, render_template, url_for, redirect, request, session
 
-from flask_login import login_required
+from flask_login import current_user, login_user,login_required,logout_user
+from app import db
+from app.models import User,Post
 
 import datetime
 from app.genum import generate_numbers
