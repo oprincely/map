@@ -1,1 +1,1 @@
-web: flask db upgrade; gunicorn numerology:app
+web: flask db upgrade; gunicorn map:app
