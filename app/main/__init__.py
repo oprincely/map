@@ -3,6 +3,7 @@ from flask import Blueprint, render_template, url_for, redirect, request, sessio
 from flask_login import current_user, login_user,login_required,logout_user
 from app import db
 from app.models import User,Post
+from app.auth.forms import PostForm
 
 import datetime
 from app.genum import generate_numbers
@@ -24,10 +25,27 @@ def index():
 @bp.route('/profile', methods=['GET', 'POST'])
 @login_required
 def profile():
-    msg = ''
+    form = PostForm()
+    user = User.query.filter_by(username=current_user.username).first()
+    print(user.number_of_questions)
+    if user.number_of_questions == 0:
+        msg = 'You do not have enough questions'
+    else:
+        msg = ''
+    if user.number_of_questions != 0 and form.validate_on_submit():
+        post = Post(body=form.post.data, author=current_user)
+        db.session.add(post)
+        
+        
+        user.number_of_questions = user.number_of_questions - 1
+        
+        db.session.commit()
+        
+        msg = 'You will receive a reply soon'
+        
     username = current_user.username
     user = User.query.filter_by(username=username).first()
-    return render_template('profile.html',msg=msg,year_now=year_now)
+    return render_template('profile.html',msg=msg,year_now=year_now,form=form)
 
 #------------------Payments ----------------------#
 @bp.route('/questions', methods=['GET', 'POST'])
