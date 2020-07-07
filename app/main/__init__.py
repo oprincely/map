@@ -8,6 +8,7 @@ import datetime
 from app.genum import generate_numbers
 from app.hello import contains_y,jeff, life_number,your_personal,real,hearts_d,image_num,bddict,year_num,lesson,debt
 from app.hello import check_karma,peak,digit_sum,b_t_ms
+from app.auth.forms import NumberOfQuestions,AskQuestions
 
 x = datetime.datetime.now()
 year_now = x.year
@@ -28,6 +29,45 @@ def profile():
     user = User.query.filter_by(username=username).first()
     return render_template('profile.html',msg=msg,year_now=year_now)
 
+#------------------Payments ----------------------#
+@bp.route('/questions', methods=['GET', 'POST'])
+@login_required
+def question():
+    form = NumberOfQuestions()
+    if form.validate_on_submit():
+        numberofquestions = int(form.numberofquestions.data)
+        usertoupdate = form.username.data
+        
+        user = User.query.filter_by(username=usertoupdate).first()
+        
+        user.number_of_questions = numberofquestions
+        db.session.commit()
+        
+        #msg = 'Number Of Questions Updated'
+        return 'Number Of Questions Updated'
+    return render_template('questions.html', form=form)
+
+#------------------Payments Ends----------------------#
+
+#------------------Ask Question----------------------#
+
+@bp.route('/ask', methods=['GET', 'POST'])
+@login_required
+def askQuestion():
+    form = AskQuestions()
+    if form.validate_on_submit():
+        question = form.numberofquestions.data
+        
+        user = User.query.filter_by(username=current_user).first()
+        
+        #user.number_of_questions = numberofquestions
+        #db.session.commit()
+        
+        #msg = 'Number Of Questions Updated'
+        return 'Number Of Questions Updated'
+    return render_template('questions.html', form=form)
+
+#------------------Ask Question Ends----------------------#
 
 #-------------------Numerology Readings----------------------#
 

@@ -88,21 +88,15 @@
                 <p>To get extra questions choose optional below</p>
                 
                 <div>
-                    <form>
-                        <input type="text" name="email" id="email" placeholder="Enter email address">
-                        <select name="amount" id="amount">
-                            <option value="">Select Amount</option>
-                            <option value="2410">5 QUESTION N2,410.00</option>
-                            <option value="4170">10 QUESTION N4,170.00</option>
-                            <option value="740">1 QUESTION N740.00</option>
-                        </select>
-                        
-                    </form>
-                    <script type="text/javascript" src="https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
-                    <!--<script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>-->
-                    <button type="button" onClick="payWithRave()">Pay Now</button>
+                    <p>
+						<select name="menu1" id="menu1">
+							<option value="https://flutterwave.com/pay/1question">Buy Question</option>
+							<option value="https://flutterwave.com/pay/5questions">5 QUESTION N2,410.00</option>
+							<option value="https://flutterwave.com/pay/10questions">10 QUESTION N4,170.00</option>
+							<option value="https://flutterwave.com/pay/1question">1 QUESTION N740.00</option>
+						</select>
+					</p>
                     <img alt="ravebanner" class="" src="{{ url_for('static', filename='img/ravebanner.png') }}" />
-                    
                 </div>
             </div>
             
@@ -153,6 +147,14 @@
         <!-- paste ad here -->
     
         <div><!-- Go to www.addthis.com/dashboard to customize your tools --><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51cae2b827410f6d"></script></div>
+		
+		<!-- Link open to buy questions -->
+		<script type="text/javascript">
+             var urlmenu = document.getElementById( 'menu1' );
+             urlmenu.onchange = function() {
+                  window.open( this.options[ this.selectedIndex ].value );
+             };
+        </script>
     
         <footer>
             <p><strong>Spiritual counseling will keep your life as simple as possible</strong></p>

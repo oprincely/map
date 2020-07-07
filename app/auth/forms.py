@@ -9,6 +9,17 @@ from flask_wtf import FlaskForm
 #from wtforms import StringField, PasswordField, BooleanField, SubmitField
 #from wtforms.validators import DataRequired
 
+class NumberOfQuestions(FlaskForm):
+    username = StringField('Username', validators=[DataRequired()])
+    numberofquestions = StringField('Numberofquestions', validators=[DataRequired()])
+    submit = SubmitField('Update')
+    
+
+class AskQuestions(FlaskForm):
+    question = TextAreaField('Ask Your Question', validators=[DataRequired(), Length(min=1, max=140)])
+    submit = SubmitField('Ask')
+
+
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
