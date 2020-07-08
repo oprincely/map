@@ -56,6 +56,15 @@ def edit_profile():
     return render_template('users/edit_profile.html', title='Edit Profile',form=form)
 
 
+@bp.route('/explore')
+@login_required
+def explore():
+    page = request.args.get('page', 1, type=int)
+    posts = Post.query.order_by(Post.timestamp.desc()).paginate(
+        page, app.config['POSTS_PER_PAGE'], False)
+    return render_template("users.explore.html", title='Explore', posts=posts.items)
+
+
 @bp.before_request
 def before_request():
     if current_user.is_authenticated:

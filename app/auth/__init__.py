@@ -65,7 +65,7 @@ def login():
             next_page = url_for('main.profile')
         return redirect(next_page)
     
-    return render_template('auth/login.html', title='Sign In', form=form)
+    return render_template('auth/login1.html', title='Sign In', form=form)
 
 @bp.route('/register', methods=['GET', 'POST'])
 def register():
@@ -82,7 +82,7 @@ def register():
         #msg = 'Congratulations, you are now a registered user!'
         flash('Congratulations, you are now a registered user!')
         return redirect(url_for('auth.login'))
-    return render_template('auth/register.html', form=form)
+    return render_template('auth/register1.html', form=form)
 
 @bp.route('/logout')
 def logout():
