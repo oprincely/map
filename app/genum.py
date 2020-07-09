@@ -24,8 +24,13 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
     btm = int(btm1)
     bty = int(bty1)
     
-    name1 = contains_y(FN).upper()
-    name2 = contains_y(MN).upper()
+    if MN == '':
+        name2 = contains_y(FN[len(FN)-1]).upper()
+        name1 = contains_y(FN[:len(FN)-1]).upper()
+    else:
+        name2 = contains_y(MN).upper()
+        name1 = contains_y(FN).upper()
+        
     name3 = contains_y(LN).upper()
     
     k1=jeff(name1)

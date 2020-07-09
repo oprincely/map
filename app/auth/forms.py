@@ -29,7 +29,7 @@ class LoginForm(FlaskForm):
 
 class RegistrationForm(FlaskForm):
     firstname = StringField('Fisrtname', validators=[DataRequired()])
-    middlename = StringField('Middlename', validators=[DataRequired()])
+    middlename = StringField('Middlename')
     lastname = StringField('Lastname', validators=[DataRequired()])
     dob = StringField('Date of birth: 22/02/2020', validators=[DataRequired()])
     tob = StringField('Time of birth: 1/24 am and n for unknown', validators=[DataRequired()])
