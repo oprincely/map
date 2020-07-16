@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        
+        <meta name="viewport" content="width=device-width initial-scale=1"><meta name="author" content="princely okwuego">
+        <meta name="description" content= "">
+    	
+    	<link href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&amp;display=swap" rel="stylesheet" />
+    	<link href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" rel="stylesheet" />
+    	<!--<link href="https://wec.org.ng/wec/style-muritum.css" rel="stylesheet" />-->
+		<link href="{{ url_for('static', filename='style-muritum.css') }}" rel="stylesheet" />
+		<!--<link href="style.css" rel="stylesheet" />-->
+    	<title>FINAL EXAMS SCORES</title>
+    	
+    	<!--<style>
+			.card {
+				background: #337590;
+				display: grid;
+				grid-template-columns: 1fr 5fr;
+				align-items: center;
+				border-radius: 1em;
+				margin-bottom: 2em;
+			}
+			p, h3 {
+				margin: 0;
+			}
+			h3 {
+				margin-left: 1em;
+				margin-top: .5em
+			}
+			span {
+				width: 5em;
+				height: 5em;
+				background: #75A2B8;
+				border-radius: 50%;
+			}
+
+			/* 
+
+			   Your fixes below:
+			   
+			   My solution included using the following properties:  
+			   width, background, padding, margin,
+			   text-transform, font-size, letter-spacing & color
+			   
+			*/
+
+			.container {
+				width: 90%;
+			}
+
+			.card {
+				background: #2C3031;
+				padding: 1.5em;
+			}
+
+			p.date {
+				text-transform: uppercase;
+				font-size: .75em;
+				letter-spacing: .1em;
+				color: #7A8587;
+				margin-bottom: .4em;
+			}
+
+			h3 {
+				margin: 0 0 .3em;
+				color: #B6EAFF;
+				font-size: 1.8em;
+			}
+		</style>-->
+		<style>
+		    body {
+            	margin: 0;
+            	font-family: 'lora', serif;
+            	font-size: 1.125rem;
+            	font-weight: 300;
+            }
+		
+		    .container {
+            	width: 100%;
+            	max-width: 1000px;
+            	/*border: 1px solid magenta;*/
+            	margin: 0 auto;
+            }
+			
+			.containersmall {
+				width: 50%;
+				max-width: 250px;
+				/*border: 1px solid magenta;*/
+			}
+			.containersmall-flex {
+				display: flex;
+				flex-direction: rows;
+				justify-content: space-between;
+			}
+			.col {
+				/*border: 1px solid green;*/
+			}
+			#mark-q1 {
+				font-size: 2rem;
+				font-weight: bold;
+			}
+			
+			#value {
+				font-size: 2rem;
+				font-weight: bold;
+			}
+			
+			/*----------------------*/
+			p,label {
+				font: 1rem 'Fira Sans', sans-serif;
+			}
+
+			input {
+				margin: .4rem;
+			}
+		    
+		</style>
+    	
+    </head>
+    <body>
+        <header>
+            <div class="container container-flex">
+                <div class="site-title">
+                <h1>WritePencil</h1>
+            
+                <p class="subtitle">Computer Institute</p>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#">Final Exam Scores</a></li>
+                        
+                    </ul>
+                </nav>
+            </div><!--close container-->
+        </header>
+        
+    
+        <div class="container container-flex">
+            <main role="main">
+				<h2 class="article-title">RESULT SHEET</h2>
+				<p class="subtitle"></p>
+				<p class="article-body">
+                
+				<div id="score"> 
+					<p>You scored <h3>{{ total_marks }}% <h3> </p>
+					
+					<p>A certificate is awarded only if a student scores 70% and above.</p>
+					<p>Your certificate will be ready at the end of the session and you will be communicated.</p>
+				</div>
+				
+            </main>
+        </div>
+        <!-- paste ad here -->
+    
+        <footer>
+            <p><strong>Federal Polytechnic Nekede Owerri</strong></p>
+            <!--<p>Images are Painting by <a href="https://androidjones.com/" class="article-read-more">Android Jones</a></p>-->
+            
+            <p>Copyright 2020</p>
+        </footer>
+    </body>
+</html>

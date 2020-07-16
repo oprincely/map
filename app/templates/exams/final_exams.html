@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        
+        <meta name="viewport" content="width=device-width initial-scale=1"><meta name="author" content="princely okwuego">
+        <meta name="description" content= "">
+    	
+    	<link href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&amp;display=swap" rel="stylesheet" />
+    	<link href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" rel="stylesheet" />
+    	<!--<link href="https://wec.org.ng/wec/style-muritum.css" rel="stylesheet" />-->
+		<link href="{{ url_for('static', filename='style-muritum.css') }}" rel="stylesheet" />
+		<!--<link href="style.css" rel="stylesheet" />-->
+    	<title>FINAL EXAMS</title>
+    	
+    	<!--<style>
+			.card {
+				background: #337590;
+				display: grid;
+				grid-template-columns: 1fr 5fr;
+				align-items: center;
+				border-radius: 1em;
+				margin-bottom: 2em;
+			}
+			p, h3 {
+				margin: 0;
+			}
+			h3 {
+				margin-left: 1em;
+				margin-top: .5em
+			}
+			span {
+				width: 5em;
+				height: 5em;
+				background: #75A2B8;
+				border-radius: 50%;
+			}
+
+			/* 
+
+			   Your fixes below:
+			   
+			   My solution included using the following properties:  
+			   width, background, padding, margin,
+			   text-transform, font-size, letter-spacing & color
+			   
+			*/
+
+			.container {
+				width: 90%;
+			}
+
+			.card {
+				background: #2C3031;
+				padding: 1.5em;
+			}
+
+			p.date {
+				text-transform: uppercase;
+				font-size: .75em;
+				letter-spacing: .1em;
+				color: #7A8587;
+				margin-bottom: .4em;
+			}
+
+			h3 {
+				margin: 0 0 .3em;
+				color: #B6EAFF;
+				font-size: 1.8em;
+			}
+		</style>-->
+		<style>
+		    body {
+            	margin: 0;
+            	font-family: 'lora', serif;
+            	font-size: 1.125rem;
+            	font-weight: 300;
+            }
+		
+		    .container {
+            	width: 100%;
+            	max-width: 1000px;
+            	/*border: 1px solid magenta;*/
+            	margin: 0 auto;
+            }
+			
+			.containersmall {
+				width: 50%;
+				max-width: 250px;
+				/*border: 1px solid magenta;*/
+			}
+			.containersmall-flex {
+				display: flex;
+				flex-direction: rows;
+				justify-content: space-between;
+			}
+			.col {
+				/*border: 1px solid green;*/
+			}
+			#mark-q1 {
+				font-size: 2rem;
+				font-weight: bold;
+			}
+			
+			#value {
+				font-size: 2rem;
+				font-weight: bold;
+			}
+			
+			/*----------------------*/
+			p,label {
+				font: 1rem 'Fira Sans', sans-serif;
+			}
+
+			input {
+				margin: .4rem;
+			}
+		    
+		</style>
+    	
+    </head>
+    <body>
+        <header>
+            <div class="container container-flex">
+                <div class="site-title">
+                <h1>WritePencil</h1>
+            
+                <p class="subtitle">Computer Institute</p>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#">Final Exam</a></li>
+                        
+                    </ul>
+                </nav>
+            </div><!--close container-->
+        </header>
+        
+    
+        <div class="container container-flex">
+            <main role="main">
+				<h2 class="article-title">WELCOME TO YOUR FINAL EXAMS.</h2>
+				<p class="subtitle">Duration: 60 mins.</p>
+				<p class="article-body">
+                <form action="{{ url_for('exams.exams') }}" method="post">
+				
+					<div id="answer_num1"> 
+						<h3>Question 1 </h3>
+					  <p>Which of these statement is true. <br /><br />
+						(A) a computer is an electronic device which can respond to command. <br />
+						(B) a modern computer is designed to receive either a set of insructions from the operator or a programmer, and then carry out the 
+						required tasks by performing calculations on numerical data or by compiling and correlating other forms of information. <br />
+						(C) a computer solves problems by performing sums and by dealing with each number digit by digit. <br />
+						(D) a computer bases its operation on the ability to determine if a switch/gate is either open or closed. </p>
+						
+						<input type="radio" name="answer1" id="answer1" value="A,B,C,D" /> A,B,C,D </input><br /><!--answer = A-->
+						<input type="radio" name="answer1" id="answer2" value="A,B" /> A,B </input><br />
+						<input type="radio" name="answer1" id="answer3" value="A" /> A </input><br />
+						<input type="radio" name="answer1" id="answer4" value="B" /> B </input><br />
+						<input type="radio" name="answer1" id="answer5" value="A,B,C" /> A,B,C</input>
+						
+					</div>
+
+					<div id="answer_num2">
+						<h3>Question 2 </h3>
+					  <p>Which of these statement is true. <br /><br />
+						(A) computer evolved as vacuum tube to transistors to intergrated circuits to microprocessor. <br />
+						(B) computer evolved as vacuum tube to intergrated circuits to transistors to microprocessor. <br />
+						(C) computer evolved as vacuum tube to transistors to microprocessor to intergrated circuits. <br />
+						(D) computer evolved as vacuum tube to transistors to microprocessor. <br /><br />
+					  </p>
+					  
+						<input type="radio" name="answer2" id="answer1" value="A" /> A </input><br /><!--answer = A-->
+						<input type="radio" name="answer2" id="answer2" value="B" /> B </input><br />
+						<input type="radio" name="answer2" id="answer3" value="C" /> C </input><br />
+						<input type="radio" name="answer2" id="answer4" value="D" /> D </input><br />
+						<input type="radio" name="answer2" id="answer5" value="None of the above" /> None of the above</input>
+					  
+						
+				  <div id="answer_num3">
+						<h3>Question 3 </h3>
+					  <p>A mouse is an example of. <br /><br />
+						(A) Output Device. <br />
+						(B) Storage Device. <br />
+						(C) Input Device. <br />
+						(D) Switching Device. <br /><br />
+						<input type="radio" name="answer3" id="answer1" value="A" /> A </input><br />
+						<input type="radio" name="answer3" id="answer2" value="B" /> B </input><br />
+						<input type="radio" name="answer3" id="answer3" value="C" /> C </input><br /><!--answer = C-->
+						<input type="radio" name="answer3" id="answer4" value="D" /> D </input><br />
+						<input type="radio" name="answer3" id="answer5" value="None of the above" /> None of the above</input>
+					  </p>
+					  
+				  </div>
+				  
+				  <div id="answer_num4">
+						<h3>Question 4 </h3>
+					  <p>Which of these is the function of central processing unit. <br /><br />
+						(A) Central processing unit performs arithmetic and logic calculation. <br />
+						(B) Central processing unit times and control the operations of the other elements of the computer. <br />
+						(C) Central processing unit is located in the computer's Mothersboard. <br />
+						(D) central processing unit consist of a single chip or series of chips. <br /><br />
+						<input type="radio" name="answer4" id="answer1" value="A" /> A </input><br />
+						<input type="radio" name="answer4" id="answer2" value="B" /> B </input><br /> 
+						<input type="radio" name="answer4" id="answer3" value="A,B,D" /> A,B,D </input><br /><!--answer = A,B,D-->
+						<input type="radio" name="answer4" id="answer4" value="A,B,C,D" /> A,B,C,D </input><br />
+						<input type="radio" name="answer4" id="answer5" value="None of the above" /> None of the above</input>
+					  </p>
+					  
+				  </div>
+				  <div id="answer_num5">
+						<h3>Question 5 </h3>
+					  <p>Word-Processing, Spreadsheets, Presentations, and Databases are. <br /><br />
+						(A) Application Softwares. <br />
+						(B) User Softwares. <br />
+						(C) Computer Programs. <br />
+						(D) Operating Systems. <br /><br />
+						<input type="radio" name="answer5" id="answer1" value="A" /> A </input><br />
+						<input type="radio" name="answer5" id="answer2" value="B" /> B </input><br /> 
+						<input type="radio" name="answer5" id="answer3" value="A,B,D" /> A,B,D </input><br />
+						<input type="radio" name="answer5" id="answer4" value="A,B,C" /> A,B,C </input><br /><!--answer = A,B,C-->
+						<input type="radio" name="answer5" id="answer5" value="All of the above" /> All of the above</input>
+					  </p>
+					  
+				  </div>
+				  <div id="answer_num6">
+						<h3>Question 6 </h3>
+					  <p>Which of these statement is true. <br /><br />
+						(A) A mouse is used to give instruction to the computer. <br />
+						(B) A mouse can be used to draw in the computer. <br />
+						(C) A computer is a Program. <br />
+						(D) Other resources of a computer that are not hardware are often referred to as the software. <br /><br />
+						<input type="radio" name="answer6" id="answer1" value="A" /> A </input><br />
+						<input type="radio" name="answer6" id="answer2" value="C" /> C </input><br /> 
+						<input type="radio" name="answer6" id="answer3" value="A,B,D" /> A,B,D </input><br />
+						<input type="radio" name="answer6" id="answer4" value="A,D" /> A,D </input><br /><!--answer = A,D-->
+						<input type="radio" name="answer6" id="answer5" value="All of the above" /> All of the above</input>
+					  </p>
+					  
+				  </div>
+				  
+				  <div id="answer_num7">
+						<h3>Question 7 </h3>
+					  <p>
+						The difference between people with access to computer and internet and those without its knowledge is known as<br /><br />
+						<input type="radio" name="answer7" id="answer1" value="A" /> computer literate </input><br />
+						<input type="radio" name="answer7" id="answer2" value="B" /> computer programmer </input><br /> 
+						<input type="radio" name="answer7" id="answer3" value="C" /> digital divide </input><br /><!--answer = C-->
+						<input type="radio" name="answer7" id="answer4" value="D" /> internet experts </input><br />
+						<input type="radio" name="answer7" id="answer5" value="E" /> web master</input>
+					  </p>
+					  
+				  </div>
+				  
+				  <div id="answer_num8">
+						<h3>Question 8 </h3>
+					  <p>
+						The distribution of audio and video contents to a dispersed audience through a digital transmission media is called<br /><br />
+						<input type="radio" name="answer8" id="answer1" value="A" /> authenticating </input><br />
+						<input type="radio" name="answer8" id="answer2" value="B" /> broadcasting </input><br /> <!--answer = B-->
+						<input type="radio" name="answer8" id="answer3" value="C" /> converting </input><br />
+						<input type="radio" name="answer8" id="answer4" value="D" /> switching </input><br />
+						<input type="radio" name="answer8" id="answer5" value="E" /> translating</input>
+					  </p>
+					  
+				  </div>
+				  
+				  <div id="answer_num9">
+						<h3>Question 9 </h3>
+					  <p>
+						In Microsoft Excel, a new work space is created with the name ______ by default.<br /><br />
+						<input type="radio" name="answer9" id="answer1" value="A" /> book 1 </input><br /><!--answer = A-->
+						<input type="radio" name="answer9" id="answer2" value="B" />  excel 1 </input><br />
+						<input type="radio" name="answer9" id="answer3" value="C" /> mybook 1 </input><br />
+						<input type="radio" name="answer9" id="answer4" value="D" /> sheet 1 </input><br />
+						<input type="radio" name="answer9" id="answer5" value="E" /> workbook 1</input>
+					  </p>
+					  
+				  </div>
+				  
+				  <div id="answer_num10">
+						<h3>Question 10 </h3>
+					  <p>
+						In the e-mail address deardammy@gmail.com, "deardammy" is the _______ name.<br /><br />
+						<input type="radio" name="answer10" id="answer1" value="A" /> client </input><br />
+						<input type="radio" name="answer10" id="answer2" value="B" />  domain </input><br />
+						<input type="radio" name="answer10" id="answer3" value="C" /> host </input><br />
+						<input type="radio" name="answer10" id="answer4" value="D" /> server </input><br />
+						<input type="radio" name="answer10" id="answer5" value="E" /> user</input><!--answer = E-->
+					  </p>
+					  
+				  </div>
+				  
+				  <div id="answer_num11">
+						<h3>Question 11 </h3>
+					  <p>
+						The _______ displays the content of the active cell in Microsoft Excel.<br /><br />
+						<input type="radio" name="answer11" id="answer1" value="A" /> formular bar </input><br /><!--answer = A-->
+						<input type="radio" name="answer11" id="answer2" value="B" />  name box </input><br />
+						<input type="radio" name="answer11" id="answer3" value="C" /> row heading </input><br />
+						<input type="radio" name="answer11" id="answer4" value="D" /> task pane </input><br />
+						<input type="radio" name="answer11" id="answer5" value="E" /> title bar</input>
+					  </p>
+					  
+				  </div>
+				  
+				  <div id="answer_num12">
+						<h3>Question 12 </h3>
+					  <p>
+						A computer system without an Operating System is useless, this is because Operating System is<br /><br />
+						<input type="radio" name="answer12" id="answer1" value="A" /> a program that manages computer hardware and software </input><br /><!--answer = A-->
+						<input type="radio" name="answer12" id="answer2" value="B" />  an antivirus agent </input><br />
+						<input type="radio" name="answer12" id="answer3" value="C" /> embedded in the motherboard </input><br />
+						<input type="radio" name="answer12" id="answer4" value="D" /> the microprocessor of a computer </input><br />
+						<input type="radio" name="answer12" id="answer5" value="E" /> the source of power to the computer</input>
+					  </p>
+					  
+				  </div>
+				  
+				  <div id="answer_num13">
+					  <h3>Question 13 </h3>
+					  <p>
+						A wireless network uses ________ waves to transmit signal.<br /><br />
+						<input type="radio" name="answer13" id="answer1" value="A" /> electrical </input><br />
+						<input type="radio" name="answer13" id="answer2" value="B" />  magnetic </input><br />
+						<input type="radio" name="answer13" id="answer3" value="C" /> mechanical </input><br />
+						<input type="radio" name="answer13" id="answer4" value="D" /> radio </input><br /><!--answer = D-->
+						<input type="radio" name="answer13" id="answer5" value="E" /> sound</input>
+					  </p>
+					  
+				  </div>
+				  
+				  <input type="submit" value="Sumit">
+			    </form>
+            </main>
+        </div>
+        <!-- paste ad here -->
+    
+        <footer>
+            <p><strong>Federal Polytechnic Nekede Owerri</strong></p>
+            <!--<p>Images are Painting by <a href="https://androidjones.com/" class="article-read-more">Android Jones</a></p>-->
+            
+            <p>Copyright 2020</p>
+        </footer>
+    </body>
+</html>
