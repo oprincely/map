@@ -69,51 +69,7 @@
 			}
 		</style>-->
 		<style>
-		    body {
-            	margin: 0;
-            	font-family: 'lora', serif;
-            	font-size: 1.125rem;
-            	font-weight: 300;
-            }
-		
-		    .container {
-            	width: 100%;
-            	max-width: 1000px;
-            	/*border: 1px solid magenta;*/
-            	margin: 0 auto;
-            }
-			
-			.containersmall {
-				width: 50%;
-				max-width: 250px;
-				/*border: 1px solid magenta;*/
-			}
-			.containersmall-flex {
-				display: flex;
-				flex-direction: rows;
-				justify-content: space-between;
-			}
-			.col {
-				/*border: 1px solid green;*/
-			}
-			#mark-q1 {
-				font-size: 2rem;
-				font-weight: bold;
-			}
-			
-			#value {
-				font-size: 2rem;
-				font-weight: bold;
-			}
-			
-			/*----------------------*/
-			p,label {
-				font: 1rem 'Fira Sans', sans-serif;
-			}
-
-			input {
-				margin: .4rem;
-			}
+		    
 		    
 		</style>
     	
@@ -141,14 +97,15 @@
             <main role="main">
 				<h2 class="article-title">RESULT SHEET</h2>
 				<p class="subtitle"></p>
-				<p class="article-body">
+				<p class="article-body"></p>
                 
-				<div id="score"> 
-					<p>You scored <h3>{{ total_marks }}% <h3> </p>
-					
-					<p>A certificate is awarded only if a student scores 70% and above.</p>
-					<p>Your certificate will be ready at the end of the session and you will be communicated.</p>
-				</div>
+				 
+				<p>You scored</p>
+				<h3>{{ total_marks }}% <h3>
+				
+				<p class="article-body">A certificate is awarded only if a student scores 70% and above.</p>
+				<p class="article-body">Your certificate will be ready at the end of the session and you will be communicated.</p>
+				
 				
             </main>
         </div>

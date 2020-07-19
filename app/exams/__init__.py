@@ -1,10 +1,15 @@
 from flask import Blueprint, render_template, url_for, redirect, request, session
 
+from flask_login import current_user, login_user,login_required,logout_user
+from app import db
+from app.models import User
+import datetime
 
 bp = Blueprint('exams', __name__)
 
 
 @bp.route('/exams',methods=['GET', 'POST'])
+@login_required
 def exams():
     marks = []
     if request.method == 'POST':
