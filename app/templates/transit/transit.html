@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+
+<head>
+    <!--<style>
+	    .container1{
+	    }
+	    .columns{
+	        
+	        display: flex;
+	        flex-direction: row;
+	        justify-content: space-between;
+	    }
+	    
+		input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #b7832f;
+            border-radius: 4px;
+            /*background-color: #707070;*/
+        }
+        input[type=text]:focus {
+            border: 2px solid #555;
+        }
+        input[type=button], input[type=submit], input[type=reset] {
+            background-color: #ef5839;
+            border: none;
+            width: 100%;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        input[type=submit]:hover{
+            color: #2e354f;
+	        background: #d4b44c;
+        }
+        
+            
+	    /* for small screen*/
+	    @media (max-width: 675px) {
+	        .columns{
+    	        flex-direction: column;
+    	        }
+	    }
+	   
+		
+		/*button, input, select, textarea {
+		  font-family : inherit;
+		  font-size   : 100%;
+		}
+		input, textarea, select, button {
+		  width : 150px;
+		  margin: 0;
+		  box-sizing: border-box;
+		}*/
+	</style>-->
+    
+</head>
+
+<body>
+    
+	
+	<div class="container1">
+	    <h2>User</h2>
+        <i><h5>PLEASE FILL OUT CAREFULLY - INCORECT INFORMATION WILL GIVE INCORRECT REPORT READINGS!</h5></i>
+    
+        <!--<i><h5>BIRTH NAME: Enter exactly as listed in your birth certificate, even if you have never used it.
+        Do not enter space, hyphens, jr., III, etc</h5></i>-->
+	    <form action="{{ url_for('transit.transit') }}" method="POST">
+	        
+        	<p>Enter Your Birthdate</p>
+        	
+        	<div class="columns">
+        	    <div class="col">
+        	      <p><input type="text" name="day" id="day" placeholder="day" required /></p>
+        	    </div>
+        	    <div class="col">
+        	        <p><input type="text" name="month" id="month" placeholder="month" required /></p>
+        	    </div>
+        	    <div class="col">
+        	        <p><input type="text" name="year" id="year" placeholder="year" required /></p>
+        	    </div>
+        	</div>
+        	
+        	<p>Enter Your Transit date</p>
+        	<div class="columns">
+        	    <div class="col">
+        	      <p><input type="text" name="tday" id="tday" placeholder="day" required /></p>
+        	    </div>
+        	    <div class="col">
+        	        <p><input type="text" name="tmonth" id="tmonth" placeholder="month" required /></p>
+        	    </div>
+        	    <div class="col">
+        	        <p><input type="text" name="tyear" id="tyear" placeholder="year" required /></p>
+        	    </div>
+        	</div>
+        	
+        	<p>Enter Your asc,mc,prog</p>
+        	<div class="columns">
+        	    <div class="col">
+        	      <p><input type="text" name="asc" id="asc" placeholder="asc" required /></p>
+        	    </div>
+        	    <div class="col">
+        	        <p><input type="text" name="mc" id="mc" placeholder="mc" required /></p>
+        	    </div>
+        	    <div class="col">
+        	        <p><input type="text" name="pr" id="pr" placeholder="pr moon" required /></p>
+        	    </div>
+        	</div>
+        	
+        	<p><input type="submit" value="submit" /></p>
+	    </form>
+	</div>
+	
+    <div>
+        <p>Forces at work</p>
+        {% for list_of_list in f %}
+                {% for list_ in list_of_list %}
+                    {% for items in list_ %}
+                        {% for item in items %}
+                            <p>{{item}}</p>
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+        {% endfor %}
+    </div>
+    
+    <div>
+        <p>Transits</p>
+        {% for list_of_list in f2 %}
+                {% for list_ in list_of_list %}
+                    {% for items in list_ %}
+                        {% for item in items %}
+                            <p>{{item}}</p>
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+        {% endfor %}
+    </div>
+    
+    <div>
+        <p>Oppurtunity and wastes</p>
+        {% for list_of_list in f1 %}
+                {% for list_ in list_of_list %}
+                    {% for items in list_ %}
+                        {% for item in items %}
+                            <p>{{item}}</p>
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+        {% endfor %}
+    </div>
+    
+    
+    
+</body>
+
+</html>
