@@ -1,23 +1,376 @@
-{% extends "base-muritum.html" %}
-
-{% block content %}
-<article class="article-featured">
-    <h2 class="article-title">Hi, Guest</h2>
-	<img src="{{ url_for('static', filename='img/adverchess714x308.jpg') }}" alt="a chess" class="article-image">
-	<!--<p class="article-info">September 25, 2019 | 3 comments</p>-->
-	<p class="article-body">
-	    This is your moment of self-discovery.
-        Remember, each life is developed from its own <em>potentials</em> and each of us
-        can deal only with the potentials we possess.
-        You can only express, at best, the highest level of your own potentials.
-        It will not benefit you to compare yourself (or anyone else) with others.
-        People have their own potentials and are operating only within those contexts.
-        <strong>If a certain time have come into your life when things looks like they are 
-        not as you want and "YOU NEED ANSWERS" or may be you want to activate things, that what I will show you how to do. Just call me now to</strong>
-        ...<em>discover you potentials now.</em>
-    </p>
-    <p>To give a hint of what am capable, to learn how this <strong>"YEAR"</strong> will look, check out my <em>event of the year section</em> when you register</p>
-    <a href="{{ url_for('main.profile') }}" class="article-read-more">Call Me Now: 0813 676 7311 | ASK YOUR QUESTION</a>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Princely || AstroPychic</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./wp/images/favicon.ico" type="image/x-icon" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <!-- goggle fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Poppins&amp;display=swap" rel="stylesheet" />
+    <!-- styles css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+  <body>
+    <!-- header  -->
+    <header id="home">
+      <!-- navbar -->
+        <nav class="navbar">
+            <div class="nav-center">
+              <!-- nav header -->
+              <div class="nav-header">
+                <h4 class="nav-logo">Princely<span class="subtitle">.men</span></h4>
+                <!--<img src="./images/logo.svg" class="nav-logo" alt="" />-->
+                <button
+                  type="button"
+                  class="nav-toggle"
+                  id="nav-toggle"
+                  aria-label="nav toggler "
+                >
+                  <i class="fas fa-bars"></i>
+                </button>
+              </div>
+              <!-- end of nav header -->
+              
+              <!-- nav links -->
+              <div class="nav-links" id="nav-links">
+                <!-- single link -->
+                <a href="#home" class="scroll-link nav-link">
+                  home
+                </a>
+                <!-- end of single link -->
+                <!-- single link -->
+                <a href="#about" class=" scroll-link nav-link">
+                  about
+                </a>
+                <!-- end of single link -->
+                <!-- single link -->
+                <a href="#services" class="nav-link scroll-link">
+                  services
+                </a>
+                <!-- end of single link -->
+                <!-- single link -->
+                <a href="#featured" class="nav-link scroll-link">
+                  featured
+                </a>
+                <!-- end of single link -->
+                <!-- single link -->
+                <a href="#gallery" class="nav-link scroll-link">
+                  gallery
+                </a>
+                <!-- end of single link -->
+              </div>
+              <!-- end of nav links -->
+              
+              <!-- nav social media icons -->
+              <!-- footer icons -->
+              <div class="nav-icons">
+                <a href="https://www.twitter.com" target="_blank" class="nav-icon"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank" class="nav-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.twitter.com" target="_blank" class="nav-icon"><i class="fab fa-linkedin"></i></a>
+              <!-- end of nav social media icons -->
+            </div>
+            </div>
+        </nav>
+      
+      <!-- hero component Call Me Now: 0813 676 7311 | ASK YOUR QUESTION-->
+      <div class="hero">
+        <div class="hero-banner">
+          <h1 class="hero-title">man! know yourself!</h1>
+          <p class="hero-text">
+            AWARENESS! is the first step in being able to overcome your limitations. 
+			While you remain unaware of the limitations, you are at the mercy of unconscious forces.
+          </p>
+          <a href="#featured" class="btn btn-white scroll-link">Call Me Now: 0813 676 7311</a>
+		  <a href="{{ url_for('main.profile') }}" class="btn btn-white">ASK YOUR FREE QUESTION</a>
+        </div>
+      </div>
+    </header>
+    <!-- end of header  -->
     
-</article>
-{% endblock %}
+    <!-- about section -->
+    <section class="section about" id="about">
+      <!-- title  -->
+      <div class="title-wrapper">
+        <h2 class="title">about <span class="subtitle">us</span></h2>
+      </div>
+      <!-- end of title  -->
+      <!-- about-center -->
+      <div class="section-center about-center">
+        <!-- about img wrapper-->
+        <div class="about-img">
+          <img
+            src="{{ url_for('static', filename='images/adverchess714x308.jpg') }}"
+            class="about-photo"
+            alt="awesome beach"
+          />
+        </div>
+        <!-- about info -->
+        <article class="about-info">
+          <h3>psychic</h3>
+          <p>
+            The journey to self-discovery
+          </p>
+          <p>
+           Remember, each life is developed from its own potentials and each 
+		   of us can deal only with the potentials we possess. You can only express, 
+		   at best, the highest level of your own potentials...
+           <!-- 
+            It will not benefit you
+		   to compare yourself (or anyone else) with others. People have their own
+		   potentials and are operating only within those contexts. If a certain 
+		   time have come into your life when things looks like they are not as you 
+		   want and "YOU NEED ANSWERS" or may be you want to activate things, that 
+		   what I will show you how to do. Just call me now to ...discover you potentials now.
+		   
+		   It's good to start with money. Our finace calls for all time attention but not all is ment to acquire money.
+				Some of us are ment to surfare money acquization.
+            
+            all seek love, but love itself has pattern what works for him may not work for you.
+				And the only way to be fulfiled is to know your own pattern.
+				
+				What you call power may not be your true definition of your power. Like everything else,
+				power, the one power in you if discovered, will bring true happiness to you.
+           -->
+          </p>
+          <a href="#" class="btn-primary">read more</a>
+        </article>
+      </div>
+    </section>
+    <!-- end of about section -->
+    <!-- services -->
+    <section class="section services" id="services">
+      <!-- title  -->
+      <div class="title-wrapper">
+        <h2 class="title">simple <span class="subtitle">truth</span></h2>
+      </div>
+      <!-- end of title  -->
+      <div class="section-center services-center">
+        <!-- single service -->
+        <article class="service">
+          <span class="service-icon"><i class="fas fa-wallet fa-fw"></i></span>
+          <div class="service-info">
+            <h4 class="service-title">past</h4>
+            <p class="service-text">
+                When you learn from your past, you will be equipped for the present. Many a time, we forget that our past
+				occurred because of the wishes we were burn with. Weather the past is good or ugly, it's good to read from it.
+                
+            </p>
+          </div>
+        </article>
+        <!-- end of single service -->
+        <!-- single service -->
+        <article class="service">
+          <span class="service-icon"><i class="fas fa-tree fa-fw"></i></span>
+          <div class="service-info">
+            <h4 class="service-title">present</h4>
+            <p class="service-text">
+                Yes, the present will always be according to the seed we sold in the past, so whatever your current present is, you are the one who made it.
+				Reading from the present will give us knowledge of how we lived in the past to make another past and present.
+            </p>
+          </div>
+        </article>
+        <!-- end of single service -->
+        <!-- single service -->
+        <article class="service">
+          <span class="service-icon"><i class="fas fa-socks fa-fw"></i></span>
+          <div class="service-info">
+            <h4 class="service-title">future</h4>
+            <p class="service-text">
+                The future is known to those who knows how to know, this is true because life is always a pattern and the pattern always, I said always repeat.
+            </p>
+          </div>
+        </article>
+        <!-- end of single service -->
+      </div>
+    </section>
+    <!-- end of services -->
+    
+   <!-- ######################################## -->
+    <!-- featured tours -->
+    <section class="section featured-tours" id="featured">
+      <!-- title  -->
+      <div class="title-wrapper">
+        <h2 class="title">featured <span class="subtitle">readings</span></h2>
+      </div>
+      <!-- end of title  -->
+      <!-- featured-center -->
+      <div class="section-center featured-center ">
+        <!-- single tour -->
+        <article class="tour-card">
+          <div class="tour-img-container">
+            <img src="{{ url_for('static', filename='images/Union_2048x.jpg') }}" class="tour-img" alt="" />
+            <p class="tour-date">Learn More</p>
+          </div>
+          <!-- tour footer -->
+          <div class="tour-footer">
+            <h4 class="tour-title">When will I meet my future husband/wife?</h4>
+            <!-- tour info -->
+            <div class="tour-info">
+              <p class="tour-country">
+                <span><i class="fas fa-map"></i></span> seek answer
+              </p>
+              <div class="tour-details">
+                <p>48 hours delivery</p>
+                <p>from ₦5,000</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- end of single tour -->
+        <!-- single tour -->
+        <article class="tour-card">
+          <div class="tour-img-container">
+            <img src="{{ url_for('static', filename='images/tigershopify-copy-1296x512.jpg') }}" class="tour-img" alt="" />
+            <p class="tour-date">Learn More</p>
+          </div>
+          <!-- tour footer -->
+          <div class="tour-footer">
+            <h4 class="tour-title">Am I on a right path? Which would be a good path for me?</h4>
+            <!-- tour info -->
+            <div class="tour-info">
+              <p class="tour-country">
+                <span><i class="fas fa-map"></i></span> seek answer
+              </p>
+              <div class="tour-details">
+                <p>48 hours delivery</p>
+                <p>from ₦5,000</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- end of single tour -->
+        <!-- single tour -->
+        <article class="tour-card">
+          <div class="tour-img-container">
+            <img src="{{ url_for('static', filename='images/SHIVA_KAILASH_2048x.jpg') }}" class="tour-img" alt="" />
+            <p class="tour-date">Learn More</p>
+          </div>
+          <!-- tour footer -->
+          <div class="tour-footer">
+            <h4 class="tour-title">When is right time for me to get abroad?</h4>
+            <!-- tour info -->
+            <div class="tour-info">
+              <p class="tour-country">
+                <span><i class="fas fa-map"></i></span> seek answer
+              </p>
+              <div class="tour-details">
+                <p>48 hours delivery</p>
+                <p>from ₦5,000</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- end of single tour -->
+      </div>
+      <!-- end of tours center -->
+      <div class="tour-link">
+        <a href="#" class="btn-primary">all readings</a>
+      </div>
+    </section>
+    <!-- end of featured tours -->
+    
+    
+    <!-- gallery  -->
+    <section id="gallery" class="gallery">
+      <!-- title  -->
+      <div class="title-wrapper">
+        <h2 class="title">psychic<span class="subtitle ">readings</span></h2>
+      </div>
+      <!-- end of title  -->
+
+      <div class="gallery-center">
+        <!-- single item -->
+        <div class="gallery-img-container">
+          <img src="./images/tour-1.jpeg" class="gallery-img" alt="" />
+          <span class="gallery-icon"><i class="fas fa-search"></i></span>
+        </div>
+        <!-- end of single item -->
+        <!-- single item -->
+        <div class="gallery-img-container">
+          <img src="./images/tour-2.jpeg" class="gallery-img" alt="" />
+          <span class="gallery-icon"><i class="fas fa-search"></i></span>
+        </div>
+        <!-- end of single item -->
+        <!-- single item -->
+        <div class="gallery-img-container">
+          <img src="./images/tour-3.jpeg" class="gallery-img" alt="" />
+          <span class="gallery-icon"><i class="fas fa-search"></i></span>
+        </div>
+        <!-- end of single item -->
+        <!-- single item -->
+        <div class="gallery-img-container">
+          <img src="./images/tour-4.jpeg" class="gallery-img" alt="" />
+          <span class="gallery-icon"><i class="fas fa-search"></i></span>
+        </div>
+        <!-- end of single item -->
+        <!-- single item -->
+        <div class="gallery-img-container">
+          <img src="./images/tour-5.jpeg" class="gallery-img" alt="" />
+          <span class="gallery-icon"><i class="fas fa-search"></i></span>
+        </div>
+        <!-- end of single item -->
+        <!-- single item -->
+        <div class="gallery-img-container">
+          <img src="./images/tour-6.jpeg" class="gallery-img" alt="" />
+          <span class="gallery-icon"><i class="fas fa-search"></i></span>
+        </div>
+        <!-- end of single item -->
+      </div>
+    </section>
+    <!-- end of gallery  -->
+    <!-- contact -->
+    <section class="section deals" id="deals">
+      <!-- title  -->
+      <div class="title-wrapper">
+        <h2 class="title">hot <span class="subtitle ">deals</span></h2>
+      </div>
+      <!-- end of title  -->
+      <form>
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="your email" />
+          <button type="submit" class="btn-submit">submit</button>
+        </div>
+      </form>
+    </section>
+    <!-- end of contact -->
+    <!-- footer -->
+    <footer class="section footer">
+      <!-- footer links -->
+      <div class="footer-links">
+        <a href="#home" class="footer-link scroll-link">home</a>
+        <a href="#about" class="footer-link scroll-link">about</a>
+        <a href="#services" class="footer-link scroll-link">services</a>
+        <a href="#featured" class="footer-link scroll-link">featured</a>
+        <a href="#gallery" class="footer-link scroll-link" scroll-link>gallery</a>
+
+      </div>
+      <!-- footer icons -->
+      <div class="footer-icons">
+        <a href="https://www.twitter.com" target="_blank" class="footer-icon"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="https://www.twitter.com" target="_blank" class="footer-icon"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://www.twitter.com" target="_blank" class="footer-icon"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+      <p class="copyright">
+        copyright &copy; Princely.men
+        <span id="date"></span>. all rights reserved
+      </p>
+    </footer>
+    <!-- js -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>

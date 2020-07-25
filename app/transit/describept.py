@@ -923,25 +923,25 @@ union.""",
 ###########################################################################
 
 #Venus and Lunar Node 462
-"ven_to_natlunarnod":"""Nice meeting with someone; romantic contact.""",
-"lunarnod_to_natven":"""Contact with someone or an event in the arts; cultural
+"ven_to_natnod":"""Nice meeting with someone; romantic contact.""",
+"nod_to_natven":"""Contact with someone or an event in the arts; cultural
 get-togethers; romance; emotional meetings.""",
-"sun_ven/lunarnd":"""Politeness; sociability; geniality; others coming to one's
+"sun_ven/nod":"""Politeness; sociability; geniality; others coming to one's
 assistance.""",
-"moon_ven/lunarnd":"""Showing one's feelings.""",
-"merc_ven/lunarnd":"""Communication about romance or artistic matters to others.""",
-"mars_ven/lunarnd":"""Making sexy contact with someone; making an important
+"moon_ven/nod":"""Showing one's feelings.""",
+"merc_ven/nod":"""Communication about romance or artistic matters to others.""",
+"mars_ven/nod":"""Making sexy contact with someone; making an important
 romantic date.""",
-"jup_ven/lunarnd":"""Enjoying someone's company enormously; entertainment.""",
-"sat_ven/lunarnd":"""Being brought up short in a situation that was potentially
+"jup_ven/nod":"""Enjoying someone's company enormously; entertainment.""",
+"sat_ven/nod":"""Being brought up short in a situation that was potentially
 emotionally rewarding; shyness; withdrawal.""",
-"ura_ven/lunarnd":"""Intense, sudden attraction to someone; quick liaison; making
+"ura_ven/nod":"""Intense, sudden attraction to someone; quick liaison; making
 friends with someone out of the ordinary.""",
-"nep_ven/lunarnd":"""Idealizing someone; making promises that are hard to keep;
+"nep_ven/nod":"""Idealizing someone; making promises that are hard to keep;
 indulgent with love.""",
-"plu_ven/lunarnd":"""Romantic contact that may be extremely strong and lasting.""",
-"asc_ven/lunarnd":"""Affectionate nature; cordiality; popularity.""",
-"mc_ven/lunarnd":"""Being known for one's art or appreciation of things cultural;
+"plu_ven/nod":"""Romantic contact that may be extremely strong and lasting.""",
+"asc_ven/nod":"""Affectionate nature; cordiality; popularity.""",
+"mc_ven/nod":"""Being known for one's art or appreciation of things cultural;
 significant romantic fulfillment.""",
 
 ##########################################################################
