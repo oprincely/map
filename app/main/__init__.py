@@ -9,6 +9,7 @@ import datetime
 from app.genum import generate_numbers
 from app.hello import contains_y,jeff, life_number,your_personal,real,hearts_d,image_num,bddict,year_num,lesson,debt
 from app.hello import check_karma,peak,digit_sum,b_t_ms
+from app.hello1 import missing_numbers
 from app.auth.forms import NumberOfQuestions,AskQuestions
 
 x = datetime.datetime.now()
@@ -154,11 +155,12 @@ def reading1():
     btm = user.dob[3:5] #02
     bty = user.dob[6:10] #22
     
-    r = generate_numbers(FN,MN,LN,btd,btm,bty)[2]#[1]
+    r = generate_numbers(FN,MN,LN,btd,btm,bty)[1]
     
     #r = generate_numbers('uchechukwu','emeka','okwu','22','02','1982')[2]#[1]
     
-    return 'soon'#render_template('reading1.html',FN=FN,lp=lp,A=A,B=B,C=C,D=D,E=E,F=F,G=G,H=H,I=I,
-                 #          Rall=Rall,R1all=R1all,R2all=R2all,R3all=R3all,R4all=R4all,R5all=R5all,R6all=R6all,R7all=R7all,
-                 #          p=p,missing_numbers=missing_numbers,bash1=bash1,bash2=bash2,bash3=bash3,
-                 #          bash4=bash4,bash5=bash5,bash6=bash6,bash7=bash7,bash8=bash8,bash9=bash9,year_now=year_now)
+    return render_template('reading1.html',FN=FN,lp=r[0],A=r[1],B=r[2],C=r[3],D=r[4],E=r[5],F=r[6],G=r[7],H=r[8],I=r[9],
+                           Rall=r[10],R1all=r[11],R2all=r[12],R3all=r[13],R4all=r[14],R5all=r[15],R6all=r[16],R7all=r[17],
+                           missing_numbers=missing_numbers,p=r[18],bash1=r[19],bash2=r[20],bash3=r[21],
+                           bash4=r[22],bash5=r[23],bash6=r[24],bash7=r[25],bash8=r[26],bash9=r[27],year_now=year_now)
+

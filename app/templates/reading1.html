@@ -36,8 +36,8 @@
             </h2>
         </div>
     </div>
-
-    <p>{{ Rall }}</p>
+	
+    <p>{{ R0all }}</p>
     <p>{{ R1all }}</p>
     <p>{{ R2all }}</p>
     <p>{{ R3all }}</p>
@@ -45,11 +45,16 @@
     <p>{{ R5all }}</p>
     <p>{{ R6all }}</p>
     <p>{{ R7all }}</p>
+	
+	<p>Power Line missing</p>
     {% for k,v in missing_numbers.items(): %}
     {% if k not in p: %}
     <p>{{ v }}</p>
     {% endif %}
     {% endfor %}
+	<p>Power Line missing Ends</p>
+	
+	<p>Power Line bash</p>
     <p>{{ bash1 }}</p>
     <p>{{ bash2 }}</p>
     <p>{{ bash3 }}</p>
@@ -59,6 +64,7 @@
     <p>{{ bash7 }}</p>
     <p>{{ bash8 }}</p>
     <p>{{ bash9 }}</p>
+	<p>Power Line bash Ends</p>
 
     <p3><h3>
         This concludes your free reading, which is the first partial-part of our full Personality Profile,

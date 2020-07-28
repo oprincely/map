@@ -3,7 +3,7 @@
 
 # Full power lines
 
-r_all = '''
+r0_all = '''
 If you have the full 123 Power Line in your chart, you are
 someone that can organize tasks and remain focused to their
 completion. You may not be as particular about tasks which
@@ -73,7 +73,7 @@ and effort for them to achieve what is likely to be relatively easy for you.
 '''
 #empty power lines
 
-r_all_missing = '''
+r0_all_missing = '''
 1, 2 and 3 all Missing
 This will not appear in the chart of anyone born in the 20th or 21st Century.
 You might want to theorize about what anyone without these three numbers

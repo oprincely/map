@@ -7,7 +7,7 @@ import datetime
 
 from app.hello import contains_y,jeff,digit_sum, check_karma
 
-from app.hello1 import r_all_missing,r_all,r1_all,r1_all_missing,r2_all,r2_all_missing,r3_all,r3_all_missing,r4_all
+from app.hello1 import r0_all_missing,r0_all,r1_all,r1_all_missing,r2_all,r2_all_missing,r3_all,r3_all_missing,r4_all
 from app.hello1 import r4_all_missing,r5_all,r5_all_missing,r6_all,r6_all_missing,r7_all,r7_all_missing,missing_numbers,s_num
 
 import collections
@@ -386,8 +386,10 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
     #print(event)
     #############
     #speed reading
-    d = collections.Counter(s)# count number of,, just do print
+    d = collections.Counter(s)# count number of,, just do print  Counter({2: 4, 1: 1, 9: 1, 8: 1})
+    #print('d = ',d)
     p = list(d.keys())
+    #print('p = ',p) #[2, 1, 9, 8]
     b = OrderedDict(sorted(d.items()))
     try:
         A = b[1]
@@ -425,139 +427,74 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
         I = b[9]
     except:
         I = 0
-    #All missing or all not missing
+    #All missing or all not missing p=[2, 1, 9, 8] ##page 62
+    def power_lines(r,p,n):
+        d = list(set(r).intersection(p))
+        m = list(set(r).difference(d))
+        if d == []:
+            return f'r{n}_all_missing'
+        elif d == r:
+            return f'r{n}_all'
+        else:
+            return ''
+
+#print(power_lines(r,p))
+        
+        
     r = [1, 2, 3]
-    result = all(elem in p for elem in r)
-    if result:
-        Rall = r_all
-    else:
-        result = not any(elem in p for elem in r)
-    if result:
-        Rall = r_all_missing
+    Rall = power_lines(r,p,0)
     
     r1 = [4, 5, 6]
-    result = all(elem in p for elem in r1)
-    if result:
-        R1all = r1_all
-    else:
-        result = not any(elem in p for elem in r1)
-    if result:
-        R1all = r1_all_missing
+    R1all = power_lines(r,p,1)
     
     r2 = [7, 8, 9]
-    result = all(elem in p for elem in r2)
-    if result:
-        R2all = r2_all
-    else:
-        result = not any(elem in p for elem in r2)
-    if result:
-        R2all = r2_all_missing
+    R2all = power_lines(r,p,2)
     
     r3 = [1, 4, 7]
-    result = all(elem in p for elem in r3)
-    if result:
-        R3all = r3_all
-    else:
-        result = not any(elem in p for elem in r3)
-    if result:
-        R3all = r3_all_missing
+    R3all = power_lines(r,p,3)
     
     r4 = [2, 5, 8]
-    result = all(elem in p for elem in r4)
-    if result:
-        R4all = r4_all
-    else:
-        result = not any(elem in p for elem in r4)
-    if result:
-        R4all = r4_all_missing
+    R4all = power_lines(r,p,4)
     
     r5 = [3, 6, 9]
-    result = all(elem in p for elem in r5)
-    if result:
-        R5all = r5_all
-    else:
-        result = not any(elem in p for elem in r5)
-    if result:
-        R5all = r5_all_missing
+    R5all = power_lines(r,p,5)
         
     r6 = [1, 5, 9]
-    result = all(elem in p for elem in r6)
-    if result:
-        R6all = r6_all
-    else:
-        result = not any(elem in p for elem in r6)
-    if result:
-        R6all = r6_all_missing
+    R6all = power_lines(r,p,6)
         
     r7 = [3, 5, 7]
-    result = all(elem in p for elem in r7)
-    if result:
-        R7all = r7_all
-    else:
-        result = not any(elem in p for elem in r7)
-    if result:
-        R7all = r7_all_missing
+    R7all = power_lines(r,p,7)
     
     # number of time a number occured
-    for k, v in d.items(): #Counter({2: 4, 1: 1, 9: 1, 8: 1})
-        try:
-            if k == 1 and v == d[1]:
-                bash1 = (s_num[k][v])
-        except (KeyError, IndexError):
-            pass
+    def bashes(n,d):
+        for k, v in d.items(): #Counter({2: 4, 1: 1, 9: 1, 8: 1})
+            if k == n and v == d[n]:
+                bash = (s_num[k][v]);
+                return bash
+            
+    def remove_bashes_none(b):
+        if b == None:
+            return ''
+        else:
+            return b
         
-        try:
-            if k == 2 and v == d[2]:
-                bash2 = (s_num[k][v])
-        except (KeyError, IndexError):
-            pass
         
-        try:
-            if k == 3 and v == d[3]:
-                bash3 = (s_num[k][v])
-        except (KeyError, IndexError):
-            pass
-        try:
-            if k == 4 and v == d[4]:
-                bash4 = (s_num[k][v])
-        except (KeyError, IndexError):
-            pass
-        try:
-            if k == 5 and v == d[5]:
-                bash5 = (s_num[k][v])
-        except (KeyError, IndexError):
-            pass
-        try:
-            if k == 6 and v == d[6]:
-                bash6 = (s_num[k][v])
-        except (KeyError, IndexError):
-            pass
-        try:
-            if k == 7 and v == d[7]:
-                bash7 = (s_num[k][v])
-        except (KeyError, IndexError):
-            pass
-        try:
-            if k == 8 and v == d[8]:
-                bash8 = (s_num[k][v])
-        except (KeyError, IndexError):
-            pass
-        try:
-            if k == 9 and v == d[9]:
-                bash9 = (s_num[k][v])
-        except (KeyError, IndexError):
-            pass
-    
+    bash1 = remove_bashes_none(bashes(1,d))
+    bash2 = remove_bashes_none(bashes(2,d))
+    bash3 = remove_bashes_none(bashes(3,d))
+    bash4 = remove_bashes_none(bashes(4,d))
+    bash5 = remove_bashes_none(bashes(5,d))
+    bash6 = remove_bashes_none(bashes(6,d))
+    bash7 = remove_bashes_none(bashes(7,d))
+    bash8 = remove_bashes_none(bashes(8,d))
+    bash9 = remove_bashes_none(bashes(9,d))
+        
+        
     mini_reading = [exp,exp11, sU, sU1, iM, iM1,hP, ln, lp,bd1, lb, cH, cH1, cH2, cH3, LEB,
                     Mrity,cha,btd1,bd22,p1,p11,p2,p22,p3,p33,p4,p44,year_now,py_num,karma,karma1,karma2]
-    '''
-    [exp,exp11, sU, sU1, iM, iM1,hP, ln, lp,bd1, lb, cH, cH1, cH2, cH3, LEB,
-    Mrity,cha,btd1,bd22,p1,peak,p11,p2,p22,p3,p33,p4,p44,year_now,py_num,karma,karma1,karma2]
-    '''
     
-    speed_reading = []
-    #[lp,A,B,C,D,E,F,G,H,I,Rall,R1all,R2all,R3all,R4all,R5all,R6all,R7all,p,bash1,bash2,bash3,bash4,bash5,
-    #                bash6,bash7,bash8,bash9,year_now]
+    speed_reading = [lp,A,B,C,D,E,F,G,H,I,Rall,R1all,R2all,R3all,R4all,R5all,R6all,R7all,p,bash1,bash2,bash3,bash4,bash5,
+                    bash6,bash7,bash8,bash9]
 
     full_reading = []
     
@@ -566,8 +503,3 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
 
     return mini_reading, speed_reading, full_reading, event
 ###########################
-'''
-{'uniday':uniday,'pday':pday,'year':year,'Gpina':Gpina,'Gcha':Gcha,'Gper_pi':Gper_pi,'Gper_cha':Gper_cha,
-             'k_day':k_day,'k_pday':k_pday,'one':one,'two':two,'thr':thr,'fou':fou,'fiv':fiv,'six':six,'sev':sev,
-             'eig':eig,'nin':nin,'year_now':year_now}
-'''
