@@ -23,6 +23,11 @@ bp = Blueprint('main', __name__)
 def index():
     return render_template('index.html',year_now=year_now)
 
+
+@bp.route('/about')
+def about():
+    return render_template('about.html',year_now=year_now)
+
 @bp.route('/profile', methods=['GET', 'POST'])
 @login_required
 def profile():

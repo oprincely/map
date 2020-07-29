@@ -80,21 +80,6 @@
             </div>
             </div>
         </nav>
-      
-      <!-- hero component Call Me Now: 0813 676 7311 | ASK YOUR QUESTION-->
-      <div class="hero">
-        <div class="hero-banner">
-          <h1 class="hero-title">discover yourself!</h1>
-          <p class="hero-text">
-            AWARENESS! is the first step in being able to overcome your limitations. 
-			While you remain unaware of the limitations, you are at the mercy of unconscious forces.
-          </p>
-          <a href="#featured" class="btn btn-white scroll-link">Call Now: 08136767311</a>
-		  <a href="{{ url_for('main.profile') }}" class="btn btn-white">ASK YOUR FREE QUESTION</a>
-        </div>
-      </div>
-    </header>
-    <!-- end of header  -->
     
     <!-- about section -->
     <section class="section about" id="about">
@@ -110,7 +95,7 @@
           <img
             src="{{ url_for('static', filename='images/adverchess714x308.jpg') }}"
             class="about-photo"
-            alt="awesome beach"
+            alt="about princely"
           />
         </div>
         <!-- about info -->
@@ -120,15 +105,18 @@
             The journey to self-discovery
           </p>
           <p>
-			I am a Tarot Master, Astrologer, Psychic Visionary. 
-			I learned through life experiences and the visions I received from Spirit and 
-			Ascended Masters that were assigned to me, which I met through my visions and dreams. 
-			I find life better, and I'm happier when things are nice and simple.
-			<!--
+			This is your moment of self-discovery.
+			Remember, each life is developed from its own <em>potentials</em> and each of us
+			can deal only with the potentials we possess.
+			You can only express, at best, the highest level of your own potentials.
+			It will not benefit you to compare yourself (or anyone else) with others.
+			People have their own potentials and are operating only within those contexts ... discover you potentials now.
+			
+		  <!--
            Remember, each life is developed from its own potentials and each 
 		   of us can deal only with the potentials we possess. You can only express, 
 		   at best, the highest level of your own potentials...
-            
+
             It will not benefit you
 		   to compare yourself (or anyone else) with others. People have their own
 		   potentials and are operating only within those contexts. If a certain 
@@ -146,192 +134,19 @@
 				power, the one power in you if discovered, will bring true happiness to you.
            -->
           </p>
-          <a href="{{ url_for('main.about') }}" class="btn-primary">read more</a>
+		  <p>
+			<strong>If a certain time have come into your life when things looks like they are 
+			not as you want and "YOU NEED ANSWERS" or may be you want to activate things, that what I will show you how to do. Just call me now </strong>
+			...<em>for the right direction on what to do, how to do it and when to do it.</em>
+		  </p>
+		  <p>To give a hint of what am capable, to learn how this <strong>"YEAR"</strong> will look, check out my <em>event of the year section</em> when you register.</p>
+          <a href="{{ url_for('main.profile') }}" class="btn-primary">ask your question here</a>
+		  
         </article>
       </div>
     </section>
     <!-- end of about section -->
-    <!-- services -->
-    <section class="section services" id="services">
-      <!-- title  -->
-      <div class="title-wrapper">
-        <h2 class="title">simple <span class="subtitle">truth</span></h2>
-      </div>
-      <!-- end of title  -->
-      <div class="section-center services-center">
-        <!-- single service -->
-        <article class="service">
-          <span class="service-icon"><i class="fas fa-yin-yang"></i></span>
-          <div class="service-info">
-            <h4 class="service-title">past</h4>
-            <p class="service-text">
-                When you learn from your past, you will be equipped for the present. Many a time, we forget that our past
-				occurred because of the wishes we were burn with. Weather the past is good or ugly, it's good to read from it.
-                
-            </p>
-          </div>
-        </article>
-        <!-- end of single service -->
-        <!-- single service -->
-        <article class="service">
-          <span class="service-icon"><i class="fas fa-torah"></i></span>
-          <div class="service-info">
-            <h4 class="service-title">present</h4>
-            <p class="service-text">
-                Yes, the present will always be according to the seed we sold in the past, so whatever your current present is, you are the one who made it.
-				Reading from the present will give us knowledge of how we lived in the past to make another past and present.
-            </p>
-          </div>
-        </article>
-        <!-- end of single service -->
-        <!-- single service -->
-        <article class="service">
-          <span class="service-icon"><i class="fas fa-star-of-david"></i></span>
-          <div class="service-info">
-            <h4 class="service-title">future</h4>
-            <p class="service-text">
-                The future is known to those who knows how to know, this is true because life is always a pattern and the pattern always, I said always repeat.
-            </p>
-          </div>
-        </article>
-        <!-- end of single service -->
-      </div>
-    </section>
-    <!-- end of services -->
-    
-   <!-- ######################################## -->
-    <!-- featured tours -->
-    <section class="section featured-tours" id="featured">
-      <!-- title  -->
-      <div class="title-wrapper">
-        <h2 class="title">featured <span class="subtitle">readings</span></h2>
-      </div>
-      <!-- end of title  -->
-      <!-- featured-center -->
-      <div class="section-center featured-center ">
-        <!-- single tour -->
-        <article class="tour-card">
-          <div class="tour-img-container">
-            <img src="{{ url_for('static', filename='images/Union_2048x.jpg') }}" class="tour-img" alt="" />
-            <p class="tour-date">Learn More</p>
-          </div>
-          <!-- tour footer -->
-          <div class="tour-footer">
-            <h4 class="tour-title">When will I meet my future husband/wife?</h4>
-            <!-- tour info -->
-            <div class="tour-info">
-              <p class="tour-country">
-                <span><i class="fas fa-map"></i></span> seek answer
-              </p>
-              <div class="tour-details">
-                <p>48 hours delivery</p>
-                <p>from ₦5,000</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <!-- end of single tour -->
-        <!-- single tour -->
-        <article class="tour-card">
-          <div class="tour-img-container">
-            <img src="{{ url_for('static', filename='images/tigershopify-copy-1296x512.jpg') }}" class="tour-img" alt="" />
-            <p class="tour-date">Learn More</p>
-          </div>
-          <!-- tour footer -->
-          <div class="tour-footer">
-            <h4 class="tour-title">Am I on a right path? Which would be a good path for me?</h4>
-            <!-- tour info -->
-            <div class="tour-info">
-              <p class="tour-country">
-                <span><i class="fas fa-map"></i></span> seek answer
-              </p>
-              <div class="tour-details">
-                <p>48 hours delivery</p>
-                <p>from ₦5,000</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <!-- end of single tour -->
-        <!-- single tour -->
-        <article class="tour-card">
-          <div class="tour-img-container">
-            <img src="{{ url_for('static', filename='images/SHIVA_KAILASH_2048x.jpg') }}" class="tour-img" alt="" />
-            <p class="tour-date">Learn More</p>
-          </div>
-          <!-- tour footer -->
-          <div class="tour-footer">
-            <h4 class="tour-title">When is right time for me to get abroad?</h4>
-            <!-- tour info -->
-            <div class="tour-info">
-              <p class="tour-country">
-                <span><i class="fas fa-map"></i></span> seek answer
-              </p>
-              <div class="tour-details">
-                <p>48 hours delivery</p>
-                <p>from ₦5,000</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <!-- end of single tour -->
-      </div>
-      <!-- end of tours center -->
-      <div class="tour-link">
-        <a href="#" class="btn-primary">all readings </a>
-      </div>
-    </section>
-    <!-- end of featured tours -->
-    
-    
-    <!-- gallery  -->
-    <section id="gallery" class="gallery">
-      <!-- title  -->
-      <div class="title-wrapper">
-        <h2 class="title">psychic <span class="subtitle ">readings</span></h2>
-      </div>
-      <!-- end of title  -->
-
-      <div class="gallery-center">
-        <!-- single item -->
-        <div class="gallery-img-container">
-          <img src="./images/tour-1.jpeg" class="gallery-img" alt="" />
-          <span class="gallery-icon"><i class="fas fa-search"></i></span>
-        </div>
-        <!-- end of single item -->
-        <!-- single item -->
-        <div class="gallery-img-container">
-          <img src="./images/tour-2.jpeg" class="gallery-img" alt="" />
-          <span class="gallery-icon"><i class="fas fa-search"></i></span>
-        </div>
-        <!-- end of single item -->
-        <!-- single item -->
-        <div class="gallery-img-container">
-          <img src="./images/tour-3.jpeg" class="gallery-img" alt="" />
-          <span class="gallery-icon"><i class="fas fa-search"></i></span>
-        </div>
-        <!-- end of single item -->
-        <!-- single item -->
-        <div class="gallery-img-container">
-          <img src="./images/tour-4.jpeg" class="gallery-img" alt="" />
-          <span class="gallery-icon"><i class="fas fa-search"></i></span>
-        </div>
-        <!-- end of single item -->
-        <!-- single item -->
-        <div class="gallery-img-container">
-          <img src="./images/tour-5.jpeg" class="gallery-img" alt="" />
-          <span class="gallery-icon"><i class="fas fa-search"></i></span>
-        </div>
-        <!-- end of single item -->
-        <!-- single item -->
-        <div class="gallery-img-container">
-          <img src="./images/tour-6.jpeg" class="gallery-img" alt="" />
-          <span class="gallery-icon"><i class="fas fa-search"></i></span>
-        </div>
-        <!-- end of single item -->
-      </div>
-    </section>
-    <!-- end of gallery  -->
+	
     <!-- contact -->
     <section class="section deals" id="deals">
       <!-- title  -->
@@ -339,6 +154,7 @@
         <h2 class="title">hot <span class="subtitle ">deals</span></h2>
       </div>
       <!-- end of title  -->
+	  
       <form>
         <div class="input-group">
           <input type="email" class="form-control" placeholder="your email" />
@@ -347,6 +163,7 @@
       </form>
     </section>
     <!-- end of contact -->
+	
     <!-- footer -->
     <footer class="section footer">
       <!-- footer links -->
