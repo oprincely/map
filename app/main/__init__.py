@@ -93,6 +93,13 @@ def askQuestion():
 
 #------------------Ask Question Ends----------------------#
 
+#------------------- Payment successful ----------------------#
+@bp.route('/paysuccess')
+@login_required
+def paysuccess():
+    return render_template('paysuccess.html')
+#------------------- Payment successful End ----------------------#
+
 #-------------------Numerology Readings----------------------#
 
 @bp.route('/event')
