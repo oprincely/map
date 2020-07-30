@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	
+	<meta name="viewport" content="width=device-width initial-scale=1" /><meta name="author" content="princely okwuego" />
+	<meta name="description" content= "To find answers to your inner heart desires, lies with spiritual awakening and 
+	this will help you open new horizons for love, money, wealth power - A happy life is here." />
+	<meta name="keywords" content="spiritual, self-discovery, numerology, numerology-reading, spiritual-help-and-healing, 
+	spiritual-counseling, astrology, astrology-reading spiritual-awakening." />
+	
+    <title>Princely.men</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <!-- goggle fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Poppins&amp;display=swap" rel="stylesheet" />
+    <!-- styles css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+  <body>
+    <!-- header  -->
+    <header id="home">
+      <!-- navbar -->
+        <nav class="navbar">
+            <div class="nav-center">
+              <!-- nav header -->
+              <div class="nav-header">
+                <h4 class="nav-logo">Princely<span class="subtitle">.men</span></h4>
+                <!--<img src="./images/logo.svg" class="nav-logo" alt="" />-->
+                <button
+                  type="button"
+                  class="nav-toggle"
+                  id="nav-toggle"
+                  aria-label="nav toggler "
+                >
+                  <i class="fas fa-bars"></i>
+                </button>
+              </div>
+              <!-- end of nav header -->
+              
+              <!-- nav links -->
+              <div class="nav-links" id="nav-links">
+                <!-- single link -->
+                <a href="{{ url_for('main.index') }}" class="scroll-link nav-link">
+                  home
+                </a>
+                <!-- end of single link -->
+                <!-- single link -->
+                <a href="{{ url_for('auth.login') }}" class=" scroll-link nav-link">
+                  login
+                </a>
+                <!-- end of single link -->
+                <!-- single link -->
+                <a href="{{ url_for('auth.register') }}" class="nav-link scroll-link">
+                  register
+                </a>
+                <!-- end of single link -->
+                <!-- single link 
+                <a href="#featured" class="nav-link scroll-link">
+                  astrology
+                </a>
+                <!-- end of single link -->
+                <!-- single link 
+                <a href="#gallery" class="nav-link scroll-link">
+                  tarot
+                </a>
+                end of single link -->
+              </div>
+              <!-- end of nav links -->
+              
+              <!-- nav social media icons -->
+              <!-- footer icons -->
+              <div class="nav-icons">
+                <a href="https://web.facebook.com/churchspiritual" target="_blank" class="nav-icon"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank" class="nav-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.twitter.com" target="_blank" class="nav-icon"><i class="fab fa-linkedin"></i></a>
+              <!-- end of nav social media icons -->
+            </div>
+            </div>
+        </nav>
+    
+    <!-- about section -->
+    <main role="main">
+		{% block content %}{% endblock %}
+	</main>
+    <!-- end of about section -->
+	
+    <!-- footer -->
+    <footer class="section footer">
+      <!-- footer links -->
+      <div class="footer-links">
+        <!--<a href="{{ url_for('main.index') }}" class="footer-link scroll-link">home</a>
+        <a href="{{ url_for('auth.login') }}" class="footer-link scroll-link">login</a>
+        <a href="{{ url_for('auth.register') }}" class="footer-link scroll-link">register</a>-->
+        <a href="#featured" class="footer-link scroll-link">astrology books</a>
+        <a href="#gallery" class="footer-link scroll-link" scroll-link>numerology books</a>
+
+      </div>
+      <!-- footer icons -->
+      <div class="footer-icons">
+        <a href="https://web.facebook.com/churchspiritual" target="_blank" class="footer-icon"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="https://www.twitter.com" target="_blank" class="footer-icon"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://www.twitter.com" target="_blank" class="footer-icon"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+      <p class="copyright">
+        copyright &copy; Princely.men
+        <span id="date"></span>. all rights reserved
+      </p>
+    </footer>
+    <!-- js -->
+	{% block scripts %}
+		<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+	{% endblock %}
+    
+  </body>
+</html>

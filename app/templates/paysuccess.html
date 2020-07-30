@@ -1,149 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Princely.men</title>
-    <!-- favicon -->
-    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon" />
-    <!-- font-awesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
-      crossorigin="anonymous"
-    />
-    <!-- goggle fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Poppins&amp;display=swap" rel="stylesheet" />
-    <!-- styles css -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
-  </head>
-  <body>
-    <!-- header  -->
-    <header id="home">
-      <!-- navbar -->
-        <nav class="navbar">
-            <div class="nav-center">
-              <!-- nav header -->
-              <div class="nav-header">
-                <h4 class="nav-logo">Princely<span class="subtitle">.men</span></h4>
-                <!--<img src="./images/logo.svg" class="nav-logo" alt="" />-->
-                <button
-                  type="button"
-                  class="nav-toggle"
-                  id="nav-toggle"
-                  aria-label="nav toggler "
-                >
-                  <i class="fas fa-bars"></i>
-                </button>
-              </div>
-              <!-- end of nav header -->
-              
-              <!-- nav links -->
-              <div class="nav-links" id="nav-links">
-                <!-- single link -->
-                <a href="#home" class="scroll-link nav-link">
-                  home
-                </a>
-                <!-- end of single link -->
-                <!-- single link -->
-                <a href="#about" class=" scroll-link nav-link">
-                  about
-                </a>
-                <!-- end of single link -->
-                <!-- single link -->
-                <a href="#services" class="nav-link scroll-link">
-                  numerology
-                </a>
-                <!-- end of single link -->
-                <!-- single link -->
-                <a href="#featured" class="nav-link scroll-link">
-                  astrology
-                </a>
-                <!-- end of single link -->
-                <!-- single link -->
-                <a href="#gallery" class="nav-link scroll-link">
-                  tarot
-                </a>
-                <!-- end of single link -->
-              </div>
-              <!-- end of nav links -->
-              
-              <!-- nav social media icons -->
-              <!-- footer icons -->
-              <div class="nav-icons">
-                <a href="https://web.facebook.com/churchspiritual" target="_blank" class="nav-icon"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.twitter.com" target="_blank" class="nav-icon"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.twitter.com" target="_blank" class="nav-icon"><i class="fab fa-linkedin"></i></a>
-              <!-- end of nav social media icons -->
-            </div>
-            </div>
-        </nav>
-    
-    <!-- about section -->
-    <section class="section about" id="about">
-      <!-- title  -->
-      <div class="title-wrapper">
-        <h2 class="title">payment <span class="subtitle">successful</span></h2>
-      </div>
-      <!-- end of title  -->
-      <!-- about-center -->
-      <div class="section-center about-center">
-        <!-- about img wrapper-->
-        <div class="about-img">
-          <img
-            src="{{ url_for('static', filename='img/ravebanner.png') }}"
-            class=""
-            alt="payment successful"
-          />
-        </div>
-        <!-- about info -->
-        <article class="about-info">
-          <h3></h3>
-          <p>
-            Your payment was successful and you will be credited in a moment. Thant you.
-          </p>
-          
-          <a href="{{ url_for('main.profile') }}" class="btn-primary">ask your question here</a>
-		  
-        </article>
-      </div>
-    </section>
-    <!-- end of about section -->
-	
-    <!-- footer -->
-    <footer class="section footer">
-      <!-- footer links -->
-      <div class="footer-links">
-        <a href="#home" class="footer-link scroll-link">home</a>
-        <a href="#about" class="footer-link scroll-link">about</a>
-        <a href="#services" class="footer-link scroll-link">numerology</a>
-        <a href="#featured" class="footer-link scroll-link">astrology</a>
-        <a href="#gallery" class="footer-link scroll-link" scroll-link>tarot</a>
+{% extends "base-fine.html" %}
 
-      </div>
-      <!-- footer icons -->
-      <div class="footer-icons">
-        <a href="https://web.facebook.com/churchspiritual" target="_blank" class="footer-icon"
-          ><i class="fab fa-facebook"></i
-        ></a>
-        <a href="https://www.twitter.com" target="_blank" class="footer-icon"
-          ><i class="fab fa-twitter"></i
-        ></a>
-        <a href="https://www.twitter.com" target="_blank" class="footer-icon"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-      </div>
-      <p class="copyright">
-        copyright &copy; Princely.men
-        <span id="date"></span>. all rights reserved
-      </p>
-    </footer>
-    <!-- js -->
-	{% block scripts %}
-		<script src="{{ url_for('static', filename='js/app.js') }}"></script>
-	{% endblock %}
-    
-  </body>
-</html>
+{% block content %}
+	<!-- about section -->
+	<section class="section about" id="about">
+	  <!-- title  -->
+	  <div class="title-wrapper">
+		<h2 class="title">payment <span class="subtitle">successful</span></h2>
+	  </div>
+	  <!-- end of title  -->
+	  <!-- about-center -->
+	  <div class="section-center about-center">
+		<!-- about img wrapper-->
+		<div class="about-img">
+		  <img
+			src="{{ url_for('static', filename='img/ravebanner.png') }}"
+			class=""
+			alt="payment successful"
+		  />
+		</div>
+		<!-- about info -->
+		<article class="about-info">
+		  <h3></h3>
+		  <p>
+			Your payment was successful and you will be credited in a moment. Thank you.
+		  </p>
+		  
+		  <a href="{{ url_for('main.profile') }}" class="btn-primary">ask your question here</a>
+		  
+		</article>
+	  </div>
+	</section>
+	<!-- end of about section -->
+{% endblock %}
