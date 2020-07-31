@@ -20,7 +20,7 @@ def transit():
         btm = int(request.form['month'])
         bty = int(request.form['year'])
         
-        print(bty)
+        #print(bty)
         
         transit_day = int(request.form['tday'])
         transit_month = int(request.form['tmonth'])
@@ -50,15 +50,12 @@ def transit():
         return render_template('transit/transit.html',f=f,f1=f1,f2=f2)
     return render_template('transit/transit.html')
     
-@bp.route('/eph')
-def ephemeris():    
-    call_write_eph_again(202,0)
-    return 'done'
+@bp.route('/eph', methods=('GET', 'POST'))
+def eph():
+    if request.method == 'POST':
+        year = int(request.form['year'])
+        start_month = int(request.form['start'])
+        call_write_eph_again(year,start_month)
+        return 'done'
+    return render_template('transit/eph.html')
 
-@bp.route('/open_file')
-def open_file():
-    #{{ url_for('static', filename='ephemeris/readme.txt') }}
-    with open('./b/readme.txt','r') as f:
-        contexts = f.readlines()
-        print(contexts)
-    return contexts

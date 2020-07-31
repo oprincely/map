@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+    <!--<style>
+	    
+	</style>-->
+    
+</head>
+
+<body>
+    
+	
+	<div class="container1">
+	    <h2>User</h2>
+        <i><h5>PLEASE FILL OUT CAREFULLY - INCORECT INFORMATION WILL GIVE INCORRECT REPORT READINGS!</h5></i>
+    
+        <!--<i><h5>BIRTH NAME: Enter exactly as listed in your birth certificate, even if you have never used it.
+        Do not enter space, hyphens, jr., III, etc</h5></i>-->
+	    <form action="{{ url_for('transit.eph') }}" method="POST">
+	        
+        	<p>Enter Ephemeris</p>
+        	
+        	<div class="columns">
+        	    <div class="col">
+        	      <p><input type="text" name="year" id="year" placeholder="enter year" required /></p>
+        	    </div>
+        	    <div class="col">
+        	        <p><input type="text" name="start" id="start" placeholder=" start month" required /></p>
+        	    </div>
+        	</div>
+        
+        	<p><input type="submit" value="submit" /></p>
+	    </form>
+	</div>
+</body>
+
+</html>
