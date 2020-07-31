@@ -425,23 +425,21 @@ changes of plans.""",
 ####################################################################################
 
 #Moon and Neptune 441
-"moon_to_natnep":"""The awakening of aesthetics, special sensitivities, or the spirit.
-Subconscious awareness emerges, refinement or bewilderment.""",
-"nep_to_natmoon":"""A delicate relationship; the man trying to support the woman;
+"moon_to_natnep":"""The awakening of aesthetics, special sensitivities, or the spirit.""",
+"nep_to_natmoon":"""Subconscious awareness emerges, refinement or bewilderment.""",
+"sun_moon/nep":"""A delicate relationship; the man trying to support the woman;
 illuminated aesthetics; the importance of the spirit.""",
-"sun_moon/nep":"""Fantasy; imagination; remembrance of things past; saying one
-thing and meaning another; vagueness.""",
-"merc_moon/nep":"""Highly romanticized feelings oflove; art appreciation; being
+"merc_moon/nep":"""Fantasy; imagination; remembrance of things past; saying one thing and meaning another; vagueness.""",
+"ven_moon/nep":"""Highly romanticized feelings oflove; art appreciation; being
 deceived through the emotions.""",
-"ven_moon/nep":"""Personal magic; hypersensitivity; weakened system.""",
-"mars_moon/nep":"""Grand imaginings and plans; artistic interests and success.""",
-"jup_moon/nep":"""sense of suffering under the yoke; hard work to restructure
-ambition; shaking off indolence.""",
+"mars_moon/nep":"""Personal magic; hypersensitivity; weakened system.""",
+"jup_moon/nep":"""Grand imaginings and plans; artistic interests and success.""",
+"sat_moon/nep":"""sense of suffering under the yoke; hard work to restructure ambition; shaking off indolence.""",
 "plu_moon/nep":"""Temperamental impulse; emotional unpredictability. Emotional
 shock, upheaval, change.""",
-"nod_moon/nep":"""he projection of passivity or confusion.""",
-"asc_moon/":"""The feeling of having lost ego definition.""",
-"asc_moon/nep":"""Artistic talent possible; artsy temperament; imagination can pay
+"nod_moon/nep":"""The projection of passivity or confusion.""",
+"asc_moon/nep":"""The feeling of having lost ego definition.""",
+"mc_moon/nep":"""Artistic talent possible; artsy temperament; imagination can pay
 off significantly; emotional concerns from the early home life
 come to consciousness.""",
 
@@ -1682,9 +1680,9 @@ others; being let down by occurrences; undependability.""",
 #############################################################################
 
 #Neptune and Ascendant 493
-"nep _to_natasc":"""AS High sensitivity, impressionability; spiritual projection; loss of
+"nep_to_natasc":"""High sensitivity, impressionability; spiritual projection; loss of
 ego.""",
-"asc _to_natnep":"""Gaining acceptance for one's specialness.""",
+"asc_to_natnep":"""Gaining acceptance for one's specialness.""",
 "sun_nep/asc":"""Projection of aesthetics, creativity; the arts as a profession;
 sensitivities are used for gain, or there is discomfort and
 frustration.""",
@@ -1711,7 +1709,7 @@ the identity somehow gets lost in situations through
 disregard or through drugs or alcohol in emotional defensiveness;
 possible success through the arts, imagination, aesthetics;
 peculiar states in the early home life; job vagaries for the adult.""",
-"mc _to_natnep":"""Accentuation of creativity on the job; disruption in the home
+"mc_to_natnep":"""Accentuation of creativity on the job; disruption in the home
 life; being pushed around; feeling lost; "losing it.""",
 "sun_nep/mc":"""Illumination of aesthetics and creativity on the job or in the
 social life; possible discontent with life position and the creativity
@@ -1737,7 +1735,7 @@ insecurity.""",
 ############################################################################
 
 #Pluto and Lunar Node 495
-"plu _to_natlunarnode":"""Identification with a large group; making very important
+"plu_to_natlunarnode":"""Identification with a large group; making very important
 contacts; a life-significant relationship.""",
 "lunarnode _to_natplu":"""New associations of significance and importance.""",
 "sun_plu/lunarnod":"""The urge to impose one's will on others.""",
@@ -1757,10 +1755,10 @@ success through others.""",
 #######################################################################
 
 #Pluto and Ascendant 496
-"plu _to_natasc":"""Extremely important time oflife: dramatic changes of
+"plu_to_natasc":"""Extremely important time oflife: dramatic changes of
 perspective are possible; identity transformation; geographic
 relocation; taking command of things; a life milestone.""",
-"asc _to_natplu":"""The use of personal power and persuasion.""",
+"asc_to_natplu":"""The use of personal power and persuasion.""",
 "sun_plu/asc":"""Seeing a whole new avenue for development and success; "full
 steam ahead.""",
 "moon_plu/asc":"""Strong reaction to stimuli; emotional eruption.""",
@@ -1781,12 +1779,12 @@ vision to fulfill; embarrassment to transcend.""",
 ############################################################################
 
 #Pluto and Midheaven 497
-"plu _to_natmc":"""Extremely important time of life; dramatic changes of
+"plu_to_natmc":"""Extremely important time of life; dramatic changes of
 perspective are practically assured; identity transformation
 is possible; job adjustment is major; professional developments
 are life significant; parental adjustments in the early home are
 personally significant; separations; a life-milestone.""",
-"mc _to_natplu":"""Recognition and the ultimate power position are probable;
+"mc_to_natplu":"""Recognition and the ultimate power position are probable;
 past mistakes can be opened to view and threaten ruin; change
 of status.""",
 "sun_plu/asc":"""The potential for major life change is illuminated; wanting to spread one's wings and fly;
@@ -1810,7 +1808,7 @@ run amuck.""",
 
 #Lunar Node and Ascendant 498
 "nod_to_natasc ":"""Personal relationships.""",
-"asc _to_natnod":"""Personal relationships.""",
+"asc_to_natnod":"""Personal relationships.""",
 "sun_nod/asc":"""Helpful social contacts; gregariousness; an entertaining
 personality.""",
 "moon_nod/asc":"""Emotional bonds with others; sympathy; caring for others.""",
@@ -1830,22 +1828,22 @@ interests in the paranormal; impressionability.""",
 ######################################################################################
 
 #Lunar Node and Midheaven 499
-"lunarnode_to_natmc ":"""Being recognized; meeting or marriage.""",
-"mc_to_natlunarnode ":"""Being recognized; meeting or marriage.""",
-"sun_lunarnode/mc":"""The importance of contacts and friends for success; easy social
+"nod_to_natmc ":"""Being recognized; meeting or marriage.""",
+"mc_to_natnod ":"""Being recognized; meeting or marriage.""",
+"sun_nod/mc":"""The importance of contacts and friends for success; easy social
 ascendancy.""",
-"moon_lunarnode/mc":"""The challenge and fulfillment ofsharing emotions with others.""",
-"merc_lunarnode/mc":"""The exchange of ideas for personal gain.""",
-"ven_lunarnode/mc":"""Sociability; congeniality; talking about feelings to someone.""",
-"mars_lunarnode/mc":"""Getting things done together; partnership work.""",
-"jup_lunarnode/mc":"""Social life and entertainment; church groups; togetherness.""",
-"ura_lunarnode/mc":"""Being comfortable in the loner's position; being the serious person in the group; respect;
+"moon_nod/mc":"""The challenge and fulfillment ofsharing emotions with others.""",
+"merc_nod/mc":"""The exchange of ideas for personal gain.""",
+"ven_nod/mc":"""Sociability; congeniality; talking about feelings to someone.""",
+"mars_nod/mc":"""Getting things done together; partnership work.""",
+"jup_nod/mc":"""Social life and entertainment; church groups; togetherness.""",
+"ura_nod/mc":"""Being comfortable in the loner's position; being the serious person in the group; respect;
 conservatism.""",
-"sat_lunarnode/mc":"""The sudden experience; possible rashness; being seen as "zany";
+"sat_nod/mc":"""The sudden experience; possible rashness; being seen as "zany";
 solving problems innovatively with others.""",
-"nep_lunarnode/mc":"""The tendency to impracticality in dealing with others.""",
-"plu_lunarnode/mc":"""Leadership; success.""",
-"asc_lunarnode/mc":"""Harmony.""",
+"nep_nod/mc":"""The tendency to impracticality in dealing with others.""",
+"plu_nod/mc":"""Leadership; success.""",
+"asc_nod/mc":"""Harmony.""",
 
 #####################################################################################
 
