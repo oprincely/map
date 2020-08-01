@@ -10,6 +10,8 @@ from app.genum import generate_numbers
 from app.hello import contains_y,jeff, life_number,your_personal,real,hearts_d,image_num,bddict,year_num,lesson,debt
 from app.hello import check_karma,peak,digit_sum,b_t_ms
 from app.hello1 import missing_numbers
+from app.destiny_num import destiny,birthForce
+
 from app.auth.forms import NumberOfQuestions,AskQuestions
 
 x = datetime.datetime.now()
@@ -176,3 +178,24 @@ def reading1():
                            missing_numbers=missing_numbers,p=r[18],bash1=r[19],bash2=r[20],bash3=r[21],
                            bash4=r[22],bash5=r[23],bash6=r[24],bash7=r[25],bash8=r[26],bash9=r[27],year_now=year_now)
 
+    
+@bp.route('/fullreading', methods=['GET', 'POST'])
+@login_required
+def fullreading():
+    username = current_user.username
+    user = User.query.filter_by(username=username).first()
+    
+    if user.username == 'admin':
+        FN = user.firstname
+        MN = user.middlename
+        LN = user.lastname
+        
+        btd = user.dob[0:2] #1982
+        btm = user.dob[3:5] #02
+        bty = user.dob[6:10] #22
+        
+        r = generate_numbers(FN,MN,LN,btd,btm,bty)[2]
+        
+        return render_template('transit/fullreading.html',
+                               exp=r[0],exp11=r[1],ln=r[2], lp=r[3],year_now=r[4],destiny=destiny,birthForce=birthForce)
+    return 'ACCESS DENIED'

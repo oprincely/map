@@ -1,0 +1,63 @@
+{% extends "base-muritum.html" %}
+
+{% block content %}
+    <style>
+        h4 {color: #008CBA;}
+        p3 {color: #ff6347;}
+        p4 {color: #0000ff;}
+    </style>
+    
+    <h3>
+        Your Destiny Number
+    </h3>
+
+    <i>
+        This is an indicator of your inborn abilities and talents (we all have them!)
+    </i>
+
+       <h4>Your Destiny Number is {{ exp }}/{{ exp11}}<br></h4>
+
+        {% for k, v in destiny.items()%}
+        {% if k == exp11 %}
+        <p>{{ v[0] }}</p>
+        <p>{{ v[1] }}</p>
+        <p>{{ v[2] }}</p>
+        <p>{{ v[3] }}</p>
+        <p>{{ v[4] }}</p>
+        <p>{{ v[5] }}</p>
+        <p>{{ v[6] }}</p>
+        <p>{{ v[7] }}</p>
+        <p>{{ v[8] }}</p>
+        {% endif %}
+        {% endfor %}
+        
+    <hr>
+    
+    <h3>
+        Your Life Path Number
+    </h3>
+
+    <i>
+        This number indicates the focus of your life in Numerological terms.
+        Numerologists who believe in re-incarnation say that the number represents
+        the main lesson which you must learn in this life.
+    </i>
+        <h4>Your Life Path is {{ ln }}/{{ lp }}<br></h4>
+
+        {% for k, v in birthForce.items()%}
+        {% if k == lp %}
+        <p>{{ v[0] }}</p>
+        <p>{{ v[1] }}</p>
+        <p>{{ v[2] }}</p>
+        <p>{{ v[3] }}</p>
+        <p>{{ v[4] }}</p>
+        <p>{{ v[5] }}</p>
+        <p>{{ v[6] }}</p>
+        <p>{{ v[7] }}</p>
+        <p>{{ v[8] }}</p>
+        {% endif %}
+        {% endfor %}
+        
+    <hr>
+
+{% endblock %}
