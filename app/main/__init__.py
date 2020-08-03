@@ -10,7 +10,7 @@ from app.genum import generate_numbers
 from app.hello import contains_y,jeff, life_number,your_personal,real,hearts_d,image_num,bddict,year_num,lesson,debt
 from app.hello import check_karma,peak,digit_sum,b_t_ms
 from app.hello1 import missing_numbers
-from app.destiny_num import destiny,birthForce
+from app.destiny_num import destiny,birthForce,heart_desire
 
 from app.auth.forms import NumberOfQuestions,AskQuestions
 
@@ -197,5 +197,6 @@ def fullreading():
         r = generate_numbers(FN,MN,LN,btd,btm,bty)[2]
         
         return render_template('transit/fullreading.html',
-                               exp=r[0],exp11=r[1],ln=r[2], lp=r[3],year_now=r[4],destiny=destiny,birthForce=birthForce)
+                               exp=r[0],exp11=r[1],ln=r[2], lp=r[3],year_now=r[4],sU=r[5], sU1=r[6],
+                               destiny=destiny,birthForce=birthForce,heart_desire=heart_desire)
     return 'ACCESS DENIED'

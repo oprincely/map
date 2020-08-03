@@ -1404,22 +1404,22 @@ to demands of the environment totally.""",
 hard, hard work.""",
 "plu_to_natsat":"""The threat of loss in any area of life; potential self-destruction;
 hard, hard work.""",
-"sun_sat/nep":"""Threat of loss; hard work; enforced change; separation; potential
+"sun_sat/plu":"""Threat of loss; hard work; enforced change; separation; potential
 ill health.""",
-"moon_sat/nep":"""Emotional coldness; renunciation; giving up giving.""",
-"merc_sat/nep":"""Depression; morbid thoughts; deep study; stark realism.""",
-"ven_sat/nep":"""Troubled by the loss of love.""",
-"mars_sat/nep":"""Fighting battles to keep life going; enormous undercurrent of
+"moon_sat/plu":"""Emotional coldness; renunciation; giving up giving.""",
+"merc_sat/plu":"""Depression; morbid thoughts; deep study; stark realism.""",
+"ven_sat/plu":"""Troubled by the loss of love.""",
+"mars_sat/plu":"""Fighting battles to keep life going; enormous undercurrent of
 frustration; a gun with a cork in its barrel.""",
-"jup_sat/nep":"""Trouble with authority; adoption of the austere; staying out
+"jup_sat/plu":"""Trouble with authority; adoption of the austere; staying out
 of trouble; trying to save what's left.""",
-"ura_sat/nep":"""Brutal efforts to start a new order; an attack, regardless of
+"ura_sat/plu":"""Brutal efforts to start a new order; an attack, regardless of
 potential losses.""",
-"nep_sat/nep":"""Being doubted; not being seen for who one is; unstable life
+"nep_sat/plu":"""Being doubted; not being seen for who one is; unstable life
 situation because of the inexplicable, because offear.""",
-"nod_sat/nep":"""Suffering shared with others.""",
-"asc_sat/nep":"""Sadness; mourning.""",
-"mc_sat/nep":"""Hard, hard work to rise again from difficulty; major separation
+"nod_sat/plu":"""Suffering shared with others.""",
+"asc_sat/plu":"""Sadness; mourning.""",
+"mc_sat/plu":"""Hard, hard work to rise again from difficulty; major separation
 as a last resort.""",
 
 ######################################################################################
@@ -1579,22 +1579,22 @@ and people approving the motion.""",
 #Uranus and Ascendant 489
 "ura_to_natasc":"""AS Major new start; high probability of geographic relocation.""",
 "asc_to_natura":"""Showcase opportunity for individuality; "show off time.""",
-"sun_ura/asc ":"""Show of restlessness; anxiety about putting one's best foot
+"sun_ura/asc":"""Show of restlessness; anxiety about putting one's best foot
 forward; hoping for success.""",
-"moon_ura/asc ":"""Emotionalism spills into view; needs sympathy, support, and
+"moon_ura/asc":"""Emotionalism spills into view; needs sympathy, support, and
 approval.""",
-"merc_ura/asc ":"""Nervous planning; fault finding; sharp witted; caustic.""",
-"ven_ura/asc ":"""Being sexy; showing oneself in exciting fashion; emphasizing
+"merc_ura/asc":"""Nervous planning; fault finding; sharp witted; caustic.""",
+"ven_ura/asc":"""Being sexy; showing oneself in exciting fashion; emphasizing
 individual "new looks" of any kind.""",
-"mars_ura/asc ":"""Making things happen raucously; devil-may-care attitude.""",
-"jup_ura/asc ":"""Working feverishly to earn recognition.""",
-"sat_ura/asc ":"""The clash of controls and the avant-garde; indecision; airing
+"mars_ura/asc":"""Making things happen raucously; devil-may-care attitude.""",
+"jup_ura/asc":"""Working feverishly to earn recognition.""",
+"sat_ura/asc":"""The clash of controls and the avant-garde; indecision; airing
 dilemmas.""",
-"nep_ura/asc ":"""Strange experiences may be revealed; emotions are shared;
+"nep_ura/asc":"""Strange experiences may be revealed; emotions are shared;
 a feeling of martyrdom can be exploited.""",
-"plu_ura/asc ":"""Force; commanding success.""",
-"nod_ura/asc ":"""Getting like-minded people on board.""",
-"mc_ura/asc ":"""Major change potential in job status, with the parents, or
+"plu_ura/asc":"""Force; commanding success.""",
+"nod_ura/asc":"""Getting like-minded people on board.""",
+"mc_ura/asc":"""Major change potential in job status, with the parents, or
 through the spouse's job position or family.""",
 
 #####################################################################################
@@ -1607,23 +1607,23 @@ in practically every department oflife; individuality reigns;
 geographic relocation.""",
 "mc_to_natura":"""Brings the power of selfhood forward; assertion is recognized;
 strong developmental tensions for job and social position.""",
-"sun_ura/mc ":"""Strong illumination of individuality; getting what one deserves;
+"sun_ura/mc":"""Strong illumination of individuality; getting what one deserves;
 unrest; eagerness for achievement; nervous drive.""",
-"moon_ura/mc ":"""Prominent shift of direction for emotional fulfillment;
+"moon_ura/mc":"""Prominent shift of direction for emotional fulfillment;
 excitement about making a new bid for life advancement.""",
-"merc_ura/mc ":"""Nervous excitability in expectation of change; new ideas.""",
-"ven_ura/mc ":"""Possible promiscuity; feelings are exposed; creativity; eagerness
+"merc_ura/mc":"""Nervous excitability in expectation of change; new ideas.""",
+"ven_ura/mc":"""Possible promiscuity; feelings are exposed; creativity; eagerness
 to please.""",
-"mars_ura/mc ":"""Temperamental drive for ego recognition; argumentative and
+"mars_ura/mc":"""Temperamental drive for ego recognition; argumentative and
 challenging; rash action; upping the tempo.""",
-"jup_ura/mc ":"""Optimistic outlook for success; recognition; publicity.""",
-"sat_ura/mc ":"""Possible rebuff in one's bid for recognition; having to temper
+"jup_ura/mc":"""Optimistic outlook for success; recognition; publicity.""",
+"sat_ura/mc":"""Possible rebuff in one's bid for recognition; having to temper
 idiosyncratic behavior; pull back for gain.""",
-"nep_ura/mc ":"""Creativity; expecting recognition; withdrawal if frustrated.""",
-"plu_ura/mc ":"""Extraordinary power-drive to win success and command
+"nep_ura/mc":"""Creativity; expecting recognition; withdrawal if frustrated.""",
+"plu_ura/mc":"""Extraordinary power-drive to win success and command
 attention; overexertion threatens the nervous system.""",
-"nod_ura/mc ":"""Climbing over others to fulfill one's own needs for recognition.""",
-"asc_ura/mc ":"""Sudden adjustments to much of the life; change that has
+"nod_ura/mc":"""Climbing over others to fulfill one's own needs for recognition.""",
+"asc_ura/mc":"""Sudden adjustments to much of the life; change that has
 far-reaching significance; "this is it" for years to come.""",
 
 ####################################################################
@@ -1635,26 +1635,26 @@ concerns about death matters; creative enterprise.""",
 "plu_to_natnep":"""Enormous intensification of sensory sensitivity; possible loss of
 the frame of reality; subterfuge; possible introduction of drugs
 or alcohol dysftmctionally.""",
-"sun_nep/plu ":"""Creative enterprise; possible drain on the system through
+"sun_nep/plu":"""Creative enterprise; possible drain on the system through
 overindulgences; rationalization reigns over realism.""",
-"moon_nep/plu ":"""Extreme creativity possible; high sensitivity; big mood sweeps
+"moon_nep/plu":"""Extreme creativity possible; high sensitivity; big mood sweeps
 and fluctuations; anxiety about being appreciated.""",
-"merc_nep/plu ":"""Preoccupation with out-of-the-world thoughts and experiences;
+"merc_nep/plu":"""Preoccupation with out-of-the-world thoughts and experiences;
 communications are other than they appear; deception as a
 strategy; nervous irritability; loss of centering.""",
-"ven_nep/plu ":"""Creativity; respect for mysticism; intense love fantasy; sensuality;
+"ven_nep/plu":"""Creativity; respect for mysticism; intense love fantasy; sensuality;
 overindulgence with anything pleasant.""",
-"mars_nep/plu ":"""Great personal magnetism to set things right or rejection of
+"mars_nep/plu":"""Great personal magnetism to set things right or rejection of
 actions because of misunderstanding.""",
-"jup_nep/plu ":"""In love with love, with life; feeling at one with the way things
+"jup_nep/plu":"""In love with love, with life; feeling at one with the way things
 should be; a 'Thank God' position; possibly religiousness.""",
-"sat_nep/plu ":"""Grief, weakness, torment.""",
-"nep_nep/plu ":"""Disruption to gain recognition; adventurous ego thrust; courage;
+"sat_nep/plu":"""Grief, weakness, torment.""",
+"nep_nep/plu":"""Disruption to gain recognition; adventurous ego thrust; courage;
 making waves to get to shore; possibly aberrant behavior.""",
-"nod_nep/plu ":"""Sharing otherworldliness and curiosity with others; group study
+"nod_nep/plu":"""Sharing otherworldliness and curiosity with others; group study
 projects.""",
-"asc_nep/plu ":"""The mystical air flavors personal image.""",
-"mc_nep/plu ":"""Profit through the occult or the spiritual; recognition of
+"asc_nep/plu":"""The mystical air flavors personal image.""",
+"mc_nep/plu":"""Profit through the occult or the spiritual; recognition of
 idiosyncrasies.""",
 
 ##################################################################################
@@ -1662,7 +1662,7 @@ idiosyncrasies.""",
 #Neptune and Lunar Node 492
 "nep_to_natnod":"""Possible breakdown of relationships; sense of being out of the
 group, or bound together through spiritual sharing.""",
-"nod _to_natnep":"""Meeting with others interested in paranormal dimensions.""",
+"nod_to_natnep":"""Meeting with others interested in paranormal dimensions.""",
 "sun_nep/nod":"""Seeking to establish contacts with others through artistic or
 spiritual exchange; or else feeling misunderstood.""",
 "moon_nep/nod":"""High sensitivity; feeling ostracized; being misunderstood.""",
@@ -1735,22 +1735,22 @@ insecurity.""",
 ############################################################################
 
 #Pluto and Lunar Node 495
-"plu_to_natlunarnode":"""Identification with a large group; making very important
+"plu_to_natnod":"""Identification with a large group; making very important
 contacts; a life-significant relationship.""",
-"lunarnode _to_natplu":"""New associations of significance and importance.""",
-"sun_plu/lunarnod":"""The urge to impose one's will on others.""",
-"moon_plu/lunarnod":"""Reaching for the big picture; making the big scene emotionally;
+"nod_to_natplu":"""New associations of significance and importance.""",
+"sun_plu/nod":"""The urge to impose one's will on others.""",
+"moon_plu/nod":"""Reaching for the big picture; making the big scene emotionally;
 ambition is magnified, or there is too much fear for any action.""",
-"merc_plu/lunarnod":"""Thinking big; hearing the grass grow; intellectual dominance.""",
-"ven_plu/lunarnod":"""Important love contact; possible tragic melodrama.""",
-"mars_plu/lunarnod":"""Exhibition ofpersonal power; tyranny.""",
-"jup_plu/lunarnod":"""Forcing oneself into a power position; self-promotion; attaining
+"merc_plu/nod":"""Thinking big; hearing the grass grow; intellectual dominance.""",
+"ven_plu/nod":"""Important love contact; possible tragic melodrama.""",
+"mars_plu/nod":"""Exhibition ofpersonal power; tyranny.""",
+"jup_plu/nod":"""Forcing oneself into a power position; self-promotion; attaining
 success through others.""",
-"ura_plu/lunarnod":"""Potential loss through others; the end of relationships.""",
-"sat_plu/lunarnod":"""Intense need for recognition; publicity; crush the opposition.""",
-"nep_plu/lunarnod":"""The power of the half-truth; deception as a tool; win at any cost.""",
-"asc_plu/lunarnod":"""The need for influence.""",
-"mc_plu/lunarnod":"""Associations with others are the sine qua non of success.""",
+"ura_plu/nod":"""Potential loss through others; the end of relationships.""",
+"sat_plu/nod":"""Intense need for recognition; publicity; crush the opposition.""",
+"nep_plu/nod":"""The power of the half-truth; deception as a tool; win at any cost.""",
+"asc_plu/nod":"""The need for influence.""",
+"mc_plu/nod":"""Associations with others are the sine qua non of success.""",
 
 #######################################################################
 

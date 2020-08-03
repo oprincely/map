@@ -59,5 +59,30 @@
         {% endfor %}
         
     <hr>
+	
+	<h3>
+        Your Heart Desire Number
+    </h3>
+
+    <i>
+        ...
+    </i>
+        <h4>Your Heart Desire is {{ sU1 }}/{{ sU}}<br></h4>
+
+        {% for k, v in heart_desire.items()%}
+        {% if k == sU %}
+        <p>{{ v[0] }}</p>
+        <p>{{ v[1] }}</p>
+        <p>{{ v[2] }}</p>
+        <p>{{ v[3] }}</p>
+        <p>{{ v[4] }}</p>
+        <p>{{ v[5] }}</p>
+        <p>{{ v[6] }}</p>
+        <p>{{ v[7] }}</p>
+        <p>{{ v[8] }}</p>
+        {% endif %}
+        {% endfor %}
+        
+    <hr>
 
 {% endblock %}

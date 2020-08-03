@@ -758,3 +758,66 @@ Wear opal, canary, or tan while you work.
 """],
 9:[]
 }
+
+heart_desire = {
+6:[],
+7:["""
+You are naturally selective and discriminating, for deep in 
+your heart there is a desire for the best life has to offer. A keen 
+sense of perfection governs your life and all your undertakings. 
+You aim high and strive for the perfect result. You should 
+never lose sight of your ideals but sometimes you reach for a 
+goal that is almost unattainable, thus making it difficult for 
+others to understand you or to live up to your expectations of 
+them. Your sense of the "fitness of things" is tremendously 
+strong and you derive your greatest satisfaction from being 
+sure everything is just right.""",
+""" You do not regard any effort to be 
+accurate and certain as a loss of time. You greatly desire knowledge and
+want to know the reason why. You are not a person 
+to accept things at their surface value, but seek to prove, test, 
+and understand the motives, causes, and underlying principles 
+before you accept them or make them a part of your life. Your 
+ideals are well defined and, if possible, you refuse to accept 
+anything-friendship, opportunity, or environment - if it does 
+not measure up to your standards.""","""
+
+You have a deep intuitive feeling, and even though you 
+may seem to be analytical and mental, you sense and feel hidden
+values, higher principles, spiritual and occult standards 
+with which to measure life. You should accept them and use 
+them in your everyday affairs. If you do they will make you 
+outstanding, if not to the world, at least in your circle of activity,
+enabling you to uncover and develop the hidden laws of 
+life for the improvement of humanity. Your desire for the best 
+makes you particular about your associations. You are often 
+very quiet in manner and have a great deal of pride.""","""
+From time 
+to time you experience the desire to get away from the jazz and 
+excitement of the world, to live a life of solitude and serenity 
+on mental horizons. No matter how active your life is, you 
+should daily make it a practice to take time out to rest, relax 
+and to be alone, to think, study and meditate, especially when 
+you have a serious problem to meet. By so doing you will make 
+fewer mistakes and discover your inner soul guidance.""","""
+Your natural reserve may cause people to consider you 
+distant, proud and hard to meet. Your faculty of analysis may 
+make you appear cool, calculating and suspicious. So be careful
+of your actions and allow others to discover the really generous spirit you have hidden beneath a seemingly cool manner, 
+especially in love and marriage. You can be exacting and demand
+explanations from others which may bring about misunderstanding and separation. When others misunderstand you, 
+conscientiously seek to overcome the misunderstanding. At 
+heart, you are really a visionary person and you love the odd, 
+the mysterious and the unusual. ""","""Keep a broad faith in life itself 
+and in people, but do not permit your quiet, reserved nature to 
+suppress you. Go forth with dignity and pride, but be kind and 
+forgiving and value your urge to get the best out of life. Let he 
+charm and distinction and cleverness which you inherently possess lift you to a specialized and outstanding position in life. 
+When you realize your desires, be sure to share with others, if 
+you want to find true happiness.""","""
+
+Wear purple, brick, or pearl as part of your accessories to 
+win friends."""
+    ],
+    
+}

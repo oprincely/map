@@ -496,7 +496,7 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
     speed_reading = [lp,A,B,C,D,E,F,G,H,I,Rall,R1all,R2all,R3all,R4all,R5all,R6all,R7all,p,bash1,bash2,bash3,bash4,bash5,
                     bash6,bash7,bash8,bash9]
 
-    full_reading = [exp,exp11,ln,lp,year_now]
+    full_reading = [exp,exp11,ln,lp,year_now,sU,sU1]
     
     event = [exp11,sU,iM1,lp,Mrity,phy,men,emo,intt,one,two,thr,fou,fiv,six,sev,eig,nin,ps,cH,cH1,cH2,cH3,
              Essence,pynum,uniynum,pina,rc,pmonth,uniday,pday,Gpina,Gcha,Gper_pi,Gper_cha,k_day,k_pday,year_now]
