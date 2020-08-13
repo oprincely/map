@@ -1,7 +1,7 @@
 {% extends 'bootstrap/base.html' %}
 
 {% block title %}
-    {% if title %}{{ title }} - Princely.men{% else %}Welcome to Minimis AstroPsychic{% endif %}
+    {% if title %}{{ title }} - Princely.men{% else %}Welcome to Princely.men{% endif %}
 {% endblock %}
 
 {% block navbar %}
@@ -20,6 +20,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url_for('main.index') }}">Home</a></li>
                     <li><a href="">Explore</a></li>
+					<!-- <li><a href="{{ url_for('users.explore') }}">Explore</a></li>-->
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     {% if current_user.is_anonymous %}
@@ -47,4 +48,5 @@
         {# application content needs to be provided in the app_content block #}
         {% block app_content %}{% endblock %}
     </div>
+	
 {% endblock %}

@@ -821,3 +821,511 @@ win friends."""
     ],
     
 }
+
+personality = {
+5:[],
+6:["""
+You often fails to give importance to your looks or clothing.
+The bearing is generally sympathetic and inspires confidence the motherly and fatherly type.
+Your personality is not style-conscious as a rule but you enjoy good clothes of good material.
+You like to be comfortable in easy-to-wear clothing. You should always be well dressed and give thought to the way
+you look and dress. You cannot afford to be overweight.""",
+    ],
+}
+
+reality = {
+2:[],
+3:["""
+The opportunity for a rich, full life is present, the privilege 
+of true self-expression, perhaps greater than at any time during 
+the life. Even the character who has not previously been able to 
+express the thoughts and feelings in words, music, gaiety or 
+along any line of creative interest will be surprised at the 
+growth and development which come in this respect. To scatter 
+the forces and talents in self-indulgence at this time of life is 
+to waste the opportunity for a wonderful use of the coveted 
+power of imagination.""",
+    ],
+}
+
+#Zero in Planes
+zero_in_plane = {
+'p_plane':["""Lack of physical endurance or practical application."""],
+
+'m_plane':["""Finds it difficult to meet the cold, hard mental 
+tacts of life and does not explain the "what" or "why" with 
+logic or mental relationships. May lack will power and force of 
+decision."""],
+
+'e_plane':["""Emotion is not easily expressed. Does not express its ideas well in words or fancy. May even lack sentiment 
+and sympathy."""],
+
+'i_plane':["""Not apt to be interested in the impressions 
+and abstract ideas of the intuitive nature. May be lacking in 
+real philanthropic interests and the forgiveness natural to the 
+higher planes."""],
+
+'summary': ["""
+A Cipher on any plane describes character as definitely as 
+a digit. It indicates a character who does not work or live on 
+that level of consciousness. A lack of numbers may, in reality, 
+be a balancing force, due to that particular type of number 
+being emphasized on the major positions. Many numbers on 
+the plane would then be an overintensification, resulting in 
+extremes of feeling and action, making life difficult for the 
+individual.
+""","""
+At times, a missing number or numbers on a plane of expression may be found as a pinnacle experience (Chapter 12) or 
+on the Table of Events (Chapter 16) when life takes a hand and 
+forces that type of development or some future purpose. 
+
+When a "0" appears, this should not be considered a 
+weakness - "to thine own self be true." However, it is helpful 
+in understanding personal problems if this quality of the missing plane is recognized and quietly developed, through reading, 
+observation, and self-analysis.
+""","""
+Life would be dull if all people were alike. Read I Corinthians, 12th Chapter, 4 to 12: "Now there are diversities of 
+gifts, but the same Spirit." 
+Each individual has the task of living up to the pattern oi 
+Destiny and talent shown by his particular name in this lifetime. There have been many lives in ages past. There are many 
+still ahead in the great Eternal Plan to be lived and enjoyed."""
+]
+}
+##########
+one_in_plane = {
+'p_plane':["""Very active and enthusiastic. Outgoing. Not apt 
+to finish what is begun. Soon tiring of the plan or work. Leaders. Work hard to get what is desired. Original. Outstanding, 
+expecially if 10 numbers are shown."""],
+
+'m_plane':["""Original in thought and deductions. Quick responses to ideas or conditions, good or bad. Witty."""],
+
+'e_plane':["""Changeable, original, capable of meeting all 
+kinds of people. Can touch all levels of living. Nervous and 
+high-strung. Can demand much in love and marriage."""],
+
+'i_plane':["""Great inspiration. Ideas come quickly like a flash."""],
+
+'summary': ["""
+The number One Total on any plane gives inspiration and 
+success through work which fires the enthusiasm and a feeling 
+of daring. Otherwise the manner can be dull and disinterested. 
+It is challenged by obstacles. The number One is independent 
+and individualized in work and undertakings. ""","""It may act in a 
+different manner—however, if not happy or pleased, causing 
+many difficulties in business and domestic association. The 
+number One Total on any plane gives strong likes and dislikes 
+and a desire to live according to its personal feelings and beliefs. Charm and wit characterize the number One.
+""","""
+There is a 
+tendency to live things up quickly, to be easily bored, and soon 
+tire of an association or activity. A strong desire to be at the 
+head of any undertaking generally opens the way to leadership 
+and important positions. The number One Total on any plane 
+gives good financial attractions. At times the number One may 
+cling to a personal plan or idea with bulldog determination, as 
+it does not accept subordination easily. """]
+}
+
+three_in_plane = {
+'p_plane':["""Demonstrates and expresses in an artistic manner on the material plane. Functions in a Three manner even in 
+practical matters. Does not like to face realities. Uses imagination to make things go. Talented and artistic in work and endeavor. Careless about order and system."""],
+
+'m_plane':["""Creative on the Mental Plane, uses knowledge 
+and facts in a creative manner and colors them with imagination and vision. Thinks things out for self and uses imagination 
+to get results. Talks boastfully about self, personal interests, 
+and plans. Colors all activity with a touch of fancy. Not too 
+serious. Can be a grand person and interesting talker."""],
+
+'e_plane':["""Very imaginative and personal where emotions are concerned, both in work and in love affairs. Wants 
+admiration and to be popular. Ponders over things and then 
+acts impulsively. Artistic and talented. Often scatters possessions and money and can talk too much. Needs artistic outlet."""],
+
+'i_plane':["""Colors ideas from on High with imagination 
+and much personal feeling. Capable of inspiring others to 
+higher interests and faith. Fine speaker. Much artistic talent. 
+May be reticent and not put self over without help from others. 
+Psychic responses. """],
+
+'summary': ["""
+Three on any plane indicates an emotional response to 
+circumstance, work, and happenings. Hard physical work of 
+long duration is not natural for the sensitive, high-strung, creative number Three on any plane of expression. This should be 
+understood in judging the temperament of this happy, inspirational, and loving number. A fine tenacity will be shown and 
+endless application when the field of endeavor gives an outlet 
+for the artistic and imaginative feeling and thinking.
+""","""
+Otherwise, the Three can be judged as careless or indolent. The gift 
+of words is an asset, even though at times too much talk scatters the strength and sidetracks opportunity.
+However, this talent should be cultivated for added opportunity. Love affairs 
+bring many experiences, now and then a jolt, because of too 
+strong a desire for appreciation and admiration. The number 
+Three does not like to be alone or live alone because of a companionable nature, but can
+learn to do so if deeply hurt or unhappy.
+""","""
+The ability to make others happy and to express joy 
+and goodwill are a part of the Three’s stock in trade. A love of 
+pleasure and fun characterizes the nature, but this should not 
+be the real aim of life. The creative talent should be used to 
+strengthen the Plane of Expression upon which it is found. 
+Threes on any Plane may have presentiments or natural psychic prophecy. """]
+}
+
+six_in_plane = {
+'p_plane':["""Works with things of beauty. Practical artists, 
+dieticians, professional service in practical manner. Helps others and takes responsibility.
+Artistic talent. Kindergarten teachers, contractors, architects, mining engineers."""],
+
+'m_plane':["""Carries responsibility. Can be depended upon to 
+do what it has been asked to do or has promised to do. May 
+feel burdened, unappreciated, but carries the burden to the 
+end. Worries, carries responsibility of others on its shoulders, 
+yet conscious of the fact it is doing so. Takes care of children 
+or family, promotes welfare of humanity. Through mental 
+powers, succeeds in big business. Many emotional affairs possibly unusual and unsought. Needs education in the arts 
+and sciences."""],
+
+'e_plane':["""Expresses beauty, harmony, music, and helpful service. Feels things deeply and tears itself to pieces through 
+worry over someone who does not do the right thing. Honest and true. Can make others unhappy by too much discipline, or 
+by demanding that others live up to its ideals. Responds to admiration and appreciation."""],
+
+'i_plane':["""Apt to be quite personal about faith and religion. May put people on a pedestal and then experience
+disappointment because others do not live up to its ideals. Does big things in mind and often lives in visions of
+grandeur rather than actions. Can be ministers and artists."""],
+
+'summary': ["""The number Six Total on any plane is a natural teacher, 
+nurse, physician and humanitarian, and has an artistic nature 
+with deep appreciation of beauty, harmony, music, color and 
+the luxurious. Service to mankind is its keynote, in a personal 
+way or in the world of welfare and human rights.
+""","""
+It is always 
+called upon to serve in some capacity, which it does willingly, 
+but it will be aware of the service it is giving, expecting appreciation, compensation,
+and recognition for the service rendered. It is capable of sacrificing itself for a cause or ideal and 
+can be greatly imposed upon because of a warmhearted, high 
+sense of justice, honesty and willingness to fight for the rights 
+of others.
+""","""
+Having high ideals, the number Six can be very demanding, even dominant, exacting, and a firm disciplinarian, but 
+often fails to get the love, approval and appreciation it so 
+deeply desires because of its insistence that others live up to its 
+demands and ways of thinking and believing. 
+""","""
+There is a love of the home, family, garden, animals, and 
+comfortable living. The number Six never outgrows its desire 
+for love, affection and approval, even in the latter days of life. 
+It has the talent and business ability to attain the best in the 
+world for itself through its desire to add beauty and loveliness 
+to all endeavor.
+""","""
+The Six maintains, supports, and upholds high 
+standards and seeks to represent these at all times. When a Six 
+lacks the feeling of usefulness and appreciation, it can scatter 
+its forces and live in confusion and resentment. Many 
+problems come through the affairs of children. Family inheritance influences the life of the number Six on all planes."""]
+}
+
+ones = {
+'average_1s':["""
+Average Ones - An average number of ones (3 to 4) gives 
+the necessary initiative, will power, executive ability, qualities 
+of leadership, determination, and individuality necessary to get 
+on in the world."""],
+
+'many_1s':["""
+Many Ones - Five or six or more will show very strong 
+opinions and fixed ideas. The individual will stand for his 
+manner, or again, winning by silence. Ability to get things 
+done, original ideas give leadership. Many ones, above the 
+average in names, give a tendency to rule and a determination 
+to have its own way. Many ones may bring a health problem, 
+affecting the head and lungs. Wit and humor can be a talent."""],
+
+'no_1s':["""
+No Ones - (or few ones) indicates less self-determination 
+and inability to stand up for the personal rights or to put over 
+personal plans against the will of others. But the individual will 
+be easier in association. The character may be charming and 
+lovely, more interested in others than the self. Before judging your 
+character as lacking in ones, follow the rule - look to the major 
+number. There may be a one in the Birth number or Heart’s 
+Desire."""],
+}
+
+twos = {
+'average_2s':["""
+Average Twos - Tact, diplomacy, and cooperation are not 
+too high in the makeup of human nature. The average person 
+has a natural desire to associate with others, so at least one degree of the courtesy of good manners and generai helpfulness 
+of the two is necessary for all and is generally found in a name 
+of average length."""],
+
+'many_2s':["""
+Many Twos - Give a fine degree of consideration for others, especially in little things. It has a very sensitive nature and 
+a desire for companionship. The ability to bring others together in harmony and agreement is a talent and o ten a business asset. Being sensitive to environment, to people and to 
+lack of beauty or culture, it may appear shy and retiring. The 
+ability to do things well, to gather information with patience 
+and skill is characteristic of its nature.
+""","""
+Many twos give a sense 
+of timing and rhythm and may give a talent for dancing or 
+music. The number two is a feminine number, and many twos 
+in a man’s name may give an effeminate nature, but a great appreciation of the arts.
+An interest in history and activities having to do with the past and the cultural development of people 
+and races may mean success. Very adaptable, even too much 
+so. An inner fear of people, even though liking them. Can 
+work with the detailed arrangements of lovely and delicate 
+things. Very unhappy when spiritual faith is denied."""],
+
+'no_2s':["""
+No Twos - No twos gives a lack of consideration for others and an impatience with the sensitiveness of others and their 
+attention to details. True cooperation is not present, with carelessness regarding the line points of accomplishment.
+The individual may be kind and helpful due to ones, threes, and sixes, 
+but mostly in their own way, not as others would desire. A 
+mother or father may do everything to protect the family and 
+children but still not give true consideration to the real interest 
+and needs of the loved ones. Look for the missing two in the 
+major numbers. It may be present in other ways and not be entirely missing."""]
+}
+
+
+threes = {
+'average_3s':["""
+Average Threes - The number Three represents imagination, enthusiasm, and creative talent.
+It gives the ability to express the ideas, feelings, and fancies in words written or spoken. 
+It likes to do big things and has the ability to visualize the end 
+from the beginning. It is a happy number and, at the same time, 
+gives a great deal of self-importance and personal feeling. Two 
+threes are not uncommon, although one three is the average."""],
+
+'many_3s':["""
+Many Threes - Four or five threes are an outstanding indication of talent. The imagination is very positive, and there is 
+artistic talent which may be expressed through music, painting, acting, designing, writing of novels, and the creation of 
+artistic clothing, jewelry, and articles which appeal to the love 
+of luxury in human nature.
+""","""
+Too many threes give a strong 
+self-interest, even selfishness, scattered energies, and lack of 
+orderly direction. A tendency to talk too much because of too 
+much emotion may lead to a wasted endeavor. Admiration, romance, and popularity are very important for happiness and 
+continued success. Does not like hard, physical work, but, if 
+inspired, will work long and patiently to get results."""],
+
+'no_3s':["""
+No Threes - The gift of creative imagination does not belong to the three alone, nor the gift of words. The ones are 
+good talkers and have a degree of imagination. The fives are 
+good salesmen, and the sevens also talk interestingly and colorfully if interested or acquainted with a subject or idea. All 
+numbers, in fact, have some degree of imagination and the 
+ability to talk about what interests them, but, with the three,
+the "gift o; gab" and fancy is a natural talent and business asset. When there are no threes in the name, not even on the
+major positions, fanciful ideas, sentimental speech, romance, 
+and flights into imagination are not natural tendencies. """],
+}
+
+fours = {
+'average_4s':["""
+Average Fours - The strong points of the Four are concentration, application, a good sense of practical values,
+and ability to stick to things. One four gives the ability to put work and 
+plans into form and to maintain and sustain needed order and 
+system."""],
+
+'many_4s':["""
+Many Fours —Two or more fours intensify the practical 
+tendency in the nature and add to the ability to appraise, estimate,
+and to know values and the worth of material and concrete plans. The concentration is very good, the ability to 
+understand details and to build and put ideas into form is very 
+high. There will be work and e ort required. The in-laws are 
+the pleasure and the problem, as with all fours. Three or four 
+or five fours on the Points of Intensification will indicate ability to build,
+construct, and to establish practices of supporting 
+and lasting nature."""],
+
+'no_4s':["""
+No Fours - The natural application and concentration of 
+the number Four are not strong traits when there are no fours 
+on the Points of Intensification. It is important to look to 
+the major numbers in such a chart; other talents may be outstanding. When there are no fours, assistance and help will 
+come through others, but lack of application may be the weakness of the nature.
+Few people lack in the quality of the number Four. It is the foundation number of all endeavor. This 
+number will generally be found somewhere in the name or as a 
+future experience."""],
+}
+
+fives = {
+'average_5s':["""
+Average Fives - It is human nature to enjoy the excitement 
+of public contact. Change and variety stand for progress and 
+growth. Most names have an average number of fives, the reason why people move, travel, make changes, enjoy excitement, 
+feel the need of fun and entertainment and something doing. 
+They easily move forward into the new. Change means progress and keeps the world moving forward. """],
+
+'many_5s':["""
+Many Fives - Five or six fives, unless there is a balancing 
+force of fours or sixes in the name or on the Points of Intensification, are apt to give a restless nature, lack of application, 
+interest in too many things, or a turning from one line of work 
+or interest suddenly, without completing either task or work. 
+May be unconventional, Bohemian in interest, and seem to 
+break many laws. However, opportunity is present through legal and civic activities and all types of salesmanship. Not domestically inclined unless the home life is filled with interesting 
+people and variety. Needs a line of business which promotes 
+travel and contact with the public and many people. Being critical of others may become a ault."""],
+
+'no_5s':["""
+No Fives - This is very seldom found, for all people have a 
+love of freedom, curiosity, and response to life and experience 
+and like to be part of worldly affairs; otherwise there would be 
+no progress in the world. With no fives or one five there will be 
+a dislike of crowds and a desire to be left alone. Often one is 
+a 'raid to face the world in an aggressive manner, so it is very 
+important to study the major numbers and positions in order 
+to discover the real talents shown by the other Points o Intensification. Fixed—not easily adaptable."""],
+}
+
+sixs = {
+'average_6s':["""
+Average Sixes - Six is the humanitarian, the idealist, the 
+teacher, often the physician, the nurse or the one who is interested in children or welfare work; loves the home and the 
+beautiful, luxuries and comfortable things of life, and seeks to 
+give these to others. One six in a name gives these qualities. 
+The Six has a keen sense of right and wrong, and willingness to 
+take responsibility."""],
+
+'many_6s':["""
+Many Sixes - Three or four or more sixes give strong opinions and fixed ideals which are not easily given up.
+The individual with many sixes in the name may become confused or 
+broken in spirit if the ideals are taken away or destroyed. However, the personal tendency is to try to persuade others to 
+adopt its ideals and concepts about right and wrong. Many 
+sixes give generosity and a fine humanitarian spirit. But the nature is strict, dominant and demanding. Loyalty is expected
+and many hurts are experienced when this is not given. Traditions are strong; sometimes radical ideals mark the nature and 
+the position in life."""],
+
+'no_6s':["""
+No Sixes - In many names the number is missing. The true 
+sense of duty is not overly strong in the majority of the people 
+of the world. This lack is generally made up by other qualities 
+and talents needed to promote the progress of mankind. Do 
+not condemn the individual without this feeling of duty and 
+responsibility, and do not expect it o a husband, wife or child 
+if it is not expressed. A certain luck supports the endeavors. 
+Others help and take care of things undone. No sixes in a name 
+often indicates interesting situations and happenings. In the 
+home and marriage, both for men and women, the domestic 
+problems are apt to be taken lightly"""],
+}
+
+sevens = {
+'average_7s':["""
+Average Sevens - This is the number oi' analysis, technique, 
+accuracy, observation, investigation, and demanding to know 
+the reason why. Therefore, one seven in the name will give this 
+quality and a questioning attitude of mind. It gives a keen 
+mind, a tendency to analyze and to question; also discrimination and ability to look under the surface with intuitive perceptions and a sense of perfection. This quality is frequently 
+missing in the makeup of most people."""],
+
+'many_7s':["""
+Many Sevens —Two sevens intensify the gift of discernment and the desire for proof, indicating a scientific, technical 
+turn of mind and one who likes mathematics or works with figures, charts, and laboratory research. Many sevens are skillfull 
+in work and clever mentally, do specialized work, no matter 
+what line is taken up. Faith, alone, is not enough. They are not 
+good mixers, being selective and difficult to know or understand. Many sevens may give odd and unusual ideas, and, if 
+there is a lack of good education, the talents may turn to 
+schemes and hidden undertakings. All sevens want the best and 
+desire to be paid for what is undertaken and can, at times, be 
+very close about money. They are thinkers but solve problems 
+through intuition. They dislike to show emotions."""],
+
+'no_7s':["""
+No Sevens - The caution and analysis of the seven is not 
+present. Often there is more inner happiness. Not inclined to 
+look under the surface for motives and reasons for the things 
+that happen, but is more open-minded."""],
+}
+
+eights = {
+'average_8s':["""
+Average Eights - The number eight is a strong number, 
+self-sufficient and businesslike. It has the ability to direct, supervise, and control others, and is generally at the head of 
+groups or organizations and in positions of authority. Being 
+so strong in will, mental qualities, and efficiency, it appears 
+dominant; and the ambition to attain, so characteristic of the 
+number eight, leads to independent action and thought, often 
+colored with a pnilosophical attitude of mind. The ability to 
+see both sides of a question, to weigh and balance, gives the 
+ability to direct and control others, resulting in recognition and 
+positions of authority. It is not an easy number, though having 
+business ability. Strain about money or finances affects the 
+life. There is natural ability to rise to emergencies and to keep 
+control of situations. Business training and money evaluation 
+should be cultivated."""],
+
+'many_8s':["""
+Many Eights - Too many eights, even two eights, gives an 
+intense nature with too much drive to accomplish work or 
+plans and for money and position. They are capable of executive supervision and generally are an authority on some subject. They are good judges of character and often counselors to 
+people in all walks of life. They may have literary ability, especially along lines of correspondence, magazine printing, and 
+publishing; interest in research work, organizing and coordinating the works of others. Many eights in a name make life 
+hard, even for the talented individual, with many frustrations 
+and personal tests. The mental energies should be expressed 
+with more inner poise and less discontent. The reward is public 
+recognition and standing in the community."""],
+
+'no_8s':["""
+No Eights - There is not so much self-control when there 
+are no eights in the name. There is more dependence upon others, and often less strain about money in the long run, and 
+more help or luck from others. The individual with eights has a 
+more intense life to live and, even though very capable, may 
+have more problems than when there are no eights in the name."""],
+}
+
+nines = {
+'average_9s':["""
+Average Nines - This is the number of the brotherhood of 
+man and is found three or four times in most names. Without 
+this influence, mankind would have destroyed itsel long ago. 
+The number nine gives compassion, tolerance, benevolence, 
+and goodwill towards mankind, and it is because of this number that all races, religions, and all peoples live in the world together, even with difference of opinions and traditions. Number 
+nine gives the color and drama to life and the ability to understand all levels of living. It is impressionable, intuitive, has 
+deep eeling with appreciation of the grandeur of life—qualities belonging to all people. """],
+
+'many_9s':["""
+Many Nines - Give impressionability, imagination, and 
+generosity, often to an extreme, and lack of direction and 
+balance of feeling, thought, and action; a tendency to follow 
+dreams and impressions without practical direction or without 
+emotional balance, with little actual accomplishment, but adding beauty, warmth, and inspiration to others. The individual 
+with many nines will not be easy to reason with, but is often 
+forgiven because of the generosity that is in the nature. Six or 
+seven nines can give so much feeling that the character may be 
+overly sensitive, moody, and not too well physically, but have 
+flashes of intuition and wisdom to accomplish, without reason 
+or so-called common sense. Great religionists, noted dramatists 
+sometimes have many nines in their names. One should avoid 
+habits of food and drink under periods of disappointment."""],
+
+'no_9s':["""
+No Nines - This is sometimes found in names, but is not 
+common. Nine is an outstanding characteristic, and, if this is 
+not made up or balanced by nines somewhere on the major positions, it can be an indication of lack of broadness, tolerance, 
+and compassion in the nature, even though sixes may be present. The number six is the humanitarian number and renders 
+service to others. On the other hand, the number nine is the 
+philanthropist, giving without thought of return. No nines indicates a nature that is helpful, kind, and capable, but without 
+the feeling of universal forgiveness or giving which characterizes the number nine. A lack of nines may limit the extent of 
+the accomplishments. Studies of comparative religions and 
+character analysis will be helpful."""],
+}
+
+
+
+vocation = {
+'many_1s_and_8s':["""business interest and you are not carried away by emotion."""],
+
+'many_2s_and_3s_and_6s':["""artistic ability, opportunity along professional lines, inspirational service, and 
+instruction."""],
+
+'many_4s_and_7s':["""scientific, mechanical, and mathematical tendencies."""],
+
+'many_5s':["""versatility, sales promotion and public administration."""],
+
+'many_7s_and_9s':["""literary ability."""],
+
+'many_8s':["""philosophical feeling, expressed through printing and publishing, correspondence, and newspapers."""]
+}

@@ -53,7 +53,19 @@
             
         </tr>
         <tr>
-            <td class="center">{{ exp11 }}</td>
+            <td class="center">
+				
+				<span class="number_popup">
+					<a href="{{ url_for('main.event_number', number=number) }}">
+						{{ exp11 }}
+					</a>
+				</span>
+				
+				
+			</td>
+			
+			
+			
             <td class="center">{{ lp }}</td>
             <td class="center">{{ sU }}</td>
             <td class="center">{{ iM1 }}</td>
@@ -74,8 +86,8 @@
             </tr>
             <tr>
                 <td class="center">{{ phy }}</td>
-                <td class="center">{{ emo }}</td>
                 <td class="center">{{ men }}</td>
+                <td class="center">{{ emo }}</td>
                 <td class="center">{{ intt }}</td>
             </tr>
         </table>

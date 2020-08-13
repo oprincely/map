@@ -65,7 +65,7 @@
     </h3>
 
     <i>
-        ...
+       Your Secret Thoughts and Wishes: the Consciousness.
     </i>
         <h4>Your Heart Desire is {{ sU1 }}/{{ sU}}<br></h4>
 
@@ -80,6 +80,273 @@
         <p>{{ v[6] }}</p>
         <p>{{ v[7] }}</p>
         <p>{{ v[8] }}</p>
+        {% endif %}
+        {% endfor %}
+        
+    <hr>
+	
+	<h3>
+        Your Personality Number
+    </h3>
+
+    <i>
+       How Others See You.
+    </i>
+        <h4>Your Personality is {{ iM }}/{{ iM1}}<br></h4>
+
+        {% for k, v in personality.items()%}
+        {% if k == iM1 %}
+        <p>{{ v[0] }}</p>
+        {% endif %}
+        {% endfor %}
+        
+    <hr>
+	
+	<h3>
+        Your Reality Number
+    </h3>
+
+    <i>
+       Your Final Attainment.
+    </i>
+        <h4>Your Reality is {{ Mrity}}<br></h4>
+
+        {% for k, v in reality.items()%}
+        {% if k == Mrity %}
+        <p>{{ v[0] }}</p>
+        {% endif %}
+        {% endfor %}
+        
+    <hr> 
+
+	<h3>
+		Plane Of Expression.
+	</h3>
+
+    <i>
+       Peculiarities of Temperament and Aptitudes.
+    </i>
+        <h4>Your Physical Plane is {{ phy }}<br></h4>
+
+        {% for k, v in phy_num_to_str.items()%}
+        {% if k == 'p_plane' %}
+        <p>{{ v[0] }}</p>
+		
+		<!-- summary -->
+		<h4>Summary:<br></h4>
+		<p>{{ phy_num_to_str['summary'][0] }}</p>
+		<p>{{ phy_num_to_str['summary'][1] }}</p>
+		<p>{{ phy_num_to_str['summary'][2] }}</p>
+		<p>{{ phy_num_to_str['summary'][3] }}</p>
+		<p>{{ phy_num_to_str['summary'][5] }}</p>
+		<p>{{ phy_num_to_str['summary'][6] }}</p>
+		<!-- summary ends -->
+		
+        {% endif %}
+        {% endfor %}
+        
+    <hr> 
+	
+	<h4>Your Mental Plane is {{ men }}<br></h4>
+
+        {% for k, v in m_num_to_str.items()%}
+        {% if k == 'm_plane' %}
+        <p>{{ v[0] }}</p>
+		
+		<!-- summary -->
+		<h4>Summary:<br></h4>
+		<p>{{ m_num_to_str['summary'][0] }}</p>
+		<p>{{ m_num_to_str['summary'][1] }}</p>
+		<p>{{ m_num_to_str['summary'][2] }}</p>
+		<p>{{ m_num_to_str['summary'][3] }}</p>
+		<p>{{ m_num_to_str['summary'][5] }}</p>
+		<p>{{ m_num_to_str['summary'][6] }}</p>
+		<!-- summary ends -->
+		
+        {% endif %}
+        {% endfor %}
+        
+    <hr> 
+	
+	<h4>Your Emotional Plane is {{ emo }}<br></h4>
+
+        {% for k, v in emo_num_to_str.items()%}
+        {% if k == 'e_plane' %}
+        <p>{{ v[0] }}</p>
+		
+		<!-- summary -->
+		<h4>Summary:<br></h4>
+		<p>{{ emo_num_to_str['summary'][0] }}</p>
+		<p>{{ emo_num_to_str['summary'][1] }}</p>
+		<p>{{ emo_num_to_str['summary'][2] }}</p>
+		<p>{{ emo_num_to_str['summary'][3] }}</p>
+		<p>{{ emo_num_to_str['summary'][5] }}</p>
+		<p>{{ emo_num_to_str['summary'][6] }}</p>
+		<!-- summary ends -->
+		
+        {% endif %}
+        {% endfor %}
+        
+    <hr> 
+	
+	<h4>Your Intuitive Plane is {{ intt }}<br></h4>
+
+        {% for k, v in i_num_to_str.items()%}
+        {% if k == 'i_plane' %}
+        <p>{{ v[0] }}</p>
+		
+		<!-- summary -->
+		<h4>Summary:<br></h4>
+		<p>{{ i_num_to_str['summary'][0] }}</p>
+		<p>{{ i_num_to_str['summary'][1] }}</p>
+		<p>{{ i_num_to_str['summary'][2] }}</p>
+		<p>{{ i_num_to_str['summary'][3] }}</p>
+		<p>{{ i_num_to_str['summary'][5] }}</p>
+		<p>{{ i_num_to_str['summary'][6] }}</p>
+		<!-- summary ends -->
+		
+        {% endif %}
+        {% endfor %}
+        
+    <hr> 
+	
+	<h3>
+		Specialized Traits and Points of Intensification.
+	</h3>
+
+    <i>
+       How You Differ From Others.
+    </i>
+        <h4>Your total Number of one's is {{ one }}<br></h4>
+
+        {% for k, v in ones.items()%}
+        {% if k == t_num1 %}
+        <p>{{ v[0] }}</p>
+		
+        {% endif %}
+        {% endfor %}
+        
+    <hr>
+	
+	<h4>Your total Number of two's is {{ two }}<br></h4>
+
+        {% for k, v in twos.items()%}
+        {% if k == t_num2 %}
+        <p>{{ v[0] }}</p>
+		<p>{{ v[1] }}</p>
+		
+        {% endif %}
+        {% endfor %}
+        
+    <hr>
+	
+	<h4>Your total Number of three's is {{ thr }}<br></h4>
+
+        {% for k, v in threes.items()%}
+        {% if k == t_num3 %}
+        <p>{{ v[0] }}</p>
+		<p>{{ v[1] }}</p>
+		
+        {% endif %}
+        {% endfor %}
+        
+    <hr>
+	
+	<h4>Your total Number of four's is {{ fou }}<br></h4>
+
+        {% for k, v in fours.items()%}
+        {% if k == t_num4 %}
+        <p>{{ v[0] }}</p>
+		<p>{{ v[1] }}</p>
+		
+        {% endif %}
+        {% endfor %}
+        
+    <hr>
+	
+	<h4>Your total Number of five's is {{ fiv }}<br></h4>
+
+        {% for k, v in fives.items()%}
+        {% if k == t_num5 %}
+        <p>{{ v[0] }}</p>
+		<p>{{ v[1] }}</p>
+		
+        {% endif %}
+        {% endfor %}
+        
+    <hr>
+	
+	<h4>Your total Number of six's is {{ six }}<br></h4>
+
+        {% for k, v in sixs.items()%}
+        {% if k == t_num6 %}
+        <p>{{ v[0] }}</p>
+		<p>{{ v[1] }}</p>
+		
+        {% endif %}
+        {% endfor %}
+        
+    <hr>
+	
+	<h4>Your total Number of sevens's is {{ sev }}<br></h4>
+
+        {% for k, v in sevens.items()%}
+        {% if k == t_num7 %}
+        <p>{{ v[0] }}</p>
+		<p>{{ v[1] }}</p>
+		
+        {% endif %}
+        {% endfor %}
+        
+    <hr>
+	
+	<h4>Your total Number of eight's is {{ eig }}<br></h4>
+
+        {% for k, v in eights.items()%}
+        {% if k == t_num8 %}
+        <p>{{ v[0] }}</p>
+		<p>{{ v[1] }}</p>
+		
+        {% endif %}
+        {% endfor %}
+        
+    <hr>
+	
+	<h4>Your total Number of nine's is {{ nin }} <br></h4>
+	<h5>Should be 3+</h5>
+	<h6>Needed to boost talent YES but lacking</h6>
+
+        {% for k, v in nines.items()%}
+        {% if k == t_num9 %}
+        <p>{{ v[0] }}</p>
+		<p>{{ v[1] }}</p>
+		
+        {% endif %}
+        {% endfor %}
+        
+    <hr>
+
+
+	<h4>Your vocation is poitting towards<br></h4>
+
+        {% for k, v in vocation.items()%}
+        {% if k == v_pointer %}
+        <p>{{ v[0] }}</p>
+		
+        {% endif %}
+        {% endfor %}
+		
+		{% for k, v in vocation.items()%}
+        {% if k == v_pointer1 %}
+        <p>{{ v[0] }}</p>
+		
+        {% endif %}
+        {% endfor %}
+		
+		{% for k, v in vocation.items()%}
+        {% if k == v_pointer2 %}
+        <p>{{ v[0] }}</p>
+		
         {% endif %}
         {% endfor %}
         

@@ -66,7 +66,6 @@ def jeff(name):
         cc=digit_sum(digit_sum(c1))
     return sE,vv,cc,v,c
 
-
 life_number = {
 1:
 """

@@ -124,7 +124,10 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
     reality_number = digit_sum(destiny_number + birth_force)
     Mrity = reality_number
     
+    #Turn names to list in uppercase ['J', 'O', 'H', 'N', 'J', 'O', 'S', 'E', 'P', 'H', 'P', 'E', 'R', 'S', 'H', 'I', 'N', 'G']
     list_name = list(name1 + name2 + name3)
+    
+    #Join all the names to single JOHNJOSEPHPERSHING
     join_all_apha_in_name = ''.join(list_name)
     
     convert_alpha_in_name_to_number = [ord(char.lower())-96 for char in join_all_apha_in_name if char.lower()
@@ -132,7 +135,7 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
     
     new_convert_alpha_in_name_to_number = [] #[5, 4, 5, 2, 1, 3, 3, 8, 3, 8, 3, 2, 5, 3, 6, 2, 5, 3]
     for i in convert_alpha_in_name_to_number:
-        summed = digit_sum(i)
+        summed = digit_sum(digit_sum(i))
         new_convert_alpha_in_name_to_number.append(summed)
     
     freq = collections.Counter(new_convert_alpha_in_name_to_number)# Counter({3: 6, 5: 4, 2: 3, 8: 2, 4: 1, 1: 1, 6: 1})
@@ -496,7 +499,7 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
     speed_reading = [lp,A,B,C,D,E,F,G,H,I,Rall,R1all,R2all,R3all,R4all,R5all,R6all,R7all,p,bash1,bash2,bash3,bash4,bash5,
                     bash6,bash7,bash8,bash9]
 
-    full_reading = [exp,exp11,ln,lp,year_now,sU,sU1]
+    full_reading = [exp,exp11,ln,lp,year_now,sU,sU1,iM,iM1,Mrity,phy,men,emo,intt,one,two,thr,fou,fiv,six,sev,eig,nin]
     
     event = [exp11,sU,iM1,lp,Mrity,phy,men,emo,intt,one,two,thr,fou,fiv,six,sev,eig,nin,ps,cH,cH1,cH2,cH3,
              Essence,pynum,uniynum,pina,rc,pmonth,uniday,pday,Gpina,Gcha,Gper_pi,Gper_cha,k_day,k_pday,year_now]

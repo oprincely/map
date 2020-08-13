@@ -30,7 +30,7 @@ def users():
     return render_template("users/users.html", title='Users Page', form=form,posts=posts)
 
 @bp.route('/user/<username>')
-#@login_required
+@login_required
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()
     posts = [
@@ -38,6 +38,14 @@ def user(username):
         {'author': user, 'body': 'Test post #2'}
     ]
     return render_template('users/user.html', user=user, posts=posts)
+
+
+@bp.route('/user/<username>/popup')
+@login_required
+def user_popup(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    form = EmptyForm()
+    return render_template('users/user_popup.html', user=user, form=form)
 
 
 @bp.route('/edit_profile', methods=['GET', 'POST'])
@@ -64,6 +72,18 @@ def explore():
         page, app.config['POSTS_PER_PAGE'], False)
     return render_template("users.explore.html", title='Explore', posts=posts.items)
 
+################ remove #############
+@bp.route('/querydb')
+@login_required
+def querydb():
+    users = User.query.all()
+    for u in users:
+        print(u.username, u.password_hash)
+    #return (u.username, u.password)
+    #print(users)
+    return 'done'
+    #return render_template("users.querybd.html", title='Querying DB')
+############# 
 
 @bp.before_request
 def before_request():

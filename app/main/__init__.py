@@ -10,7 +10,9 @@ from app.genum import generate_numbers
 from app.hello import contains_y,jeff, life_number,your_personal,real,hearts_d,image_num,bddict,year_num,lesson,debt
 from app.hello import check_karma,peak,digit_sum,b_t_ms
 from app.hello1 import missing_numbers
-from app.destiny_num import destiny,birthForce,heart_desire
+from app.destiny_num import destiny,birthForce,heart_desire,personality,reality,six_in_plane,one_in_plane,three_in_plane
+from app.destiny_num import zero_in_plane,ones,twos,threes,fours,fives,sixs,sevens,eights,nines,vocation
+from app.count_numbers import count_1s,count_2s,count_3s,count_4s,count_5s,count_6s,count_7s,count_8s,count_9s,vocation_pointer
 
 from app.auth.forms import NumberOfQuestions,AskQuestions
 
@@ -119,6 +121,7 @@ def event():
     bty = user.dob[6:10] #22
     
     e = generate_numbers(FN,MN,LN,btd,btm,bty)[3]
+    #e = generate_numbers('John','Joseph','Pershing','22','02','1982')[3]#[1]
     
     #e = generate_numbers('uchechukwu','emeka','okwu','22','02','1982')[3]
     
@@ -126,6 +129,14 @@ def event():
                             two=e[10],thr=e[11],fou=e[12],fiv=e[13],six=e[14],sev=e[15],eig=e[16],nin=e[17],ps=e[18],cH=e[19],cH1=e[20],cH2=e[21],cH3=e[22],
                             Essence=e[23],pynum=e[24],uniynum=e[25],pina=e[26],rc=e[27],pmonth=e[28],uniday=e[29],pday=e[30],Gpina=e[31],Gcha=e[32],Gper_pi=e[33],
                             Gper_cha=e[34],k_day=e[35],k_pday=e[36],year_now=e[37])
+
+@bp.route('/event/<number>/popup')
+@login_required
+def event_number(number):
+    
+    #user = User.query.filter_by(username=username).first_or_404()
+    number = 4
+    return render_template('transit/number_popup.html',number=number)
 
 
 @bp.route('/reading')
@@ -194,9 +205,68 @@ def fullreading():
         btm = user.dob[3:5] #02
         bty = user.dob[6:10] #22
         
-        r = generate_numbers(FN,MN,LN,btd,btm,bty)[2]
+        def num_to_strs(g): #g=r[10]
+            g = digit_sum(g)
+            if g == 0:
+                return zero_in_plane
+            elif g == 1:
+                return one_in_plane
+            elif g == 3:
+                return three_in_plane
+            elif g == 6:
+                return six_in_plane
+            elif g == 7:
+                return sev_in_plane
+        
+        r = generate_numbers(FN,MN,LN,btd,btm,bty)[2] #[22, 4, 26, 8, 2020, 7, 25, 15, 6, 3, 6, 3, 10, 0]
+        #r = generate_numbers('John','Joseph','Pershing','22','02','1982')[2]#[1]
+        
+        phy_num_to_str = num_to_strs(r[10])
+        m_num_to_str = num_to_strs(r[11])
+        emo_num_to_str = num_to_strs(r[12])
+        i_num_to_str = num_to_strs(r[13])
+        
+        t_num1 = count_1s(r[14])
+        t_num2 = count_2s(r[15])
+        t_num3 = count_3s(r[16])
+        t_num4 = count_4s(r[17])
+        t_num5 = count_5s(r[18])
+        t_num6 = count_6s(r[19])
+        t_num7 = count_7s(r[20])
+        t_num8 = count_8s(r[21])#many_8s
+        t_num9 = count_9s(r[22])
+        
+        v_point = []
+        v_points = []
+        
+        v_point.append(vocation_pointer(t_num1))
+        v_point.append(vocation_pointer(t_num2))
+        v_point.append(vocation_pointer(t_num3))
+        v_point.append(vocation_pointer(t_num4))
+        v_point.append(vocation_pointer(t_num5))
+        v_point.append(vocation_pointer(t_num6))
+        v_point.append(vocation_pointer(t_num7))
+        v_point.append(vocation_pointer(t_num8))
+        v_point.append(vocation_pointer(t_num9))
+        
+        for v in v_point:
+            if v != []:
+                v_points.append(v[0])
+        
+        
+        v_pointer = v_points[0]
+        v_pointer1 = v_points[1]
+        
         
         return render_template('transit/fullreading.html',
                                exp=r[0],exp11=r[1],ln=r[2], lp=r[3],year_now=r[4],sU=r[5], sU1=r[6],
-                               destiny=destiny,birthForce=birthForce,heart_desire=heart_desire)
+                               iM=r[7], iM1=r[8],Mrity=r[9],phy=r[10],men=r[11],emo=r[12],intt=r[13],one=r[14],two=r[15],
+                               thr=r[16],fou=r[17],fiv=r[18],six=r[19],sev=r[20],eig=r[21],nin=r[22],
+                               destiny=destiny,birthForce=birthForce,heart_desire=heart_desire,
+                               personality=personality,reality=reality,one_in_plane=one_in_plane,six_in_plane=six_in_plane,
+                               three_in_plane=three_in_plane,ones=ones,twos=twos,threes=threes,fours=fours,fives=fives,
+                               sixs=sixs,sevens=sevens,eights=eights,nines=nines,vocation=vocation,
+                               phy_num_to_str=phy_num_to_str,m_num_to_str=m_num_to_str,emo_num_to_str=emo_num_to_str,
+                               i_num_to_str=i_num_to_str,t_num1=t_num1,t_num2=t_num2,t_num3=t_num3,t_num4=t_num4,t_num5=t_num5,
+                               t_num6=t_num6,t_num7=t_num7,t_num8=t_num8,t_num9=t_num9,v_pointer=v_pointer,v_pointer1=v_pointer1)
     return 'ACCESS DENIED'
