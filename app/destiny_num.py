@@ -763,6 +763,59 @@ Wear opal, canary, or tan while you work.
 }
 
 heart_desire = {
+1:[],
+2:[],
+3:[],
+4:["""
+You have a fine appreciation of law and order in your inner nature. When successfully used, this quality will be of 
+value to you in the world of material success. You have a practical point of view and like to
+have affairs arranged with system and dispatch. You look at life in a wholesome way and 
+you are very conscientious in your undertakings. You want 
+things to be correct and "like they should be" and generally 
+meet your problems seriously, in a matter-of-fact way. You 
+like to look ahead, to plan carefully, and to apply yourself to 
+your tasks with concentration and good management. ""","""Your 
+Destiny and your Birth numbers may not give you the full opportunity to express this desire at all times,
+but you are happier when you can plan and lay a foundation of a permanent nature 
+upon which to build your life. You can be very restless, unhappy, and inwardly disturbed when life is
+uncertain and lacking in security or when you have nothing to hold to, or for 
+which to work. 
+""","""
+In business, home, and love affairs, you are rather serious 
+in thought and action. Your business or marriage partner 
+should have a practical outlook too, because you want dreams 
+to come true and desire real and tangible results. Loyalty, stability, dependability, mean much to you. You have many convictions and do not easily change your mind once it is made up. 
+You are honest and sincere in your motives and have a fine inner determination. You can stick to things with tenacity and 
+patience when you receive the right encouragement. Your ability to apply yoursel:
+to get things done enables you to overcome difficulties and to get definite results. ""","""Now and then you 
+give too much time to details, for you like to have everything 
+exact, correct, and just right. You may worry and fret if little 
+things are not attended to. This conscientiousness is one of 
+your good traits but if carried to extremes might be the cause 
+of your missing some of life’s larger opportunities. Greater 
+happiness will come when you learn not to allow little things to 
+count too much. 
+""","""
+If I were to pick out a fault in your character, it would be 
+an unconscious tendency on your part to take the opposite side 
+oi matters at the first approach. This is due to your desire to be 
+right, to understand things, and to be sure. You may even argue and be hard to convince until you are sure.
+Friends and associates may accuse you of contrariness and slowness, but you 
+really are not contrary. It is your inability to change your mind 
+easily which makes you appear so. Plan your life according to 
+your practical desires, but also put fun and inspiration into 
+your undertakings, especially love affairs, so that you will find 
+life more interesting. You should always follow your inclination to build and construct on all planes of life.
+""","""Your soul urge 
+is for constructive accomplishment which you can use to help 
+humanity in many practical ways and also to make a success of 
+your own life. Build your character and your life brick by brick 
+and do not hurry. Take time to do things well and you will find 
+your life built upon a rock of security, with success never failing you. 
+""","""
+Wear blue, green, emerald, coffee, maroon, or silver in 
+your accessories to attract friends."""],
+5:[],
 6:[],
 7:["""
 You are naturally selective and discriminating, for deep in 
@@ -820,8 +873,9 @@ When you realize your desires, be sure to share with others, if
 you want to find true happiness.""","""
 
 Wear purple, brick, or pearl as part of your accessories to 
-win friends."""
-    ],
+win friends."""],
+8:[],
+9:[]
     
 }
 
@@ -845,7 +899,20 @@ you look and dress. You cannot afford to be overweight.""",
 }
 
 reality = {
-2:[],
+1:["""The talents, abilities, interests, and individuality of the 
+number One will support the latter days of life. The individual 
+will be very independent, very clever, and find originality o 
+thoughs: giving opportunity for leadership. The possibility o 
+becoming very set and fixed in opinions may cause problems in 
+association."""],
+2:["""The field o diplomacy is open to the number Two. The 
+talent for getting on with others and bringing many together 
+for a common good in public works and friendly association 
+means success. The arts, music, museums, libraries give pleas¬ 
+ure and opportunity. The Two is inclined to turn to religion, 
+spiritual work, and teachings. A beautiful humility, born of 
+the awareness of “that something” called God, attracts people 
+and opportunity to touch the minds and hearts of mankind."""],
 3:["""
 The opportunity for a rich, full life is present, the privilege 
 of true self-expression, perhaps greater than at any time during 
@@ -855,8 +922,36 @@ along any line of creative interest will be surprised at the
 growth and development which come in this respect. To scatter 
 the forces and talents in self-indulgence at this time of life is 
 to waste the opportunity for a wonderful use of the coveted 
-power of imagination.""",
-    ],
+power of imagination."""],
+4:["""The opportunity to actually accomplish and put into form 
+many of the ideas not before possible is present. There will be 
+work to do and many practical circumstances to meet in order 
+that a foundation may be placed to build upon. Religious, scientific, and educational interests can support
+and build a useful life. System, order, and organization are important and 
+must be added to the activities. There is a work to be done in 
+the latter days of life."""],
+5:["""This does not promise retirement and indicates an active 
+latter days of life. It is not a dull period, gives opportunity for 
+travel, a variety of experiences, and a great deal of freedom of 
+action and thought. All progressive, forward-moving activities 
+for the advancement and improvement of civic living give opportunity. Too many irons in the fire can lead to uncertainty 
+and scattered forces. Seek a worthwhile work along lines of 
+public administration."""],
+6:["""The latter days for the number Six should be filled with 
+useful endeavor having to do with humanitarian service. 
+Through this service, love and protection will be the reward for 
+the latter days of life. The best things in life, comfort and 
+financial support, will be present when the thoughts are for the 
+good o others in a broad and impersonal manner. Duty and 
+responsibility will be there also, but the means to do and the 
+accomplishment can be easily attained."""],
+7:["""The right to retire and to follow the mental interests is 
+present. Because the Seven has specialized knowledge, gained 
+through the years, others will seek this knowledge, wisdom, 
+and understanding. Opportunity lies in the field of education, 
+science, occult thinking or study; and time may be given to 
+writing, invention, and to the unusual, even odd, lines of endeavor. The desire may be to withdraw from the crowd and to 
+become absorbed in some introvert line of activity."""],
 8:["""The promise of recognition, position, and authority for 
 the latter days of life is present. Life will demand good character, self-discipline, courage, and executive ability. Through 
 this, opportunity to supervise, regulate, and direct the affairs 
@@ -864,6 +959,13 @@ of others will be present. The care of property and land may be
 part of the task of supervision. Research, investigation, counseling,
 advisory positions give usefulness and personal satisfaction. Philosophical thought and interest add strength to the 
 character and undertakings."""],
+9:["""The world of philanthropy is the reward of the number 
+Nine Reality for the latter days of life. Service to mankind and 
+the realization of the brotherhood of man is part of the reward. To be able to live above the jealousies, fears, and greed 
+of mankind is part of the victory of the latter days. ""","""The world 
+of drama, art, literature, beauty in all its forms gives personal 
+and financial reward. To live personally and to desire only personal love is to miss the goal of love and companionship which 
+will come through work done for all people, regardless of race, creed, or culture."""]
 }
 
 #Zero in Planes
@@ -909,7 +1011,7 @@ Destiny and talent shown by his particular name in this lifetime. There have bee
 still ahead in the great Eternal Plan to be lived and enjoyed."""
 ]
 }
-##########
+#ONE in Planes
 one_in_plane = {
 'p_plane':["""Very active and enthusiastic. Outgoing. Not apt 
 to finish what is begun. Soon tiring of the plan or work. Leaders. Work hard to get what is desired. Original. Outstanding, 
@@ -944,8 +1046,42 @@ cling to a personal plan or idea with bulldog determination, as
 it does not accept subordination easily. """]
 }
 
-two_in_plane = {}
+#TWO in Planes
+two_in_plane = {
+'p_plane':["""Sensitive, very apt to lack self-confidence. Needs 
+to be with people. Gives attention to details. Charm and cleverness in gathering information. Often inwardly afraid of big 
+things without help or assistance or approval. Uncertain, and 
+can worry if things are not just right. Collects, takes up 
+hobbies."""],
 
+'m_plane':["""Accumulates, collects knowledge, things, and information. Strong and firm in convictions although naturally 
+cooperative and agreeable. Afraid to undertake too much without assistance. Feels it knows a lot, but too sensitive to meet 
+opposition alone."""],
+
+'e_plane':["""Sensitive to music, rhythm, timing. Receives 
+ideas and impressions through sensitivity. Always needs love 
+and understanding and right environment. Will share with 
+others. Negative if left alone too much."""],
+
+'i_plane':["""Ultra-sensitive to spiritual facts. Feels so much 
+it wonders why others do not understand. Can be radical and 
+extremist."""],
+
+'summary': ["""
+The number Two Total on any plane colors even the most practical task with spiritual feeling and esthetic qualities. Its 
+emotional qualities show forth as a love of beauty, fine sense of rhythm and timing. The desire to have things done well and 
+with detailed perfection gives business and vocational opportunity. At times, personal and business problems may result 
+because of too much attention to detail or going to extremes which lead to loss of time, delays, and missed opportunity.
+As the number Two is the Number of association and partnership, right relationships and helpful association are important;
+otherwise self-consciousness can lead to subordination, negative expression, worry, fear, and subordinate positions.""","""
+Courtesy and good nature mark the character. However, at times, outspoken reproach and disapproval may be expressed in contrast 
+to the expected gentleness generally shown. Strong opinions along some particular line are part of the nature, even to the 
+point of becoming the "escapist" when the Two does not find others agreeing with its ideas. ""","""Musical talent is present.
+Illustration and painting may be a vocation or a hobby. Right environment and helpful companionship may correct many 
+personal problems. Ability to bring others together for a common purpose is a business asset."""]
+}
+
+#THREE in Planes
 three_in_plane = {
 'p_plane':["""Demonstrates and expresses in an artistic manner on the material plane. Functions in a Three manner even in 
 practical matters. Does not like to face realities. Uses imagination to make things go. Talented and artistic in work and endeavor. Careless about order and system."""],
@@ -990,6 +1126,7 @@ strengthen the Plane of Expression upon which it is found.
 Threes on any Plane may have presentiments or natural psychic prophecy. """]
 }
 
+#FOUR in Planes
 four_in_plane = {
 'p_plane':["""Hard worker, organizer, manager. Carries out 
 ideas for others easily. Not an originator. Steady, sure, deep 
@@ -1037,61 +1174,113 @@ to stand well in the community and get things done. Protocol is
 important to the number Four."""]
 }
 
-six_in_plane = {
-'p_plane':["""Works with things of beauty. Practical artists, 
-dieticians, professional service in practical manner. Helps others and takes responsibility.
-Artistic talent. Kindergarten teachers, contractors, architects, mining engineers."""],
+#FIVE in Planes
+five_in_plane = {
+'p_plane':["""Contacts people, likes to travel. Succeeds 
+life. Adapts to change. Good salesman when interested. Versatile and resourceful,
+but restless under routine. Likes to regulate people and affairs."""],
 
-'m_plane':["""Carries responsibility. Can be depended upon to 
-do what it has been asked to do or has promised to do. May 
-feel burdened, unappreciated, but carries the burden to the 
-end. Worries, carries responsibility of others on its shoulders, 
-yet conscious of the fact it is doing so. Takes care of children 
-or family, promotes welfare of humanity. Through mental 
-powers, succeeds in big business. Many emotional affairs possibly unusual and unsought. Needs education in the arts 
-and sciences."""],
+'m_plane':["""Quick in thought and action. Curious. Wants to 
+know what is going on. Impatient if compelled to do the same 
+thing over and over, or ii not good at it. Likes to have more 
+than one iron in the fire. Keeps things moving. Promoters, 
+agents, public service."""],
 
-'e_plane':["""Expresses beauty, harmony, music, and helpful service. Feels things deeply and tears itself to pieces through 
-worry over someone who does not do the right thing. Honest and true. Can make others unhappy by too much discipline, or 
-by demanding that others live up to its ideals. Responds to admiration and appreciation."""],
+'e_plane':["""Searcher and investigator. Wants to know 
+and find out what others feel. Emotionally colorful and interesting, but likes variety and turns away from dullness. Sees 
+everything and does not miss much. May not meet a crisis well 
+and needs to avoid temper and criticism. May change emotional interest easily or without regret."""],
 
-'i_plane':["""Apt to be quite personal about faith and religion. May put people on a pedestal and then experience
-disappointment because others do not live up to its ideals. Does big things in mind and often lives in visions of
-grandeur rather than actions. Can be ministers and artists."""],
+'i_plane':["""Can get anything from the intuitive plane. Understands Higher law. Knows things without education and 
+wonders why. May not fully believe what it receives, but can 
+make use of knowledge—teach and instruct."""],
 
-'summary': ["""The number Six Total on any plane is a natural teacher, 
-nurse, physician and humanitarian, and has an artistic nature 
-with deep appreciation of beauty, harmony, music, color and 
-the luxurious. Service to mankind is its keynote, in a personal 
-way or in the world of welfare and human rights.
+'summary': ["""
+The number Five Total on all planes seeks knowledge and 
+information according to the plane on which it is found. The 
+perceptions are quick and it likes to know what is going on, for 
+curiosity is an outstanding characteristic. It is attracted by the 
+new, the odd, the unusual, even the mysterious. It likes to be in 
+the midst of exciting conditions and to be there if something is 
+happening, it does not walk the beaten path long and may 
+change its interests, plans, ideas, and intentions quickly and 
+suddenly if the grass seems greener elsewhere or if bound too 
+long by the same old condition or routine.
 ""","""
-It is always 
-called upon to serve in some capacity, which it does willingly, 
-but it will be aware of the service it is giving, expecting appreciation, compensation,
-and recognition for the service rendered. It is capable of sacrificing itself for a cause or ideal and 
-can be greatly imposed upon because of a warmhearted, high 
-sense of justice, honesty and willingness to fight for the rights 
-of others.
+Its power of observation, its progressive nature,
+its love of public activity represent talents that repay it financially. It should, however, avoid 
+too many irons in the fire. It has the intelligence to do brilliant 
+work and to promote business and public affairs. A natural 
+salesman, it is able to talk well on any subject, even if not espedally trained as a speaker.
+""","""It desires to do useful work, seeks 
+to help others in a riendly way, but can be possessive, taking 
+over without question the affairs of others, feeling it knows 
+what is best or them or the situation, thus making it difficult, 
+in the long run, for others and causing many problems. ""","""Versatile in thought and action, it meets many experiences, keeps 
+young and alert if not too impatient, critical, or contentious. 
+The number Five can promote civilization if it works from established undertakings,
+even though promoting new and untried lines of business. It can be a rolling stone, however, 
+gathering no moss, if restlessness and constant change govern 
+the activities. 
 ""","""
-Having high ideals, the number Six can be very demanding, even dominant, exacting, and a firm disciplinarian, but 
-often fails to get the love, approval and appreciation it so 
-deeply desires because of its insistence that others live up to its 
-demands and ways of thinking and believing. 
-""","""
-There is a love of the home, family, garden, animals, and 
-comfortable living. The number Six never outgrows its desire 
-for love, affection and approval, even in the latter days of life. 
-It has the talent and business ability to attain the best in the 
-world for itself through its desire to add beauty and loveliness 
-to all endeavor.
-""","""
-The Six maintains, supports, and upholds high 
-standards and seeks to represent these at all times. When a Six 
-lacks the feeling of usefulness and appreciation, it can scatter 
-its forces and live in confusion and resentment. Many 
-problems come through the affairs of children. Family inheritance influences the life of the number Six on all planes."""]
+It often ventures in where "angels fear to tread," both to 
+its advantage and sorrow."""]
 }
 
+#SIX IN PLANE
+six_in_plane = {
+'p_plane':["""Contacts people, likes to travel. Succeeds 
+life. Adapts to change. Good salesman when interested. Versatile and resourceful,
+but restless under routine. Likes to regulate people and affairs."""],
+
+'m_plane':["""Quick in thought and action. Curious. Wants to 
+know what is going on. Impatient if compelled to do the same 
+thing over and over, or ii not good at it. Likes to have more 
+than one iron in the fire. Keeps things moving. Promoters, 
+agents, public service."""],
+
+'e_plane':["""Searcher and investigator. Wants to know 
+and find out what others feel. Emotionally colorful and interesting, but likes variety and turns away from dullness. Sees 
+everything and does not miss much. May not meet a crisis well 
+and needs to avoid temper and criticism. May change emotional interest easily or without regret."""],
+
+'i_plane':["""Can get anything from the intuitive plane. Understands Higher law. Knows things without education and 
+wonders why. May not fully believe what it receives, but can 
+make use of knowledge—teach and instruct."""],
+
+'summary': ["""
+The number Five Total on all planes seeks knowledge and 
+information according to the plane on which it is found. The 
+perceptions are quick and it likes to know what is going on, for 
+curiosity is an outstanding characteristic. It is attracted by the 
+new, the odd, the unusual, even the mysterious. It likes to be in 
+the midst of exciting conditions and to be there if something is 
+happening, it does not walk the beaten path long and may 
+change its interests, plans, ideas, and intentions quickly and 
+suddenly if the grass seems greener elsewhere or if bound too 
+long by the same old condition or routine.
+""","""
+Its power of observation, its progressive nature,
+its love of public activity represent talents that repay it financially. It should, however, avoid 
+too many irons in the fire. It has the intelligence to do brilliant 
+work and to promote business and public affairs. A natural 
+salesman, it is able to talk well on any subject, even if not espedally trained as a speaker.
+""","""It desires to do useful work, seeks 
+to help others in a riendly way, but can be possessive, taking 
+over without question the affairs of others, feeling it knows 
+what is best or them or the situation, thus making it difficult, 
+in the long run, for others and causing many problems. ""","""Versatile in thought and action, it meets many experiences, keeps 
+young and alert if not too impatient, critical, or contentious. 
+The number Five can promote civilization if it works from established undertakings,
+even though promoting new and untried lines of business. It can be a rolling stone, however, 
+gathering no moss, if restlessness and constant change govern 
+the activities. 
+""","""
+It often ventures in where "angels fear to tread," both to 
+its advantage and sorrow."""]
+}
+
+#SEVEN IN PLANE
 sev_in_plane = {
 'p_plane':["""
 Mathematician, broker, analyst, technical worker, doing excellent work in any field of scientific endeavor. 
@@ -1142,6 +1331,7 @@ and learn to meet life and the world as they are, for health and
 well-being."""]
 }
 
+#EIGHT IN PLANE
 eig_in_plane = {
 'p_plane':["""
 Ambitious for power, position and authority. 
@@ -1192,6 +1382,7 @@ authority and does not take orders unless it respects the source
 of the authority."""]
 }
 
+#NINE IN PLANE
 nin_in_plane = {
 'p_plane':["""
 Publisher, importer, writer, dramatic actor, instructor, director where the spectacular is required. In positions 

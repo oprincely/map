@@ -11,7 +11,7 @@ from app.hello import contains_y,jeff, life_number,your_personal,real,hearts_d,i
 from app.hello import check_karma,peak,digit_sum,b_t_ms
 from app.hello1 import missing_numbers
 from app.destiny_num import destiny,birthForce,heart_desire,personality,reality,one_in_plane,two_in_plane,three_in_plane
-from app.destiny_num import four_in_plane,six_in_plane,sev_in_plane,eig_in_plane,nin_in_plane
+from app.destiny_num import four_in_plane,six_in_plane,sev_in_plane,eig_in_plane,nin_in_plane,five_in_plane
 from app.destiny_num import zero_in_plane,ones,twos,threes,fours,fives,sixs,sevens,eights,nines,vocation
 from app.count_numbers import count_1s,count_2s,count_3s,count_4s,count_5s,count_6s,count_7s,count_8s,count_9s,vocation_pointer
 
@@ -277,7 +277,7 @@ def fullreading():
                                destiny=destiny,birthForce=birthForce,heart_desire=heart_desire,
                                personality=personality,reality=reality,one_in_plane=one_in_plane,sev_in_plane=sev_in_plane,
                                six_in_plane=six_in_plane,three_in_plane=three_in_plane,four_in_plane=four_in_plane,
-                               eig_in_plane=eig_in_plane,nin_in_plane=nin_in_plane,
+                               eig_in_plane=eig_in_plane,nin_in_plane=nin_in_plane,five_in_plane=five_in_plane,
                                ones=ones,twos=twos,threes=threes,fours=fours,fives=fives,
                                sixs=sixs,sevens=sevens,eights=eights,nines=nines,vocation=vocation,
                                phy_num_to_str=phy_num_to_str,m_num_to_str=m_num_to_str,emo_num_to_str=emo_num_to_str,
@@ -378,12 +378,46 @@ def newuser():
                                destiny=destiny,birthForce=birthForce,heart_desire=heart_desire,
                                personality=personality,reality=reality,one_in_plane=one_in_plane,sev_in_plane=sev_in_plane,
                                six_in_plane=six_in_plane,three_in_plane=three_in_plane,four_in_plane=four_in_plane,
-                               eig_in_plane=eig_in_plane,nin_in_plane=nin_in_plane,
+                               eig_in_plane=eig_in_plane,nin_in_plane=nin_in_plane,five_in_plane=five_in_plane,
                                ones=ones,twos=twos,threes=threes,fours=fours,fives=fives,
                                sixs=sixs,sevens=sevens,eights=eights,nines=nines,vocation=vocation,
                                phy_num_to_str=phy_num_to_str,m_num_to_str=m_num_to_str,emo_num_to_str=emo_num_to_str,
                                i_num_to_str=i_num_to_str,t_num1=t_num1,t_num2=t_num2,t_num3=t_num3,t_num4=t_num4,t_num5=t_num5,
                                t_num6=t_num6,t_num7=t_num7,t_num8=t_num8,t_num9=t_num9,v_pointer=v_pointer)
+        
+        elif request.method == 'GET':
+            return render_template('newuser.html',form=form)
+        
+    return 'ACCESS DENIED'
+
+@bp.route('/newuser/event', methods=['GET', 'POST'])
+@login_required
+def n_event():
+    username = current_user.username
+    user = User.query.filter_by(username=username).first()
+    
+    if user.username == 'admin':
+    
+        form = PredictionForm()
+        if form.validate_on_submit():
+            
+            FN = form.firstname.data
+            MN = form.middlename.data
+            LN = form.lastname.data
+            dob = form.dob.data
+            
+            btd = dob[0:2] #1982
+            btm = dob[3:5] #02
+            bty = dob[6:10] #22
+            
+            e = generate_numbers(FN,MN,LN,btd,btm,bty)[3]
+    
+            return render_template('event.html',exp11=e[0],sU=e[1],iM1=e[2],lp=e[3],Mrity=e[4],phy=e[5],men=e[6],
+                                   emo=e[7],intt=e[8],one=e[9],two=e[10],thr=e[11],fou=e[12],fiv=e[13],six=e[14],
+                                   sev=e[15],eig=e[16],nin=e[17],ps=e[18],cH=e[19],cH1=e[20],cH2=e[21],cH3=e[22],
+                                   Essence=e[23],pynum=e[24],uniynum=e[25],pina=e[26],rc=e[27],pmonth=e[28],uniday=e[29],
+                                   pday=e[30],Gpina=e[31],Gcha=e[32],Gper_pi=e[33],Gper_cha=e[34],k_day=e[35],k_pday=e[36],
+                                   year_now=e[37])
         
         elif request.method == 'GET':
             return render_template('newuser.html',form=form)
