@@ -329,25 +329,13 @@
 
 	<h4>Your vocation is poitting towards<br></h4>
 
-        {% for k, v in vocation.items()%}
-        {% if k == v_pointer %}
-        <p>{{ v[0] }}</p>
-		
-        {% endif %}
-        {% endfor %}
-		
 		{% for k, v in vocation.items()%}
-        {% if k == v_pointer1 %}
-        <p>{{ v[0] }}</p>
+			{% for s in v_pointer%}
+				{% if k == s %}
+					<p>{{ v[0] }}</p>
 		
-        {% endif %}
-        {% endfor %}
-		
-		{% for k, v in vocation.items()%}
-        {% if k == v_pointer2 %}
-        <p>{{ v[0] }}</p>
-		
-        {% endif %}
+				{% endif %}
+			{% endfor %}
         {% endfor %}
         
     <hr>

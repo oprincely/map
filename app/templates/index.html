@@ -67,9 +67,22 @@
                   tarot
                 </a>
                 <!-- end of single link -->
+				<div class="nav-link scroll-link">
+					<select name="menu1" id="menu1">
+						<option value="">More</option>
+						<option value="{{ url_for('auth.login') }}">Login</option>
+						<option value="{{ url_for('auth.register') }}">Register</option>
+						<option value="{{ url_for('auth.logout') }}">Logout</option>
+						<option value="{{ url_for('main.newuser') }}">Newuser</option>
+						<option value="">Users</option>
+					</select>
+				</div>
+				
+				
               </div>
               <!-- end of nav links -->
-              
+				
+				
               <!-- nav social media icons -->
               <!-- footer icons -->
               <div class="nav-icons">
@@ -431,6 +444,15 @@
     </script>
 	
 	<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+	
+	<script type="text/javascript">
+		 var urlmenu = document.getElementById( 'menu1' );
+		 urlmenu.onchange = function() {
+			  window.open( this.options[ this.selectedIndex ].value );
+		 };
+		 
+		 //console.log('Princely');
+	</script>
 {% endblock %}
   </body>
 </html>

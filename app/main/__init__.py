@@ -3,14 +3,15 @@ from flask import Blueprint, render_template, url_for, redirect, request, sessio
 from flask_login import current_user, login_user,login_required,logout_user
 from app import db
 from app.models import User,Post
-from app.auth.forms import PostForm
+from app.auth.forms import PostForm,PredictionForm
 
 import datetime
 from app.genum import generate_numbers
 from app.hello import contains_y,jeff, life_number,your_personal,real,hearts_d,image_num,bddict,year_num,lesson,debt
 from app.hello import check_karma,peak,digit_sum,b_t_ms
 from app.hello1 import missing_numbers
-from app.destiny_num import destiny,birthForce,heart_desire,personality,reality,six_in_plane,one_in_plane,three_in_plane
+from app.destiny_num import destiny,birthForce,heart_desire,personality,reality,one_in_plane,two_in_plane,three_in_plane
+from app.destiny_num import four_in_plane,six_in_plane,sev_in_plane,eig_in_plane,nin_in_plane
 from app.destiny_num import zero_in_plane,ones,twos,threes,fours,fives,sixs,sevens,eights,nines,vocation
 from app.count_numbers import count_1s,count_2s,count_3s,count_4s,count_5s,count_6s,count_7s,count_8s,count_9s,vocation_pointer
 
@@ -121,6 +122,7 @@ def event():
     bty = user.dob[6:10] #22
     
     e = generate_numbers(FN,MN,LN,btd,btm,bty)[3]
+    #e = generate_numbers('princely','emeka','okwuego','22','02','1982')[3]
     #e = generate_numbers('John','Joseph','Pershing','22','02','1982')[3]#[1]
     
     #e = generate_numbers('uchechukwu','emeka','okwu','22','02','1982')[3]
@@ -205,21 +207,32 @@ def fullreading():
         btm = user.dob[3:5] #02
         bty = user.dob[6:10] #22
         
+        r = generate_numbers(FN,MN,LN,btd,btm,bty)[2]
+        #r = generate_numbers('John','Joseph','Pershing','22','02','1982')[2]#[1]
+        #r = generate_numbers('princely','emeka','okwuego','22','02','1982')[2]#[1]
+        
         def num_to_strs(g): #g=r[10]
             g = digit_sum(g)
             if g == 0:
                 return zero_in_plane
             elif g == 1:
                 return one_in_plane
+            elif g == 2:
+                return two_in_plane
             elif g == 3:
                 return three_in_plane
+            elif g == 4:
+                return four_in_plane
+            elif g == 5:
+                return five_in_plane
             elif g == 6:
                 return six_in_plane
             elif g == 7:
                 return sev_in_plane
-        
-        r = generate_numbers(FN,MN,LN,btd,btm,bty)[2] #[22, 4, 26, 8, 2020, 7, 25, 15, 6, 3, 6, 3, 10, 0]
-        #r = generate_numbers('John','Joseph','Pershing','22','02','1982')[2]#[1]
+            elif g == 8:
+                return eig_in_plane
+            elif g == 9:
+                return nin_in_plane
         
         phy_num_to_str = num_to_strs(r[10])
         m_num_to_str = num_to_strs(r[11])
@@ -254,8 +267,7 @@ def fullreading():
                 v_points.append(v[0])
         
         
-        v_pointer = v_points[0]
-        v_pointer1 = v_points[1]
+        v_pointer = v_points
         
         
         return render_template('transit/fullreading.html',
@@ -263,10 +275,117 @@ def fullreading():
                                iM=r[7], iM1=r[8],Mrity=r[9],phy=r[10],men=r[11],emo=r[12],intt=r[13],one=r[14],two=r[15],
                                thr=r[16],fou=r[17],fiv=r[18],six=r[19],sev=r[20],eig=r[21],nin=r[22],
                                destiny=destiny,birthForce=birthForce,heart_desire=heart_desire,
-                               personality=personality,reality=reality,one_in_plane=one_in_plane,six_in_plane=six_in_plane,
-                               three_in_plane=three_in_plane,ones=ones,twos=twos,threes=threes,fours=fours,fives=fives,
+                               personality=personality,reality=reality,one_in_plane=one_in_plane,sev_in_plane=sev_in_plane,
+                               six_in_plane=six_in_plane,three_in_plane=three_in_plane,four_in_plane=four_in_plane,
+                               eig_in_plane=eig_in_plane,nin_in_plane=nin_in_plane,
+                               ones=ones,twos=twos,threes=threes,fours=fours,fives=fives,
                                sixs=sixs,sevens=sevens,eights=eights,nines=nines,vocation=vocation,
                                phy_num_to_str=phy_num_to_str,m_num_to_str=m_num_to_str,emo_num_to_str=emo_num_to_str,
                                i_num_to_str=i_num_to_str,t_num1=t_num1,t_num2=t_num2,t_num3=t_num3,t_num4=t_num4,t_num5=t_num5,
-                               t_num6=t_num6,t_num7=t_num7,t_num8=t_num8,t_num9=t_num9,v_pointer=v_pointer,v_pointer1=v_pointer1)
+                               t_num6=t_num6,t_num7=t_num7,t_num8=t_num8,t_num9=t_num9,v_pointer=v_pointer)
+    return 'ACCESS DENIED'
+
+
+@bp.route('/newuser', methods=['GET', 'POST'])
+@login_required
+def newuser():
+    username = current_user.username
+    user = User.query.filter_by(username=username).first()
+    
+    if user.username == 'admin':
+    
+        form = PredictionForm()
+        if form.validate_on_submit():
+            
+            FN = form.firstname.data
+            MN = form.middlename.data
+            LN = form.lastname.data
+            dob = form.dob.data
+            
+            btd = dob[0:2] #1982
+            btm = dob[3:5] #02
+            bty = dob[6:10] #22
+            
+            r = generate_numbers(FN,MN,LN,btd,btm,bty)[2]
+            
+            def num_to_strs(g): #g=r[10]
+                g = digit_sum(g)
+                if g == 0:
+                    return zero_in_plane
+                elif g == 1:
+                    return one_in_plane
+                elif g == 2:
+                    return two_in_plane
+                elif g == 3:
+                    return three_in_plane
+                elif g == 4:
+                    return four_in_plane
+                elif g == 5:
+                    return five_in_plane
+                elif g == 6:
+                    return six_in_plane
+                elif g == 7:
+                    return sev_in_plane
+                elif g == 8:
+                    return eig_in_plane
+                elif g == 9:
+                    return nin_in_plane
+            
+            phy_num_to_str = num_to_strs(r[10])
+            m_num_to_str = num_to_strs(r[11])
+            emo_num_to_str = num_to_strs(r[12])
+            i_num_to_str = num_to_strs(r[13])
+            
+            t_num1 = count_1s(r[14])
+            t_num2 = count_2s(r[15])
+            t_num3 = count_3s(r[16])
+            t_num4 = count_4s(r[17])
+            t_num5 = count_5s(r[18])
+            t_num6 = count_6s(r[19])
+            t_num7 = count_7s(r[20])
+            t_num8 = count_8s(r[21])#many_8s
+            t_num9 = count_9s(r[22])
+            
+            v_point = []
+            v_points = []
+            
+            v_point.append(vocation_pointer(t_num1))
+            v_point.append(vocation_pointer(t_num2))
+            v_point.append(vocation_pointer(t_num3))
+            v_point.append(vocation_pointer(t_num4))
+            v_point.append(vocation_pointer(t_num5))
+            v_point.append(vocation_pointer(t_num6))
+            v_point.append(vocation_pointer(t_num7))
+            v_point.append(vocation_pointer(t_num8))
+            v_point.append(vocation_pointer(t_num9))
+            
+            for v in v_point:
+                if v != []:
+                    v_points.append(v[0])
+            
+            v_pointer = v_points
+            
+            print('v_point = ',v_point)
+            #[['many_1s_and_8s'], [], [], ['many_4s_and_7s'], ['many_5s'],
+            #['many_2s_and_3s_and_6s'], ['many_7s_and_9s'], ['many_8s'], []]
+            print(v_pointer)
+            #['many_1s_and_8s', 'many_4s_and_7s', 'many_5s', 'many_2s_and_3s_and_6s', 'many_7s_and_9s', 'many_8s']
+            
+            return render_template('transit/fullreading.html',
+                               exp=r[0],exp11=r[1],ln=r[2], lp=r[3],year_now=r[4],sU=r[5], sU1=r[6],
+                               iM=r[7], iM1=r[8],Mrity=r[9],phy=r[10],men=r[11],emo=r[12],intt=r[13],one=r[14],two=r[15],
+                               thr=r[16],fou=r[17],fiv=r[18],six=r[19],sev=r[20],eig=r[21],nin=r[22],
+                               destiny=destiny,birthForce=birthForce,heart_desire=heart_desire,
+                               personality=personality,reality=reality,one_in_plane=one_in_plane,sev_in_plane=sev_in_plane,
+                               six_in_plane=six_in_plane,three_in_plane=three_in_plane,four_in_plane=four_in_plane,
+                               eig_in_plane=eig_in_plane,nin_in_plane=nin_in_plane,
+                               ones=ones,twos=twos,threes=threes,fours=fours,fives=fives,
+                               sixs=sixs,sevens=sevens,eights=eights,nines=nines,vocation=vocation,
+                               phy_num_to_str=phy_num_to_str,m_num_to_str=m_num_to_str,emo_num_to_str=emo_num_to_str,
+                               i_num_to_str=i_num_to_str,t_num1=t_num1,t_num2=t_num2,t_num3=t_num3,t_num4=t_num4,t_num5=t_num5,
+                               t_num6=t_num6,t_num7=t_num7,t_num8=t_num8,t_num9=t_num9,v_pointer=v_pointer)
+        
+        elif request.method == 'GET':
+            return render_template('newuser.html',form=form)
+        
     return 'ACCESS DENIED'

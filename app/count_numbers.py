@@ -1,3 +1,4 @@
+
 def count_1s(number):
     one = [3,4]
     if number < one[0]:
@@ -112,7 +113,7 @@ def vocation_pointer(b):
     #print('many_2s_and_3s_and_6s = ',many_2s_and_3s_and_6s)
         
     for v in many_1s_and_8s:
-        if v == 'many_1s' and 'many_8s':
+        if 'many_1s' and 'many_8s' in many_1s_and_8s:
             vocation.append('many_1s_and_8s')
             
     for v in many_2s_and_3s_and_6s:
@@ -120,18 +121,18 @@ def vocation_pointer(b):
             vocation.append('many_2s_and_3s_and_6s')
             
     for v in many_7s_and_9s:
-        if v == 'many_7s' and 'many_9s':
+        if 'many_7s' and 'many_9s' in many_7s_and_9s:
             vocation.append('many_7s_and_9s')
             
     for v in many_8s:
-        if v == 'many_8s':
+        if 'many_8s' in many_8s:
             vocation.append('many_8s')
             
     for v in many_5s:
-        if v == 'many_5s':
+        if 'many_5s' in many_5s:
             vocation.append('many_5s')
             
     for v in many_4s_and_7s:
-        if v == 'many_4s' and 'many_7s':
+        if 'many_4s' and 'many_7s' in many_4s_and_7s:
             vocation.append('many_4s_and_7s')
     return vocation

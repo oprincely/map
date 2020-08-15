@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 destiny = {
     1:
     ["""
@@ -823,6 +826,14 @@ win friends."""
 }
 
 personality = {
+2:["""The Two should always be neat and make cleanliness 
+important—and generally does. The number Two may even be 
+fussy about having everything exact in detail. A pleasing personality with gentle manner is the number Two. A knack of 
+wearing clothes can be cultivated, but loud or showy apparel 
+should be put aside for soft, flowing, easy-to-wear, neat, and 
+shining clothing. The number Two Personality should study 
+styles and adapt them to its own personality and not be plain 
+or colorless."""],
 5:[],
 6:["""
 You often fails to give importance to your looks or clothing.
@@ -846,6 +857,13 @@ the forces and talents in self-indulgence at this time of life is
 to waste the opportunity for a wonderful use of the coveted 
 power of imagination.""",
     ],
+8:["""The promise of recognition, position, and authority for 
+the latter days of life is present. Life will demand good character, self-discipline, courage, and executive ability. Through 
+this, opportunity to supervise, regulate, and direct the affairs 
+of others will be present. The care of property and land may be 
+part of the task of supervision. Research, investigation, counseling,
+advisory positions give usefulness and personal satisfaction. Philosophical thought and interest add strength to the 
+character and undertakings."""],
 }
 
 #Zero in Planes
@@ -926,6 +944,8 @@ cling to a personal plan or idea with bulldog determination, as
 it does not accept subordination easily. """]
 }
 
+two_in_plane = {}
+
 three_in_plane = {
 'p_plane':["""Demonstrates and expresses in an artistic manner on the material plane. Functions in a Three manner even in 
 practical matters. Does not like to face realities. Uses imagination to make things go. Talented and artistic in work and endeavor. Careless about order and system."""],
@@ -968,6 +988,53 @@ pleasure and fun characterizes the nature, but this should not
 be the real aim of life. The creative talent should be used to 
 strengthen the Plane of Expression upon which it is found. 
 Threes on any Plane may have presentiments or natural psychic prophecy. """]
+}
+
+four_in_plane = {
+'p_plane':["""Hard worker, organizer, manager. Carries out 
+ideas for others easily. Not an originator. Steady, sure, deep 
+concentration. Serious-minded, very capable. Tenacious. May 
+be stubborn against opposition."""],
+
+'m_plane':["""Planner, executive in charge of affairs, large or 
+small. Gets results. Determined, but can become tied down by 
+caution or held back by being too serious. Responsibility. 
+Many experiences through in-laws and relatives. Sometimes 
+has to give up just as things are going right. Manager in large 
+concerns and big businesses, but may work for self or in own 
+shop or undertaking."""],
+
+'e_plane':["""Has good evaluation, sense of form and practical values, colored by artistic feeling. Stubborn, if held down 
+or restricted over too long a period. Likes to have work properly appreciated. Can accomplish in spite of opposition. May 
+be suddenly explosive if not pleased. May resent authority. Tenacious in love affairs and regarding possessions. Sometimes 
+gives up or accepts unfavorable situations in spite of ability 
+and caution."""],
+
+'i_plane':["""Not truly creative. Cannot be depended upon 
+for imagination. Does not care too much for the vague or abstract.
+Receives ideas of impressionable nature and does something practical about them or calls the ideas impossible. Likes 
+form and ceremony in religion. """],
+
+'summary': ["""
+The number Four on all planes seeks to establish order, 
+system, and the practical in work and living conditions. Four 
+expects faith and loyalty to be respected and laws to be fulfilled. The ability to debate well is one of the assets,
+if there is 
+sure knowledge, but Four can also be argumentative or go 
+from point to point to prove or disprove the question under 
+discussion until the mind is satisfied. ""","""This may appear to be 
+stubbornness and opposition to others. The number Four does 
+not like sudden changes so should be given time to plan, build, 
+and construct according to pattern and the established order of 
+things on the plane on which it appears. Four loves the family 
+and the well-established home and traditions but finds many 
+amily and in-law problems to work out. ""","""A dominant member 
+may bring a degree of repression. However, the Four needs to 
+guard against being dominant itself in opinions and ideas. The 
+Four is not happy unless occupied or putting something into 
+form or order. It is warmhearted, generous to loved ones, likes 
+to stand well in the community and get things done. Protocol is 
+important to the number Four."""]
 }
 
 six_in_plane = {
@@ -1023,6 +1090,155 @@ standards and seeks to represent these at all times. When a Six
 lacks the feeling of usefulness and appreciation, it can scatter 
 its forces and live in confusion and resentment. Many 
 problems come through the affairs of children. Family inheritance influences the life of the number Six on all planes."""]
+}
+
+sev_in_plane = {
+'p_plane':["""
+Mathematician, broker, analyst, technical worker, doing excellent work in any field of scientific endeavor. 
+Delves into things. Should not be placed where there are crowds 
+and confusion. Not at its best in public positions. An innate 
+sense of refinement, self-control, dignity, and reserve. Many 
+peculiarities of temperament. May be close with money. Can be 
+rude and demanding. Not socially inclined, not too friendly. 
+Selective in work and friendship."""],
+
+'m_plane':["""Very introspective, can be a recluse. Wants to be 
+alone and work alone. Likes to think things out, prove and 
+test, and can live too much within its own realm of thought 
+and action. Silent or secretive, shrewd and observing. Successful through knowledge,
+technical or mathematical skills. Talkative, at times, when on familiar ground or well acquainted."""],
+
+'e_plane':["""Thoughtful, selective, reserved, sometimes 
+repressed in emotions. This could lead to frustration and inhibition of the emotions.
+Creates beauty from the depth of meditation and appreciation of perfection. Needs to ferret out the 
+inhibition and to express its feelings through beauty and more 
+creativity."""],
+
+'i_plane':["""Can be great adepts—teachers. Can probe deeply into the abstract and gain occult
+knowledge and understanding. Should not repress its feelings for health’s sake. Wants 
+everything to be in correct relationship. Unhappy if this cannot 
+be attained. May write, compose, or invent. Should watch out for false concepts or ideas. Sometimes attempts to mold others 
+to its will."""],
+
+'summary': ["""A number Seven Total on any plane gives specialized 
+skills, intuitive knowledge. Colors its work with precision and 
+mathematical endeavor, probing into the reason behind any 
+idea or concept. It does not take anything at its lace value and 
+demands perfection in work and from others. ""","""The number 
+Seven is reserved, has a silent side to its nature, keeps things to 
+itself; yet asks questions and demands answers to its questions. 
+The number Seven is charming in personality, witty, and warm-hearted, but being very
+selective and strong in its likes and dislikes it can seem cold, hard, and distant, seldom enjoying a 
+crowd, noise, or confusion. ""","""It can live alone and needs time to 
+be alone—meditate, study, and to think, for in this way it receives some of its best ideas. It is sometimes the recluse. The 
+Seven has strong self-control until very annoyed and then may 
+show temper, criticism, and sarcasm. There is artistic appreciation in the nature and a right place for every Seven when its 
+fine skills are developed. 
+""","""
+It can be thoughtless towards others—impulsively generous at one time, or, again, demanding and with tight purse 
+strings at other times. The number Seven on any plane should 
+overcome the sense of separateness and personal complexes 
+and learn to meet life and the world as they are, for health and 
+well-being."""]
+}
+
+eig_in_plane = {
+'p_plane':["""
+Ambitious for power, position and authority. 
+Gains recognition. Has executive ability. Able to handle big 
+money for others. Uses other people’s money. Does not like to 
+spend its own money. Needs group work and organizations 
+and then can be very powerful and outstanding and well-known for its accomp ishments."""],
+
+'m_plane':["""Natural executive, very ambitious mentally for 
+power and position. Likes to accomplish big things and to be 
+recognized for what has been done. Hidden pride. Good businessman and woman.
+Making big money is not easy. Many expenses to be met. Can be very philosophical and belong to societies and groups."""],
+
+'e_plane':["""Strong feelings. Strength of emotion. Dominant and businesslike in love a fairs. Strong desire to appear at 
+its very best or just a little better than others, not so much for 
+the sake of competition, but to show accomplishment, and for 
+self-satisfaction. The grand lady. Likes the big house even without money. Interested in psychology. Love affairs associated 
+with business."""],
+
+'i_plane':["""Enters into the higher realms with a perfect 
+sense of power. Can be organizer of religious activities and 
+philosophical societies or groups. Makes use of intuitive 
+knowledge. Uses Spiritual knowledge in a business manner. 
+Does research and historical investigation."""],
+
+'summary': ["""The number Eight Total on any plane gives executive ability, talent for organization,
+and supervision of large undertakings. The number Eight has fine character, excellent mental 
+qualities, good judgment. The ability to weigh and balance for 
+right action and performance rewards the Eight on any plane 
+with recognition, authority, leadership, and association with 
+the important people of the world. A natural ability to judge, 
+to estimate the strength or weakness of character in others, to 
+command obedience and respect adds to its position and usefulness.""","""
+The number Eight is an efficiency expert, a firm disciplinarian, and inwardly demands the same strength from itsel'. 
+The number Eight is always active, strenuous, never satisfied, and constantly reaching out for better results and greater 
+attainment, it may seem forceful, overwhelming, and dominant 
+to others. Life is never easy for the number Eight, who is always on the wheel of attainment.
+As a companion or sweet-heart it has little time or dreaming, sentimentality or romance, 
+even when deeply in love, as there is always some task or plan 
+which demands its attention. ""","""The Eight attracts money and 
+deals with finances; since the Eight has many expenses, it does 
+not always gain the full reward for its eforts, more especially 
+so if it makes money its goal in life. Money is the reward when 
+the Eight works for a cause or purpose that represents the good 
+of many people. As a counselor along the lines of the plane on 
+which it is found, it can be very successful. It expects to be the 
+authority and does not take orders unless it respects the source 
+of the authority."""]
+}
+
+nin_in_plane = {
+'p_plane':["""
+Publisher, importer, writer, dramatic actor, instructor, director where the spectacular is required. In positions 
+where broad and universal contacts are important. Colors all 
+activity with dramatic feeling and acts with intuition and impressions in practical situations."""],
+
+'m_plane':["""Capable of meeting and working with people of 
+all races and nations. Sometimes finds it difficult to pin mind 
+down to “right now.” May be thinking and planning for big 
+things while the things at hand need attention. Needs to be 
+placed where it does not have too much personal concern over 
+details."""],
+
+'e_plane':["""Very dramatic. Great sense of importance. 
+Always acts in a dramatic manner. Likes the attention of admiring groups or crowds. Can become very negative without 
+love or approval, forming habits hard to break, which it may 
+not understand in itself or know how to handle otherwise. May be impersonal and distant in love and emotional relationships. 
+Adds color and feeling to all undertakings. Capable of outstanding creative work in any field of endeavor."""],
+
+'i_plane':["""Brings down unusual ideas from on High. This inspiration can influence many people. Inclined to dwell in the 
+abstract, even be vague and indefinite. Not practical. Can go 
+around in a daze, dreaming and not doing. Extremely impressionable and idealistic."""],
+
+'summary': ["""The number Nine Total expresses compassion, tolerance, 
+good will, and generosity. It unconsciously adds color and 
+drama to the undertaking on the plane on which it is found. 
+The manner is independent although charitable. It likes to take 
+part in philanthropic activities for the general public welfare. 
+""","""
+It may react in a cold and indifferent manner if appealed 
+to by others for personal reasons. The abstract side of its nature makes it a dreamer and a great actor on the stage of life, 
+but difficult to understand, as it does not listen to reason, may 
+promise and then forget. It has great talent and can accomplish 
+fine work in any field of endeavor, although it is fundamentally the dramatist,
+guided and influenced by an intuitive relationship to the Universal mind. 
+""","""
+The Nine needs others to direct it, for, being impressionable and dreaming of big, broad accomplishments, it can be led 
+away by others, although it has excellent business ability when 
+its talents are directed and put to good use. The Nine may express very negatively, get caught in habits hard to break if it 
+allows egotism - the desire to be the "hale-fellow-well-met" and too much interest in the opposite sex
+to mar its finer character. The number Nine on any plane has an inner need for 
+love and companionship and needs a sympathetic and understanding mate, but also is of dramatic and
+artistic or philanthropic nature. ""","""Repeated opportunity with splendid financial 
+attraction supports the endeavors of the number Nine. Its 
+success is maintained when its efforts are appreciated and 
+its broad concepts o beauty and grandeur understood and 
+worked out for the good of many on a wide scope of attainment. Foreign travel broadens the scope of success."""]
 }
 
 ones = {
