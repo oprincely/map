@@ -121,8 +121,9 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
     #Your Life Path - Expression Bridge
     LEB = abs(birth_force - destiny_number)
     
-    reality_number = digit_sum(destiny_number + birth_force)
-    Mrity = reality_number
+    #reality_number
+    k_rity = destiny_number + birth_force
+    Mrity = digit_sum(destiny_number + birth_force)
     
     #Turn names to list in uppercase ['J', 'O', 'H', 'N', 'J', 'O', 'S', 'E', 'P', 'H', 'P', 'E', 'R', 'S', 'H', 'I', 'N', 'G']
     list_name = list(name1 + name2 + name3)
@@ -200,20 +201,20 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
     p4 = fourth_pinnacle
     
     #pinnacles starts
-    first_pinnacle_starts = 36 - birth_force
-    first_pinnacle_ends = first_pinnacle_starts + 9
+    first_pinnacle_starts = 0
+    first_pinnacle_ends = 36 - birth_force #28 yrs
     p11 = first_pinnacle_starts
     
-    second_pinnacle_starts = first_pinnacle_ends + 1
-    second_pinnacle_ends = second_pinnacle_starts + 9
+    second_pinnacle_starts = first_pinnacle_ends + 1 #29 yrs
+    second_pinnacle_ends = second_pinnacle_starts + 8 #37 yrs
     p22 = second_pinnacle_starts
     
-    third_pinnacle_starts = second_pinnacle_ends + 1
-    third_pinnacle_ends = third_pinnacle_starts + 9
+    third_pinnacle_starts = second_pinnacle_ends + 1 #38 yrs
+    third_pinnacle_ends = third_pinnacle_starts + 8 #46 yrs
     p33 = third_pinnacle_starts
     
-    fourth_pinnacle_starts = third_pinnacle_ends + 1
-    fourth_pinnacle_ends = third_pinnacle_starts + 9
+    fourth_pinnacle_starts = third_pinnacle_ends + 1 #47 yrs
+    fourth_pinnacle_ends = third_pinnacle_starts + 8 #55 yrs
     p44 = fourth_pinnacle_starts
     
     #print(third_pinnacle_starts,third_pinnacle_ends)
@@ -324,19 +325,31 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
     Gper_cha = final_challenge_of_the_pday
     
     #which pinnacle is current
-    age_now = year_now - bty
+    age_now = year_now - bty #38
     
-    if age_now in range(first_pinnacle_starts,first_pinnacle_ends):
-        curr_pina = first_pinnacle
-    elif age_now in range(second_pinnacle_starts,second_pinnacle_ends):
-        curr_pina = second_pinnacle
-    elif age_now in range(third_pinnacle_starts,third_pinnacle_ends):
-        curr_pina = third_pinnacle
-    elif age_now in range(fourth_pinnacle_starts,fourth_pinnacle_ends):
-        curr_pina = fourth_pinnacle
+    #Is pinnacle changing?
+    age_next = age_now + 1 #39
+    
+    def check_pinnacle(g):
+        if g in range(first_pinnacle_starts,first_pinnacle_ends): #(0, 28)
+            return first_pinnacle
+        elif g in range(second_pinnacle_starts,second_pinnacle_ends): #(29, 38)[29, 30, 31, 32, 33, 34, 35, 36, 37]
+            return second_pinnacle
+        elif g in range(third_pinnacle_starts,third_pinnacle_ends): #(38, 47)[38, 39, 40, 41, 42, 43, 44, 45, 46]
+            return third_pinnacle
+        elif g in range(fourth_pinnacle_starts,fourth_pinnacle_ends): #(47, 55)[47, 48, 49, 50, 51, 52, 53, 54]
+            return fourth_pinnacle
+        else:
+            return first_pinnacle
+    
+    curr_pina = check_pinnacle(age_now)
+    is_pina_changing = check_pinnacle(age_next)
+    
+    if curr_pina == is_pina_changing:
+        pina_change = 'Pinnacle is not changing'
     else:
-        curr_pina = first_pinnacle
-    
+        pina_change = f'Pinnacle is changing from {curr_pina} to {is_pina_changing}'
+        
     ################## pandas things #######
     # RC
     krc = digit_sum((year_now - bty)) + digit_sum((year_now - bty)-1)
@@ -377,8 +390,9 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
     df['outcome'] = df['Essence'] + df['y_num'] + df['u_y_num'] + df['pinac']
     df['Go'] = df['outcome'].apply(digit_sum)
     
-    event = df.loc[year_now - bty]
+    event = df.loc[year_now - bty]#38
     year = event['year']
+    Ess_karma = event['Karma']
     Essence = event['Essence']
     pynum = event['y_num']
     uniynum = event['u_y_num']
@@ -387,6 +401,21 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
     uniday = uni_day
     pday = p_day
     #print(event)
+    
+    #current letter in names
+    cur_lata1 = event['fname']
+    cur_lata2 = event['mname']
+    cur_lata3 = event['lname']
+    ################### NEXT YEAR to see if essence is changing
+    event_nxt = df.loc[(year_now - bty) + 1]#39
+    #year = event['year']
+    #Ess_karma = event['Karma']
+    Ess_nxt = event_nxt['Essence']
+    if Essence == Ess_nxt:
+        Ess_change = f'Essence is  not changing'
+    else:
+        Ess_change = f'Essence is changing from {Essence} to {Ess_nxt}'
+    
     #############
     #speed reading
     d = collections.Counter(s)# count number of,, just do print  Counter({2: 4, 1: 1, 9: 1, 8: 1})
@@ -499,7 +528,8 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
     speed_reading = [lp,A,B,C,D,E,F,G,H,I,Rall,R1all,R2all,R3all,R4all,R5all,R6all,R7all,p,bash1,bash2,bash3,bash4,bash5,
                     bash6,bash7,bash8,bash9]
 
-    full_reading = [exp,exp11,ln,lp,year_now,sU,sU1,iM,iM1,Mrity,phy,men,emo,intt,one,two,thr,fou,fiv,six,sev,eig,nin]
+    full_reading = [exp,exp11,ln,lp,year_now,sU,sU1,iM,iM1,Mrity,phy,men,emo,intt,one,two,thr,
+                    fou,fiv,six,sev,eig,nin,pina_change,k_rity,Ess_karma,Essence,Ess_change,cur_lata1,cur_lata2,cur_lata3] #pina_change
     
     event = [exp11,sU,iM1,lp,Mrity,phy,men,emo,intt,one,two,thr,fou,fiv,six,sev,eig,nin,ps,cH,cH1,cH2,cH3,
              Essence,pynum,uniynum,pina,rc,pmonth,uniday,pday,Gpina,Gcha,Gper_pi,Gper_cha,k_day,k_pday,year_now]

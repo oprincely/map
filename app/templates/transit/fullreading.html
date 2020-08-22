@@ -6,7 +6,7 @@
         p3 {color: #ff6347;}
         p4 {color: #0000ff;}
     </style>
-    
+	
     <h3>
         Your Destiny Number
     </h3>
@@ -28,6 +28,13 @@
         <p>{{ v[6] }}</p>
         <p>{{ v[7] }}</p>
         <p>{{ v[8] }}</p>
+        {% endif %}
+        {% endfor %}
+		<!-- karmas -->
+		{% for k, v in karmas.items()%}
+        {% if k == exp %}
+        <p style="color: green;">{{ v[0] }}</p>
+        <p>{{ v[1] }}</p>
         {% endif %}
         {% endfor %}
         
@@ -57,6 +64,13 @@
         <p>{{ v[8] }}</p>
         {% endif %}
         {% endfor %}
+		<!-- karmas -->
+		{% for k, v in karmas.items()%}
+        {% if k == ln %}
+        <p style="color: green;">{{ v[0] }}</p>
+        <p>{{ v[1] }}</p>
+        {% endif %}
+        {% endfor %}
         
     <hr>
 	
@@ -80,6 +94,13 @@
         <p>{{ v[6] }}</p>
         <p>{{ v[7] }}</p>
         <p>{{ v[8] }}</p>
+        {% endif %}
+        {% endfor %}
+		<!-- karmas -->
+		{% for k, v in karmas.items()%}
+        {% if k == sU1 %}
+        <p style="color: green;">{{ v[0] }}</p>
+        <p>{{ v[1] }}</p>
         {% endif %}
         {% endfor %}
         
@@ -114,6 +135,13 @@
         {% for k, v in reality.items()%}
         {% if k == Mrity %}
         <p>{{ v[0] }}</p>
+        {% endif %}
+        {% endfor %}
+		<!-- karmas -->
+		{% for k, v in karmas.items()%}
+        {% if k == k_rity %}
+        <p style="color: green;">{{ v[0] }}</p>
+        <p>{{ v[1] }}</p>
         {% endif %}
         {% endfor %}
         
@@ -339,5 +367,66 @@
         {% endfor %}
         
     <hr>
+	
+	<h6 style="color: red;">{{ pina_change }}</h6>
+	<hr>
+	<hr>
+	
+	<h3>
+		Transit Of The Year {{ year_now }}
+	</h3>
 
+    <i>
+       This how this year will manifest.
+    </i>
+        <h4>Your Essence is {{ Ess_karma }} / {{ Essence }}<br></h4>
+
+        {% for k, v in Ess.items()%}
+        {% if k == Essence %}
+        <p>{{ v[0] }}</p>
+		<p>{{ v[1] }}</p>
+		<p>{{ v[2] }}</p>
+		<p>{{ v[3] }}</p>
+        {% endif %}
+		
+		{% if k == Ess_karma %}
+        <p>{{ v[0] }}</p>
+		<p>{{ v[1] }}</p>
+		<p>{{ v[2] }}</p>
+		<p>{{ v[3] }}</p>
+        {% endif %}
+		
+        {% endfor %}
+		<h6 style="color: red;">{{ Ess_change }}</h6> 
+        
+    <hr>
+	
+	<h4>Your running a letter of {{ cur_lata1 }},{{ cur_lata2 }} and {{ cur_lata3 }} <br></h4>
+	{% for k, v in lata1.items()%}
+        {% if k == cur_lata1.lower() %}
+        <p>{{ v[0] }}</p>
+		<p>{{ v[1] }}</p>
+		<p>{{ v[2] }}</p>
+		<p>{{ v[3] }}</p>
+        {% endif %}
+	{% endfor %}
+	<hr>
+	{% for k, v in lata2.items()%}
+        {% if k == cur_lata2 %}
+        <p>{{ v[0] }}</p>
+		<p>{{ v[1] }}</p>
+		<p>{{ v[2] }}</p>
+		<p>{{ v[3] }}</p>
+        {% endif %}
+	{% endfor %}
+	<hr>
+	{% for k, v in lata3.items()%}
+        {% if k == cur_lata3.lower() %}
+        <p>{{ v[0] }}</p>
+		<p>{{ v[1] }}</p>
+		<p>{{ v[2] }}</p>
+		<p>{{ v[3] }}</p>
+        {% endif %}
+	{% endfor %}
+	
 {% endblock %}

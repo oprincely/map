@@ -3,19 +3,19 @@ from flask import Blueprint, render_template, url_for, redirect, request, sessio
 from flask_login import current_user, login_user,login_required,logout_user
 from app import db
 from app.models import User,Post
-from app.auth.forms import PostForm,PredictionForm
+from app.auth.forms import PostForm,PredictionForm,NumberOfQuestions,AskQuestions
 
 import datetime
-from app.genum import generate_numbers
-from app.hello import contains_y,jeff, life_number,your_personal,real,hearts_d,image_num,bddict,year_num,lesson,debt
-from app.hello import check_karma,peak,digit_sum,b_t_ms
 from app.hello1 import missing_numbers
-from app.destiny_num import destiny,birthForce,heart_desire,personality,reality,one_in_plane,two_in_plane,three_in_plane
-from app.destiny_num import four_in_plane,six_in_plane,sev_in_plane,eig_in_plane,nin_in_plane,five_in_plane
-from app.destiny_num import zero_in_plane,ones,twos,threes,fours,fives,sixs,sevens,eights,nines,vocation
-from app.count_numbers import count_1s,count_2s,count_3s,count_4s,count_5s,count_6s,count_7s,count_8s,count_9s,vocation_pointer
+from app.genum import generate_numbers
+from app.hello import (contains_y,jeff, life_number,your_personal,real,hearts_d,image_num,bddict,year_num,lesson,debt,
+                       check_karma,peak,digit_sum,b_t_ms)
 
-from app.auth.forms import NumberOfQuestions,AskQuestions
+from app.destiny_num import (destiny,birthForce,heart_desire,personality,karmas,reality,one_in_plane,two_in_plane,
+                             three_in_plane,four_in_plane,six_in_plane,sev_in_plane,eig_in_plane,nin_in_plane,
+                             five_in_plane,zero_in_plane,ones,twos,threes,fours,fives,sixs,sevens,eights,nines,vocation)
+from app.count_numbers import (count_1s,count_2s,count_3s,count_4s,count_5s,count_6s,count_7s,count_8s,count_9s,vocation_pointer)
+from app.timing import (Ess,B_T_K,E_N_W,F_O_X)
 
 x = datetime.datetime.now()
 year_now = x.year
@@ -131,14 +131,6 @@ def event():
                             two=e[10],thr=e[11],fou=e[12],fiv=e[13],six=e[14],sev=e[15],eig=e[16],nin=e[17],ps=e[18],cH=e[19],cH1=e[20],cH2=e[21],cH3=e[22],
                             Essence=e[23],pynum=e[24],uniynum=e[25],pina=e[26],rc=e[27],pmonth=e[28],uniday=e[29],pday=e[30],Gpina=e[31],Gcha=e[32],Gper_pi=e[33],
                             Gper_cha=e[34],k_day=e[35],k_pday=e[36],year_now=e[37])
-
-@bp.route('/event/<number>/popup')
-@login_required
-def event_number(number):
-    
-    #user = User.query.filter_by(username=username).first_or_404()
-    number = 4
-    return render_template('transit/number_popup.html',number=number)
 
 
 @bp.route('/reading')
@@ -282,7 +274,7 @@ def fullreading():
                                sixs=sixs,sevens=sevens,eights=eights,nines=nines,vocation=vocation,
                                phy_num_to_str=phy_num_to_str,m_num_to_str=m_num_to_str,emo_num_to_str=emo_num_to_str,
                                i_num_to_str=i_num_to_str,t_num1=t_num1,t_num2=t_num2,t_num3=t_num3,t_num4=t_num4,t_num5=t_num5,
-                               t_num6=t_num6,t_num7=t_num7,t_num8=t_num8,t_num9=t_num9,v_pointer=v_pointer)
+                               t_num6=t_num6,t_num7=t_num7,t_num8=t_num8,t_num9=t_num9,v_pointer=v_pointer,karmas=karmas)
     return 'ACCESS DENIED'
 
 
@@ -365,16 +357,26 @@ def newuser():
             
             v_pointer = v_points
             
-            print('v_point = ',v_point)
-            #[['many_1s_and_8s'], [], [], ['many_4s_and_7s'], ['many_5s'],
-            #['many_2s_and_3s_and_6s'], ['many_7s_and_9s'], ['many_8s'], []]
-            print(v_pointer)
-            #['many_1s_and_8s', 'many_4s_and_7s', 'many_5s', 'many_2s_and_3s_and_6s', 'many_7s_and_9s', 'many_8s']
+            def what_lata(s):
+                if s == 0:
+                    return B_T_K
+                elif s.lower() in ['e','n','w']:
+                    return E_N_W
+                elif s.lower() in ['b','t','k']:
+                    return B_T_K
+                elif s.lower() in ['f','o','x']:
+                    return F_O_X
+                
+            lata1 = what_lata(r[28])#w
+            lata2 = what_lata(r[29])#0
+            lata3 = what_lata(r[30])#O
             
             return render_template('transit/fullreading.html',
                                exp=r[0],exp11=r[1],ln=r[2], lp=r[3],year_now=r[4],sU=r[5], sU1=r[6],
                                iM=r[7], iM1=r[8],Mrity=r[9],phy=r[10],men=r[11],emo=r[12],intt=r[13],one=r[14],two=r[15],
-                               thr=r[16],fou=r[17],fiv=r[18],six=r[19],sev=r[20],eig=r[21],nin=r[22],
+                               thr=r[16],fou=r[17],fiv=r[18],six=r[19],sev=r[20],eig=r[21],nin=r[22],pina_change=r[23],
+                               k_rity=r[24],Ess_karma=r[25],Essence=r[26],Ess_change=r[27],
+                               cur_lata1=r[28],cur_lata2=r[29],cur_lata3=r[30],
                                destiny=destiny,birthForce=birthForce,heart_desire=heart_desire,
                                personality=personality,reality=reality,one_in_plane=one_in_plane,sev_in_plane=sev_in_plane,
                                six_in_plane=six_in_plane,three_in_plane=three_in_plane,four_in_plane=four_in_plane,
@@ -383,7 +385,9 @@ def newuser():
                                sixs=sixs,sevens=sevens,eights=eights,nines=nines,vocation=vocation,
                                phy_num_to_str=phy_num_to_str,m_num_to_str=m_num_to_str,emo_num_to_str=emo_num_to_str,
                                i_num_to_str=i_num_to_str,t_num1=t_num1,t_num2=t_num2,t_num3=t_num3,t_num4=t_num4,t_num5=t_num5,
-                               t_num6=t_num6,t_num7=t_num7,t_num8=t_num8,t_num9=t_num9,v_pointer=v_pointer)
+                               t_num6=t_num6,t_num7=t_num7,t_num8=t_num8,t_num9=t_num9,v_pointer=v_pointer,karmas=karmas,
+                              Ess=Ess,B_T_K=B_T_K,E_N_W=E_N_W,F_O_X=F_O_X,
+                              lata1=lata1,lata2=lata2,lata3=lata3)
         
         elif request.method == 'GET':
             return render_template('newuser.html',form=form)

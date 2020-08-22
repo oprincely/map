@@ -13,7 +13,7 @@ def main_cal_tees(btd,btm,bty,transit_day,transit_month,transit_year,asc,mc,prog
                    
     naspect1 = naspect(btd, month(number, month_to_num[btm-1],bty),asc,mc)
     arc,progressed = solar_arc(btd, month(number, month_to_num[btm-1], bty),[13,9],[13,6], transit_year),[[0, 45], prog_moon, [0, 45], [0, 45], [0, 45]]
-    transit = ephemeris_of_day(transit_day, month(98, month_to_num[transit_month-1], transit_year))
+    transit = ephemeris_of_day(transit_day, month(before_month_call(98, month_to_num[transit_month-1], transit_year), month_to_num[transit_month-1], transit_year))
     
     def mid_pts(planet1,planet2,name_of_planet1,name_of_planet2):
         #print(planet1)

@@ -84,7 +84,7 @@ def month(number, month,year):
         #print(birth_calender)
         return birth_calender,year,month
     
-#month(102, 'jan', 2019) #feb,mar,apr,may,june,july,aug,sept,oct,...nov,dec
+#month(before_month_call(98, 'aug', 2016), 'aug', 2016) #feb,mar,apr,may,june,july,aug,sept,oct,...nov,dec
 
 def sigh_2_num(m):
     if m == 'AR':
@@ -141,6 +141,7 @@ def month_2_num(m):
     return sn
 
 def ephemeris_of_day(day_date, month): #date of the month[0]
+    print(month[0])
     get_day = ((day_date - 1) * 94) + (2 * (day_date - 1)) #=answer 2208
     day = month[0][get_day:get_day + 2]
     date = month[0][get_day + 3:get_day + 5]
@@ -199,6 +200,16 @@ def ephemeris_of_day(day_date, month): #date of the month[0]
     
 
 #j = ephemeris_of_day(27, month(102, 'jan', 2019)) #other_month('apr',2020)#other_month(month,year)
+#print('j = ',j)
+
+#j = ephemeris_of_day(27, month(before_month_call(98, 'aug',2016), 'aug', 2016))
+#print('j = ',j)
+
+transit_day = 16
+transit_month = 8
+transit_year = 2016
+
+#j = ephemeris_of_day(transit_day, month(before_month_call(98, month_to_num[transit_month-1], transit_year), month_to_num[transit_month-1], transit_year))
 #print('j = ',j)
 
 def naspect(day_date, month,asc,mc):

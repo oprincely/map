@@ -1807,7 +1807,7 @@ run amuck.""",
 #####################################################################################
 
 #Lunar Node and Ascendant 498
-"nod_to_natasc ":"""Personal relationships.""",
+"nod_to_natasc":"""Personal relationships.""",
 "asc_to_natnod":"""Personal relationships.""",
 "sun_nod/asc":"""Helpful social contacts; gregariousness; an entertaining
 personality.""",
@@ -1828,8 +1828,8 @@ interests in the paranormal; impressionability.""",
 ######################################################################################
 
 #Lunar Node and Midheaven 499
-"nod_to_natmc ":"""Being recognized; meeting or marriage.""",
-"mc_to_natnod ":"""Being recognized; meeting or marriage.""",
+"nod_to_natmc":"""Being recognized; meeting or marriage.""",
+"mc_to_natnod":"""Being recognized; meeting or marriage.""",
 "sun_nod/mc":"""The importance of contacts and friends for success; easy social
 ascendancy.""",
 "moon_nod/mc":"""The challenge and fulfillment ofsharing emotions with others.""",
@@ -1848,7 +1848,7 @@ solving problems innovatively with others.""",
 #####################################################################################
 
 #Ascendant and Midheaven 500
-"asc _to_natmc ":"""Identity awareness.""",
+"asc _to_natmc":"""Identity awareness.""",
 "mc _to_natasc":"""Identity awareness.""",
 "sun_asc/mc":"""The quest to be one's own person; to do well by one's selfimage; to clarify the persona.""",
 "moon_asc/mc":"""Showing others how one feels about things.""",

@@ -25,6 +25,7 @@ def transit():
         transit_day = int(request.form['tday'])
         transit_month = int(request.form['tmonth'])
         transit_year = int(request.form['tyear'])
+        print(transit_day,transit_month,transit_year)
         
         asc1 = request.form['asc']
         asc11 = int(asc1[0:2])

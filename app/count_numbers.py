@@ -55,7 +55,7 @@ def count_6s(number):
     
 def count_7s(number):
     seven = [0]
-    if number < seven[0]:
+    if number == seven[0]:
         return 'no_7s'
     elif number > seven[0]:
         return 'many_7s'
@@ -63,14 +63,16 @@ def count_7s(number):
         return 'average_7s'
     
 def count_8s(number):
-    eight = [0,1]
-    if number < eight[0]:
-        return 'no_8s'
-    elif number > eight[0] and eight[1]:
+    eight = [0,1] #2
+    if number > eight[1]: #0 and 1
         return 'many_8s'
-    elif number == eight[0] or eight[1]:
+    elif number == eight[1]: #1
         return 'average_8s'
-    
+    else:
+        return 'no_8s'
+
+#print(count_8s(1))
+
 def count_9s(number):
     nine = [3]
     if number < nine[0]:

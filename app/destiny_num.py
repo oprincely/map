@@ -699,7 +699,53 @@ needs in practical necessities. You are not good in "get
 rich quick" schemes, but in work that has background."""],
 5:[],
 6:[],
-7:[],
+7:["""
+You are the scientific and thinking type. You have an observing nature and an analytical mind.
+It is not natural for you to accept things at their face value for you have a natural ability to relate facts,
+put two and two together, to size up situations and conditions from a technical and scientific standpoint. 
+This is part of your financial success and gives you unusual opportunity if you use it well. You have a high type of mind, 
+combined with an intuitive feeling and an ability to understand 
+the hidden and non-apparent facts, making you a developer, 
+discoverer, inventor, and specialist. Knowledge is power in your 
+life, and the more you know, the farther you will go. 
+""","""
+You are naturally reserved, thoughtful, silent, and selective, and while you like people and like to be with them, you 
+do not care for the common crowd and select your friends and 
+environment with respect for dignity and pride. However, 
+when you are on your own ground and feel familiar and at 
+home, you can talk well and interestingly. You have an inner 
+magnetism which is an inspiration to others and a drawing 
+card, both in business and friendship. 
+""","""
+You are not a truly adaptable person and are averse to 
+being asked questions outright, although you ask many and 
+demand proof, making you seem to be a doubter, or cold and 
+hard. This side of your character can make you difficult to understand and you may hardly understand yourself at times, but 
+when you take time to listen to your inner guidance, you have 
+nothing to fear at any time.
+""","""
+You often need to be a'one, to get 
+close to nature, to think and read, for you gain your composure in this way and discover your true self, which makes you a 
+most attractive and successful character. You are something of 
+the stoic too, for too much emotion strips you of your power. 
+Many times during your lifetime you will have to depend entirely upon your own ability and soul force;
+but just have confidence in your inner magnetism, your clear thinking mind, 
+your technical and mathematical ability, and you will be called 
+from the background into the luck you deserve. 
+""","""
+VOCATION 
+""","""
+All lines of business which call for calculation, analysis, 
+'ine deduction, scientific knowledge and technical ability; insurance, mathematical pursuits, chemistry, dietetics, history, 
+research, criminal investigation and all business requiring skill 
+and specialized ability; educational matters, technical and scientific art, medicine, law,
+engineering, invention, literary activities, laboratory and statistical interests, radio and cinema—are in your scope. The occult,
+mystical, and mysterious give opportunity; also music, pipe organs, and musical instruments;
+ability to do fine work with your hands, carving, etchings, and 
+making of delicate objects of art and science; bookkeeping and 
+accounting. 
+""","""
+Wear purple, brick, or pearl while working."""],
 8:
 ["""
 You are the executive type and have splendid powers of 
@@ -966,6 +1012,42 @@ of mankind is part of the victory of the latter days. ""","""The world
 of drama, art, literature, beauty in all its forms gives personal 
 and financial reward. To live personally and to desire only personal love is to miss the goal of love and companionship which 
 will come through work done for all people, regardless of race, creed, or culture."""]
+}
+
+karmas = {
+11:["""You can rule the masses, but spiritual living is demanded."""],
+22:["""
+You find it difficult to bring your thoughts and desires down to the 
+ordinary everyday activities, and to put into form and order your concepts and finer attributes.
+
+You often needs the help and support of others and must learn to cooperate with circumstances - not pull against them.
+
+Often there is a dominant person in the environment to test the peacemaking qualities of the you,
+causing you much unhappiness and sorrow.
+
+You will find your victory in helping others and in working with large undertakings or groups.
+These are the only way to overcome strange inner conflicts you will experince."""],
+16:["""
+Sudden happenings can take place wich has the power to disrupt and cause circumstances to 
+fall apart with loss and some humiliation.
+
+However, wisdom, intelligence, scientific knowledge, 
+and skill will soon bring about a recovery. If no effort is made to 
+use this intelligence, the experience can be difficult."""],
+19:[""" 
+It forces the individual to stand on his own feet and to take a 
+stand for self-development and self-realization.
+
+It is a test of courage, initiative, and self-determination. The pressure and 
+urge is felt within the individual’s own mind and heart but not 
+apparent to others nor understood by them.
+
+When the will is cultivated and combined with the tolerance and compassion, fine progress can be made.
+
+If resistance and self-pity direct the actions, the road to success and happiness is difficult and trying.
+
+A well-developed individuality and successful use of the talents also overcome the test apperent here."""]
+
 }
 
 #Zero in Planes
@@ -1735,4 +1817,44 @@ instruction."""],
 'many_7s_and_9s':["""literary ability."""],
 
 'many_8s':["""philosophical feeling, expressed through printing and publishing, correspondence, and newspapers."""]
+}
+
+cha = {
+1:["""When a One appears on the Challenge, the feeling of opposition, of being held down, often by relatives or those with 
+stronger wills, will be experienced. When the Challenge is a One, a steadier will must be cultivated, a finer determination 
+expressed with dignity and self-respect. 
+""","""
+Resentment should be avoided. Little is gained by placing the blame on others. Fighting against the hurts or headstrong action
+leads to mistakes and to unreasonableness. The quick wit, originality, and personal ideas should be valued and 
+trained. 
+""","""
+Even though there may be many ones in the name at birth 
+and the character very positive and dominant, a broader expression of purpose must still be cultivated."""],
+2:["""The number Two Challenge is one of the most commonly 
+found, for the quality of sensitiveness is natural to the human 
+race. It is a very fine characteristic. Without it, response to the 
+fitness of things would be lacking and the coarse and rude 
+phases of life would predominate.""","""When hypersensitiveness is 
+allowed to take over, it can represent fear, timidity, or lack of 
+self-confidence and be a source of deep sut ering. A feeling of 
+subordination often prevents success and gives a tendency to be 
+unduly influenced by what others think or say. Sensitiveness 
+represents intelligence and understanding of the finer relationships of life.""","""
+It is only when it is allowed to become hurt feelings, jealousies, and fear of people that it is negative. The 
+number Two Challenge should value its natural talent for relating facts, perfecting details, and for knowing what is correct 
+and right. The cultivation of harmony and decorum gives self-confidence and the feeling of usefulness. """],
+0:["""The Cipher Challenge is a very common Challenge—parttime, or for the entire life. It stands for naught or all.
+The universe is symbolized by the circle. It contains all things, but still can be emptiness, depending on the mentality or
+desire of the individual. Anyone having the Cipher Challenge has the right 
+of "choice": just to drift along in life; or to rise above the seeming problems to become truly great. ""","""
+Although big tests come, 
+many wonderful and understanding people have the complete 
+Cipher Challenge. The individual with the Cipher Challenge 
+has the right to create his own world, and if he fills his Challenge with love and compassion and true helpfulness to
+mankind, his work and his undertakings will succeed surprisingly 
+well. When a period Cipher is present at any age or time of 
+life, it should not be taken lightly, for during that time a selection must be made which should be according to the Destiny 
+and outstanding talents. """,""""A Cipher is similar to the number 
+Nine. With a Cipher Challenge, cultivate a desire to make the 
+world a better place."""]
 }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numerology Readings</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <!-- extra fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-fullreading.css') }}" />
+  </head>
+  <body>
+    <section class="questions">
+		<!-- title -->
+		<div class="title">
+			<h2>Numerology Readings</h2>
+		</div>
+		<!-- questions -->
+		<div class="section-center">
+			<!-- single question -->
+			<article class="question">
+				<div class="question-title">
+					<h4>Your Destiny Number is {{ exp }}/{{ exp11}}<br></h4>
+					<button type="button" class="question-btn">
+						<span class="plus-icon">
+							<i class="fas fa-plus-square"></i>
+						</span>
+						<span class="minus-icon">
+							<i class="fas fa-minus-square"></i>
+						</span>
+					</button>
+				</div>
+				<!-- question text -->
+				<div class="question-text">
+					{% for k, v in destiny.items()%}
+					{% if k == exp11 %}
+					<p>{{ v[0] }}</p><br>
+					<p>{{ v[1] }}</p><br>
+					<p>{{ v[2] }}</p><br>
+					<p>{{ v[3] }}</p><br>
+					<p>{{ v[4] }}</p><br>
+					<p>{{ v[5] }}</p><br>
+					<p>{{ v[6] }}</p><br>
+					<p>{{ v[7] }}</p><br>
+					<p>{{ v[8] }}</p><br>
+					{% endif %}
+					{% endfor %}
+				</div>
+			</article>
+			<!-- end single question -->
+			
+			<!-- single2 question -->
+			<article class="question">
+				<div class="question-title">
+					<h4>Your Life Path is {{ ln }}/{{ lp }}<br></h4>
+					
+					<button type="button" class="question-btn">
+						<span class="plus-icon">
+							<i class="fas fa-plus-square"></i>
+						</span>
+						<span class="minus-icon">
+							<i class="fas fa-minus-square"></i>
+						</span>
+					</button>
+				</div>
+				<!-- question text -->
+				<div class="question-text">
+					{% for k, v in birthForce.items()%}
+					{% if k == lp %}
+					<p>{{ v[0] }}</p><br>
+					<p>{{ v[1] }}</p><br>
+					<p>{{ v[2] }}</p><br>
+					<p>{{ v[3] }}</p><br>
+					<p>{{ v[4] }}</p><br>
+					<p>{{ v[5] }}</p><br>
+					<p>{{ v[6] }}</p><br>
+					<p>{{ v[7] }}</p><br>
+					<p>{{ v[8] }}</p><br>
+					{% endif %}
+					{% endfor %}
+				</div>
+			</article>
+			<!-- end single2 question -->
+		</div>
+	</section>
+    <!-- javascript -->
+	<script>
+		const questions = document.querySelectorAll(".question");
+		//console.log(questions);
+
+		//console.log("Now for each beggins")
+		questions.forEach(function (e) {
+			//console.log(e)
+		});
+
+		questions.forEach(function (q) {
+			//console.log(question);
+			const btn = q.querySelector(".question-btn");
+			//console.log(btn);
+			btn.addEventListener("click", function () {
+				questions.forEach(function (item) {
+					if (item !== q) {
+						item.classList.remove("show-text");
+					};
+				});
+				
+				
+				q.classList.toggle("show-text");
+			});
+		});
+	</script>
+	
+    <!--<script src="app.js"></script>-->
+  </body>
+</html>
