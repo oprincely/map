@@ -101,6 +101,32 @@
                 {% endfor %}
         {% endfor %}
     </div>
+	
+	<!-- arcs -->
+    <div>
+        <p style="color: red;">BREAKKKKKKKKKKK</p>
+        {% for list_of_list in A %}
+                {% for list_ in list_of_list %}
+                    {% for items in list_ %}
+                        {% for item in items %}
+                            <p>{{item}}</p>
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+        {% endfor %}
+		
+		<p>opportunity and waste from arc</p>
+		
+		{% for list_of_list in A1 %}
+                {% for list_ in list_of_list %}
+                    {% for items in list_ %}
+                        {% for item in items %}
+                            <p>{{item}}</p>
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+        {% endfor %}
+    </div>
     
     
     

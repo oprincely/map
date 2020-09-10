@@ -352,8 +352,15 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
         
     ################## pandas things #######
     # RC
-    krc = digit_sum((year_now - bty)) + digit_sum((year_now - bty)-1)
-    rc = digit_sum(digit_sum(digit_sum((year_now - bty)) + digit_sum((year_now - bty)-1)))
+    this = year_now - bty
+    that = (year_now - bty)-1
+    
+    if this == 0 and that == -1:
+        krc = 9
+        rc = 9
+    else:
+        krc = digit_sum((year_now - bty)) + digit_sum((year_now - bty)-1)
+        rc = digit_sum(digit_sum(digit_sum((year_now - bty)) + digit_sum((year_now - bty)-1)))   
     
     year = [i for i in range(bty, bty+55)]
     age = [i for i in range(0, 55)]

@@ -15,7 +15,7 @@ from app.destiny_num import (destiny,birthForce,heart_desire,personality,karmas,
                              three_in_plane,four_in_plane,six_in_plane,sev_in_plane,eig_in_plane,nin_in_plane,
                              five_in_plane,zero_in_plane,ones,twos,threes,fours,fives,sixs,sevens,eights,nines,vocation)
 from app.count_numbers import (count_1s,count_2s,count_3s,count_4s,count_5s,count_6s,count_7s,count_8s,count_9s,vocation_pointer)
-from app.timing import (Ess,B_T_K,E_N_W,F_O_X)
+from app.timing import (Ess,B_T_K,E_N_W,F_O_X,I_R,C_L_U,D_M_V,G_P_Y,A_J_S,H_Q_Z)
 
 x = datetime.datetime.now()
 year_now = x.year
@@ -360,12 +360,24 @@ def newuser():
             def what_lata(s):
                 if s == 0:
                     return B_T_K
+                elif s.lower() in ['a','j','s']:
+                    return A_J_S
+                elif s.lower() in ['c','l','u']:
+                    return C_L_U
+                elif s.lower() in ['d','m','v']:
+                    return D_M_V
+                elif s.lower() in ['g','p','y']:
+                    return G_P_Y
+                elif s.lower() in ['i','r']:
+                    return I_R
                 elif s.lower() in ['e','n','w']:
                     return E_N_W
                 elif s.lower() in ['b','t','k']:
                     return B_T_K
                 elif s.lower() in ['f','o','x']:
                     return F_O_X
+                elif s.lower() in ['h','q','z']:
+                    return H_Q_Z
                 
             lata1 = what_lata(r[28])#w
             lata2 = what_lata(r[29])#0

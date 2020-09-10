@@ -5,6 +5,7 @@ from .webscrapping import call_write_eph_again
 from .calculate_transit import * 
 from .cal_optunity_waste import *
 from .cal_tees import *
+from .astro_transit_cal import *
 import datetime
 
 
@@ -25,7 +26,6 @@ def transit():
         transit_day = int(request.form['tday'])
         transit_month = int(request.form['tmonth'])
         transit_year = int(request.form['tyear'])
-        print(transit_day,transit_month,transit_year)
         
         asc1 = request.form['asc']
         asc11 = int(asc1[0:2])
@@ -42,13 +42,14 @@ def transit():
         pr111 = int(pr1[3:4])
         prog_moon = [pr11,pr111]
         
-    
+        A = astro_cal_tees(btd,btm,bty,transit_day,transit_month,transit_year,asc,mc,prog_moon)[0]
+        A1 = astro_cal_tees(btd,btm,bty,transit_day,transit_month,transit_year,asc,mc,prog_moon)[1]#square,conj,opp
     
         f = main(btd,btm,bty,transit_day,transit_month,transit_year,asc,mc,prog_moon) #forces at work ... conj,squares and opp
         f1 = main_optunity_waste(btd,btm,bty,transit_day,transit_month,transit_year,asc,mc,prog_moon) #opprutuitys and waste ...sextile and trine
         f2 =  main_cal_tees(btd,btm,bty,transit_day,transit_month,transit_year,asc,mc,prog_moon)
         
-        return render_template('transit/transit.html',f=f,f1=f1,f2=f2)
+        return render_template('transit/transit.html',f=f,f1=f1,f2=f2,A=A,A1=A1)
     return render_template('transit/transit.html')
     
 @bp.route('/eph', methods=('GET', 'POST'))

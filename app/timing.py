@@ -41,7 +41,7 @@ living to another in an economic manner, the 7 Essence brings
 a transition also through interests and activities never thought 
 of before, with help in the end or at just the right time. ""","""There 
 is a mental test to take; there can be loss and separation, but 
-these orce the thoughts and interests in a new direction. Depression, limitation and separation, with the feeling of being 
+these force the thoughts and interests in a new direction. Depression, limitation and separation, with the feeling of being 
 alone, are to be put aside through faith and realization. The 
 number 7 is the number of attraction and seeks to reward, in 
 quiet ways, when poise and inner tranquility are maintained. 
@@ -246,5 +246,124 @@ opportunities for the X period. Honesty is the best policy,
 ideals of service, love of humanity assure the F or O or X 
 money, love, and usefulness.
 """],
+}
+
+A_J_S = {
+'a':[],
+}
+C_L_U = {}
+D_M_V = {}
+G_P_Y = {}
+H_Q_Z = {}
+I_R = {
+'i':[],
+'r':["""R - This is an important period and brings many experiences, both rewarding and disappointing, and many emotional 
+tests, but tends to give prominence and position. It demands 
+character and high principles with rewarding personal accomplishment when the heart is warm for humanity. Under the R it 
+is necessary to develop the spirit of the brotherhood of man; 
+this gives the opportunity for philanthropic undertakings based 
+on tolerance and compassion for all peoples and all races of 
+mankind. It is not an easy period when intolerance or race 
+prejudice remain fixed states of mind. ""","""The letter R is the last 
+letter of the alphabet and represents mankind’s last initiation. 
+During an R period the lesson that all life is one and all people 
+are included in the divine order of creation must be learned. It 
+is a period of great responsibility but of unlimited opportunity 
+in association with those doing the world’s work, and it seeks 
+to reward the efforts with the best life has to offer: love, attainment, and the financial means to
+accomplish broad and universal undertakings. These must be earned, however, and maintained by personal effort.
+States of mind which ask for selfish 
+reward bring many disappointments, losses, and separations 
+and much personal unhappiness. ""","""The letter R is forgiving and 
+when the talents and efforts are turned to making the world a 
+better place for all, it helps overcome all difficulties, replaces 
+all loss, and gives the personal love which is so greatly desired 
+during its period. It is an emotional period, for the feelings are 
+impressionable but deep, and reason may be lost in the dreams 
+and visions that fill the mind, much like the C L (J; but R gives 
+more self-control and self-discipline than the /. ""","""Marriage and 
+love affairs are on a high level, true and lovely when the purpose of the period is lived up to.
+High living and self-indulgence, “wine, women, and song,’’ and negative habits may 
+break up the home and separate man and wife. Egotism and 
+strong desire for popularity, without good works, end in loss 
+and regret. The promise is given for success and attainment in 
+any line of work which promotes civilization or has to do with 
+art, literature, foods, methods for right living, and all creative 
+endeavor. Problems may arise in partnerships and associations. The dishonesty of others may bring legal matters to be 
+adjusted; or they may be long drawn out. Honesty is the best 
+policy at all times and will bring the assistance necessary to 
+win. Sacrifice of principles will result in deep disappointments 
+in the end. The names of many musicians have the letters / and 
+R repeated in their names."""],
+}
+
+race = {
+'odd':["""introvert in tendency""","""
+During this period the thought is concerning the self or 
+some project that is important to the individual at that age. 
+"""],
+'even':["""extrovert in tendency. ""","""
+Others and associations are important to the success, or, in other words, 
+getting on with others is important."""],
+19:["""When we are in the teens the thought is for the self."""],
+
+20:["""In the twenties the desire is for marriage, family, and business."""],
+
+30:["""In the thirties the desire is for creative work and a career - also to enjoy life."""],
+
+40:["""The forties are practical and the time to place life on a practical basis. Often in the forties, this seems hard and not desired, especially after the 
+creative and inspiring thirties. This is the time to make sure that the foundation of life is established to provide for the 
+freedom, life, travel, change, progress, and public contact of the fifties."""],
+
+60:["""The sixties should give the reward of service and a life well-lived, bringing money, family pride, and service to humanity.
+The seventies shoulc be the time to retire, and would be, if men and women did not strive to reach the goal of success
+too soon and scatter their health and vitality. Life and traditions are changing, however, and this modern world is
+recognizing the value of age, allowing the so-called senior citizens 
+the right to usefulness and even a career."""],
+}
+p_yr = {
+1:["""Between January this year and January next year, your affairs are making a new start. You are now entering upon a 
+"new" cycle of experiences, and the next nine years of your 
+life depend a great deal upon what you do now. This year is a 
+time to have courage, to make plans, and to avoid inertia or indecision. You must look to the future and be willing to change 
+and advance for the sake of progress and happiness, it may be 
+necessary for you to let go of things having to do with the past 
+in order to take advantage of new opportunities, so be determined. Do not drift or have fear of the future, for if you do 
+you may lose out during a "beginning" time, such as you are 
+experiencing, because in standing still or looking back you are 
+caught in the ebb tide of opportunity, missing the opportunity 
+which is present but which must be seized. 
+
+This is not an easy year and you will need to use a great 
+deal of system and organization to get the desired results. This 
+year calls for strength of purpose and clear thinking, but it has 
+an opportunity hidden in its movement if you are alert enough 
+to recognize it. Try to broaden your activities and in meeting 
+conditions or circumstances which come up unexpectedly, call 
+upon your executive ability and originality of thought. Life is 
+now testing your character and your courage. You must show 
+what you have and what you can do. 
+
+Study your plans and your surroundings and do not be 
+afraid to take a chance with a new idea or plan, but avoid being impulsive or headstrong in making changes or moving forward.
+You are at the crossroads and wisdom is needed to get 
+on the right track. It is up to you to do the thinking and planning for yourself and others.
+You may not fully realize this until the Fall of the year, even though several times during the 
+Spring and Summer you will be called upon to make vital decisions concerning your future and what you want out of life. 
+
+During the Spring and Summer take care of your health 
+and that of loved ones. In fact, make an effort to direct all 
+conditions of your life towards a more constructive expression. 
+In April there is a break and a chance to move ahead. Take 
+some action now for improvement. In May, rest and have 
+poise; say very little. August and September, according to your 
+Year Number, bring many things to a head, and the Fall can 
+open the way to new opportunities and decisions you may not 
+have counted upon. Keep moving forward all during the year 
+for you may be able to work out your plans earlier than anticipated.
+December is a practical month—carries a practical number.
+Be very wise now and get down to work in a concrete manner, upon your former plans.
+
+The colors this year to help you “win” are Rame, Copper, Lilac, and Crimson."""],    
 }
 #print(F_O_X['o'])

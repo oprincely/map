@@ -1311,55 +1311,57 @@ its advantage and sorrow."""]
 
 #SIX IN PLANE
 six_in_plane = {
-'p_plane':["""Contacts people, likes to travel. Succeeds 
-life. Adapts to change. Good salesman when interested. Versatile and resourceful,
-but restless under routine. Likes to regulate people and affairs."""],
+'p_plane':["""Works with things of beauty. Practical artists, 
+dieticians, professional service in practical manner. Helps others and takes responsibility. Artistic talent.
+Kindergarten teachers, contractors, architects, mining engineers."""],
 
-'m_plane':["""Quick in thought and action. Curious. Wants to 
-know what is going on. Impatient if compelled to do the same 
-thing over and over, or ii not good at it. Likes to have more 
-than one iron in the fire. Keeps things moving. Promoters, 
-agents, public service."""],
+'m_plane':["""Carries responsibility. Can be depended upon to 
+do what it has been asked to do or has promised to do. May 
+feel burdened, unappreciated, but carries the burden to the 
+end. Worries, carries responsibility of others on its shoulders, 
+yet conscious of the fact it is doing so. Takes care of children 
+or family, promotes welfare of humanity. Through mental 
+powers, succeeds in big business. Many emotional affairs possibly unusual and unsought. Needs education in the arts 
+and sciences."""],
 
-'e_plane':["""Searcher and investigator. Wants to know 
-and find out what others feel. Emotionally colorful and interesting, but likes variety and turns away from dullness. Sees 
-everything and does not miss much. May not meet a crisis well 
-and needs to avoid temper and criticism. May change emotional interest easily or without regret."""],
+'e_plane':["""Expresses beauty, harmony, music, and helpful service. Feels things deeply and tears itself to pieces through 
+worry over someone who does not do the right thing. Honest 
+and true. Can make others unhappy by too much discipline, or 
+by demanding that others live up to its ideals. Responds to admiration and appreciation."""],
 
-'i_plane':["""Can get anything from the intuitive plane. Understands Higher law. Knows things without education and 
-wonders why. May not fully believe what it receives, but can 
-make use of knowledge—teach and instruct."""],
+'i_plane':["""Apt to be quite personal about faith and religion.
+May put people on a pedestal and then experience disappointment because others do not live up to its ideals. Does big 
+things in mind and often lives in visions of grandeur rather 
+than actions. Can be ministers and artists."""],
 
 'summary': ["""
-The number Five Total on all planes seeks knowledge and 
-information according to the plane on which it is found. The 
-perceptions are quick and it likes to know what is going on, for 
-curiosity is an outstanding characteristic. It is attracted by the 
-new, the odd, the unusual, even the mysterious. It likes to be in 
-the midst of exciting conditions and to be there if something is 
-happening, it does not walk the beaten path long and may 
-change its interests, plans, ideas, and intentions quickly and 
-suddenly if the grass seems greener elsewhere or if bound too 
-long by the same old condition or routine.
+The number Six Total on any plane is a natural teacher, 
+nurse, physician and humanitarian, and has an artistic nature 
+with deep appreciation oj beauty, harmony, music, color and 
+the luxurious. Service to mankind is its keynote, in a personal 
+way or in the world of welfare and human rights. It is always 
+called upon to serve in some capacity, which it does willingly, 
+but it will be aware of the service it is giving, expecting appreciation,
+compensation, and recognition for the service rendered. It is capable of sacrificing itself for a cause or ideal and 
+can be greatly imposed upon because of a warmhearted, high 
+sense of justice, honesty and willingness to fight for the rights 
+of others.
 ""","""
-Its power of observation, its progressive nature,
-its love of public activity represent talents that repay it financially. It should, however, avoid 
-too many irons in the fire. It has the intelligence to do brilliant 
-work and to promote business and public affairs. A natural 
-salesman, it is able to talk well on any subject, even if not espedally trained as a speaker.
-""","""It desires to do useful work, seeks 
-to help others in a riendly way, but can be possessive, taking 
-over without question the affairs of others, feeling it knows 
-what is best or them or the situation, thus making it difficult, 
-in the long run, for others and causing many problems. ""","""Versatile in thought and action, it meets many experiences, keeps 
-young and alert if not too impatient, critical, or contentious. 
-The number Five can promote civilization if it works from established undertakings,
-even though promoting new and untried lines of business. It can be a rolling stone, however, 
-gathering no moss, if restlessness and constant change govern 
-the activities. 
-""","""
-It often ventures in where "angels fear to tread," both to 
-its advantage and sorrow."""]
+Having high ideals, the number Six can be very demanding, even dominant, exacting, and a firm disciplinarian, but 
+often fails to get the love, approval and appreciation it so 
+deeply desires because of its insistence that others live up to its 
+demands and ways of thinking and believing.
+""","""There is a love of the home, family, garden, animals, and 
+comfortable living. The number Six never outgrows its desire 
+for love, affection and approval, even in the latter days of life. 
+It has the talent and business ability to attain the best in the 
+world for itself through its desire to add beauty and loveliness 
+to all endeavor. ""","""The Six maintains, supports, and upholds high 
+standards and seeks to represent these at all times. When a Six 
+lacks the feeling of usefulness and appreciation, it can scatter 
+its forces and live in confusion and resentment. Many 
+problems come through the affairs of children. Family inheritance influences the life of the number Six on all planes.  
+"""]
 }
 
 #SEVEN IN PLANE

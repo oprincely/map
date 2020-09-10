@@ -828,15 +828,15 @@ no clear reason; being taken advantage of, deceived.""",
 #Venus and Saturn 458
 "ven_to_natsat":"""Grace given to ambition; the arts introduced to the life; the hurt
 of love lost.""",
-"sat_to_natven":"""Suppression oflove feelings; relationship with someone of
+"sat_to_natven":"""Suppression of love feelings; relationship with someone of
 conspicuous age difference; learning trust in romance; trying
 to understand peacefulness and calm.""",
 "sun_ven/sat":"""Possible trouble in relationship; a difference in objectives; lack
-ofsatisfaction; conservatism.""",
+of satisfaction; conservatism.""",
 "moon_ven/sat":"""Emotional hurt, probably from loneliness or feeling
 unimportant.""",
-"merc_ven/sat":"""hinking about ways to feel fulfilled, to improve relationship,
-to feel wanted; preoccupation; searching for the ideal.""",
+"merc_ven/sat":"""Thinking about ways to feel fulfilled, to improve relationship,
+to feel wanted; pre-occupation; searching for the ideal.""",
 "mars_ven/sat":"""Driving a wedge into relationship harmony; wanting more than
 is there; fearing competition; disputes; possible separation.""",
 "jup_ven/sat":"""Learning respect for the status quo; keeping to oneself.""",
@@ -1265,8 +1265,7 @@ resources; keeping things in one's own grip.""",
 position with a gut feeling.""",
 "merc_jup/plu":"""Persuasion; influence; promotion of a cause.""",
 "ven_jup/plu":"""Creativity; flair.""",
-"mars_jup/plu":"""Leadership; publicity; organizing talent; applying controls to
-suit one's particular purposes.""",
+"mars_jup/plu":"""Leadership; publicity; organizing talent; applying controls to suit one's particular purposes.""",
 "sat_jup/plu":"""Adjusting the big picture to meet more with convention;
 strategy becomes necessary.""",
 "ura_jup/plu":"""Intense application of resources to establish a new perspective;
@@ -1287,7 +1286,7 @@ facts; working a situation into one's own format.""",
 confidence to support action.""",
 "moon_jup/nod":"""An emotional and enthusiastic projection to others pays off.""",
 "merc_jup/nod":"""Thinking about others' welfare; sharing success; appreciating
-the complementation ofpartnership.""",
+the complementation of partnership.""",
 "ven_jup/nod":"""Pleasantness with others; a graceful image; caring.""",
 "mars_jup/nod":"""Successful teamwork.""",
 "sat_jup/nod":"""Working with others by the rules; getting things perfectly clear;
@@ -1601,9 +1600,9 @@ through the spouse's job position or family.""",
 
 #Uranus and Midheaven 490
 "ura_to_natmc":"""An extraordinary time of life; probable reorganization of family
-life in the early home; dramatic adjustment ofjob status as an
+life in the early home; dramatic adjustment of job status as an
 adult; change of profession possible; sudden change of direction
-in practically every department oflife; individuality reigns;
+in practically every department of life; individuality reigns;
 geographic relocation.""",
 "mc_to_natura":"""Brings the power of selfhood forward; assertion is recognized;
 strong developmental tensions for job and social position.""",

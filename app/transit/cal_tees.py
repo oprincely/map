@@ -137,9 +137,9 @@ def main_cal_tees(btd,btm,bty,transit_day,transit_month,transit_year,asc,mc,prog
         elif u1 in transit:
             #then which of them; planet aspect name and sigh
             f2 = which_progressed_planet_aspecting(u1,transit)[0] #planet name 'sun'
-            print('u1 .. f2 = ',f2)
+            #print('u1 .. f2 = ',f2)
             f3 = which_progressed_planet_aspecting(u1,transit)[1] #planet sigh '12'
-            print('u1 ... f3 = ',f3)
+            #print('u1 ... f3 = ',f3)
             which_natal = which_natal_planet_is_aspected(planet_position)
             #
             if tipe == 'Tr':

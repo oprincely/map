@@ -141,7 +141,6 @@ def month_2_num(m):
     return sn
 
 def ephemeris_of_day(day_date, month): #date of the month[0]
-    print(month[0])
     get_day = ((day_date - 1) * 94) + (2 * (day_date - 1)) #=answer 2208
     day = month[0][get_day:get_day + 2]
     date = month[0][get_day + 3:get_day + 5]

@@ -570,3 +570,40 @@ min-height:calc(100vh - 62px);
   box-shadow: var(--lightShadow);
   z-index: 1;
 }
+
+/* sub-menu-1 */
+.sub-menu-1 {
+	display: none;
+}
+.more ul {
+	background: red;
+	list-style: none;
+}
+
+.nav-links .more ul:hover .sub-menu-1 {
+	display: block;
+	position: absolute;
+	background: blue;
+	margin-top: 15px;
+	margin-left: -15px;
+}
+
+.nav-links:hover .sub-menu-1 ul {
+	display: block;
+	margin: 10px;
+}
+.more:hover .sub-menu-1 ul li{
+	width: 150px;
+	padding: 10px;
+	border-bottom: 1px dotted #fff;
+	background: transparent;
+	border-radius: 0;
+	text-align: left;
+}
+
+.more .sub-menu-1 ul li:last-child {
+	border-bottom: none;
+}
+.more .sub-menu-1 ul li a:hover {
+	color: #b2ff00;
+}
