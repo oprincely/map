@@ -114,6 +114,8 @@ header {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	
+	/*border: 1px solid red;*/
 }
 .container-flex-blog-header {
 	display: flex;
@@ -125,6 +127,7 @@ footer {
 	text-align: center;
 	padding: 3em 0;
 }
+/* Big screen */
 @media (min-width: 675px) {
 	.container-flex {
 		flex-direction: row;
@@ -136,6 +139,14 @@ footer {
 		width: 30%;
 		min-width: 200px;
 		margin-left: 1em;
+		
+		/*border: 1px solid green;*/
+	}
+	.sidebar {
+		position: fixed;
+		top: 80px;
+		right: 185px;
+		width: 300px;
 	}
 }
 
