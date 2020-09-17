@@ -37,7 +37,63 @@
         .right {
             text-align: right;
             }
+		/* pop css */
+		/* Popup container - can be anything you want */
+		.popup {
+		  position: relative;
+		  /*display: inline-block;*/
+		  cursor: pointer;
+		  -webkit-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
+		/* The actual popup */
+		.popup .popuptext {
+		  visibility: hidden;
+		  width: 400px;
+		  background-color: #555;
+		  color: #fff;
+		  text-align: center;
+		  border-radius: 6px;
+		  padding: 0 2rem;
+		  position: absolute;
+		  z-index: 1;
+		  /*bottom: 125%;
+		  left: 50%;
+		  margin-left: -80px;*/
+		}
+		/* Popup arrow */
+		/*.popup .popuptext::after {
+		  content: "";
+		  position: absolute;
+		  top: 100%;
+		  left: 50%;
+		  margin-left: -5px;
+		  border-width: 5px;
+		  border-style: solid;
+		  border-color: #555 transparent transparent transparent;
+		}*/
+		/* Toggle this class - hide and show the popup */
+		.popup .show {
+		  visibility: visible;
+		  -webkit-animation: fadeIn 1s;
+		  animation: fadeIn 1s;
+		}
+
+		/* Add animation (fade in the popup) */
+		@-webkit-keyframes fadeIn {
+		  from {opacity: 0;} 
+		  to {opacity: 1;}
+		}
+
+		@keyframes fadeIn {
+		  from {opacity: 0;}
+		  to {opacity:1 ;}
+		}
+		/* pop css ends*/
     </style>
+	
     <table>
         <caption>
             Your life revolves around these numbers.
@@ -53,14 +109,20 @@
             
         </tr>
         <tr>
-            <td class="center">
-				
-				<span class="number_popup">
-					<a href="">
-						{{ exp11 }}
-					</a>
+            <td class="center popup" id="myFunction">{{ exp11 }}
+				<span class="popuptext" id="myPopup">
+					<!-- this is the popup text -->
+					<h4>Destiny Number 8</h4>
+
+					<P>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+						when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					</P>
+					
+					<hr>
+					<!-- this is the popup text ending-->
 				</span>
-				
 				
 			</td>
 			
@@ -78,10 +140,10 @@
         <table>
             <caption>how you respond to life and its issues</caption>
             <tr>
-                <th>Phy(4&5)</th>
-                <th>Men(1&8)</th>
+                <th>Phy(4|5)</th>
+                <th>Men(1|8)</th>
                 <th>emot(2|3|6)</th>
-                <th>Int(7&9)</th>
+                <th>intt(7|9)</th>
                 
             </tr>
             <tr>
@@ -205,6 +267,7 @@
             <td class="center">{{ Gper_cha }}</td>
         </tr>
     </table>
+	
     <ul>
         <li>1. individuality,independance,attainment</li>
         <li>2. relasionship,cooperation</li>
@@ -216,5 +279,18 @@
         <li>8. material sactifaction</li>
         <li>9. selflessness,humanitarianism</li>
     </ul>
-    
+	
+	{% block javascript %}
+		<script>
+			const myFunction = document.getElementById("myFunction");
+			const myPopup = document.getElementById("myPopup");
+			//const popupEl = document.querySelector(".popup");
+			console.log(myFunction);
+			myFunction.addEventListener("click", (e) => {
+				console.log("clicked here");
+				myPopup.classList.toggle("show");
+				//popupEl.classList.toggle("show");
+			});
+		</script>
+    {% endblock %}
 {% endblock %}

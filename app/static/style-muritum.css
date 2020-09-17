@@ -142,12 +142,12 @@ footer {
 		
 		/*border: 1px solid green;*/
 	}
-	.sidebar {
+	/*.sidebar {
 		position: fixed;
 		top: 80px;
 		right: 185px;
 		width: 300px;
-	}
+	}*/
 }
 
 /* navigation */
