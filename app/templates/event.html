@@ -93,7 +93,7 @@
 		}
 		/* pop css ends*/
     </style>
-	
+	<script type="text/javascript" src="{{ url_for('static', filename='js/event.js') }}"></script>
     <table>
         <caption>
             Your life revolves around these numbers.
@@ -271,6 +271,6 @@
     </ul>
 	
 	{% block javascript %}
-		<script type="text/javascript" src="{{ url_for('static', filename='js/event.js') }}"></script>
+		
     {% endblock %}
 {% endblock %}
