@@ -3,6 +3,7 @@
 {% block content %}
 
     <style>
+		h4 {color: #008CBA;}
         table {
             margin-left: 20px;
             margin-right: 20px;
@@ -52,16 +53,22 @@
 		.popup .popuptext {
 		  visibility: hidden;
 		  width: 400px;
-		  background-color: #555;
-		  color: #fff;
+		  background-color: #fff;
+		  color: #495057;;
 		  text-align: center;
 		  border-radius: 6px;
 		  padding: 0 2rem;
+		  box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
 		  position: absolute;
 		  z-index: 1;
 		  /*bottom: 125%;
 		  left: 50%;
 		  margin-left: -80px;*/
+		}
+		@media (max-width: 675px) {
+			.popup .popuptext {
+				width: 200px;
+			}
 		}
 		/* Popup arrow */
 		/*.popup .popuptext::after {
@@ -96,7 +103,7 @@
 	
     <table>
         <caption>
-            Your life revolves around these numbers.
+            Your life revolves around these clickable Numbers.
         </caption>
         
         <tr>
@@ -110,10 +117,7 @@
         </tr>
         <tr>
             <td class="center popup" id="myFunction"><span class="exp">{{ exp11 }}</span>
-				<span class="popuptext" id="myPopup">
-					
-				</span>
-				
+				<div class="popuptext" id="myPopup"></div>
 			</td>
 			
 			
@@ -269,7 +273,6 @@
         <li>8. material sactifaction</li>
         <li>9. selflessness,humanitarianism</li>
     </ul>
-	<div id="txtHint"></div>
 	
 	{% block javascript %}
 		<script>
@@ -298,7 +301,8 @@
 						<!-- this is the popup text ending-->`
 					}
 				}
-					
+				
+				//xhttp.open("GET", "http://127.0.0.1:5000/api/num/"+myPopupInner, true);	
 				xhttp.open("GET", "http://www.princely.men/api/num/"+myPopupInner, true);
 				xhttp.send();
 				//send an AJAX request ends

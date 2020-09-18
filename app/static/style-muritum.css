@@ -127,6 +127,9 @@ footer {
 	text-align: center;
 	padding: 3em 0;
 }
+main {
+	
+}
 /* Big screen */
 @media (min-width: 675px) {
 	.container-flex {
