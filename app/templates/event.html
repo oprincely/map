@@ -109,7 +109,7 @@
             
         </tr>
         <tr>
-            <td class="center popup" id="myFunction">{{ exp11 }}
+            <td class="center popup" id="myFunction"><span class="exp">{{ exp11 }}</span>
 				<span class="popuptext" id="myPopup">
 					
 				</span>
@@ -269,25 +269,41 @@
         <li>8. material sactifaction</li>
         <li>9. selflessness,humanitarianism</li>
     </ul>
+	<div id="txtHint"></div>
 	
 	{% block javascript %}
 		<script>
 			const myFunction = document.getElementById("myFunction");
 			const myPopup = document.getElementById("myPopup");
-			console.log(myFunction);
+			const myPopupb4Inner = document.getElementsByClassName("popup")[0];
+			//console.log(myPopupb4Inner);
+			const myPopupInner = myPopupb4Inner.getElementsByClassName("exp")[0].innerText;
+			//console.log(myPopupInner);
+			
 			myFunction.addEventListener("click", (e) => {
-				myPopup.innerHTML = `
-				<!-- this is the popup text -->
-				<h4>Destiny Number 8</h4>
+				//send an AJAX request
+				const xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						const text = this.responseText;
+						myPopup.innerHTML = `
+						<!-- this is the popup text -->
+						<h4>Destiny Number  ${myPopupInner}</h4>
 
-				<P>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-					when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-				</P>
+						<P>
+							${text}
+						</P>
+						
+						<hr>
+						<!-- this is the popup text ending-->`
+					}
+				}
+					
+				xhttp.open("GET", "http://localhost:5000/api/num/"+myPopupInner, true);
+				xhttp.send();
+				//send an AJAX request ends
 				
-				<hr>
-				<!-- this is the popup text ending-->`
+				
 				
 				myPopup.classList.toggle("show");
 			});

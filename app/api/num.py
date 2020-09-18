@@ -7,7 +7,7 @@ from app.hello import (life_number)
 def get_num_des(id):
     for k, v in life_number.items():
         if k == id:
-            return jsonify(v)
+            return v
 '''
 from flask import jsonify
 from app.models import User
