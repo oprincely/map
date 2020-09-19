@@ -116,17 +116,25 @@
             
         </tr>
         <tr>
-            <td class="center popup" id="myFunction"><span class="exp">{{ exp11 }}</span>
+            <td class="center popup" id="myFunction"><span class="abc" id="Destiny">{{ exp11 }}</span>
 				<div class="popuptext" id="myPopup"></div>
 			</td>
 			
+			<td class="center popup" id="myFunction"><span class="abc" id="Birth">{{ lp }}</span>
+				<div class="popuptext" id="myPopup"></div>
+			</td>
 			
+			<td class="center popup" id="myFunction"><span class="abc" id="Heart">{{ sU }}</span>
+				<div class="popuptext" id="myPopup"></div>
+			</td>
 			
-            <td class="center">{{ lp }}</td>
-            <td class="center">{{ sU }}</td>
-            <td class="center">{{ iM1 }}</td>
-            <td class="center">{{ Mrity }}</td>
-            
+			<td class="center popup" id="myFunction"><span class="abc" id="Personality">{{ iM1 }}</span>
+				<div class="popuptext" id="myPopup"></div>
+			</td>
+			
+			<td class="center popup" id="myFunction"><span class="abc" id="Reality">{{ Mrity }}</span>
+				<div class="popuptext" id="myPopup"></div>
+			</td>
         </tr>
         </table>
         <!--plane table-->
@@ -276,38 +284,35 @@
 	
 	{% block javascript %}
 		<script>
-			const myFunction = document.getElementById("myFunction");
 			const myPopup = document.getElementById("myPopup");
-			const myPopupb4Inner = document.getElementsByClassName("popup")[0];
-			//console.log(myPopupb4Inner);
-			const myPopupInner = myPopupb4Inner.getElementsByClassName("exp")[0].innerText;
-			//console.log(myPopupInner);
-			
-			myFunction.addEventListener("click", (e) => {
-				//send an AJAX request
-				const xhttp = new XMLHttpRequest();
-				xhttp.onreadystatechange = function() {
-					if (this.readyState == 4 && this.status == 200) {
-						const text = this.responseText;
-						myPopup.innerHTML = `
-						<!-- this is the popup text -->
-						<h4>Destiny Number  ${myPopupInner}</h4>
+			const abcEl = document.querySelectorAll(".abc");
+			abcEl.forEach( (abc) => {
+				abc.addEventListener("click", (e) => {
+					const name = e.target.id;
+					const id = e.target.innerText;
+					
+					//send an AJAX request
+					const xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function() {
+						if (this.readyState == 4 && this.status == 200) {
+							const text = this.responseText;
+							myPopup.innerHTML = `
+							<h4>${name} Number  ${id}</h4>
 
-						<P>
-							${text}
-						</P>
-						
-						<hr>
-						<!-- this is the popup text ending-->`
+							<P>
+								${text}
+							</P>
+							
+							<hr>`
+						}
 					}
-				}
-				
-				//xhttp.open("GET", "http://127.0.0.1:5000/api/num/"+myPopupInner, true);	
-				xhttp.open("GET", "http://www.princely.men/api/num/"+myPopupInner, true);
-				xhttp.send();
-				//send an AJAX request ends
-				
-				myPopup.classList.toggle("show");
+					//xhttp.open("GET", "http://127.0.0.1:5000/api/num/"+id+"/"+name, true);	
+					xhttp.open("GET", "http://www.princely.men/api/num/"+id+"/"+name, true);
+					xhttp.send();
+					//send an AJAX request ends
+					
+					myPopup.classList.toggle("show");
+				});
 			});
 		</script>
     {% endblock %}
