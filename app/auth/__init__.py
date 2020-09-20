@@ -8,11 +8,11 @@ from .forms import LoginForm,RegistrationForm
 from flask_login import current_user, login_user,logout_user,login_required 
  
 from werkzeug.urls import url_parse
-#from datetime import datetime
-#from app.forms import ResetPasswordForm,ResetPasswordRequestForm
-#from .email import send_password_reset_email
-################################
 import datetime
+
+from .forms import ResetPasswordForm,ResetPasswordRequestForm
+from .email import send_password_reset_email
+################################
 
 x = datetime.datetime.now()
 year_now = x.year
