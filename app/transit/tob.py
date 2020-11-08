@@ -285,6 +285,8 @@ def aspect_to_symbol(aspect):
         return '□'
     elif aspect == 'opp':
         return '☍'
+    elif aspect == 'sesqua':
+        return '⚼'
     elif aspect == 'setai':
         return '⚹'
     elif aspect == 'trin':

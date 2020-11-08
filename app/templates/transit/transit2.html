@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+	    h4 {color: #008CBA;}
+        table {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            border: thin solid black;
+            caption-side: top;
+            border-collapse: collapse;
+            }
+        table table th {
+            background-color: white;
+        }
+        td, th {
+            border: thin dotted gray;
+            padding: 5px;
+            }
+        caption {
+            font-style: italic;
+            padding-top: 8px;
+            margin-bottom: 20px;
+            }
+        th {
+            font-family: Verdana, Geneva, Arial, sans-serif;
+            font-size: small;
+            background-color: #cc6600;
+        }
+        .cellcolor {
+            background-color: #fcba7a;
+            }
+        .center {
+            text-align: center;
+            }
+        .right {
+            text-align: right;
+            }
+		a {
+			text-decoration: none;
+		}
+	</style>
+    
+</head>
+
+<body>
+    
+	
+	<div class="container1">
+	    <h2>User</h2>
+        <i><h5>PLEASE FILL OUT CAREFULLY - INCORECT INFORMATION WILL GIVE INCORRECT REPORT READINGS!</h5></i>
+    
+        <!--<i><h5>BIRTH NAME: Enter exactly as listed in your birth certificate, even if you have never used it.
+        Do not enter space, hyphens, jr., III, etc</h5></i>-->
+	    <form action="{{ url_for('transit.transit2') }}" method="POST">
+	        
+        	<p>Enter Your Birthdate</p>
+        	
+        	<div class="columns">
+        	    <div class="col">
+        	      <p><input type="text" name="day" id="day" placeholder="day" required /></p>
+        	    </div>
+        	    <div class="col">
+        	        <p><input type="text" name="month" id="month" placeholder="month" required /></p>
+        	    </div>
+        	    <div class="col">
+        	        <p><input type="text" name="year" id="year" placeholder="year" required /></p>
+        	    </div>
+        	</div>
+        	
+        	<p>Enter Your Transit date</p>
+        	<div class="columns">
+        	    <div class="col">
+        	      <p><input type="text" name="tday" id="tday" placeholder="day" required /></p>
+        	    </div>
+        	    <div class="col">
+        	        <p><input type="text" name="tmonth" id="tmonth" placeholder="month(0 - 11)" required /></p>
+        	    </div>
+        	    <div class="col">
+        	        <p><input type="text" name="tyear" id="tyear" placeholder="year" required /></p>
+        	    </div>
+        	</div>
+        	
+        	<!--<p>Enter Your asc,mc,prog</p>
+        	<div class="columns">
+        	    <div class="col">
+        	      <p><input type="text" name="asc" id="asc" placeholder="asc" required /></p>
+        	    </div>
+        	    <div class="col">
+        	        <p><input type="text" name="mc" id="mc" placeholder="mc" required /></p>
+        	    </div>
+        	    <div class="col">
+        	        <p><input type="text" name="pr" id="pr" placeholder="pr moon" required /></p>
+        	    </div>
+        	</div-->
+        	
+        	<p><input type="submit" value="submit" /></p>
+	    </form>
+	</div>
+	
+	<table>
+		{% for list_ in A %}
+		<tr>
+			{% for items in list_ %}
+				<td><a href="#">{{items}}</a></td>
+			{% endfor %}
+		</tr>
+		{% endfor %}
+	</table>
+	
+	<table>
+		{% for list_ in B %}
+		<tr>
+			{% for items in list_ %}
+				<td><a href="#">{{items}}</a></td>
+			{% endfor %}
+		</tr>
+		{% endfor %}
+	</table>
+	
+	<table>
+		{% for list_ in C %}
+		<tr>
+			{% for items in list_ %}
+				<td><a href="#">{{items}}</a></td>
+			{% endfor %}
+		</tr>
+		{% endfor %}
+	</table>
+
+</body>
+
+</html>
