@@ -1,6 +1,7 @@
 from flask import Blueprint, redirect, render_template, request, url_for,session,escape
 import os
 from .Transit_model import cal_transit_planet
+from .aspect_now import cal_aspects_now
 
 from .webscrapping import call_write_eph_again
 from .calculate_transit import * 
@@ -66,6 +67,7 @@ def transit2():
         tday = int(request.form['tday'])
         tmonth = int(request.form['tmonth'])
         tyear = int(request.form['tyear'])
+        Year = tyear
         
         #asc1 = request.form['asc']
         #asc11 = int(asc1[0:2])
@@ -81,23 +83,27 @@ def transit2():
         #pr11 = int(pr1[0:2])
         #pr111 = int(pr1[3:4])
         #prog_moon = [pr11,pr111]
-        def next_(a):
-            l = tmonth + a
+        def next_(): #next_month_transit(tmonth, tyear)
+            l = tmonth + 1
             if l < 12:
-                return l
+                m = l
+                y = tyear
             else:
-                return 12 - l
+                m = 12 - l
+                y = tyear + 1
+            return m, y
          
-        A = cal_transit_planet(btd,btm,bty,tmonth,tyear)
-        B = cal_transit_planet(btd,btm,bty,next_(1),tyear)
-        C = cal_transit_planet(btd,btm,bty,next_(2),tyear)
+        A = cal_transit_planet(btd,btm,bty,tmonth-1,tyear)
+        B = cal_transit_planet(btd,btm,bty,tmonth,tyear)
+        C = cal_transit_planet(btd,btm,bty,next_()[0],next_()[1])
         #A1 = astro_cal_tees(btd,btm,bty,transit_day,transit_month,transit_year,asc,mc,prog_moon)[1]#square,conj,opp
     
         #f = main(btd,btm,bty,transit_day,transit_month,transit_year,asc,mc,prog_moon) #forces at work ... conj,squares and opp
         #f1 = main_optunity_waste(btd,btm,bty,transit_day,transit_month,transit_year,asc,mc,prog_moon) #opprutuitys and waste ...sextile and trine
         #f2 =  main_cal_tees(btd,btm,bty,transit_day,transit_month,transit_year,asc,mc,prog_moon)
+        D = cal_aspects_now(btd,btm,bty,tday,tmonth,tyear,Year)
         
-        return render_template('transit/transit2.html',A=A,B=B,C=C)
+        return render_template('transit/transit2.html',A=A,B=B,C=C,D=D)
     return render_template('transit/transit2.html')
 
 ################# Transit 2 ends ############

@@ -999,7 +999,7 @@ creative activity.""",
 way; "making waves" effectively.""",
 "sun_mars/jup":"""Success; organizational talent; leadership.""",
 "moon_mars/jup":"""Opinionation; emotional, "gut" feelings guide action; pride.""",
-"merc_mars/jup":"""Planning capability; publishing; showing the fruits ofone's
+"merc_mars/jup":"""Planning capability; publishing; showing the fruits of one's
 labors and creativity.""",
 "ven_mars/jup":"""Success; romantic expression; creative activity.""",
 "sat_mars/jup":"""Struggling with impulse; having to toe the line; pulling in one's
@@ -1576,7 +1576,7 @@ and people approving the motion.""",
 #########################################################################
 
 #Uranus and Ascendant 489
-"ura_to_natasc":"""AS Major new start; high probability of geographic relocation.""",
+"ura_to_natasc":"""Major new start; high probability of geographic relocation.""",
 "asc_to_natura":"""Showcase opportunity for individuality; "show off time.""",
 "sun_ura/asc":"""Show of restlessness; anxiety about putting one's best foot
 forward; hoping for success.""",

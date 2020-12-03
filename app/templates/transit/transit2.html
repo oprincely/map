@@ -129,6 +129,15 @@
 		</tr>
 		{% endfor %}
 	</table>
+	
+	<div>
+        <p> Current Arcs </p>
+        {% for list_of_list in D %}
+			{% for item in list_of_list %}
+				<p>{{item}}</p>
+            {% endfor %}
+        {% endfor %}
+    </div>
 
 </body>
 

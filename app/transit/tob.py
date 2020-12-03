@@ -207,14 +207,14 @@ def sextile(sdeg,ssign):#3, 12
     return sdeg,result,result2,'setai'#,'⚹'
 
 def trine(sdeg,ssign):#3, 12...1
-    d = ssign + 4#16...5
-    k = abs(ssign - 4)#8...3
+    d = ssign + 4#16...5 first sigh
+    k = abs(ssign - 4)#8...3 other sigh
     if d >= 12:
         result = d - 12#4
     else:
         result = d#5
-    if k <= 3:
-        result2 = 12 - k
+    if k >= 12:
+        result2 = k - 12
     else:
         result2 = k#8...9
     return sdeg,result,result2,'trin'#'△'
