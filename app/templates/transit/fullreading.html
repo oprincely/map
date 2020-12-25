@@ -379,6 +379,21 @@
     <i>
        This how this year will manifest.
     </i>
+		<h4>Your Pinnacle Number is {{ pina }}<br></h4>
+			It started at the age of {{ pina_st }} years.
+
+			{% for k in pina_desc %}
+				<p>{{ k }}</p>
+			{% endfor %}
+		<hr>
+	
+		<h4>Your Year Number is {{ py_num }}<br></h4>
+
+			{% for k in py_desc %}
+				<p>{{ k }}</p>
+			{% endfor %}
+		<hr>
+	
         <h4>Your Essence is {{ Ess_karma }} / {{ Essence }}<br></h4>
 
         {% for k, v in Ess.items()%}
@@ -390,10 +405,10 @@
         {% endif %}
 		
 		{% if k == Ess_karma %}
-        <p>{{ v[0] }}</p>
-		<p>{{ v[1] }}</p>
-		<p>{{ v[2] }}</p>
-		<p>{{ v[3] }}</p>
+        <p style="color: green;">{{ v[0] }}</p>
+		<p style="color: green;">{{ v[1] }}</p>
+		<p style="color: green;">{{ v[2] }}</p>
+		<p style="color: green;">{{ v[3] }}</p>
         {% endif %}
 		
         {% endfor %}
@@ -401,32 +416,17 @@
         
     <hr>
 	
-	<h4>Your running a letter of {{ cur_lata1 }},{{ cur_lata2 }} and {{ cur_lata3 }} <br></h4>
-	{% for k, v in lata1.items()%}
-        {% if k == cur_lata1.lower() %}
-        <p>{{ v[0] }}</p>
-		<p>{{ v[1] }}</p>
-		<p>{{ v[2] }}</p>
-		<p>{{ v[3] }}</p>
-        {% endif %}
+	<h4>Your running a letter of {{ cur_lata1 }}, {{ cur_lata2 }} and {{ cur_lata3 }} <br></h4>
+	{% for k in lata1 %}
+        <p>{{ k }}</p>
 	{% endfor %}
 	<hr>
-	{% for k, v in lata2.items()%}
-        {% if k == cur_lata2 %}
-        <p>{{ v[0] }}</p>
-		<p>{{ v[1] }}</p>
-		<p>{{ v[2] }}</p>
-		<p>{{ v[3] }}</p>
-        {% endif %}
+	{% for k in lata2 %}
+        <p>{{ k }}</p>
 	{% endfor %}
 	<hr>
-	{% for k, v in lata3.items()%}
-        {% if k == cur_lata3.lower() %}
-        <p>{{ v[0] }}</p>
-		<p>{{ v[1] }}</p>
-		<p>{{ v[2] }}</p>
-		<p>{{ v[3] }}</p>
-        {% endif %}
+	{% for k in lata3 %}
+        <p>{{ k }}</p>
 	{% endfor %}
 	
 {% endblock %}

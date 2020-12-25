@@ -7,6 +7,7 @@ from app.auth.forms import PostForm,PredictionForm,NumberOfQuestions,AskQuestion
 
 import datetime
 from app.hello1 import missing_numbers
+from app.genum_private import generate_numbers_private
 from app.genum import generate_numbers
 from app.hello import (contains_y,jeff, life_number,your_personal,real,hearts_d,image_num,bddict,year_num,lesson,debt,
                        check_karma,peak,digit_sum,b_t_ms)
@@ -15,7 +16,8 @@ from app.destiny_num import (destiny,birthForce,heart_desire,personality,karmas,
                              three_in_plane,four_in_plane,six_in_plane,sev_in_plane,eig_in_plane,nin_in_plane,
                              five_in_plane,zero_in_plane,ones,twos,threes,fours,fives,sixs,sevens,eights,nines,vocation)
 from app.count_numbers import (count_1s,count_2s,count_3s,count_4s,count_5s,count_6s,count_7s,count_8s,count_9s,vocation_pointer)
-from app.timing import (Ess,B_T_K,E_N_W,F_O_X,I_R,C_L_U,D_M_V,G_P_Y,A_J_S,H_Q_Z)
+from app.timing import (Ess,B_T_K,E_N_W,F_O_X,I_R,C_L_U,D_M_V,G_P_Y,A_J_S,H_Q_Z,p_yr)
+from app.Pinnacle import pinnacle
 
 x = datetime.datetime.now()
 year_now = x.year
@@ -293,12 +295,14 @@ def newuser():
             MN = form.middlename.data
             LN = form.lastname.data
             dob = form.dob.data
+            year_in_past = form.year.data
             
             btd = dob[0:2] #1982
             btm = dob[3:5] #02
             bty = dob[6:10] #22
             
-            r = generate_numbers(FN,MN,LN,btd,btm,bty)[2]
+            #r = generate_numbers(FN,MN,LN,btd,btm,bty)[2]
+            r = generate_numbers_private(FN,MN,LN,btd,btm,bty,year_in_past)[2]
             
             def num_to_strs(g): #g=r[10]
                 g = digit_sum(g)
@@ -357,31 +361,37 @@ def newuser():
             
             v_pointer = v_points
             
-            def what_lata(s):
+            def what_lata(s): #s=E
                 if s == 0:
-                    return B_T_K
+                    return B_T_K[s]
                 elif s.lower() in ['a','j','s']:
-                    return A_J_S
+                    return A_J_S[s.lower()]
                 elif s.lower() in ['c','l','u']:
-                    return C_L_U
+                    return C_L_U[s.lower()]
                 elif s.lower() in ['d','m','v']:
-                    return D_M_V
+                    return D_M_V[s.lower()]
                 elif s.lower() in ['g','p','y']:
-                    return G_P_Y
+                    return G_P_Y[s.lower()]
                 elif s.lower() in ['i','r']:
-                    return I_R
+                    return I_R[s.lower()]
                 elif s.lower() in ['e','n','w']:
-                    return E_N_W
+                    return E_N_W[s.lower()]
                 elif s.lower() in ['b','t','k']:
-                    return B_T_K
+                    return B_T_K[s.lower()]
                 elif s.lower() in ['f','o','x']:
-                    return F_O_X
+                    return F_O_X[s.lower()]
                 elif s.lower() in ['h','q','z']:
-                    return H_Q_Z
+                    return H_Q_Z[s.lower()]
                 
             lata1 = what_lata(r[28])#w
             lata2 = what_lata(r[29])#0
             lata3 = what_lata(r[30])#O
+            py_num = r[31]
+            py_desc = p_yr[r[31]]
+            
+            pina = r[32][0] #[2,38]
+            pina_desc = pinnacle[pina]
+            pina_st = r[32][1]
             
             return render_template('transit/fullreading.html',
                                exp=r[0],exp11=r[1],ln=r[2], lp=r[3],year_now=r[4],sU=r[5], sU1=r[6],
@@ -398,8 +408,8 @@ def newuser():
                                phy_num_to_str=phy_num_to_str,m_num_to_str=m_num_to_str,emo_num_to_str=emo_num_to_str,
                                i_num_to_str=i_num_to_str,t_num1=t_num1,t_num2=t_num2,t_num3=t_num3,t_num4=t_num4,t_num5=t_num5,
                                t_num6=t_num6,t_num7=t_num7,t_num8=t_num8,t_num9=t_num9,v_pointer=v_pointer,karmas=karmas,
-                              Ess=Ess,B_T_K=B_T_K,E_N_W=E_N_W,F_O_X=F_O_X,
-                              lata1=lata1,lata2=lata2,lata3=lata3)
+                                Ess=Ess,lata1=lata1,lata2=lata2,lata3=lata3,py_num=py_num,py_desc=py_desc,pina=pina,
+                                pina_desc=pina_desc,pina_st=pina_st)
         
         elif request.method == 'GET':
             return render_template('newuser.html',form=form)
@@ -421,21 +431,45 @@ def n_event():
             MN = form.middlename.data
             LN = form.lastname.data
             dob = form.dob.data
+            year_in_past = form.year.data
             
             btd = dob[0:2] #1982
             btm = dob[3:5] #02
             bty = dob[6:10] #22
             
-            e = generate_numbers(FN,MN,LN,btd,btm,bty)[3]
+            e = generate_numbers_private(FN,MN,LN,btd,btm,bty,year_in_past)[3]
     
             return render_template('event.html',exp11=e[0],sU=e[1],iM1=e[2],lp=e[3],Mrity=e[4],phy=e[5],men=e[6],
                                    emo=e[7],intt=e[8],one=e[9],two=e[10],thr=e[11],fou=e[12],fiv=e[13],six=e[14],
                                    sev=e[15],eig=e[16],nin=e[17],ps=e[18],cH=e[19],cH1=e[20],cH2=e[21],cH3=e[22],
                                    Essence=e[23],pynum=e[24],uniynum=e[25],pina=e[26],rc=e[27],pmonth=e[28],uniday=e[29],
                                    pday=e[30],Gpina=e[31],Gcha=e[32],Gper_pi=e[33],Gper_cha=e[34],k_day=e[35],k_pday=e[36],
-                                   year_now=e[37])
+                                   year_now=e[37],cha=e[38],p1=e[39],p11=e[40],p2=e[41],p22=e[42],p3=e[43],p33=e[44],
+                                   p4=e[45],p44=e[46])
         
         elif request.method == 'GET':
             return render_template('newuser.html',form=form)
         
     return 'ACCESS DENIED'
+
+
+"""Perhaps the most troublesome combination of cycles is when both the Personal Year
+and Essence cycles are the same. This is called a Duality and it almost always spells trouble.
+The reason is simple and makes sense: you are off balance with too much weight of a single number
+leaning in one direction. Let's use the above example of a 4 Personal Year.
+If you also had a 4 Essence cycle, you would not only find yourself in a situation where your work
+is exceedingly demanding, details and petty stuff occupies much of your time, everybody and his uncle
+needs your attention, and you are burdened with the sense that everything is stagnating -- you are also
+in a state of mind that exaggerates and amplifies all of that. That is not a pretty picture.
+
+Generally, the best combinations of cycles are those that have a gap of 2, such as 1 and 3, 2 and 4, 3 and 5 and so forth.
+
+Particularly fortunate combinations include: 1 and 8 or 4 and 8 (good for business and career);
+2 and 6 (improvements in relationship and romance); 3 and 5 (communication, sales, self promotion, etc);
+3 and 7 (intellectually creative, spiritual realizations); 6 and 9 (artistic, healthy);
+and 7 and 9 (global consciousness, fortunate -- as in being in the right place at the right time).
+
+Troublesome combinations, other than same number cycles, include: 1 and 5 (tends to put people on the wrong path,
+often a downward spiral); 4 and 7 (petty mind, issues with jealousy, intolerance);
+2 and 8 (conflict in career and business, personality clashes); and 1 and 9 (selfish, incapable, self obstruction).
+"""

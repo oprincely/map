@@ -14,11 +14,15 @@ import collections
 from collections import OrderedDict
 
 x = datetime.datetime.now()
-year_now = x.year
+#year_now = x.year
 month_now = x.strftime("%m")
 day_now = x.strftime("%d")
 
-def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
+def generate_numbers_private(FN,MN,LN,btd1,btm1,bty1,year_in_past):
+    if year_in_past == "":
+        year_now = x.year
+    else:
+        year_now = int(year_in_past)
     ####################
     btd = int(btd1)
     btm = int(btm1)
@@ -349,6 +353,22 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
         pina_change = 'Pinnacle is not changing'
     else:
         pina_change = f'Pinnacle is changing from {curr_pina} to {is_pina_changing}'
+    
+    #
+    """To get the current pinnacle and when it will start then we can add 9 to see its stop, p11 or p22 ... =start"""
+    def current_pina(g):
+        if g in range(first_pinnacle_starts,first_pinnacle_ends): #(0, 28)
+            return first_pinnacle,p11
+        elif g in range(second_pinnacle_starts,second_pinnacle_ends): #(29, 38)[29, 30, 31, 32, 33, 34, 35, 36, 37]
+            return second_pinnacle,p22
+        elif g in range(third_pinnacle_starts,third_pinnacle_ends): #(38, 47)[38, 39, 40, 41, 42, 43, 44, 45, 46]
+            return third_pinnacle,p33
+        elif g in range(fourth_pinnacle_starts,fourth_pinnacle_ends): #(47, 55)[47, 48, 49, 50, 51, 52, 53, 54]
+            return fourth_pinnacle,p44
+        else:
+            return first_pinnacle,p11
+    
+    newuser_pina = current_pina(age_now)
         
     ################## pandas things #######
     # RC
@@ -362,7 +382,7 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
         krc = digit_sum((year_now - bty)) + digit_sum((year_now - bty)-1)
         rc = digit_sum(digit_sum(digit_sum((year_now - bty)) + digit_sum((year_now - bty)-1)))   
     
-    year = [i for i in range(bty, bty+55)]
+    year = [i for i in range(bty, bty+55)] #1982, 1982+55
     age = [i for i in range(0, 55)]
     fname = fillent(year, list(Lettered_name(str(name1))), age)[1] 
     mname = fillent(year, list(Lettered_name(str(name2))), age)[1]
@@ -398,7 +418,7 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
     df['Go'] = df['outcome'].apply(digit_sum)
     
     event = df.loc[year_now - bty]#38
-    year = event['year']
+    #year = event['year']
     Ess_karma = event['Karma']
     Essence = event['Essence']
     pynum = event['y_num']
@@ -536,7 +556,8 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
                     bash6,bash7,bash8,bash9]
 
     full_reading = [exp,exp11,ln,lp,year_now,sU,sU1,iM,iM1,Mrity,phy,men,emo,intt,one,two,thr,
-                    fou,fiv,six,sev,eig,nin,pina_change,k_rity,Ess_karma,Essence,Ess_change,cur_lata1,cur_lata2,cur_lata3] #pina_change
+                    fou,fiv,six,sev,eig,nin,pina_change,k_rity,Ess_karma,Essence,Ess_change,cur_lata1,cur_lata2,cur_lata3,
+                    pynum,newuser_pina] #pina_change
     
     event = [exp11,sU,iM1,lp,Mrity,phy,men,emo,intt,one,two,thr,fou,fiv,six,sev,eig,nin,ps,cH,cH1,cH2,cH3,
              Essence,pynum,uniynum,pina,rc,pmonth,uniday,pday,Gpina,Gcha,Gper_pi,Gper_cha,k_day,k_pday,year_now,cha,p1,p11,
@@ -544,3 +565,4 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
 
     return mini_reading, speed_reading, full_reading, event
 ###########################
+

@@ -245,6 +245,21 @@
             <td class="center">{{ rc }}</td>
         </tr>
     </table>
+	
+	<table>
+		<!-- new for now -->
+		<tr>
+			{% for i in cha %}
+				<td>{{ i }}</td>
+			{% endfor %}
+		</tr>
+		<!-- new for now -->
+		<p>Running {{ p1 }}, at age {{ p11 }} to {{ p22 - 1 }}</p>
+		<p>Running {{ p2 }}, at age {{ p22 }} to {{ p22 + 9 }}</p>
+		<p>Running {{ p3 }}, at age {{ p33 }} to {{ p33 + 9 }}</p>
+		<p>Running {{ p4 }}, at age {{ p44 }} to {{ p44 + 9 }}</p>
+	</table>
+	
     <table>
     
         <tr>

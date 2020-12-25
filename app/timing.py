@@ -22,8 +22,32 @@ a period of subordination unless there is willingness to cooperate and share, ev
 could be sudden marriage, sudden separation. Through spiritual thought there is the opportunity to gain an inner peace. 
 Then all changes and hurts will take on a new order and bring 
 an awakening of worthwhile importance."""],
+3:["""The 3 Essence represents creative endeavor and personal 
+opportunity for advancement. It is a time for sell-improvement 
+and to advance along the lines of the talents. It offers personal 
+expression with the help of friends and loved ones and encourages the pursuit of personal interests.
+These should be constructive and in art, music, literature, religion, and the more 
+cultural aspects of living. ""","""Whatever the interests, more imagination and optimism should be cultivated for a wider and 
+broader contact with the world. Selfishness and critical attitudes of mind should be avoided. Being an emotional number, 
+it brings love affairs and emotional experiences which can be 
+lovely and bring great happiness.""","""The desire for pleasure, fun, 
+and social activity, apart from useful endeavor, will bring scattered forces, loss of money, foolish action, resulting in gossip 
+and regret. It can also mean loss of position and standing unless the emotions are constructively expressed. ""","""Ideas expressed 
+in words or speech can advance the career; and if there has 
+been limitation in the expression of the feelings and abilities, it 
+is important to make the effort to find useful interests rather 
+than to retire within the self or live in repressed emotions.""",""" Children bring interest and mutual happiness. Trips for business 
+and pleasure widen the horizon. Make new friends, enjoy old 
+friends, and express the spirit of friendship."""],
+
+21:["""The (21)3 Essence brings emotional tests and the possibility 
+of emotional confusion, through too much feeling and worry 
+about what others do. Generosity may cause a sacrifice and a 
+hurt through those trusted and loved. Be generous but busi¬ 
+nesslike in all undertakings under any 3 Essence.""" ],
+
 7:["""This Essence opens a whole field of intellectual interests, 
-training, and advancement 'or a better way of living and finer 
+training, and advancement for a better way of living and finer 
 use of the talents. It is a time to look to the more subjective 
 levels of living, to try to understand the principles of Being and 
 thought, to turn aside from objective interests for the time being.
@@ -31,7 +55,7 @@ thought, to turn aside from objective interests for the time being.
 of the thoughts and actions and to try to understand what life 
 is all about. The number 7 is the thinker and the seeker and demands this way of living when it appears as an Essence.
 It is a time to "delve" into the occult and higher sciences and their 
-principles and laws—to study them, to use them, to write 
+principles and laws - to study them, to use them, to write 
 about them, and to make them a means of progress and advancement in business and in all associations.
 ""","""Strange occurrences, unusual circumstances and happenings may force a new 
 look at what life is. Psychic experience may bring awakenings. 
@@ -48,7 +72,7 @@ quiet ways, when poise and inner tranquility are maintained.
 Health matters should be taken care of. Marriage may be delayed or troubled. However, marriage can take place when the 
 interests are on the same level of thinking."""],
 
-16:["""Essence - The whole structure of the life can change, 
+16:["""(16)7 Essence - The whole structure of the life can change, 
 with something to pay up or give up, even a feeling of humiliation. This is a karmic test, coming out of the past,
 even past incarnations. But when it is over, the debt is paid and a new life 
 will open up. The troubles of a (16)7 Essence never last too 
@@ -90,13 +114,12 @@ It is advisable to look into the background of those with whom partnerships, bus
 Take care of the health and save the nervous system by avoiding 
 emotional intensity. Apt to be glad when the period is over, 
 but many lessons learned about others and the self."""],
-'k':["""Concerned with partnerships and associations.
-An exciting period of activity. A windfall of some sort 
-during the period. Strange experiences, strange friendships, 
-strange and sudden love affairs. A long trip may be associated 
+'k':["""Concerned with partnerships and associations. An exciting period of activity. A windfall of some sort during the period.
+""",
+"""Strange experiences, strange friendships, strange and sudden love affairs. A long trip may be associated
 with this or change of home and locality. Involved in the affairs of others;
 a possibility of being misled due to deep feeling, or cheated due to lack of truth or honesty on the part of 
-others. Caught off guard due to headstrong action, nervousness and emotional feeling. Illness but recovery. A!" is a letter of 
+others.""",""" Caught off guard due to headstrong action, nervousness and emotional feeling. Illness but recovery. K - is a letter of 
 extremes but gives outstanding opportunity to advance financially and for general improvements when the efforts are wisely 
 directed."""],
 }
@@ -124,12 +147,11 @@ breaks in association. ""","""Freedom should not be considered a
 chance to break all ruies and regulations. Resourcefulness will 
 overcome many difficulties. It is a time to move forward to 
 renew and renovate the activities at home or in business. Public 
-contact will bring fun, travel, interest, and help to promote bus¬ 
-iness. Marriage is slightly uncertain when freedom is taken 
+contact will bring fun, travel, interest, and help to promote business. Marriage is slightly uncertain when freedom is taken 
 carelessly. ""","""Sudden marriages or separations may bring legal 
 matters. Good for all lines of work which need the support of 
 the people. Money today, not as much tomorrow, but there 
-when needed if the efforts are 'or the good of the people. 
+when needed if the efforts are for the good of the people. 
 Worldly living and breaking of conventions give little security.
 """],
 'n':["""Experience is the teacher; progress is the opportunity. 
@@ -250,11 +272,29 @@ money, love, and usefulness.
 
 A_J_S = {
 'a':[],
+'j':[],
+'s':[],
 }
-C_L_U = {}
-D_M_V = {}
-G_P_Y = {}
-H_Q_Z = {}
+C_L_U = {
+'c':[],
+'l':[],
+'u':[],
+}
+D_M_V = {
+'d':[],
+'m':[],
+'v':[],    
+}
+G_P_Y = {
+'g':[],
+'p':[],
+'y':[],
+}
+H_Q_Z = {
+'h':["""This is H"""],
+'q':[],
+'z':[],
+}
 I_R = {
 'i':[],
 'r':["""R - This is an important period and brings many experiences, both rewarding and disappointing, and many emotional 
@@ -328,42 +368,116 @@ life depend a great deal upon what you do now. This year is a
 time to have courage, to make plans, and to avoid inertia or indecision. You must look to the future and be willing to change 
 and advance for the sake of progress and happiness, it may be 
 necessary for you to let go of things having to do with the past 
-in order to take advantage of new opportunities, so be determined. Do not drift or have fear of the future, for if you do 
+in order to take advantage of new opportunities, so be determined. ""","""Do not drift or have fear of the future, for if you do 
 you may lose out during a "beginning" time, such as you are 
 experiencing, because in standing still or looking back you are 
 caught in the ebb tide of opportunity, missing the opportunity 
-which is present but which must be seized. 
-
+which is present but which must be seized. ""","""
 This is not an easy year and you will need to use a great 
 deal of system and organization to get the desired results. This 
 year calls for strength of purpose and clear thinking, but it has 
 an opportunity hidden in its movement if you are alert enough 
-to recognize it. Try to broaden your activities and in meeting 
+to recognize it. ""","""Try to broaden your activities and in meeting 
 conditions or circumstances which come up unexpectedly, call 
-upon your executive ability and originality of thought. Life is 
+upon your executive ability and originality of thought. ""","""Life is 
 now testing your character and your courage. You must show 
 what you have and what you can do. 
-
 Study your plans and your surroundings and do not be 
 afraid to take a chance with a new idea or plan, but avoid being impulsive or headstrong in making changes or moving forward.
-You are at the crossroads and wisdom is needed to get 
+""","""You are at the crossroads and wisdom is needed to get 
 on the right track. It is up to you to do the thinking and planning for yourself and others.
-You may not fully realize this until the Fall of the year, even though several times during the 
-Spring and Summer you will be called upon to make vital decisions concerning your future and what you want out of life. 
-
+You may not fully realize this until the Fall(Sept,Oct, and Dec) of the year, even though several times during the 
+Spring(March, April, May) and Summer(June, July, August) you will be called upon to make vital decisions concerning
+your future and what you want out of life. 
 During the Spring and Summer take care of your health 
-and that of loved ones. In fact, make an effort to direct all 
+and that of loved ones. ""","""In fact, make an effort to direct all 
 conditions of your life towards a more constructive expression. 
 In April there is a break and a chance to move ahead. Take 
 some action now for improvement. In May, rest and have 
 poise; say very little. August and September, according to your 
-Year Number, bring many things to a head, and the Fall can 
+Year Number, bring many things to a head, and the Fall(Sept,Oct, and Nov) can 
 open the way to new opportunities and decisions you may not 
-have counted upon. Keep moving forward all during the year 
+have counted upon. ""","""Keep moving forward all during the year 
 for you may be able to work out your plans earlier than anticipated.
-December is a practical month—carries a practical number.
+December is a practical month - carries a practical number.
 Be very wise now and get down to work in a concrete manner, upon your former plans.
+The colors this year to help you “win” are Rame, Copper, Lilac, and Crimson."""],
+2:["""Between January this year and January next year, your success and happiness depend to a great extent upon how much 
+tact, diplomacy, and cooperation you use in dealing with others, especially when things are not running smoothly. Last year 
+you were required to be determined and to take the initiative. This year results are gained through "sharing" and willingness 
+to wait for development. There is advancement and progress in the year; but many plans of last year cannot come to a
+fulfillment without further time to mature. Time is the keynote to the years’ experiences. ""","""Because of this you may experience periods of delay, for results cannot come to the surface all at 
+once. You should try to understand this and be content to grow quietly; for any attempt to force conditions in a dominant and aggressive way is apt to bring even more delay or to 
+result in disharmony and broken partnerships. If you try "too hard" you may become confused and cause trouble in associations, both at home and in business. Instead, cooperate with 
+circumstances and try for that arrangement which will bring more "peace" for yourself and others. In this way you can win 
+what you could not force, bringing about results beyond your expectation. ""","""
+During the early part of the year there is a tendency for agreements or associations to break up unless you are more 
+than patient and considerate, especially during February and March. According to your numbers - May could find you deeply
+disturbed about what others have said or done. But "snap out of it" for your own good, and forget your self-importance for
+the time being. Even if you seem to be subordinated and held down, try to cooperate. ""","""Next year is your year, so this year
+you can afford to share and to do more than your part to bring about agreements of a harmonious nature.
+Quarrels and separation and unhappiness result from being mean, cold, and selfish now. This year should bring you new
+partnerships, new friends, and the opportunity to cement a tie of love and friendship, if you are tactful, diplomatic,
+and not afraid to give of what you have - time, love, or patience. ""","""
+In July, your numbers indicate a closing of conditions and you may finish up some association or arrangement by natural 
+growth, or because of necessity. Show' compassion, tolerance, and understanding in your partnerships now. From August on, 
+your Year Number indicates the opening up of new arrangements, new living conditions and new agreements, which if 
+properly directed should bring more peace of mind and satisfaction. ""","""Do not talk too much but keep things to yourself
+during the year, especially during the Fall(Sept,Oct, and Nov). Look underneath the surface to make sure your roots are
+growing and that all arrangements are accurate and carefully understood. This is very important during the early
+part of the year. 
+""","""The colors for the year to help you “win” are Gold, Salmon, Garnet, Prune, and Cinnamon."""],
+5:[],
+9:["""This year brings many of your affairs to a head. Between 
+January of this year and January of next year you will realize a 
+completion and also the fulfillment of some of your dreams. 
+You are now closing a cycle of experience, one that you began 
+nine years ago, leading to a beginning and new start with next 
+year. The completion is not a failure or sorrow. ""","""It is in reality 
+a reward, for through it you open the way to new opportunities 
+and new interests in life. During the year you must be ready 
+and willing to let go of the old and undesirable in your life to 
+make way for the real and worthwhile. It is important to make 
+a definite effort to be through with things which have no further value. """,
+"""If something you are trying to hold on to, asks for 
+freedom, or desires to get away, be understanding; for if you 
+try to hold it, it may get away anyway, especially if Life sees it 
+to make this change. Be tolerant, compassionate and forgiving, 
+for then you will find this one of the most wonderful years of 
+your life; a reward of love, sympathy, understanding, and fulfillment of your plans can result and bring financial assistance 
+as well as loving appreciation.""",""" 
 
-The colors this year to help you “win” are Rame, Copper, Lilac, and Crimson."""],    
+During the early Winter(December, January, February) and Spring(March, April, May), affairs should
+improve and bring you an opportunity to do what you feel is necessary, but during the summer(June, July, August)
+you may feel alone, held back, 
+and unable to keep things moving forward in a steady manner. 
+Do not try to do so. ""","""Give life a chance to help you out, and 
+keep your mind open to broader interests and larger activities 
+which can be born now, even though not carried out fully until 
+the new cycle opens with next year. During the year you may 
+;ind your interests growing away from some of your former associations and activities and unconsciously turn your thought 
+and attention to interests which have not been a part of your 
+life before. Make these interests of universal nature and avoid 
+being small, personal, and selfish, for this could lead to disappointment in the end. ""","""Love a fairs will hold your attention - others if
+not your own - and you may find you are involved in 
+these without your desire. But there is something for you to do 
+to help others straighten out their affairs, as this is a year of 
+impersonal thought and feeling. Through what you do for others your reward is given. 
+""","""This is not a good time to start new issues. The tide of life 
+is out rather than in. Keep busy and accept opportunity if it 
+comes to you, but until September you may not see the way 
+clearly and will need to make changes and adjustments on account of the closing force of the year. Do not overwork. Take 
+a vacation in July. Your health must be kept up to par, for you 
+have much to do next year. ""","""The Fall(September, October, November) of the year finds you 
+marking time, going slowly, but with mutual assistance if you 
+are cooperative and generous in your thought and feeling. If 
+something goes out of your life, let it go, for it is clearing the 
+way to your future happiness and good. 
+""","""
+Wear colorful garments this year. Avoid black."""],
 }
+# spring (March, April, May),
+#summer (June, July, August),
+#autumn|fall (September, October, November) and
+#winter (December, January, February).
 #print(F_O_X['o'])

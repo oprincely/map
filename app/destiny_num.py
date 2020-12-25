@@ -861,7 +861,54 @@ your life built upon a rock of security, with success never failing you.
 ""","""
 Wear blue, green, emerald, coffee, maroon, or silver in 
 your accessories to attract friends."""],
-5:[],
+5:["""You are interested in what is going on in the world and desire to be a part of it in some way.
+You are enthusiastic, enjoy life, the new, the progressive, the unusual, and seek the opportunity
+to express yourself through groups or public activity. 
+The unexpected and exciting are more stimulating to you than 
+the ordinary procedures of everyday existence. ""","""Independent in 
+thought and action, you definitely claim the right to personal 
+freedom; you do not permit people or conditions to interfere 
+with your life or to limit your self-expression or any length of 
+time. You are charitable and considerate of others, but at the 
+same time you insist upon the right to follow your own ideals, 
+and to live your own life. ""","""
+Routine can easily become a bore to you regardless of 
+your work or activities. You are not at your best when forced 
+to do work or remain in a place which is always the same. Your 
+attention may wander if there is not sometning new, different, 
+or just a little bit exciting taking place to give variety and spice 
+to life. ""","""Your Destiny or Vocational numbers may not allow 
+you all the freedom you desire, but you will be able to express 
+yourself better in a general way if you can change things from 
+time to time to liven them up. Lack of freedom and variety 
+may lead to a feeling of dullness, discontent, unrest, and dissatisfaction, causing you to act hastily and impulsively,
+and to do things which may lead to sorrow or regret later for others as 
+well as yourself. ""","""If you will learn to recognize this unrest and 
+turn it into worthwhile action and resourcefulness instead of 
+impatience, you will develop an amazing power to accomplish 
+things, influence people, and "go places" in the social, financial, and progressive world. 
+You are ambitious too, but you should avoid too many 
+irons in the fire, scattering your forces and finances and undertaking more than you can successfully carry out.
+""","""Too much change and variety may result in lack of proper application and 
+concentration to the tasks at hand, so that you fail to accom¬ 
+plish anything. Watch out for this tendency. Be alive and active but in a very definite and useful manner. Your Destiny will 
+help you decide how. There is a little of the "Bohemian" in 
+your nature and you may become somewhat of a free lance in 
+your religion, politics, or social life as you grow older and 
+make up your mind in your independent way. Even in love affairs you are likely to keep things interesting or introduce the 
+unexpected. Travel is good for you. ""","""When you feel yourselt 
+getting restless and critical or irritable, buy something new, 
+take a trip, or make some constructive change which will improve your work and environment. Don’t tear things down or 
+criticize others. Your own restlessness and impatience may be 
+at fault. Refuse to take from others more than is your due or 
+than you can return. Claim your freedom but realize that freedom does not mean breaking the standards of living or being 
+unconventional. ""","""It simply means living a fuller, richer life and 
+helping others to do the same. Value your resourcefulness; 
+make it pay you well and use it to bring joy to those you love. 
+Keep in touch with what is going on in the world. You need to 
+keep up-to-date. ""","""
+Wear pink, strawberry, claret, wisteria, or cherry as part 
+of your accessories to attract friends. """],
 6:[],
 7:["""
 You are naturally selective and discriminating, for deep in 

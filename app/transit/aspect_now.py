@@ -1,7 +1,7 @@
 from __future__ import print_function, division
 import datetime
 from .webscrapping_extended import planet_points,planet_pos,month_year
-from .tob import oppoAct,sqareAct,conj,sesquaAct,semiquaAct,to_symbol,aspect_to_symbol
+from .tob import oppoAct,sqareAct,conj,sesquaAct,semiquaAct,sextile,trine,to_symbol,aspect_to_symbol
 from .mid_pts import MidPts
 from .arc import Arc
 #from .progress_pts import prog_planets
@@ -20,7 +20,7 @@ def cal_aspects_now(btd,btm,bty,tday,tmonth,tyear,Year):
     transit = planet_points(tday, month_year(tmonth-1, tyear),'transit')
 
     nat_pts = planet_points(btd, month_year(btm-1, bty),'natal')
-    #print('nat_pts = ',nat_pts)
+    print('nat_pts = ',nat_pts)
     nat_name = (('sun'), ('moon'), ('merc'), ('ven'), ('mars'), ('jup'), ('sat'), ('ura'),
                    ('nep'), ('plu'), ('nod'), ('asc'), ('mc'),('vetx'))
 
@@ -114,6 +114,8 @@ def cal_aspects_now(btd,btm,bty,tday,tmonth,tyear,Year):
     aspects_now(nat_pts,arc_list,nat_name, arc_name,sqareAct,'square','natpts')
     aspects_now(nat_pts,arc_list,nat_name, arc_name,sesquaAct,'sesqua','natpts')
     aspects_now(nat_pts,arc_list,nat_name, arc_name,oppoAct,'opp','natpts')
+    aspects_now(nat_pts,arc_list,nat_name, arc_name,sextile,'setai','natpts')
+    aspects_now(nat_pts,arc_list,nat_name, arc_name,trine,'trin','natpts')
 
     aspects_now(midpts,arc_list,midpts_name, arc_name,conj,'conj','midpts')
     aspects_now(midpts,arc_list,midpts_name, arc_name,semiquaAct,'semiqua','midpts')

@@ -65,8 +65,10 @@ def cal_transit_planet(btd,btm,bty,tmonth,tyear):
                 uramin = loop_transit_points(d)[2] #transit_planet_min
                 #----------------- first code to run ends -----
                 
+                asp_deg = aspect(planet_deg,planet_sigh)[0]
+                
                 #upper sq
-                if uradeg == planet_deg and uramin not in exact_range and urasigh == aspect(planet_deg,planet_sigh)[1]:
+                if uradeg == asp_deg and uramin not in exact_range and urasigh == aspect(planet_deg,planet_sigh)[1]:
                     if f'{uraname} {aspect_to_symbol(tipe)} {planet_name} in deg but not exact' not in transit_filter:
                         transit_filter.append(f'{uraname} {aspect_to_symbol(tipe)} {planet_name} in deg but not exact')
                         
@@ -74,7 +76,7 @@ def cal_transit_planet(btd,btm,bty,tmonth,tyear):
                                                f'{to_symbol(uraname)} {aspect_to_symbol(tipe)} {to_symbol(planet_name)}','view'])
                         
                 #lower sq        
-                elif uradeg == planet_deg and uramin not in exact_range and urasigh == aspect(planet_deg,planet_sigh)[2]:
+                elif uradeg == asp_deg and uramin not in exact_range and urasigh == aspect(planet_deg,planet_sigh)[2]:
                     if f'{uraname} {aspect_to_symbol(tipe)} {planet_name} in deg but not exact' not in transit_filter:
                         transit_filter.append(f'{uraname} {aspect_to_symbol(tipe)} {planet_name} in deg but not exact')
                         
@@ -97,6 +99,10 @@ def cal_transit_planet(btd,btm,bty,tmonth,tyear):
             get_transit_planet(n, month_year(b, tyear),conj,'conj')
             get_transit_planet(n, month_year(b, tyear),sesquaAct,'sesqua')
             get_transit_planet(n, month_year(b, tyear),semiquaAct,'semiqua')
+            
+            get_transit_planet(n, month_year(b, tyear),sextile,'setai')
+            get_transit_planet(n, month_year(b, tyear),trine,'trin')
+            
             n += 1
         b += 1
         

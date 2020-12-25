@@ -57,6 +57,7 @@ class PredictionForm(FlaskForm):
     middlename = StringField('Middlename')
     lastname = StringField('Lastname', validators=[DataRequired()])
     dob = StringField('Date of birth: 22/02/2020', validators=[DataRequired()])
+    year = StringField('Year in past: 2020')
     submit = SubmitField('Predict')
         
 class EditProfileForm(FlaskForm):
