@@ -116,6 +116,7 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
     cy1 = digit_sum(digit_sum(year_now)) #current year
     
     #personal year number bd + bm + cy1
+    py_kma = digit_sum((sum_bd + sum_bm + cy1))
     py_num = digit_sum(digit_sum((sum_bd + sum_bm + cy1)))# personal year
     
     #Your Life Path - Expression Bridge
@@ -173,6 +174,14 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
     sev = how_many_seven
     eig = how_many_eight
     nin = how_many_nine
+    
+    #which number is the max for intensity point
+    def get_key(val):
+        for key, value in freq.items():
+            if val == value:
+                return key
+        return "key doesn't exist"
+    int_pt = get_key(max(one,two,thr,fou,fiv,six,sev,eig,nin))
     
     #missing numbers in name
     exp_list = k1[3] + k1[4] + k2[3] + k2[4] + k3[3] + k3[4] #[5, 5, 1, 0, 4, 2, 3, 5, 3, 3, 0, 3, 8, 3, 8, 2, 5, 6, 3, 0, 2, 5]
@@ -536,7 +545,7 @@ def generate_numbers(FN,MN,LN,btd1,btm1,bty1):
                     bash6,bash7,bash8,bash9]
 
     full_reading = [exp,exp11,ln,lp,year_now,sU,sU1,iM,iM1,Mrity,phy,men,emo,intt,one,two,thr,
-                    fou,fiv,six,sev,eig,nin,pina_change,k_rity,Ess_karma,Essence,Ess_change,cur_lata1,cur_lata2,cur_lata3] #pina_change
+                    fou,fiv,six,sev,eig,nin,pina_change,k_rity,Ess_karma,Essence,Ess_change,cur_lata1,cur_lata2,cur_lata3,py_kma] #pina_change
     
     event = [exp11,sU,iM1,lp,Mrity,phy,men,emo,intt,one,two,thr,fou,fiv,six,sev,eig,nin,ps,cH,cH1,cH2,cH3,
              Essence,pynum,uniynum,pina,rc,pmonth,uniday,pday,Gpina,Gcha,Gper_pi,Gper_cha,k_day,k_pday,year_now,cha,p1,p11,

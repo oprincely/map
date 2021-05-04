@@ -2,8 +2,7 @@
 # -*- coding: utf-8 -*-
 
 Ess = {
-2:["""All 2 Essences represent a period of growth, but "haste 
-makes waste." Partnerships, associations, and the affairs of 
+2:["""All 2 Essences represent a period of growth, but "haste makes waste." Partnerships, associations, and the affairs of 
 others bring opportunity. There is little to be gained through 
 trying to avoid the help others can give. Also there is much demanded in the way of cooperation and peaceful coexistence 
 with those met in business and domestic affairs. ""","""In fact, Cooperation is the keynote to success. Many little things are to be 
@@ -427,6 +426,7 @@ during the year, especially during the Fall(Sept,Oct, and Nov). Look underneath 
 growing and that all arrangements are accurate and carefully understood. This is very important during the early
 part of the year. 
 ""","""The colors for the year to help you “win” are Gold, Salmon, Garnet, Prune, and Cinnamon."""],
+3:[],
 5:[],
 9:["""This year brings many of your affairs to a head. Between 
 January of this year and January of next year you will realize a 

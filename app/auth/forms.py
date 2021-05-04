@@ -59,6 +59,20 @@ class PredictionForm(FlaskForm):
     dob = StringField('Date of birth: 22/02/2020', validators=[DataRequired()])
     year = StringField('Year in past: 2020')
     submit = SubmitField('Predict')
+    
+class RelationshipForm(FlaskForm):
+    firstname = StringField('Fisrtname', validators=[DataRequired()])
+    middlename = StringField('Middlename')
+    lastname = StringField('Lastname', validators=[DataRequired()])
+    dob = StringField('Date of birth: 22/02/2020', validators=[DataRequired()])
+    
+    firstname1 = StringField('Partiners Fisrtname', validators=[DataRequired()])
+    middlename1 = StringField('Partiners Middlename')
+    lastname1 = StringField('Partiners Lastname', validators=[DataRequired()])
+    dob1 = StringField('Partiners Date of birth: 22/02/2020', validators=[DataRequired()])
+    
+    year = StringField('Year in past: 2020')
+    submit = SubmitField('Read Relationship')
         
 class EditProfileForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])

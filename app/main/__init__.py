@@ -3,7 +3,7 @@ from flask import Blueprint, render_template, url_for, redirect, request, sessio
 from flask_login import current_user, login_user,login_required,logout_user
 from app import db
 from app.models import User,Post
-from app.auth.forms import PostForm,PredictionForm,NumberOfQuestions,AskQuestions
+from app.auth.forms import PostForm,PredictionForm,RelationshipForm,NumberOfQuestions,AskQuestions
 
 import datetime
 from app.hello1 import missing_numbers
@@ -11,6 +11,7 @@ from app.genum_private import generate_numbers_private
 from app.genum import generate_numbers
 from app.hello import (contains_y,jeff, life_number,your_personal,real,hearts_d,image_num,bddict,year_num,lesson,debt,
                        check_karma,peak,digit_sum,b_t_ms)
+from app.Love import (same_heart_desire,go_getters,carry_outers,easy_takers,lover_affairs,extroverts,introverts)
 
 from app.destiny_num import (destiny,birthForce,heart_desire,personality,karmas,reality,one_in_plane,two_in_plane,
                              three_in_plane,four_in_plane,six_in_plane,sev_in_plane,eig_in_plane,nin_in_plane,
@@ -124,15 +125,12 @@ def event():
     bty = user.dob[6:10] #22
     
     e = generate_numbers(FN,MN,LN,btd,btm,bty)[3]
-    #e = generate_numbers('princely','emeka','okwuego','22','02','1982')[3]
-    #e = generate_numbers('John','Joseph','Pershing','22','02','1982')[3]#[1]
-    
-    #e = generate_numbers('uchechukwu','emeka','okwu','22','02','1982')[3]
     
     return render_template('event.html',exp11=e[0],sU=e[1],iM1=e[2],lp=e[3],Mrity=e[4],phy=e[5],men=e[6],emo=e[7],intt=e[8],one=e[9],
                             two=e[10],thr=e[11],fou=e[12],fiv=e[13],six=e[14],sev=e[15],eig=e[16],nin=e[17],ps=e[18],cH=e[19],cH1=e[20],cH2=e[21],cH3=e[22],
                             Essence=e[23],pynum=e[24],uniynum=e[25],pina=e[26],rc=e[27],pmonth=e[28],uniday=e[29],pday=e[30],Gpina=e[31],Gcha=e[32],Gper_pi=e[33],
-                            Gper_cha=e[34],k_day=e[35],k_pday=e[36],year_now=e[37])
+                            Gper_cha=e[34],k_day=e[35],k_pday=e[36],year_now=e[37],p1=e[39],
+                           p11=e[40],p2=e[41],p22=e[42],p3=e[43],p33=e[44],p4=e[45],p44=e[46])
 
 
 @bp.route('/reading')
@@ -150,8 +148,6 @@ def reading():
     bty = user.dob[6:10] #22
     
     r = generate_numbers(FN,MN,LN,btd,btm,bty)[0]
-    
-    #r = generate_numbers('uchechukwu','emeka','okwu','22','02','1982')[0]
     
     return render_template('reading.html', exp=r[0],exp11=r[1], sU=r[2], sU1=r[3], iM=r[4], iM1=r[5],
                            hP=r[6], ln=r[7], lp=r[8],bd1=r[9], lb=r[10], cH=r[11], cH1=r[12], cH2=r[13], cH3=r[14], LEB=r[15], 
@@ -178,14 +174,166 @@ def reading1():
     
     r = generate_numbers(FN,MN,LN,btd,btm,bty)[1]
     
-    #r = generate_numbers('uchechukwu','emeka','okwu','22','02','1982')[2]#[1]
-    
     return render_template('reading1.html',FN=FN,lp=r[0],A=r[1],B=r[2],C=r[3],D=r[4],E=r[5],F=r[6],G=r[7],H=r[8],I=r[9],
                            Rall=r[10],R1all=r[11],R2all=r[12],R3all=r[13],R4all=r[14],R5all=r[15],R6all=r[16],R7all=r[17],
                            missing_numbers=missing_numbers,p=r[18],bash1=r[19],bash2=r[20],bash3=r[21],
                            bash4=r[22],bash5=r[23],bash6=r[24],bash7=r[25],bash8=r[26],bash9=r[27],year_now=year_now)
 
+@bp.route('/relationship', methods=['GET', 'POST'])
+@login_required
+def relation():
+    username = current_user.username
+    user = User.query.filter_by(username=username).first()
     
+    if user.username == 'admin':
+        
+        form = RelationshipForm()
+        if form.validate_on_submit():
+            #person 1
+            FN = form.firstname.data
+            MN = form.middlename.data
+            LN = form.lastname.data
+            dob = form.dob.data
+            
+            btd = dob[0:2] #1982
+            btm = dob[3:5] #02
+            bty = dob[6:10] #22
+            #person 2
+            FN1 = form.firstname1.data
+            MN1 = form.middlename1.data
+            LN1 = form.lastname1.data
+            dob1 = form.dob1.data
+            
+            btd1 = dob1[0:2] #1982
+            btm1 = dob1[3:5] #02
+            bty1 = dob1[6:10] #22
+            
+            year_in_past = form.year.data
+
+            person1 = generate_numbers_private(FN,MN,LN,btd,btm,bty,year_in_past)[4]
+
+            person2 = generate_numbers_private(FN1,MN1,LN1,btd1,btm1,bty1,year_in_past)[4]
+            
+            #mixed relationships.
+            person1_list = (person1['Heart desire'],person1['Destiny'],person1['Talent'],person1['Goal'],
+                            person1['Personality'],person1['physical'],person1['mental'],person1['emotion'],
+                            person1['intuitive'],person1['security'],person1['point of intense'])
+            #'n1':one,'n2':two,'n3':thr,'n4':fou,'n5':fiv,'n6':six,'n7':sev,'n8':eig,'n9':nin,'security':ps
+            person2_list = (person2['Heart desire'],person2['Destiny'],person2['Talent'],person2['Goal'],
+                            person2['Personality'],person2['physical'],person2['mental'],person2['emotion'],
+                            person2['intuitive'],person2['security'],person2['point of intense'])
+            
+            #print('person1_list = ',person1_list)
+            #print('person2_list = ',person2_list)
+            
+            #The intersection
+            def intersection(lst1, lst2): 
+                return list(set(lst1) & set(lst2))
+            
+            #Analyze
+            #same_heart_desire,go_getters,carry-outers,easy-takers,lover_affairs,extroverts,introverts
+            def where_is_the_heart(*list_to_compare,heart_desire,person):
+                conclude = [person]
+                for i in list_to_compare:
+                    if heart_desire in i:
+                        conclude.append(i[-1])
+                return conclude
+            
+            rule1 = """Rule1. True love is the attraction, brought forth from past lives. (Many numbers in common.)"""
+                    
+            rule2 = """Rule2. The marriage may be one of experience, with love to be earned through tests and trials,
+                        then ending in happy companionship and the joy of being together. (One or two numbers in common.)"""
+                    
+            rule3 = """Rule3. Other marriages ending in divorce court have seemed to be wrong from the start;
+                    the reason for the attraction based only on a temporary position as a Pinnacle, Personal Year, or Table 
+                    of Events, all changing experiences."""
+            
+            common_core_contact = {k: person1[k] for k in person1 if k in person2 and person1[k] == person2[k]}
+            
+            #where_is_the_heart(*list_to_compare,heart_desire)
+            w_i_t_h1 = where_is_the_heart(introverts[0],extroverts[0],go_getters[0],carry_outers[0],easy_takers[0],
+                                         heart_desire=person1['Heart desire'],person=FN)
+            w_i_t_h2 = where_is_the_heart(introverts[0],extroverts[0],go_getters[0],carry_outers[0],easy_takers[0],
+                                         heart_desire=person2['Heart desire'],person=FN1)
+            
+            '''[where_is_the_heart(introverts,person1['Heart desire'],'introvert'),
+                           where_is_the_heart(extroverts,person1['Heart desire'],'extrovert'),
+                           where_is_the_heart(go_getters,person1['Heart desire'],'go_getters'),
+                           where_is_the_heart(carry_outers,person1['Heart desire'],'carry-outers'),
+                           where_is_the_heart(easy_takers,person1['Heart desire'],'easy_takers')
+                           ]'''
+            
+            if person1['Heart desire'] ==  person2['Heart desire']:
+                deduction = """Same Heart: A strong emotional tie. Love and interest can remain a lifetime through,
+                            even though problems and separation come about for other reasons. The tie between two people with
+                            the same Heart’s Desire is a spiritual one."""
+            else:
+                deduction = 'No same Heart Desire'
+                
+            if person1 == 'common_core_contact':
+                affinitive = """Second—compare each major position in the same way. Do they have the same numbers on all positions?
+                                This is most unusual. This attraction would be similar to being affinities.
+                                But far too often there is little real accomplishment when two people are so much alike."""
+            else:
+                affinitive = 'No same affinitive'
+                
+            if person1['Destiny'] ==  person2['Destiny']:
+                same_destiny = """Same Destiny: the marriage may be comparatively happy, as they live on the same level of activity.
+                                They may have grown up together in the same environment, or met through association on the same 
+                                level of living. Many marriages, comparatively happy, come about in this way because of common
+                                interests from birth; but there should be other points of attraction in common to bring
+                                the lasting fire of romance."""
+            else:
+                same_destiny = 'No same Destiny'
+            
+            if person1['Talent'] ==  person2['Talent']:
+                same_talent = """Same Talent: this may bring two people together in love and marriage through association at 
+                                work or social interests connected with the work. This marriage can be generally
+                                happy because of a mutual interest. This is usually built on the commonly accepted
+                                traditions and standards of home and marriage. Now and then, this tie is strange 
+                                and intense, with many problems of temperament brought over
+                                from past incarnations. This attraction can lead to marriage but not to smooth waters."""
+            else:
+                same_talent = 'No same Talent'
+            if person1['Goal'] ==  person2['Goal']:
+                same_goal = """Same Goal: The tie between two people with the same Ultimate Goal is a pleasing one, but does not
+                            always lead to marriage until later in life, unless there are other points of attraction in common."""
+            else:
+                same_goal = 'No same Goal'
+                
+            if person1['Personality'] ==  person2['Personality']:
+                same_person = """Same Persons: Two people may be attracted to each other by the Personality.
+                                This is not enough for a happy marriage."""
+            else:
+                same_person = 'No same Persons'
+            #mixed relationships.
+            mix = intersection(person1_list, person2_list)
+            #print('mixed_relationships = ',mixed_relationships)
+            
+            mixed = []
+            def get_key(my_dict, val):
+                for key, value in my_dict.items():
+                    if val == value:
+                        return key
+                return "key doesn't exist"
+            
+            for i in mix:
+                if get_key(common_core_contact, i) == "key doesn't exist":
+                    mixed.append(f'{FN} {get_key(person1, i)} is the {FN1} {get_key(person2, i)}')
+                    #print(mixed)
+            
+            data = [rule1,rule2,rule3,person1,person2,w_i_t_h1,w_i_t_h2,deduction,affinitive,same_destiny,same_talent,
+                    same_goal,same_person]
+            #data = [tool,common_core_contact,deduction,same_destiny]
+            
+            return render_template('relationship.html',data=data,common_core_contact=common_core_contact,
+                                   mix=mix,mixed=mixed,form=form)
+        
+        elif request.method == 'GET':
+            return render_template('relationship.html',form=form)
+        
+    return 'ACCESS DENIED'
+
 @bp.route('/fullreading', methods=['GET', 'POST'])
 @login_required
 def fullreading():
@@ -202,8 +350,6 @@ def fullreading():
         bty = user.dob[6:10] #22
         
         r = generate_numbers(FN,MN,LN,btd,btm,bty)[2]
-        #r = generate_numbers('John','Joseph','Pershing','22','02','1982')[2]#[1]
-        #r = generate_numbers('princely','emeka','okwuego','22','02','1982')[2]#[1]
         
         def num_to_strs(g): #g=r[10]
             g = digit_sum(g)
@@ -300,8 +446,7 @@ def newuser():
             btd = dob[0:2] #1982
             btm = dob[3:5] #02
             bty = dob[6:10] #22
-            
-            #r = generate_numbers(FN,MN,LN,btd,btm,bty)[2]
+
             r = generate_numbers_private(FN,MN,LN,btd,btm,bty,year_in_past)[2]
             
             def num_to_strs(g): #g=r[10]
@@ -409,7 +554,7 @@ def newuser():
                                i_num_to_str=i_num_to_str,t_num1=t_num1,t_num2=t_num2,t_num3=t_num3,t_num4=t_num4,t_num5=t_num5,
                                t_num6=t_num6,t_num7=t_num7,t_num8=t_num8,t_num9=t_num9,v_pointer=v_pointer,karmas=karmas,
                                 Ess=Ess,lata1=lata1,lata2=lata2,lata3=lata3,py_num=py_num,py_desc=py_desc,pina=pina,
-                                pina_desc=pina_desc,pina_st=pina_st)
+                                pina_desc=pina_desc,pina_st=pina_st,py_kma=r[33])
         
         elif request.method == 'GET':
             return render_template('newuser.html',form=form)

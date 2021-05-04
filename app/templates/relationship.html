@@ -1,0 +1,50 @@
+{% extends "users/base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+	<h6>
+		PLEASE FILL OUT CAREFULLY - INCORECT INFORMATION WILL GIVE INCORRECT REPORT READINGS!<br /><br />
+    
+        BIRTH NAME: Enter exactly as listed in your birth certificate, even if you have never used it.
+        Do not enter space, hyphens, jr., III, etc
+	
+	</h6>
+    <h1>New User</h1>
+    <div class="row">
+        <div class="col-md-4">
+            {{ wtf.quick_form(form) }}
+        </div>
+    </div>
+	
+	<br />
+	<br />
+	
+	<div>
+		common_core_contact = {{ common_core_contact }}
+	</div>
+	
+	<div>
+		['Heart desire','Destiny','Talent','Maturity','Image number','physical','mental','emotion','intuitive','security','point of intense']
+	</div>
+	<br />
+	<div>
+		mixd relation = {{ mix }}
+	</div>
+	
+	<br />
+	<div>
+		{% for i in mixed %}
+			<p>{{ i }}</p>
+		{% endfor %}
+	</div>
+	
+	<br />
+	<br />
+	<div>
+		{% for i in data %}
+
+			<p>{{ i }}</p>
+			
+		{% endfor %}
+	</div>
+{% endblock %}

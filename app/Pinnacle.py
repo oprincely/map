@@ -88,5 +88,5 @@ Try to keep a few roots down, even though living an active life.
 When sudden changes occur or when restlessness builds up, 
 avoid hasty, impulsive actions."""],
 6:[],
-
+8:[],
 }

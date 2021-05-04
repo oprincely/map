@@ -120,6 +120,7 @@ def generate_numbers_private(FN,MN,LN,btd1,btm1,bty1,year_in_past):
     cy1 = digit_sum(digit_sum(year_now)) #current year
     
     #personal year number bd + bm + cy1
+    py_kma = sum_bd + sum_bm + cy1
     py_num = digit_sum(digit_sum((sum_bd + sum_bm + cy1)))# personal year
     
     #Your Life Path - Expression Bridge
@@ -177,6 +178,14 @@ def generate_numbers_private(FN,MN,LN,btd1,btm1,bty1,year_in_past):
     sev = how_many_seven
     eig = how_many_eight
     nin = how_many_nine
+    
+    #which number is the max
+    def get_key(val):
+        for key, value in freq.items():
+            if val == value:
+                return key
+        return "key doesn't exist"
+    int_pt = get_key(max(one,two,thr,fou,fiv,six,sev,eig,nin))
     
     #missing numbers in name
     exp_list = k1[3] + k1[4] + k2[3] + k2[4] + k3[3] + k3[4] #[5, 5, 1, 0, 4, 2, 3, 5, 3, 3, 0, 3, 8, 3, 8, 2, 5, 6, 3, 0, 2, 5]
@@ -557,12 +566,18 @@ def generate_numbers_private(FN,MN,LN,btd1,btm1,bty1,year_in_past):
 
     full_reading = [exp,exp11,ln,lp,year_now,sU,sU1,iM,iM1,Mrity,phy,men,emo,intt,one,two,thr,
                     fou,fiv,six,sev,eig,nin,pina_change,k_rity,Ess_karma,Essence,Ess_change,cur_lata1,cur_lata2,cur_lata3,
-                    pynum,newuser_pina] #pina_change
+                    pynum,newuser_pina,py_kma] #pina_change
     
     event = [exp11,sU,iM1,lp,Mrity,phy,men,emo,intt,one,two,thr,fou,fiv,six,sev,eig,nin,ps,cH,cH1,cH2,cH3,
              Essence,pynum,uniynum,pina,rc,pmonth,uniday,pday,Gpina,Gcha,Gper_pi,Gper_cha,k_day,k_pday,year_now,cha,p1,p11,
              p2,p22,p3,p33,p4,p44]
-
-    return mini_reading, speed_reading, full_reading, event
+    
+    relationship = {'Heart desire':sU,'Destiny':exp11,'Talent':lp,'Goal':Mrity,'Personality':iM1,
+                    'physical':phy,'mental':men,'emotion':emo,'intuitive':intt,'n1':one,'n2':two,'n3':thr,
+                    'n4':fou,'n5':fiv,'n6':six,'n7':sev,'n8':eig,'n9':nin,'security':ps
+                    ,'point of intense':int_pt,'pinnacle':pina,'essence':Essence,
+                    'person year':pynum}
+    
+    return mini_reading, speed_reading, full_reading, event,relationship
 ###########################
 

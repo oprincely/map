@@ -2,9 +2,46 @@
 <html>
 
 <head>
-    <!--<style>
-	    
-	</style>-->
+    <style>
+	    h4 {color: #008CBA;}
+        table {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            border: thin solid black;
+            caption-side: top;
+            border-collapse: collapse;
+            }
+        table table th {
+            background-color: white;
+        }
+        td, th {
+            border: thin dotted gray;
+            padding: 5px;
+            }
+        caption {
+            font-style: italic;
+            padding-top: 8px;
+            margin-bottom: 20px;
+            }
+        th {
+            font-family: Verdana, Geneva, Arial, sans-serif;
+            font-size: small;
+            background-color: #cc6600;
+        }
+        .cellcolor {
+            background-color: #fcba7a;
+            }
+        .center {
+            text-align: center;
+            }
+        .right {
+            text-align: right;
+            }
+		a {
+			text-decoration: none;
+		}
+	</style>
     
 </head>
 
@@ -39,14 +76,14 @@
         	      <p><input type="text" name="tday" id="tday" placeholder="day" required /></p>
         	    </div>
         	    <div class="col">
-        	        <p><input type="text" name="tmonth" id="tmonth" placeholder="month" required /></p>
+        	        <p><input type="text" name="tmonth" id="tmonth" placeholder="month(0 - 11)" required /></p>
         	    </div>
         	    <div class="col">
         	        <p><input type="text" name="tyear" id="tyear" placeholder="year" required /></p>
         	    </div>
         	</div>
         	
-        	<p>Enter Your asc,mc,prog</p>
+        	<!--<p>Enter Your asc,mc,prog</p>
         	<div class="columns">
         	    <div class="col">
         	      <p><input type="text" name="asc" id="asc" placeholder="asc" required /></p>
@@ -57,79 +94,94 @@
         	    <div class="col">
         	        <p><input type="text" name="pr" id="pr" placeholder="pr moon" required /></p>
         	    </div>
-        	</div>
+        	</div-->
         	
         	<p><input type="submit" value="submit" /></p>
 	    </form>
 	</div>
 	
-    <div>
-        <p>Forces at work</p>
-        {% for list_of_list in f %}
-                {% for list_ in list_of_list %}
-                    {% for items in list_ %}
-                        {% for item in items %}
-                            <p>{{item}}</p>
-                        {% endfor %}
-                    {% endfor %}
-                {% endfor %}
-        {% endfor %}
-    </div>
-    
-    <div>
-        <p>Transits</p>
-        {% for list_of_list in f2 %}
-                {% for list_ in list_of_list %}
-                    {% for items in list_ %}
-                        {% for item in items %}
-                            <p>{{item}}</p>
-                        {% endfor %}
-                    {% endfor %}
-                {% endfor %}
-        {% endfor %}
-    </div>
-    
-    <div>
-        <p>Oppurtunity and wastes</p>
-        {% for list_of_list in f1 %}
-                {% for list_ in list_of_list %}
-                    {% for items in list_ %}
-                        {% for item in items %}
-                            <p>{{item}}</p>
-                        {% endfor %}
-                    {% endfor %}
-                {% endfor %}
+	<div>
+        <p> Transit To Natals </p>
+        {% for list in transit_to_natals %}
+			<p>{{list}}</p>
         {% endfor %}
     </div>
 	
-	<!-- arcs -->
-    <div>
-        <p style="color: red;">BREAKKKKKKKKKKK</p>
-        {% for list_of_list in A %}
-                {% for list_ in list_of_list %}
-                    {% for items in list_ %}
-                        {% for item in items %}
-                            <p>{{item}}</p>
-                        {% endfor %}
-                    {% endfor %}
-                {% endfor %}
-        {% endfor %}
-		
-		<p>opportunity and waste from arc</p>
-		
-		{% for list_of_list in A1 %}
-                {% for list_ in list_of_list %}
-                    {% for items in list_ %}
-                        {% for item in items %}
-                            <p>{{item}}</p>
-                        {% endfor %}
-                    {% endfor %}
-                {% endfor %}
+	<div>
+        <p> Transit To Mid Points </p>
+        {% for list in transit_to_mid_points %}
+			<p>{{list}}</p>
         {% endfor %}
     </div>
-    
-    
-    
+	
+	<div>
+        <p> Arcs To Natals </p>
+        {% for list in arc_to_natals %}
+			<p>{{list}}</p>
+        {% endfor %}
+    </div>
+	
+	<div>
+        <p> Arcs To Mid Points </p>
+        {% for list in arc_to_mid_points %}
+			<p>{{list}}</p>
+        {% endfor %}
+    </div>
+	
+	<div>
+        <p> Progression To Natals </p>
+        {% for list in progresion_to_natals %}
+			<p>{{list}}</p>
+        {% endfor %}
+    </div>
+	
+	<div>
+        <p> Progression To Mid Points </p>
+        {% for list in progresion_to_mid_points %}
+			<p>{{list}}</p>
+        {% endfor %}
+    </div>
+	
+	<!--table>
+		{% for list_ in transit_to_natals %}
+		<tr>
+			{% for items in list_ %}
+				<td><a href="#">{{items}}</a></td>
+			{% endfor %}
+		</tr>
+		{% endfor %}
+	</table>
+	
+	<table>
+		{% for list_ in B %}
+		<tr>
+			{% for items in list_ %}
+				<td>{{items}}</td>
+			{% endfor %}
+			<td><a href="#">read more</a></td>
+		</tr>
+		{% endfor %}
+	</table>
+	
+	<table>
+		{% for list_ in C %}
+		<tr>
+			{% for items in list_ %}
+				<td><a href="#">{{items}}</a></td>
+			{% endfor %}
+		</tr>
+		{% endfor %}
+	</table>
+	
+	<div>
+        <p> Current Arcs </p>
+        {% for list_of_list in D %}
+			{% for item in list_of_list %}
+				<p>{{item}}</p>
+            {% endfor %}
+        {% endfor %}
+    </div-->
+
 </body>
 
 </html>
