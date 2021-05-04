@@ -14,16 +14,24 @@ def transit():
         tmonth = int(request.form['tmonth'])
         tyear = int(request.form['tyear'])
         Year = tyear
-
-        transit_to_natals = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,'natal','natal','transit')
-        transit_to_mid_points = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,'mid_pts','mid_pt','transit')
         
-        arc_to_natals = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,'natal','natal','arc')
-        arc_to_mid_points = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,'mid_pts','mid_pt','arc')
-        print(arc_to_natals)
+        mc_str = request.form['mc']
+        mc = (int(mc_str[0:2]),int(mc_str[3:5]),int(mc_str[6:8]),'mc')
+        
+        asc_str = request.form['asc']
+        asc = (int(asc_str[0:2]),int(asc_str[3:5]),int(asc_str[6:8]),'asc')
+        
+        prog_moon_str = request.form['pr']
+        prog_moon = (int(prog_moon_str[0:2]),int(prog_moon_str[3:5]),int(prog_moon_str[6:8]),'moon')
 
-        progresion_to_natals = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,'natal','natal','prog')
-        progresion_to_mid_points = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,'mid_pts','mid_pt','prog')
+        transit_to_natals = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,'natal','natal','transit')
+        transit_to_mid_points = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,'mid_pts','mid_pt','transit')
+        
+        arc_to_natals = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,'natal','natal','arc')
+        arc_to_mid_points = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,'mid_pts','mid_pt','arc')
+
+        progresion_to_natals = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,'natal','natal','prog')
+        progresion_to_mid_points = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,'mid_pts','mid_pt','prog')
         
         return render_template('transit/transit.html',transit_to_natals=transit_to_natals,
                                transit_to_mid_points=transit_to_mid_points,

@@ -4,7 +4,7 @@ from .webscrapping_extended_new import planet_points
 from .convert_time import time_to_int,int_to_time,get_hour_or_min
 import time
 
-def prog_date(btd,btm,bty,Year,tday,tmonth,tyear):
+def prog_date(btd,btm,bty,Year,tday,tmonth,tyear,asc,mc):
     cur_year = datetime.datetime.now().year
     if Year == '':
         days_in_time = cur_year - bty
@@ -29,13 +29,13 @@ def prog_date(btd,btm,bty,Year,tday,tmonth,tyear):
     #print(prog_date()) #returns 02 04 1982 01 04 1982
     
     #Advanced calculated date ACD
-    def acd(btd, btm, bty, Year,tday,tmonth,tyear):
+    def acd(btd, btm, bty, Year,tday,tmonth,tyear,asc,mc):
         #position of sun day after birth
         
-        day_after_planet_pos = planet_points(prog_day_after,prog_month_after - 1,prog_year_after,'natal')[0]
+        day_after_planet_pos = planet_points(prog_day_after,prog_month_after - 1,prog_year_after,asc,mc,'natal')[0]
 
         #position of sun birthday
-        bday_planet_pos = planet_points(prog_day,prog_month - 1,prog_year,'natal')[0]
+        bday_planet_pos = planet_points(prog_day,prog_month - 1,prog_year,asc,mc,'natal')[0]
         #print(day_after_moom_pos,bday_moon_pos) #(22, 4, 8) (8, 4, 8)
         
         prog_moon_pos = time_to_int(day_after_planet_pos[0], day_after_planet_pos[2], 0) - time_to_int(bday_planet_pos[0], bday_planet_pos[2], 0)
@@ -63,14 +63,14 @@ def prog_date(btd,btm,bty,Year,tday,tmonth,tyear):
                          'Jul':Jul_21,'Aug':Aug_21,'Sep':Sep_21,'Oct':Oct_21,'Nov':Nov_21,'Dec':Dec_21}
         return current_month[cur_month]
     
-    def cal_arc(btd, btm, bty, year,tday,tmonth,tyear):
-        nat_pts = planet_points(btd,btm-1,bty,'natal')
+    def cal_arc(btd, btm, bty, year,tday,tmonth,tyear,asc,mc):
+        nat_pts = planet_points(btd,btm-1,bty,asc,mc,'natal')
         arc_list = []
         n=0
         while n != len(nat_pts):
             
             #current possition of prog sun - nat position
-            prog_sun_dis = acd(btd, btm, bty, year,tday,tmonth,tyear) - time_to_int(nat_pts[0][0],nat_pts[0][2],0)
+            prog_sun_dis = acd(btd, btm, bty, year,tday,tmonth,tyear,asc,mc) - time_to_int(nat_pts[0][0],nat_pts[0][2],0)
             arc_pos = prog_sun_dis + time_to_int(nat_pts[n][0],nat_pts[n][2],0)
 
             cal_deg = round(get_hour_or_min(arc_pos)[0]) #19
@@ -95,7 +95,7 @@ def prog_date(btd,btm,bty,Year,tday,tmonth,tyear):
             
             n += 1
         return arc_list
-    return cal_arc(btd, btm, bty, Year,tday,tmonth,tyear)
+    return cal_arc(btd, btm, bty, Year,tday,tmonth,tyear,asc,mc)
    
 
 #print(prog_date(nat_pts,btd,btm,bty,Year,tday,tmonth,tyear))

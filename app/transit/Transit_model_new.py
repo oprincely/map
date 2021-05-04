@@ -7,7 +7,7 @@ from .describept import describe
 from .arc_new import prog_date
 from .progress_pts import calculate_prog_pts
 
-def cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,transit_to,calculate_with,what_is_transit):
+def cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,transit_to,calculate_with,what_is_transit):
     aspects = [(conj,'conj'),(sqareAct,'square'),(oppoAct,'opp'),(sesquaAct,'sesqua'),(sextile,'setai'),
                (trine,'trin'),(semiquaAct,'semiqua')]
     
@@ -15,22 +15,22 @@ def cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,transit_to,calculate_w
     
     if transit_to == 'mid_pts':
         #Get mid points
-        transit_to = mid_pts(btd,btm,bty) #from mid_pts_new module
+        transit_to = mid_pts(btd,btm,bty, asc, mc) #from mid_pts_new module
     else:
         #Get the natal points
-        transit_to = planet_points(btd, btm-1, bty,'natal') #from webscrapping_extended_new module
+        transit_to = planet_points(btd, btm-1, bty,asc,mc,'natal') #from webscrapping_extended_new module
         
     #Get the transit points
-    transit = planet_points(tday, tmonth-1, tyear,'transit')
+    transit = planet_points(tday, tmonth-1, tyear,asc,mc,'transit')
     
     if what_is_transit == 'arc':
     #Get the arc
-        arc = prog_date(btd,btm,bty,Year,tday,tmonth,tyear)
+        arc = prog_date(btd,btm,bty,Year,tday,tmonth,tyear,asc,mc)
     else:
         #Get the progressed points
         '''this progress module need to come with the current asc not that from the natal'''
         #arc = calculate_prog_pts(btd,btm,bty,tday,tmonth,tyear,year)[1] #from progress_pts module
-        arc = [(25, 4, 44, 'moon')]
+        arc = [prog_moon]
 
     transit_filter = []
     transit_starts = []

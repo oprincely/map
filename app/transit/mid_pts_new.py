@@ -1,12 +1,12 @@
 from .midptmodel_new import sign_num,mp_sign
 from .webscrapping_extended_new import planet_points
 
-def mid_pts(btd, btm, bty):
+def mid_pts(btd, btm, bty, asc, mc):
     '''save the mid points in list'''
     midpts = []
     
     '''Get the natal points'''
-    nat_points = planet_points(btd, btm-1, bty,'natal')
+    nat_points = planet_points(btd, btm-1, bty, asc, mc,'natal')
     
     '''the first while loop iterates over all the mid points'''
     start_num = 0

@@ -68,7 +68,7 @@ def sigh_2_num(m):
     sigh_dict = {'AR':1,'TA':2,'GE':3,'CN':4,'LE':5,'VI':6,'LI':7,'SC':8,'SG':9,'CP':10,'AQ':11,'PI':12}
     return sigh_dict[m]
 
-def cal_planet_points(day, month, yr, type_of_points): #planet_points(day, month, year)
+def cal_planet_points(day, month, yr, asc, mc, type_of_points): #planet_points(day, month, year)
     t_list = []
     def plt_pos(position):
         name = ('sun','moon','merc','ven','mars','jup','sat','ura','nep','plu','nod','asc','mc')
@@ -83,17 +83,10 @@ def cal_planet_points(day, month, yr, type_of_points): #planet_points(day, month
         for row in csv_f:
             #Get the natal points
             if type_of_points == 'natal':
-                if row != [] and f'{str(day).zfill(2)}' in row: #to convert 1 to 01 str(1).zfill(2)
-                    if day == 22 and month == 1 and yr == 1982:
-                        asc = (13,9,43)
-                        mc = (13,6,18)
-                        #vtx = (16,12,6)
-                    else:
-                        asc = (0,1,43)
-                        mc = (0,10,18)
-                        
+                #to convert 1 to 01 str(1).zfill(2)
+                if row != [] and f'{str(day).zfill(2)}' in row:
                     return (plt_pos(3),plt_pos(4),plt_pos(5),plt_pos(6),plt_pos(7),plt_pos(8),plt_pos(9),plt_pos(10),
-                               plt_pos(11),plt_pos(12),plt_pos(13),(asc[0],asc[1],asc[2],"asc"),(mc[0],mc[1],mc[2],"mc"))
+                               plt_pos(11),plt_pos(12),plt_pos(13),(asc[0],asc[1],asc[2],asc[3]),(mc[0],mc[1],mc[2],mc[3]))
                     
                     #to get the transit for one dayin question uncomment and remove #Get the transit points
                     #transit = (plt_pos(7),plt_pos(8),plt_pos(9),plt_pos(10),plt_pos(11),plt_pos(12),plt_pos(13))
@@ -105,11 +98,11 @@ def cal_planet_points(day, month, yr, type_of_points): #planet_points(day, month
                 
     return t_list
         
-def planet_points(day, month, yr, type_of_points):
+def planet_points(day, month, yr, asc, mc, type_of_points):
     try:
-        return cal_planet_points(day, month, yr, type_of_points)
+        return cal_planet_points(day, month, yr, asc, mc, type_of_points)
     except FileNotFoundError: #except Exception:
         convert_to_csv(month, yr)
-        return cal_planet_points(day, month, yr, type_of_points)
+        return cal_planet_points(day, month, yr, asc, mc, type_of_points)
 
 #print(planet_points(30, 3, 2021, "transit"))
