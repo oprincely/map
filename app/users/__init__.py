@@ -77,12 +77,12 @@ def explore():
 @login_required
 def querydb():
     users = User.query.all()
-    for u in users:
-        print(u.username, u.password_hash)
+    #for u in users:
+    #    print(u.username, u.password_hash)
     #return (u.username, u.password)
     #print(users)
-    return 'done'
-    #return render_template("users.querybd.html", title='Querying DB')
+    #return 'done'
+    return render_template("admin.html", users=users,title='Querying DB')
 ############# 
 
 @bp.before_request

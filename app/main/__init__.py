@@ -41,7 +41,8 @@ def about():
 def profile():
     form = PostForm()
     user = User.query.filter_by(username=current_user.username).first()
-    print(user.number_of_questions)
+    #print(user.password_hash)
+    #print('This is users = ',User.query.order_by(User.username).all())
     if user.number_of_questions == 0:
         msg = 'You do not have enough questions'
     else:

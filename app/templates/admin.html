@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+	    h4 {color: #008CBA;}
+        table {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            border: thin solid black;
+            caption-side: top;
+            border-collapse: collapse;
+            }
+        table table th {
+            background-color: white;
+        }
+        td, th {
+            border: thin dotted gray;
+            padding: 5px;
+            }
+        caption {
+            font-style: italic;
+            padding-top: 8px;
+            margin-bottom: 20px;
+            }
+        th {
+            font-family: Verdana, Geneva, Arial, sans-serif;
+            font-size: small;
+            background-color: #cc6600;
+        }
+        .cellcolor {
+            background-color: #fcba7a;
+            }
+        .center {
+            text-align: center;
+            }
+        .right {
+            text-align: right;
+            }
+		a {
+			text-decoration: none;
+		}
+	</style>
+    
+</head>
+
+<body>
+    
+	
+	<div class="container1">
+	    
+		<table>
+			{% for user in users %}
+			<tr>
+				<td><a href="#">{{user.username}}</a></td>
+			</tr>
+			{% endfor %}
+		</table>
+
+		<!--table>
+			{% for list_ in B %}
+			<tr>
+				{% for items in list_ %}
+					<td>{{items}}</td>
+				{% endfor %}
+				<td><a href="#">read more</a></td>
+			</tr>
+			{% endfor %}
+		</table>
+
+		<table>
+			{% for list_ in C %}
+			<tr>
+				{% for items in list_ %}
+					<td><a href="#">{{items}}</a></td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+
+		<div>
+			<p> Current Arcs </p>
+			{% for list_of_list in D %}
+				{% for item in list_of_list %}
+					<p>{{item}}</p>
+				{% endfor %}
+			{% endfor %}
+		</div-->
+	</div>
+</body>
+
+</html>
