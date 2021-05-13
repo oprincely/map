@@ -1424,26 +1424,26 @@ as a last resort.""",
 ######################################################################################
 
 #Saturn and Lunar Node 483
-"sat_to_natlunarnod":"""Serious attitude in relation to others; aloneness.""",
-"lunarnod_to_natsat":"""b Meetings of a serious nature; a lonely position.""",
-"sun_sat/lunarnod":"""Setting oneself apart from others for defense or for prestige;
+"sat_to_natnod":"""Serious attitude in relation to others; aloneness.""",
+"nod_to_natsat":"""b Meetings of a serious nature; a lonely position.""",
+"sun_sat/nod":"""Setting oneself apart from others for defense or for prestige;
 appearing self-contained.""",
-"moon_sat/lunarnod":"""Appealing to senior persons; showing precocious maturity;
+"moon_sat/nod":"""Appealing to senior persons; showing precocious maturity;
 qualifying for responsibility.""",
-"merc_sat/lunarnod":"""Thoughts that appeal to others because they are sound,
+"merc_sat/nod":"""Thoughts that appeal to others because they are sound,
 conservative, and respectful; strategy; news ofsadness.""",
-"ven_sat/lunarnod":"""Difficulty expressing emotions to others; inhibitions; depression
+"ven_sat/nod":"""Difficulty expressing emotions to others; inhibitions; depression
 in relationship.""",
-"mars_sat/lunarnod":"""Difficult surrounding situations; looking for personal freedom;
+"mars_sat/nod":"""Difficult surrounding situations; looking for personal freedom;
 confused motivation.""",
-"jup_sat/lunarnod":"""The generation gap; rebellion; freeing oneself from stress.""",
-"ura_sat/lunarnod":"""Upsetting the established way of doing things; going against
+"jup_sat/nod":"""The generation gap; rebellion; freeing oneself from stress.""",
+"ura_sat/nod":"""Upsetting the established way of doing things; going against
 group expectations; separatist activities.""",
-"nep_sat/lunarnod":"""Confusion in one's environment; confusing others about one's
+"nep_sat/nod":"""Confusion in one's environment; confusing others about one's
 personal stand; deception; fraud; lies.""",
-"plu_sat/lunarnod":"""Sacrifice; loss through others; giving up the struggle.""",
-"asc_sat/lunarnod":"""Pulling back; appearing alone; going away.""",
-"mc_sat/lunarnod":"""Standing alone in life; mourning for others; little joy from
+"plu_sat/nod":"""Sacrifice; loss through others; giving up the struggle.""",
+"asc_sat/nod":"""Pulling back; appearing alone; going away.""",
+"mc_sat/nod":"""Standing alone in life; mourning for others; little joy from
 accomplishments.""",
 
 ###############################################################################

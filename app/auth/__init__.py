@@ -1,6 +1,5 @@
 from flask import render_template, flash, redirect, url_for, Blueprint, url_for, redirect, request, session
 
-
 ############### Microblog things
 from app.models import User,Post
 from app import db
@@ -82,7 +81,7 @@ def register():
         #msg = 'Congratulations, you are now a registered user!'
         flash('Congratulations, you are now a registered user!')
         return redirect(url_for('auth.login'))
-    return render_template('auth/register1.html', form=form)
+    return render_template('auth/register1.html', form=form) 
 
 @bp.route('/logout')
 def logout():

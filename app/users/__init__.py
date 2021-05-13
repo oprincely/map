@@ -4,14 +4,14 @@ from flask_login import current_user, login_user,login_required,logout_user
 from app import db
 from app.models import User,Post
 from app.auth.forms import EditProfileForm,PostForm
-
+import os
 from datetime import datetime
 
 #from app.auth.forms import NumberOfQuestions,AskQuestions
 
 
 bp = Blueprint('users', __name__)
-
+'''
 @bp.route('/users', methods=['GET', 'POST'])
 #@login_required
 def users():
@@ -25,7 +25,6 @@ def users():
         return redirect(url_for('users.users'))
     
     posts = Post.query.all()
-    #print('posts', posts)
     #posts = current_user.followed_posts().all()
     return render_template("users/users.html", title='Users Page', form=form,posts=posts)
 
@@ -47,7 +46,7 @@ def user_popup(username):
     form = EmptyForm()
     return render_template('users/user_popup.html', user=user, form=form)
 
-
+'''
 @bp.route('/edit_profile', methods=['GET', 'POST'])
 @login_required
 def edit_profile():
@@ -63,7 +62,7 @@ def edit_profile():
         form.about_me.data = current_user.about_me
     return render_template('users/edit_profile.html', title='Edit Profile',form=form)
 
-
+'''
 @bp.route('/explore')
 @login_required
 def explore():
@@ -72,19 +71,7 @@ def explore():
         page, app.config['POSTS_PER_PAGE'], False)
     return render_template("users.explore.html", title='Explore', posts=posts.items)
 
-################ remove #############
-@bp.route('/querydb')
-@login_required
-def querydb():
-    users = User.query.all()
-    #for u in users:
-    #    print(u.username, u.password_hash)
-    #return (u.username, u.password)
-    #print(users)
-    #return 'done'
-    return render_template("admin.html", users=users,title='Querying DB')
-############# 
-
+'''
 @bp.before_request
 def before_request():
     if current_user.is_authenticated:

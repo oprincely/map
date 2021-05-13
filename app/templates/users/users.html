@@ -1,7 +1,7 @@
 {% extends "users/base.html" %}
 
 {% block content %}
-    <h1>Hi, {{ current_user.username }}!</h1>
+    <!--h1>Hi, {{ current_user.username }}!</h1>
 	
     <form action="" method="post">
         {{ form.hidden_tag() }}
@@ -18,6 +18,6 @@
     {% for post in posts %}
     <p>
     {{ post.author.username }} says: <b>{{ post.body }}</b>
-    </p>
+    </p-->
     {% endfor %}
 {% endblock %}
