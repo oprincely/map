@@ -22,7 +22,7 @@ def querydb():
 @login_required
 @check_admin
 def delete_user():
-    delete_name = 'jeff'
+    delete_name = 'asorock'
     users = User.query.all()
     for user in users:
         if user.username == delete_name:
