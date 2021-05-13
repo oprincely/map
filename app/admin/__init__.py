@@ -14,6 +14,14 @@ bp = Blueprint('admin', __name__)
 @login_required
 @check_admin
 def querydb():
+    users = User.query.all()
+    return render_template("admin.html", users=users,title='Querying DB')
+
+
+@bp.route('/deleteuser')
+@login_required
+@check_admin
+def delete_user():
     delete_name = 'jeff'
     users = User.query.all()
     for user in users:
@@ -21,7 +29,6 @@ def querydb():
             db.session.delete(user)
             db.session.commit()
     return render_template("admin.html", users=users,title='Querying DB')
-
 
 @bp.route('/relationship', methods=['GET', 'POST'])
 @login_required

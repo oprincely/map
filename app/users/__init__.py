@@ -27,7 +27,7 @@ def users():
     posts = Post.query.all()
     #posts = current_user.followed_posts().all()
     return render_template("users/users.html", title='Users Page', form=form,posts=posts)
-
+'''
 @bp.route('/user/<username>')
 @login_required
 def user(username):
@@ -38,7 +38,7 @@ def user(username):
     ]
     return render_template('users/user.html', user=user, posts=posts)
 
-
+'''
 @bp.route('/user/<username>/popup')
 @login_required
 def user_popup(username):
