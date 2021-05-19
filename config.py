@@ -12,7 +12,6 @@ class Config(object):
         uri = uri.replace("postgres://", "postgresql://", 1)
     
     SQLALCHEMY_DATABASE_URI = uri
-    print("SQLALCHEMY_DATABASE_URI = ",SQLALCHEMY_DATABASE_URI)
     
     
     SQLALCHEMY_TRACK_MODIFICATIONS = False
