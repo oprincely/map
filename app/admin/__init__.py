@@ -18,14 +18,13 @@ def querydb():
     return render_template("admin.html", users=users,title='Querying DB')
 
 
-@bp.route('/deleteuser')
+@bp.route('/deleteuser/<username>')
 @login_required
 @check_admin
-def delete_user():
-    delete_name = 'asorock'
+def delete_user(username):
     users = User.query.all()
     for user in users:
-        if user.username == delete_name:
+        if user.username == username:
             db.session.delete(user)
             db.session.commit()
     return render_template("admin.html", users=users,title='Querying DB')
