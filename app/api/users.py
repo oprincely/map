@@ -7,12 +7,6 @@ from app.api.auth import token_auth
 from app import db
 from app.api.errors import bad_request
 
-@bp.route('/api/get_data/<list:data>', methods=['GET'])
-#@token_auth.login_required
-def get_data(data):
-    print(data)
-    return "done"
-
 @bp.route('/api/users/<int:id>', methods=['GET'])
 @token_auth.login_required
 def get_user(id):
