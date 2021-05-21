@@ -7,13 +7,20 @@ from app.api.auth import token_auth
 from app import db
 from app.api.errors import bad_request
 
+'''Try to create custom view =>https://exploreflask.com/en/latest/views.html'''
+
+@bp.route('/api/get_data/<path:data>', methods=['GET'])
+#@token_auth.login_required
+def get_data(data):
+    return data.split('/')
+
 @bp.route('/api/users/<int:id>', methods=['GET'])
-@token_auth.login_required
+#@token_auth.login_required
 def get_user(id):
     return jsonify(User.query.get_or_404(id).to_dict())
 
 @bp.route('/api/users', methods=['GET'])
-@token_auth.login_required
+#@token_auth.login_required
 def get_users():
     page = request.args.get('page', 1, type=int)
     per_page = min(request.args.get('per_page', 10, type=int), 100)
