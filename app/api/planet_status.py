@@ -20,16 +20,20 @@ def cal_status(btd,btm,bty):
     check_Interception = {"intercept":[4, 10]}
 
     status = {} #{'mars_det': 'det', 'sat_ext': 'ext'}
-
+    
+    #planet position sun=3,moon=4...
+    p_pos = {'sun':3,'moon':4,'merc':5,'ven':6,'mars':7}
+    
     n = 0
     while n != len(natal):
         for k, v in check_status[n].items():
             if natal[n][1] in v:
                 status[f"{natal[n][3]}_{k}"] = k
                 break
-        #check for intercepting planet
+        #check for intercepting planet intercept_planet_starts(day,month,yr,planet_position)
         if natal[n][1] in check_Interception["intercept"] and natal[n][3] in ['sun','moon','merc','ven','mars']:
-            status[f"{natal[n][3]}_int"] = ['int',intercept_planet_starts(btd,btm,bty)]
+            print(f'planet_deg = {natal[n][1]}, and planet_pos = {p_pos[natal[n][3]]}')
+            status[f"{natal[n][3]}_int"] = ['int',intercept_planet_starts(btd,btm,bty,p_pos[natal[n][3]])]
         elif natal[n][1] in check_Interception["intercept"] and natal[n][3] not in ['sun','moon','merc','ven','mars']:
             status[f"{natal[n][3]}_int"] = ['int',natal[n][3]]
         #else:
