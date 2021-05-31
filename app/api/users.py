@@ -12,7 +12,8 @@ from app.api.errors import bad_request
 @bp.route('/api/get_data/<path:data>', methods=['GET'])
 #@token_auth.login_required
 def get_data(data):
-    return data.split('/')
+    _list = data.split('/')
+    return jsonify(_list)
 
 @bp.route('/api/users/<int:id>', methods=['GET'])
 #@token_auth.login_required

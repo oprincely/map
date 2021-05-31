@@ -19,6 +19,7 @@ def cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,trans
     else:
         #Get the natal points
         transit_to = planet_points(btd, btm-1, bty,asc,mc,'natal') #from webscrapping_extended_new module
+        print("transit_to = ",transit_to)
         
     #Get the transit points
     transit = planet_points(tday, tmonth-1, tyear,asc,mc,'transit')

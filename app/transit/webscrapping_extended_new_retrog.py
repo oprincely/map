@@ -86,8 +86,11 @@ def cal_planet_points(day, month, yr, asc, mc, type_of_points): #planet_points(d
             if type_of_points == 'natal':
                 #to convert 1 to 01 str(1).zfill(2)
                 if row != [] and f'{str(day).zfill(2)}' in row:
-                    return (plt_pos(3),plt_pos(4),plt_pos(5),plt_pos(6),plt_pos(7),plt_pos(8),plt_pos(9),plt_pos(10),
-                               plt_pos(11),plt_pos(12),plt_pos(13),(asc[0],asc[1],asc[2],asc[3]),(mc[0],mc[1],mc[2],mc[3]))
+                    print(row)
+                    if f'{str(day+1).zfill(2)}' in row:
+                        print(row)
+                    #return (plt_pos(3),plt_pos(4),plt_pos(5),plt_pos(6),plt_pos(7),plt_pos(8),plt_pos(9),plt_pos(10),
+                    #           plt_pos(11),plt_pos(12),plt_pos(13),(asc[0],asc[1],asc[2],asc[3]),(mc[0],mc[1],mc[2],mc[3]))
                     
                     #to get the transit for one dayin question uncomment and remove #Get the transit points
                     #transit = (plt_pos(7),plt_pos(8),plt_pos(9),plt_pos(10),plt_pos(11),plt_pos(12),plt_pos(13))

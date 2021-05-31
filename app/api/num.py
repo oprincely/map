@@ -1,5 +1,8 @@
 from app.api import bp
 from flask import jsonify,request
+
+from .planet_status import cal_status
+
 from app.hello import (life_number,your_personal,hearts_d,image_num,real)
 
 @bp.route('/api/num/<int:id>/Destiny', methods=['GET'])
@@ -54,3 +57,10 @@ def data_get(index_no):
     
     else:
         return 't_in = %s ; result: %s ; '%(index_no, data[int(index_no)])
+    
+@bp.route('/api/num/planet-status/<path:data>', methods=['GET'])
+def status(data):
+    _list = data.split('/')
+    return cal_status(int(_list[0]),int(_list[1]),int(_list[2]))
+    #return jsonify(_list)
+    #return cal_status(22,2,1982)
