@@ -1,5 +1,5 @@
 from app.api import bp
-from flask import jsonify,url_for
+from flask import jsonify,url_for,request
 from app.models import User
 from flask import abort
 from app.api.auth import token_auth
@@ -14,9 +14,16 @@ from app.api.errors import bad_request
 def get_data(data):
     _list = data.split('/')
     return jsonify(_list)
+    
+@bp.route('/api/num_data/', methods=['GET'])
+#@token_auth.login_required
+def num_data():
+    data = request.args.get('name')
+    print(data)
+    return 'data is ready'
 
 @bp.route('/api/users/<int:id>', methods=['GET'])
-#@token_auth.login_required
+@token_auth.login_required
 def get_user(id):
     return jsonify(User.query.get_or_404(id).to_dict())
 

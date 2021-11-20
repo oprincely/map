@@ -1556,7 +1556,7 @@ leadership.""",
 
 #Uranus and Lunar Node 488
 "ura_to_natnod":"""Meetings with unusual people pay off; sudden relationships.""",
-"nod _to_natura":"""Shared experiences are particularly rewarding.""",
+"nod_to_natura":"""Shared experiences are particularly rewarding.""",
 "sun_ura/nod":"""High tension; a group taking action.""",
 "moon_ura/nod":"""Excitability; a team taking a stand.""",
 "merc_ura/nod":"""Excited thoughts shared with others; impetuousness.""",

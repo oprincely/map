@@ -1,5 +1,7 @@
 from flask import Blueprint, redirect, render_template, request, url_for,session,escape
 from .Transit_model_new import cal_transit_planet
+from .Transit_model_new_prog import prog_moon_to_pts
+
 
 bp = Blueprint('transit', __name__)
 
@@ -30,8 +32,8 @@ def transit():
         arc_to_natals = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,'natal','natal','arc')
         arc_to_mid_points = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,'mid_pts','mid_pt','arc')
 
-        progresion_to_natals = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,'natal','natal','prog')
-        progresion_to_mid_points = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,'mid_pts','mid_pt','prog')
+        progresion_to_natals = prog_moon_to_pts(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,'natal','natal','prog')
+        progresion_to_mid_points = prog_moon_to_pts(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,'mid_pts','mid_pt','prog')
         
         return render_template('transit/transit.html',transit_to_natals=transit_to_natals,
                                transit_to_mid_points=transit_to_mid_points,

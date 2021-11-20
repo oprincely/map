@@ -106,8 +106,7 @@ header {
 }
 
 .container {
-	width: 90%;
-	max-width: 900px;
+	max-width: 69.375rem;
 	margin: 0 auto;
 }
 .container-flex {

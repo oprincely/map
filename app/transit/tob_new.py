@@ -7,87 +7,114 @@ def conj(sdeg,ssign):
     return sdeg, result,0,'conj'#'☌'
 
 def semiquaAct(sdeg,ssign):
-    if sdeg <= 15:
-        result = sdeg + 15
-        k = ssign + 1
-        if k <= 12:
-            result2 = k
-        else:
-            result2 = k - 12
-        result3 = ssign - 2
-    elif sdeg >= 16:
-        h = sdeg + 15
-        result = h - 30
-        k = ssign + 2
-        if k <= 12:
-            result2 = k
-        else:
-            result2 = k - 12
-        result3 = ssign - 1
-    return result,result2,result3,'semiqua'#'∠'
+    left_sign_side = ssign + 1
+    right_sign_side = left_sign_side + 10
+    sdeg_plus_15 = sdeg + 15
+     
+    if left_sign_side > 12:
+        left_sign = left_sign_side - 12
+    else:
+        left_sign = left_sign_side
+        
+    if right_sign_side > 12:
+        right_sign = right_sign_side - 12
+    else:
+        right_sign = right_sign_side
+        
+    if sdeg_plus_15 > 29:
+        new_left_sign = left_sign + 1
+        new_right_sign = right_sign + 1
+        new_sdeg = sdeg_plus_15 - 29
+    else:
+        new_left_sign = left_sign
+        new_right_sign = right_sign
+        new_sdeg = sdeg_plus_15
+        
+    return new_sdeg,new_left_sign,new_right_sign,'semiqua'
 ###############squa#Act####
 def sqareAct(sdeg,ssign):#p(10,11)
-    if ssign <= 9:
-        result2 = ssign + 3
-        result3 = result2 - 6
-    elif ssign >= 9:
-        j = ssign + 3#14
-        result2 = j - 12#2
-        result3 = result2 + 6#8
-    return sdeg,result2,result3,'square'#'□'  10,2,8,square
+    left_sign_side = ssign + 3
+    right_sign_side = left_sign_side + 6
+     
+    if left_sign_side > 12:
+        left_sign = left_sign_side - 12
+    else:
+        left_sign = left_sign_side
+        
+    if right_sign_side > 12:
+        right_sign = right_sign_side - 12
+    else:
+        right_sign = right_sign_side
+    
+    return sdeg,left_sign,right_sign,'square'
 ############sesqua#act 135deg#########
 def sesquaAct(sdeg,ssign): #(3, 12)
-    if sdeg <= 15:
-        result = sdeg + 15 #3+15=18
-        k = ssign + 4 #12+4=16
-        if k <= 12:
-            result2 = k
-        else:
-            result2 = k - 12 #16-12=4
-        result3 = ssign - 5 #12-5=7
-    elif sdeg >= 16:
-        h = sdeg + 15
-        result = h - 30
-        k = ssign + 5
-        if k <= 12:
-            result2 = k
-        else:
-            result2 = k - 12
-        result3 = ssign - 4
-    return result,result2,result3,'sesqua'#'⚼'
+    left_sign_side = ssign + 4
+    right_sign_side = left_sign_side + 4
+    sdeg_plus_15 = sdeg + 15
+     
+    if left_sign_side > 12:
+        left_sign = left_sign_side - 12
+    else:
+        left_sign = left_sign_side
+        
+    if right_sign_side > 12:
+        right_sign = right_sign_side - 12
+    else:
+        right_sign = right_sign_side
+        
+    if sdeg_plus_15 > 29:
+        new_left_sign = left_sign + 1
+        new_right_sign = right_sign + 1
+        new_sdeg = sdeg_plus_15 - 29
+    else:
+        new_left_sign = left_sign
+        new_right_sign = right_sign
+        new_sdeg = sdeg_plus_15
+        
+    return new_sdeg,new_left_sign,new_right_sign,'sesqua'
     
 def oppoAct(sdeg,ssign):#10, 8
-    if ssign <=6:
-        result = ssign + 6
-    elif ssign >= 7:
-        result = ssign - 6
-    return sdeg,result,0,'opp'#'☍'
+    right_sign_side = ssign + 6
+        
+    if right_sign_side > 12:
+        right_sign = right_sign_side - 12
+    else:
+        right_sign = right_sign_side
+    
+    return sdeg,right_sign,0,'opp'
 
 def sextile(sdeg,ssign):#3, 12
-    d = ssign + 2#14...5
-    k = abs(ssign - 2)#10...3
-    if d >= 12:
-        result = d - 12#2
+    left_sign_side = ssign + 2
+    right_sign_side = ssign + 8
+     
+    if left_sign_side > 12:
+        left_sign = left_sign_side - 12
     else:
-        result = d#5
-    if k <= 3:
-        result2 = 12 - k
+        left_sign = left_sign_side
+        
+    if right_sign_side > 12:
+        right_sign = right_sign_side - 12
     else:
-        result2 = k#10...9
-    return sdeg,result,result2,'setai'#,'⚹'
+        right_sign = right_sign_side
+    
+    return sdeg,left_sign,right_sign,'setai'
 
 def trine(sdeg,ssign):#3, 12...1
-    d = ssign + 4#16...5 first sigh
-    k = abs(ssign - 4)#8...3 other sigh
-    if d >= 12:
-        result = d - 12#4
+    left_sign_side = ssign + 4
+    right_sign_side = ssign + 4
+     
+    if left_sign_side > 12:
+        left_sign = left_sign_side - 12
     else:
-        result = d#5
-    if k >= 12:
-        result2 = k - 12
+        left_sign = left_sign_side
+        
+    if right_sign_side > 12:
+        right_sign = right_sign_side - 12
     else:
-        result2 = k#8...9
-    return sdeg,result,result2,'trin'#'△'
+        right_sign = right_sign_side
+    
+    return sdeg,left_sign,right_sign,'trin'
 
 depression = ['nep_merc/sat', 'sat_nep/plu','plu_sat/asc','asc_sat/plu','merc_to_natsat','sat_to_natmerc']
 romance = ['ven_to_natsun', 'sun_to_natven', 'ven_sun/moon', 'moon_to_natven','jup_sun/ven', 'ven_sun/jup',

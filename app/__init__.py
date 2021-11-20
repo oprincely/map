@@ -12,6 +12,10 @@ from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from flask_mail import Mail
 
+
+#from flask_wtf.csrf import CSRFProtect
+
+
 db = SQLAlchemy()
 migrate = Migrate()
 login = LoginManager()
@@ -32,6 +36,9 @@ def create_app(config_class=Config):
     bootstrap = Bootstrap(app)
     moment.init_app(app)
     mail.init_app(app)
+    
+    # protecting our app 
+    #csrf = CSRFProtect(app)
     
     #-------- mailling --------------
     if not app.debug:

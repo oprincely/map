@@ -20,6 +20,7 @@ def cal_status(btd,btm,bty):
     check_Interception = {"intercept":[4, 10]}
 
     status = {} #{'mars_det': 'det', 'sat_ext': 'ext'}
+    intercept = {}
     
     #planet position sun=3,moon=4...
     p_pos = {'sun':3,'moon':4,'merc':5,'ven':6,'mars':7}
@@ -28,14 +29,14 @@ def cal_status(btd,btm,bty):
     while n != len(natal):
         for k, v in check_status[n].items():
             if natal[n][1] in v:
-                status[f"{natal[n][3]}_{k}"] = k
+                status[f"{natal[n][3]}"] = k
                 break
         #check for intercepting planet intercept_planet_starts(day,month,yr,planet_position)
         if natal[n][1] in check_Interception["intercept"] and natal[n][3] in ['sun','moon','merc','ven','mars']:
             print(f'planet_deg = {natal[n][1]}, and planet_pos = {p_pos[natal[n][3]]}')
-            status[f"{natal[n][3]}_int"] = ['int',intercept_planet_starts(btd,btm,bty,p_pos[natal[n][3]])]
+            intercept[f"{natal[n][3]}"] = intercept_planet_starts(btd,btm,bty,p_pos[natal[n][3]])
         elif natal[n][1] in check_Interception["intercept"] and natal[n][3] not in ['sun','moon','merc','ven','mars']:
-            status[f"{natal[n][3]}_int"] = ['int',natal[n][3]]
+            intercept[f"{natal[n][3]}"] = 'will not in this life time'
         #else:
             #status[f"{natal[n][3]}_int"] = ['int',natal[n][3]]
         n+=1
@@ -69,6 +70,6 @@ def cal_status(btd,btm,bty):
             critical_deg.append(critical_degrees(deg,sigh,name))
         
     #print("critical_deg = ",critical_deg)
-    return jsonify(status,critical_deg)
+    return jsonify(status,intercept,critical_deg)
 
 #print(cal_status(21,3,1985))

@@ -1,6 +1,6 @@
 from __future__ import print_function, division
 import datetime
-from .webscrapping_extended_new import planet_points
+from .webscrapping_extended_new_pro import planet_points
 from .convert_time import time_to_int,int_to_time,get_hour_or_min
 
 #asc = [13,9]
@@ -34,7 +34,11 @@ def calculate_prog_pts(btd,btm,bty,tday,tmonth,tyear,Year):
     #print(prog_date()) #returns 02 04 1982 01 04 1982
 
     #position of moon day after birth
-    day_after_planets_pos = planet_points(prog_date(btd,btm,bty)[0],prog_date(btd,btm,bty)[1]-1,prog_date(btd,btm,bty)[2],'natal')
+    #planet_points(day, month, yr, asc, mc, type_of_points)
+    day_after_planets_pos = planet_points(prog_date(btd,btm,bty)[0],
+                                          prog_date(btd,btm,bty)[1]-1,
+                                          prog_date(btd,btm,bty)[2],
+                                          'natal')
 
     #position of moon birthday
     bday_planets_pos = planet_points(prog_date(btd,btm,bty)[3],prog_date(btd,btm,bty)[4]-1,prog_date(btd,btm,bty)[5],'natal') 
@@ -87,4 +91,6 @@ def calculate_prog_pts(btd,btm,bty,tday,tmonth,tyear,Year):
             
             n += 1
         return prog_list
+    
     return prog_planets(tday,tmonth,tyear)
+

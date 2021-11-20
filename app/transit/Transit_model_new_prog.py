@@ -8,7 +8,7 @@ from .arc_new import prog_date
 from .progress_pts import calculate_prog_pts
 
 
-def cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,transit_to,calculate_with,what_is_transit):
+def prog_moon_to_pts(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,transit_to,calculate_with,what_is_transit):
     aspects = [(conj,'conj'),(sqareAct,'square'),(oppoAct,'opp'),(sesquaAct,'sesqua'),(sextile,'setai'),
                (trine,'trin'),(semiquaAct,'semiqua')]
     
@@ -21,12 +21,12 @@ def cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,trans
         #Get the natal points
         transit_to = planet_points(btd, btm-1, bty,asc,mc,'natal') #from webscrapping_extended_new module
         #print("transit_to = ",transit_to)
-        
-    #Get the transit points
-    transit = planet_points(tday, tmonth-1, tyear,asc,mc,'transit')
     
-    #Get the arc
-    arc = prog_date(btd,btm,bty,Year,tday,tmonth,tyear,asc,mc)
+    
+    #Get the progressed points
+    '''this progress module need to come with the current asc not that from the natal'''
+    arc = [calculate_prog_pts(btd,btm,bty,tday,tmonth,tyear,Year)[1]] #from progress_pts module
+        
         
     transit_filter = []
     transit_starts = []
@@ -67,13 +67,12 @@ def cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,trans
                 
                 #upper sq
                 if uradeg == asp_deg and uramin not in exact_range and urasigh == aspect(planet_deg,planet_sigh)[1]:
-                    
                     if f'{uraname} {aspect_to_symbol(tipe)} {planet_name} in deg but not exact' not in transit_filter:
                         transit_filter.append(f'{uraname} {aspect_to_symbol(tipe)} \
 {planet_name} in deg but not exact')
                         transit_starts.append(f'{to_symbol(uraname)} {aspect_to_symbol(tipe)} {to_symbol(planet_name)}')
-                        if rate_transit(uraname,tipe,planet_name) == 4:
-                            impotant_transit.append(f"{to_symbol(uraname)} {aspect_to_symbol(tipe)} \
+                        #if rate_transit(uraname,tipe,planet_name) == 4:
+                        impotant_transit.append(f"{to_symbol(uraname)} {aspect_to_symbol(tipe)} \
 {to_symbol(planet_name)}: {describe[f'{uraname}_to_nat{planet_name}']}")
                         
                 #lower sq        
@@ -82,8 +81,8 @@ def cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,trans
                         transit_filter.append(f'{uraname} {aspect_to_symbol(tipe)} \
 {planet_name} in deg but not exact')
                         transit_starts.append(f'{to_symbol(uraname)} {aspect_to_symbol(tipe)} {to_symbol(planet_name)}')
-                        if rate_transit(uraname,tipe,planet_name) == 4:
-                            impotant_transit.append(f"{to_symbol(uraname)} {aspect_to_symbol(tipe)} \
+                        #if rate_transit(uraname,tipe,planet_name) == 4:
+                        impotant_transit.append(f"{to_symbol(uraname)} {aspect_to_symbol(tipe)} \
 {to_symbol(planet_name)}: {describe[f'{uraname}_to_nat{planet_name}']}")
                 
             else:
@@ -93,9 +92,9 @@ def cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,trans
                         transit_filter.append(f'{uraname} {aspect_to_symbol(tipe)} {planet_name} in deg but not exact')
                         transit_starts.append(f'{to_symbol(uraname)} {aspect_to_symbol(tipe)} {to_symbol(planet_name)}')
                         
-                        if rate_transit(uraname,tipe,planet_name) == 4:
-                            if f'{uraname}_{npoint[3]}/{npoint[4]}' in describe:
-                                impotant_transit.append(f"{to_symbol(uraname)} {aspect_to_symbol(tipe)} {to_symbol(npoint[3])}/{to_symbol(npoint[4])}: {describe[f'{uraname}_{npoint[3]}/{npoint[4]}']}")
+                        #if rate_transit(uraname,tipe,planet_name) == 4:
+                        if f'{uraname}_{npoint[3]}/{npoint[4]}' in describe:
+                            impotant_transit.append(f"{to_symbol(uraname)} {aspect_to_symbol(tipe)} {to_symbol(npoint[3])}/{to_symbol(npoint[4])}: {describe[f'{uraname}_{npoint[3]}/{npoint[4]}']}")
                         
                 #lower sq        
                 elif uradeg == asp_deg and uramin not in exact_range and urasigh == aspect(planet_deg,planet_sigh)[2]:
@@ -103,25 +102,15 @@ def cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,trans
                         transit_filter.append(f'{uraname} {aspect_to_symbol(tipe)} {planet_name} in deg but not exact')
                         transit_starts.append(f'{to_symbol(uraname)} {aspect_to_symbol(tipe)} {to_symbol(planet_name)}')
                         
-                        if rate_transit(uraname,tipe,planet_name) == 4:
-                            if f'{uraname}_{planet_name}/{npoint[4]}' in describe:
-                                impotant_transit.append(f"{to_symbol(uraname)} {aspect_to_symbol(tipe)} {to_symbol(npoint[3])}/{to_symbol(npoint[4])}: {describe[f'{uraname}_{planet_name}/{npoint[4]}']}")
+                        #if rate_transit(uraname,tipe,planet_name) == 4:
+                        if f'{uraname}_{planet_name}/{npoint[4]}' in describe:
+                            impotant_transit.append(f"{to_symbol(uraname)} {aspect_to_symbol(tipe)} {to_symbol(npoint[3])}/{to_symbol(npoint[4])}: {describe[f'{uraname}_{planet_name}/{npoint[4]}']}")
 ########
-    
-    if what_is_transit == 'transit':
-        '''Transit points have some complex format'''
-        for npoint in transit_to:
-            for tpoint in transit:
-                for a_point in tpoint:
-                    perform_iteration()
-    else:
-        for npoint in transit_to:
-            for tpoint in arc: #arc or progression_now
-                ##########
-                perform_iteration()
-    
-    #Lets see all aspect before filtering
-    #print('transit_filter = ',transit_filter)
+                            
+    for npoint in transit_to:
+        for tpoint in arc: #arc or progression_now
+            ##########
+            perform_iteration()
     
     return impotant_transit
     
