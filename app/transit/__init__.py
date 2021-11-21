@@ -3,6 +3,7 @@ from .Transit_model_new import cal_transit_planet
 from .Transit_model_new_prog import prog_moon_to_pts
 
 
+
 bp = Blueprint('transit', __name__)
 
 @bp.route('/transit', methods=('GET', 'POST'))
@@ -26,7 +27,8 @@ def transit():
         prog_moon_str = request.form['pr']
         prog_moon = (int(prog_moon_str[0:2]),int(prog_moon_str[3:5]),int(prog_moon_str[6:8]),'moon')
 
-        transit_to_natals = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,'natal','natal','transit')
+        transit_to_natals = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,
+                                               'natal','natal','transit')
         transit_to_mid_points = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,'mid_pts','mid_pt','transit')
         
         arc_to_natals = cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,'natal','natal','arc')
@@ -41,4 +43,6 @@ def transit():
                                arc_to_mid_points=arc_to_mid_points,
                                progresion_to_natals=progresion_to_natals,
                                progresion_to_mid_points=progresion_to_mid_points)
+        
+        
     return render_template('transit/transit.html')

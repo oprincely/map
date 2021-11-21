@@ -2,7 +2,8 @@ from __future__ import print_function, division
 import requests
 from bs4 import BeautifulSoup
 import os
-import csv 
+import csv
+from .ephemeris_engine import create_ephemeris
 
 #from Allaspects import conj_or_opp
 month_to_num = ('jan','feb','mar','apr','may','june','july','aug','sept','oct','nov','dec')
@@ -28,41 +29,6 @@ def convert_to_csv(month, yr):
     except Exception:
         create_ephemeris(yr)
         convert_to_csv(month, yr)
-       
-
-
-def create_ephemeris(yr):
-    """Downloads the ephemeris and process the file and save it as csv"""
-    
-    #saving the file so if the directory is not we creat it
-    if not os.path.exists(f'./ephemeris/{yr}'):
-        os.mkdir(f'./ephemeris/{yr}')
-    
-    #URL
-    #print('Calling URL ...')
-    url = f'https://www.findyourfate.com/astrology/ephemeris/{yr}.html'
-    
-    #using beautiful soup
-    try:
-        page = requests.get(url)
-        soup = BeautifulSoup(page.text, "lxml")
-        astro_ele = soup.find_all('pre')
-        
-        ele_list = []
-        for ele in astro_ele:
-            #we extract each element to a list, but years 2021 first element contains all the elem and 1982 is normal
-            ele_list.append(ele.get_text())
-        
-        n = 0
-        while n != len(month_to_num):
-            with open(f'./ephemeris/{yr}/{yr}_{month_to_num[n]}.txt', "w") as file:
-                if yr in range(2020,2026):
-                    file.write(ele_list[n+1])
-                file.write(ele_list[n])
-                n += 1
-                
-    except Exception as e:
-        print("Connection failed due to {}".format(e))
 
 def sigh_2_num(m):
     sigh_dict = {'AR':1,'TA':2,'GE':3,'CN':4,'LE':5,'VI':6,'LI':7,'SC':8,'SG':9,'CP':10,'AQ':11,'PI':12}
@@ -72,12 +38,14 @@ def cal_planet_points(day, month, yr, asc, mc, type_of_points): #planet_points(d
     t_list = []
     def plt_pos(position):
         name = ('sun','moon','merc','ven','mars','jup','sat','ura','nep','plu','nod','asc','mc')
+        date = int(row[1])
+        
         sdeg = int(row[position][0:2])
         #print("sdeg = ",sdeg)
         ssigh = sigh_2_num(row[position][2:4])
         smin = int(row[position][4:6])
         
-        return sdeg,ssigh,smin,name[position - 3]
+        return sdeg,ssigh,smin,name[position - 3],date
     
     #Open csv
     with open(f'./ephemeris/{yr}/{yr}_{month_to_num[month]}.csv') as f:
@@ -95,7 +63,8 @@ def cal_planet_points(day, month, yr, asc, mc, type_of_points): #planet_points(d
                 
             #Get the transit points
             elif type_of_points == 'transit':
-                if row != []:
+                if row != []: #Get the transit of the whole month
+                #if row != [] and f'{str(day).zfill(2)}' in row: #just get the transit of the exact day
                     t_list.append((plt_pos(7),plt_pos(8),plt_pos(9),plt_pos(10),plt_pos(11),plt_pos(12),plt_pos(13)))
             
             #Get the planet status

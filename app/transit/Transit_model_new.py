@@ -7,6 +7,7 @@ from .describept import describe
 from .arc_new import prog_date
 from .progress_pts import calculate_prog_pts
 
+month_to_num = ('jan','feb','mar','apr','may','june','july','aug','sept','oct','nov','dec')
 
 def cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,transit_to,calculate_with,what_is_transit):
     aspects = [(conj,'conj'),(sqareAct,'square'),(oppoAct,'opp'),(sesquaAct,'sesqua'),(sextile,'setai'),
@@ -42,6 +43,7 @@ def cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,trans
         planet_min = npoint[2]
         planet_name = npoint[3]
         
+        
         # 1 degree in and out for transit => 3 = (3,4,5,6)
         exact_range = (planet_min,planet_min+1,planet_min+2,planet_min+3)
         
@@ -51,12 +53,14 @@ def cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,trans
             urasigh = a_point[1]
             uramin = a_point[2]
             uraname = a_point[3]
+            aspect_date = a_point[4]
         else:
             #Else use this
             uradeg = tpoint[0]
             urasigh = tpoint[1]
             uramin = tpoint[2]
             uraname = tpoint[3]
+            aspect_date = tday
         
         #aspect like square returns sdeg,2,8,'square'
         for aspect,tipe in aspects:
@@ -74,7 +78,7 @@ def cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,trans
                         transit_starts.append(f'{to_symbol(uraname)} {aspect_to_symbol(tipe)} {to_symbol(planet_name)}')
                         if rate_transit(uraname,tipe,planet_name) == 4:
                             impotant_transit.append(f"{to_symbol(uraname)} {aspect_to_symbol(tipe)} \
-{to_symbol(planet_name)}: {describe[f'{uraname}_to_nat{planet_name}']}")
+{to_symbol(planet_name)}: {describe[f'{uraname}_to_nat{planet_name}']} {aspect_date} {month_to_num[tmonth-1]} {tyear}")
                         
                 #lower sq        
                 elif uradeg == asp_deg and uramin not in exact_range and urasigh == aspect(planet_deg,planet_sigh)[2]:
@@ -84,7 +88,7 @@ def cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,trans
                         transit_starts.append(f'{to_symbol(uraname)} {aspect_to_symbol(tipe)} {to_symbol(planet_name)}')
                         if rate_transit(uraname,tipe,planet_name) == 4:
                             impotant_transit.append(f"{to_symbol(uraname)} {aspect_to_symbol(tipe)} \
-{to_symbol(planet_name)}: {describe[f'{uraname}_to_nat{planet_name}']}")
+{to_symbol(planet_name)}: {describe[f'{uraname}_to_nat{planet_name}']} {aspect_date} {month_to_num[tmonth-1]} {tyear}")
                 
             else:
                 #upper sq
@@ -95,7 +99,7 @@ def cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,trans
                         
                         if rate_transit(uraname,tipe,planet_name) == 4:
                             if f'{uraname}_{npoint[3]}/{npoint[4]}' in describe:
-                                impotant_transit.append(f"{to_symbol(uraname)} {aspect_to_symbol(tipe)} {to_symbol(npoint[3])}/{to_symbol(npoint[4])}: {describe[f'{uraname}_{npoint[3]}/{npoint[4]}']}")
+                                impotant_transit.append(f"{to_symbol(uraname)} {aspect_to_symbol(tipe)} {to_symbol(npoint[3])}/{to_symbol(npoint[4])}: {describe[f'{uraname}_{npoint[3]}/{npoint[4]}']} {aspect_date} {month_to_num[tmonth-1]} {tyear}")
                         
                 #lower sq        
                 elif uradeg == asp_deg and uramin not in exact_range and urasigh == aspect(planet_deg,planet_sigh)[2]:
@@ -105,7 +109,7 @@ def cal_transit_planet(btd,btm,bty,Year,tday,tmonth,tyear,prog_moon,asc,mc,trans
                         
                         if rate_transit(uraname,tipe,planet_name) == 4:
                             if f'{uraname}_{planet_name}/{npoint[4]}' in describe:
-                                impotant_transit.append(f"{to_symbol(uraname)} {aspect_to_symbol(tipe)} {to_symbol(npoint[3])}/{to_symbol(npoint[4])}: {describe[f'{uraname}_{planet_name}/{npoint[4]}']}")
+                                impotant_transit.append(f"{to_symbol(uraname)} {aspect_to_symbol(tipe)} {to_symbol(npoint[3])}/{to_symbol(npoint[4])}: {describe[f'{uraname}_{planet_name}/{npoint[4]}']} {aspect_date} {month_to_num[tmonth-1]} {tyear}")
 ########
     
     if what_is_transit == 'transit':
