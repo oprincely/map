@@ -7,7 +7,7 @@ def mid_pts(btd, btm, bty,geo,birth_time, asc, mc):
     
     '''Get the natal points [(3, 3, 12, 'sun'), (11, 3, 11, 'moon')] + [asc,mc]'''
     nat_points = planet_pos(btd,btm,bty,geo, birth_time) + [asc,mc]
-    #print('nat_points = ',nat_points)
+    
     #[(3, 3, 12, 'sun'), (11, 3, 11, 'moon'), (6, 40, 11, 'merc'), (25, 41, 10, 'ven'),
     #(19, 10, 7, 'mars'), (10, 19, 8, 'jup'), (21, 50, 7, 'sat'), (4, 30, 9, 'ura'),
     #(26, 41, 9, 'nep'), (26, 46, 7, 'plu'), (21, 56, 4, 'nod')]

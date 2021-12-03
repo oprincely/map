@@ -26,6 +26,7 @@ def transit():
         asc_str = request.form['asc']
         asc = (int(asc_str[0:2]),int(asc_str[3:5]),int(asc_str[6:8]),'asc')
         
+        
         pr_m = request.form['pr']
         prog_moon = (int(pr_m[0:2]),int(pr_m[3:5]),int(pr_m[6:8]),'moon')
         
@@ -35,10 +36,10 @@ def transit():
 
 
         transit_to_natals = cal_transit_planet(btd,btm,bty,geo,birth_time,tday,tmonth,tyear,asc,mc,'natal','natal','transit')
-        transit_to_mid_points = cal_transit_planet(btd,btm,bty,geo,birth_time,tday,tmonth,tyear,asc,mc,'mid_pts','mid_pt','transit')
+        transit_to_mid_points = ''#cal_transit_planet(btd,btm,bty,geo,birth_time,tday,tmonth,tyear,asc,mc,'mid_pts','mid_pt','transit')
         
-        arc_to_natals = cal_transit_planet(btd,btm,bty,geo,birth_time,tday,tmonth,tyear,asc,mc,'natal','natal','arc')
-        arc_to_mid_points = cal_transit_planet(btd,btm,bty,geo,birth_time,tday,tmonth,tyear,asc,mc,'mid_pts','mid_pt','arc')
+        arc_to_natals = ''#cal_transit_planet(btd,btm,bty,geo,birth_time,tday,tmonth,tyear,asc,mc,'natal','natal','arc')
+        arc_to_mid_points = ''#cal_transit_planet(btd,btm,bty,geo,birth_time,tday,tmonth,tyear,asc,mc,'mid_pts','mid_pt','arc')
         
         progresion_to_natals = cal_prog_moon(btd,btm,bty,geo,birth_time,tday,tmonth,tyear,prog_moon,asc,mc,'natal','natal','prog')
         progresion_to_mid_points = cal_prog_moon(btd,btm,bty,geo,birth_time,tday,tmonth,tyear,prog_moon,asc,mc,'mid_pts','mid_pt','prog')

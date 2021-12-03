@@ -63,7 +63,13 @@ def planet_pos(btd,btm,bty,geo, birth_time):
         if cal_deg <= 29:
             planet_position = (cal_deg, cal_min, birth_day_planets_pos[n][2],birth_day_planets_pos[n][3]) #[19, 17, 11]
         elif cal_deg > 29:
-            planet_position = ((cal_deg - 29), cal_min, (birth_day_planets_pos[n][2] + 1),birth_day_planets_pos[n][3])
+            sign = birth_day_planets_pos[n][2] + 1
+            if sign > 12:
+                new_sign = sign - 12
+            else:
+                new_sign = sign
+                
+            planet_position = ((cal_deg - 29), cal_min, new_sign,birth_day_planets_pos[n][3])
         
         
         nat_pts.append(planet_position)
