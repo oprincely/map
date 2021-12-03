@@ -1,7 +1,7 @@
 from app.api import bp
 from flask import jsonify,request,render_template,make_response
 
-from .planet_status import cal_status
+#from .planet_status import cal_status
 
 from app.hello import (life_number,your_personal,hearts_d,image_num,real)
 
@@ -66,8 +66,8 @@ def data_get(index_no):
     
 @bp.route('/api/num/planet-status/<path:data>', methods=['GET'])
 def status(data):
-    _list = data.split('/')
-    return cal_status(int(_list[0]),int(_list[1]),int(_list[2]))
+    #_list = data.split('/')
+    return 'Go do the cal ....'#cal_status(int(_list[0]),int(_list[1]),int(_list[2]))
     #return jsonify(_list)
     #return cal_status(22,2,1982)
 
