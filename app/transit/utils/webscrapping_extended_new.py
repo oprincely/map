@@ -45,7 +45,7 @@ def cal_planet_points(day, month, yr, asc, mc, type_of_points): #planet_points(d
         ssigh = sigh_2_num(row[position][2:4])
         smin = int(row[position][4:6])
         
-        return sdeg,ssigh,smin,name[position - 3],date
+        return sdeg,smin,ssigh,name[position - 3],date
     
     #Open csv
     with open(f'./ephemeris/{yr}/{yr}_{month_to_num[month]}.csv') as f:

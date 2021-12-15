@@ -1,7 +1,8 @@
 from flask import Blueprint, redirect, render_template, request, url_for,session,escape
 from .Transit_engine import cal_transit_planet
+from .prog_moon_engine import cal_prog_moon
 
-from .prog_moon.prog_moon_engine import cal_prog_moon
+
 import datetime
 
 
@@ -28,7 +29,7 @@ def transit():
         
         
         pr_m = request.form['pr']
-        prog_moon = (int(pr_m[0:2]),int(pr_m[3:5]),int(pr_m[6:8]),'moon')
+        prog_moon = ''#(int(pr_m[0:2]),int(pr_m[3:5]),int(pr_m[6:8]),'moon')
         
         geo_and_bt = request.form['bt']
         geo = geo_and_bt[0:3]
@@ -41,6 +42,7 @@ def transit():
         arc_to_natals = cal_transit_planet(btd,btm,bty,geo,birth_time,tday,tmonth,tyear,asc,mc,'natal','natal','arc')
         arc_to_mid_points = cal_transit_planet(btd,btm,bty,geo,birth_time,tday,tmonth,tyear,asc,mc,'mid_pts','mid_pt','arc')
         
+       
         progresion_to_natals = cal_prog_moon(btd,btm,bty,geo,birth_time,tday,tmonth,tyear,prog_moon,asc,mc,'natal','natal','prog')
         progresion_to_mid_points = cal_prog_moon(btd,btm,bty,geo,birth_time,tday,tmonth,tyear,prog_moon,asc,mc,'mid_pts','mid_pt','prog')
         
@@ -55,4 +57,8 @@ def transit():
         
         
     return render_template('transit/transit.html')
+    
+@bp.route('/transit/scrap', methods=['GET'])
+def scrap():
+    return render_template('transit/scrap.html')
     

@@ -1,30 +1,7 @@
 """for midpont conversion to 360 addition"""
 def sign_num(sdeg,ssign):#(a, n):
-    if ssign == 1:
-        sign = sdeg
-    elif ssign == 2:
-        sign = sdeg + 30
-    elif ssign == 3:
-        sign = sdeg + 60
-    elif ssign == 4:
-        sign = sdeg + 90
-    elif ssign == 5:
-        sign = sdeg + 120
-    elif ssign == 6:
-        sign = sdeg + 150
-    elif ssign == 7:
-        sign = sdeg + 180
-    elif ssign == 8:
-        sign = sdeg + 210
-    elif ssign == 9:
-        sign = sdeg + 240
-    elif ssign == 10:
-        sign = sdeg + 270
-    elif ssign == 11:
-        sign = sdeg + 300
-    elif ssign == 12:
-        sign = sdeg + 330 #12+330 = 342
-    return sign
+    sign_to_angle = {1:0,2:30,3:60,4:90,5:120,6:150,7:180,8:210,9:240,10:270,11:300,12:330}
+    return sign_to_angle[ssign] + sdeg
 
 def mp_sign(n,planet_min,first_planets_name,second_planets_name): #sign_num(sdeg,ssign) + sign_num(mdeg,msign)=> 342 + 400 =652/2 = 326
     if n in range(0, 30):

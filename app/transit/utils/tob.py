@@ -2,14 +2,16 @@
 # -*- coding: utf-8 -*-
 
 ##########################
-def conj(sdeg,ssign):
-    result = ssign
-    return sdeg, result,0,'conj'#'☌'
+def conj(point): #(3,3,12,'sun')
+    result = point[2]
+    pt_1 = point[0],point[1],result,point[3]
+    pt_2 = point[0],point[1],0,point[3]
+    return pt_1,pt_2,'conj'
 
-def semiquaAct(sdeg,ssign):
-    left_sign_side = ssign + 1
+def semiquaAct(point):
+    left_sign_side = point[2] + 1
     right_sign_side = left_sign_side + 10
-    sdeg_plus_15 = sdeg + 15
+    sdeg_plus_15 = point[0] + 15
      
     if left_sign_side > 12:
         left_sign = left_sign_side - 12
@@ -30,10 +32,13 @@ def semiquaAct(sdeg,ssign):
         new_right_sign = right_sign
         new_sdeg = sdeg_plus_15
         
-    return new_sdeg,new_left_sign,new_right_sign,'semiqua'
+    pt_1 = new_sdeg,point[1],new_left_sign,point[3]
+    pt_2 = new_sdeg,point[1],new_right_sign,point[3]
+        
+    return pt_1,pt_2,'semiqua'
 ###############squa#Act####
-def sqareAct(sdeg,ssign):#p(10,11)
-    left_sign_side = ssign + 3
+def sqareAct(point):#p(10,11)
+    left_sign_side = point[2] + 3
     right_sign_side = left_sign_side + 6
      
     if left_sign_side > 12:
@@ -45,13 +50,16 @@ def sqareAct(sdeg,ssign):#p(10,11)
         right_sign = right_sign_side - 12
     else:
         right_sign = right_sign_side
-    
-    return sdeg,left_sign,right_sign,'square'
+
+    pt_1 = point[0],point[1],left_sign,point[3]
+    pt_2 = point[0],point[1],right_sign,point[3]
+        
+    return pt_1,pt_2,'square'
 ############sesqua#act 135deg#########
-def sesquaAct(sdeg,ssign): #(3, 12)
-    left_sign_side = ssign + 4
+def sesquaAct(point): #(3, 12)
+    left_sign_side = point[2] + 4
     right_sign_side = left_sign_side + 4
-    sdeg_plus_15 = sdeg + 15
+    sdeg_plus_15 = point[0] + 15
      
     if left_sign_side > 12:
         left_sign = left_sign_side - 12
@@ -71,22 +79,28 @@ def sesquaAct(sdeg,ssign): #(3, 12)
         new_left_sign = left_sign
         new_right_sign = right_sign
         new_sdeg = sdeg_plus_15
+
+    pt_1 = new_sdeg,point[1],new_left_sign,point[3]
+    pt_2 = new_sdeg,point[1],new_right_sign,point[3]
         
-    return new_sdeg,new_left_sign,new_right_sign,'sesqua'
+    return pt_1,pt_2,'sesqua'
     
-def oppoAct(sdeg,ssign):#10, 8
-    right_sign_side = ssign + 6
+def oppoAct(point):#10, 8
+    right_sign_side = point[2] + 6
         
     if right_sign_side > 12:
         right_sign = right_sign_side - 12
     else:
         right_sign = right_sign_side
     
-    return sdeg,right_sign,0,'opp'
+    pt_1 = point[0],point[1],right_sign,point[3]
+    pt_2 = point[0],point[1],0,point[3]
+        
+    return pt_1,pt_2,'opp'
 
-def sextile(sdeg,ssign):#3, 12
-    left_sign_side = ssign + 2
-    right_sign_side = ssign + 8
+def sextile(point):#3, 12
+    left_sign_side = point[2] + 2
+    right_sign_side = point[2] + 8
      
     if left_sign_side > 12:
         left_sign = left_sign_side - 12
@@ -98,11 +112,14 @@ def sextile(sdeg,ssign):#3, 12
     else:
         right_sign = right_sign_side
     
-    return sdeg,left_sign,right_sign,'setai'
+    pt_1 = point[0],point[1],left_sign,point[3]
+    pt_2 = point[0],point[1],right_sign,point[3]
+        
+    return pt_1,pt_2,'setai'
 
-def trine(sdeg,ssign):#3, 12...1
-    left_sign_side = ssign + 4
-    right_sign_side = ssign + 4
+def trine(point):#3, 12...1
+    left_sign_side = point[2] + 4
+    right_sign_side = point[2] + 4
      
     if left_sign_side > 12:
         left_sign = left_sign_side - 12
@@ -114,7 +131,12 @@ def trine(sdeg,ssign):#3, 12...1
     else:
         right_sign = right_sign_side
     
-    return sdeg,left_sign,right_sign,'trin'
+    #return sdeg,left_sign,right_sign,'trin'
+
+    pt_1 = point[0],point[1],left_sign,point[3]
+    pt_2 = point[0],point[1],right_sign,point[3]
+        
+    return pt_1,pt_2,'trin'
 
 depression = ['nep_merc/sat', 'sat_nep/plu','plu_sat/asc','asc_sat/plu','merc_to_natsat','sat_to_natmerc']
 romance = ['ven_to_natsun', 'sun_to_natven', 'ven_sun/moon', 'moon_to_natven','jup_sun/ven', 'ven_sun/jup',
@@ -153,3 +175,4 @@ def to_symbol(planet_name):
 def aspect_to_symbol(aspect):
     aspect_dict = {'conj':'☌','semiqua':'∠','square':'□','opp':'☍','sesqua':'⚼','setai':'⚹','trin':'△'}
     return aspect_dict[aspect]
+

@@ -1,104 +1,132 @@
 from __future__ import print_function, division
 import datetime
-from .utils.webscrapping_extended_new import planet_points
-from .utils.convert_time import time_to_int,int_to_time,get_hour_or_min
-import time
+from .utils.webscrapped_csv_file import cal_planet_points
+from .utils.convert_time import time_to_sec,int_to_time,get_hour_or_min
+from .utils.Moon_pos import planet_pos
+from .utils.Planet_position import planet_pos as nat_planet_pos
+from .moon_phase import sign_to_deg
 
-def solar_arc(btd,btm,bty,tday,tmonth,tyear,asc,mc):
+
+
+def solar_arc(btd,btm,bty,tday,tmonth,tyear,geo, birth_time):
     
     daten = datetime.datetime(tyear,tmonth,tday)
-        
-    days_in_time = daten.year - bty
-    curr_month = daten.month
-    curr_day = daten.day
+    acd = datetime.datetime(tyear,2,13)
+    acd_month = acd.strftime("%b")
     
-    birthdate = datetime.datetime.strptime(f"{btm}/{btd}/{bty}", "%m/%d/%Y")
-    #progressed_date before
-    progressed_date_after = birthdate + datetime.timedelta(days=days_in_time + 1)
-    #progressed_date after
-    progressed_date = birthdate + datetime.timedelta(days=days_in_time)
-
-    #print(progressed_date)
-    prog_day_after = int(progressed_date_after.strftime("%d"))
-    prog_month_after = int(progressed_date_after.strftime("%m"))
-    prog_year_after = int(progressed_date_after.strftime("%Y"))
-
-    prog_day = int(progressed_date.strftime("%d"))
-    prog_month = int(progressed_date.strftime("%m"))
-    prog_year = int(progressed_date.strftime("%Y"))
+    month = daten.strftime("%b")
+    if daten >= acd:
+        days_in_time = daten.year - bty #40
+    else:
+        days_in_time = (daten.year - bty) - 1 #39
     
-    #print(prog_date()) #returns 02 04 1982 01 04 1982
     
-    #Advanced calculated date ACD
-    def acd(btd, btm, bty,tday,tmonth,tyear,asc,mc):
-        #position of sun day after birth
+    def prog_date(btd,btm,bty):
         
-        day_after_planet_pos = planet_points(prog_day_after,prog_month_after - 1,prog_year_after,asc,mc,'natal')[0]
-
-        #position of sun birthday
-        bday_planet_pos = planet_points(prog_day,prog_month - 1,prog_year,asc,mc,'natal')[0]
-        #print(day_after_moom_pos,bday_moon_pos) #(22, 4, 8) (8, 4, 8)
+        birthdate = datetime.datetime.strptime(f"{btm}/{btd}/{bty}", "%m/%d/%Y")
+        #progressed_date before
+        progressed_date = birthdate + datetime.timedelta(days=days_in_time + 1)
+        #print('progressed_date = ',progressed_date)
         
-        #prog_sun_position and prog_sun_move_monthly
-        prog_moon_pos = time_to_int(day_after_planet_pos[0], day_after_planet_pos[2], 0) - time_to_int(bday_planet_pos[0], bday_planet_pos[2], 0)
-        prog_moon_move_monthly = prog_moon_pos/12 #monthly rate
-        
-        #moon position on May 01 is that of april 01 plus monthly rate so to get sept will keep adding result to rate
-        Feb_21 = time_to_int(bday_planet_pos[0], bday_planet_pos[2], 0) + prog_moon_move_monthly
-        Mar_21 = Feb_21 + prog_moon_move_monthly
-        Apr_21 = Mar_21 + prog_moon_move_monthly
-        May_21 = Apr_21 + prog_moon_move_monthly
-        Jun_21 = May_21 + prog_moon_move_monthly
-        Jul_21 = Jun_21 + prog_moon_move_monthly
-        Aug_21 = Jul_21 + prog_moon_move_monthly
-        Sep_21 = Aug_21 + prog_moon_move_monthly
-        Oct_21 = Sep_21 + prog_moon_move_monthly
-        Nov_21 = Oct_21 + prog_moon_move_monthly
-        Dec_21 = Nov_21 + prog_moon_move_monthly
-        Jan_21 = Dec_21 + prog_moon_move_monthly
-        
-        #cur_month = datetime.datetime.now().strftime("%b")
-        cur_month = datetime.datetime(tyear, tmonth, tday).strftime("%b")
-        #print('check_date = ',check_date)
-        
-        current_month = {'Jan':Jan_21,'Feb':Feb_21,'Mar':Mar_21,'Apr':Apr_21,'May':May_21,'Jun':Jun_21,
-                         'Jul':Jul_21,'Aug':Aug_21,'Sep':Sep_21,'Oct':Oct_21,'Nov':Nov_21,'Dec':Dec_21}
-        return current_month[cur_month]
+        #progressed_date after
+        progressed_date_after = birthdate + datetime.timedelta(days=days_in_time)
+        #print('progressed_date_after = ',progressed_date_after)
     
-    def cal_arc(btd, btm, bty,tday,tmonth,tyear,asc,mc):
-        nat_pts = planet_points(btd,btm-1,bty,asc,mc,'natal')
-        arc_list = []
-        n=0
-        while n != len(nat_pts):
+        #print('progressed_date = ',progressed_date)
+        progressed_day = int(progressed_date.strftime("%d"))
+        progressed_month = int(progressed_date.strftime("%m"))
+        progressed_year = int(progressed_date.strftime("%Y"))
+        
+        progressed_day_after = int(progressed_date_after.strftime("%d"))
+        progressed_month_after = int(progressed_date_after.strftime("%m"))
+        progressed_year_after = int(progressed_date_after.strftime("%Y"))
+        
+        #print('progressed_day = ',progressed_day, progressed_month,progressed_year)
+        #print('progressed_day_after = ',progressed_day_after, progressed_month_after,progressed_year_after)
+        
+        return progressed_day, progressed_month,progressed_year,progressed_day_after, progressed_month_after,progressed_year_after
+    #print('prog_date = ',prog_date(btd,btm,bty)) #02 04 1982 01 04 1982
+    
+    prog_day, prog_m,prog_yr,prog_day_after, prog_m_after,prog_yr_after = prog_date(btd,btm,bty)
+    
+    #position of moon day after progressed date
+    day_after_planets_pos = cal_planet_points(prog_day,prog_m-1,prog_yr,'natal')
+    #print('day_after_planets_pos = ',day_after_planets_pos)
+    
+    #position of moon progressed date
+    bday_planets_pos = cal_planet_points(prog_day_after,prog_m_after-1,prog_yr_after,'natal') 
+    #print('positions = ',day_after_planets_pos[1],' and ',bday_planets_pos[1]) #(22, 4, 8) (8, 4, 8)
+    
+    '''Find the position of the progressed Sun.'''
+    prog_sun = planet_pos(day_after_planets_pos[0],bday_planets_pos[0],month)
+    
+    nat_points = nat_planet_pos(btd,btm,bty,geo, birth_time)
+    nat_sun = nat_points[0]
+    
+    #print(f'prog_sun = {prog_sun} and nat_sun = {nat_sun}')
+    
+    '''Subtract the natal Sun from this new progressed Sun position.'''
+    #print(f'{nat_sun} - {prog_sun}')
+    
+    prog_sun_pt = sign_to_deg(prog_sun)
+    nat_sun_pt = sign_to_deg(nat_sun)
+    #print(f'prog_sun_pt = {prog_sun_pt} and nat_sun_pt = {nat_sun_pt}')
+    
+    '''-------------------------------------------prog_sun minute - nat_sun_minutes'''
+    #solar_arc = (360 - (nat_sun_pt - prog_sun_pt),prog_sun[1] - nat_sun[1])
+    arc_deg = 360 - (nat_sun_pt - prog_sun_pt)#,prog_sun[1] - nat_sun[1],0) #39,42
+    arc_min = prog_sun[1] - nat_sun[1]
+    #print('arc_deg = ',arc_deg)
+    #print('arc_min = ',arc_min)
+    
+    arc_list = []
+    
+    for pt in nat_points:
+        deg,min_,sign,name = pt
+        
+        #print('arc_deg = ',arc_deg)
+        #print('arc_min = ',arc_min)
+        add_mins = min_ + arc_min
+        #print(f'arc_min = {arc_min} and min = {min_} and add_mins = {add_mins} => {name}')
+        
+        if add_mins <= 59:
+            pt_min = add_mins
+            extra = 0
+        else:
+            pt_min = add_mins - 60
+            extra = 1
+        #print(f'arc_min = {arc_min} and min = {min_} and add_mins = {add_mins} and pt_min = {pt_min} & extra = {extra} => {name}')   
             
-            #current possition of prog sun - nat position
-            prog_sun_dis = acd(btd, btm, bty,tday,tmonth,tyear,asc,mc) - time_to_int(nat_pts[0][0],nat_pts[0][2],0)
-            arc_pos = prog_sun_dis + time_to_int(nat_pts[n][0],nat_pts[n][2],0)
-
-            cal_deg = round(get_hour_or_min(arc_pos)[0]) #19
-            #get the min
-            cal_min = round(get_hour_or_min(arc_pos)[1]) #17
-
-            if cal_deg <= 29:
-                new_arc_sigh = nat_pts[n][1] + 1
-                if new_arc_sigh <= 12:
-                    planet_arc = (cal_deg, new_arc_sigh,cal_min,nat_pts[n][3])
-                elif new_arc_sigh > 12:
-                    planet_arc = (cal_deg, (new_arc_sigh - 12),cal_min,nat_pts[n][3])
-            elif cal_deg > 29:
-                new_arc_sigh = nat_pts[n][1] + 2
-                if new_arc_sigh <= 12:
-                    planet_arc = (cal_deg - 30, new_arc_sigh,cal_min,nat_pts[n][3])
-                elif new_arc_sigh > 12:
-                    planet_arc = (cal_deg - 30, (new_arc_sigh - 12),cal_min,nat_pts[n][3])
-                
-                
-            arc_list.append(planet_arc)
+        add_degs = deg + arc_deg + extra
+        if add_degs <= 29:
+            pt_deg = add_degs
+            bpt_sign = sign
+        else:
+            bpt_deg = add_degs - 30
+            bpt_sign = sign + 1
+            if bpt_deg <= 29:
+                pt_deg = bpt_deg
+            else:
+                pt_deg = bpt_deg - 30
+                bpt_sign = sign + 2
+        
+        
+        if bpt_sign <= 12:
+            pt_sign = bpt_sign
+        else:
+            pt_sign = bpt_sign - 12
             
-            n += 1
-        return arc_list
-    return cal_arc(btd, btm, bty,tday,tmonth,tyear,asc,mc)
-   
+        #print(f'arc_deg = {get_hour_or_min(arc)[0]} and arc_min = {get_hour_or_min(arc)[1]}')
+        
+        
+        planet_arc = (pt_deg, pt_min, pt_sign,name)
+        ###
+             
+        arc_list.append(planet_arc)
+            
+    #print(f'solar_arc = {solar_arc}')
+    
+    return arc_list
+    
+#print(solar_arc(22,2,1982,13,12,2021,'07E','01,35'))
 
-#print(prog_date(nat_pts,btd,btm,bty,Year,tday,tmonth,tyear))
-#print('arc = ',solar_arc(22,2,1982,'',23,11,2021,(16,9,18,'asc'),(16,6,48,'mc')))
