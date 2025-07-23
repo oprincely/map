@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-destiny = {
+read = {
+
+'destiny' = {
     1:
     ["""
 Your name destines you to LEADERSHIP. You must 
@@ -473,9 +475,9 @@ and minds of humanity. Make the expression of your personality
 colorful. Do not be drab or colorless in your dress or 
 environment.
 """]
-}
+},
 
-birthForce = {
+'birthforce' = {
 1:
 ["""You are the leader type, strongly individualized, and demand 
 the right to think and act according to your own ideas 
@@ -806,9 +808,9 @@ statistical and research departments, efficiency expert.
 Wear opal, canary, or tan while you work. 
 """],
 9:[]
-}
+},
 
-heart_desire = {
+'heart_desire' = {
 1:[],
 2:[],
 3:[],
@@ -970,11 +972,11 @@ win friends."""],
 8:[],
 9:[]
     
-}
+},
 
-personality = {
+'personality' = {
 2:["""The Two should always be neat and make cleanliness 
-important—and generally does. The number Two may even be 
+important and generally does. The number Two may even be 
 fussy about having everything exact in detail. A pleasing personality with gentle manner is the number Two. A knack of 
 wearing clothes can be cultivated, but loud or showy apparel 
 should be put aside for soft, flowing, easy-to-wear, neat, and 
@@ -989,9 +991,9 @@ Your personality is not style-conscious as a rule but you enjoy good clothes of 
 You like to be comfortable in easy-to-wear clothing. You should always be well dressed and give thought to the way
 you look and dress. You cannot afford to be overweight.""",
     ],
-}
+},
 
-reality = {
+'reality' = {
 1:["""The talents, abilities, interests, and individuality of the 
 number One will support the latter days of life. The individual 
 will be very independent, very clever, and find originality o 
@@ -1001,8 +1003,8 @@ association."""],
 2:["""The field o diplomacy is open to the number Two. The 
 talent for getting on with others and bringing many together 
 for a common good in public works and friendly association 
-means success. The arts, music, museums, libraries give pleas¬ 
-ure and opportunity. The Two is inclined to turn to religion, 
+means success. The arts, music, museums, libraries give pleasure and opportunity.
+The Two is inclined to turn to religion, 
 spiritual work, and teachings. A beautiful humility, born of 
 the awareness of “that something” called God, attracts people 
 and opportunity to touch the minds and hearts of mankind."""],
@@ -1027,7 +1029,8 @@ the latter days of life."""],
 latter days of life. It is not a dull period, gives opportunity for 
 travel, a variety of experiences, and a great deal of freedom of 
 action and thought. All progressive, forward-moving activities 
-for the advancement and improvement of civic living give opportunity. Too many irons in the fire can lead to uncertainty 
+for the advancement and improvement of civic living give opportunity.
+Too many irons in the fire can lead to uncertainty 
 and scattered forces. Seek a worthwhile work along lines of 
 public administration."""],
 6:["""The latter days for the number Six should be filled with 
@@ -1059,24 +1062,28 @@ of mankind is part of the victory of the latter days. ""","""The world
 of drama, art, literature, beauty in all its forms gives personal 
 and financial reward. To live personally and to desire only personal love is to miss the goal of love and companionship which 
 will come through work done for all people, regardless of race, creed, or culture."""]
-}
+},
 
-karmas = {
+'karmas' = {
 11:["""You can rule the masses, but spiritual living is demanded."""],
 22:["""
 You find it difficult to bring your thoughts and desires down to the 
-ordinary everyday activities, and to put into form and order your concepts and finer attributes.
+ordinary everyday activities, and to put into form and order your concepts
+and finer attributes.
 
-You often needs the help and support of others and must learn to cooperate with circumstances - not pull against them.
+You often needs the help and support of others and must learn to cooperate
+with circumstances - not pull against them.
 
-Often there is a dominant person in the environment to test the peacemaking qualities of the you,
+Often there is a dominant person in the environment to test the peacemaking
+qualities of the you,
 causing you much unhappiness and sorrow.
 
-You will find your victory in helping others and in working with large undertakings or groups.
+You will find your victory in helping others and in working with large undertakings or
+groups.
 These are the only way to overcome strange inner conflicts you will experince."""],
 16:["""
-Sudden happenings can take place wich has the power to disrupt and cause circumstances to 
-fall apart with loss and some humiliation.
+Sudden happenings can take place wich has the power to disrupt and cause
+circumstances to fall apart with loss and some humiliation.
 
 However, wisdom, intelligence, scientific knowledge, 
 and skill will soon bring about a recovery. If no effort is made to 
@@ -1089,16 +1096,19 @@ It is a test of courage, initiative, and self-determination. The pressure and
 urge is felt within the individual’s own mind and heart but not 
 apparent to others nor understood by them.
 
-When the will is cultivated and combined with the tolerance and compassion, fine progress can be made.
+When the will is cultivated and combined with the tolerance and compassion,
+fine progress can be made.
 
-If resistance and self-pity direct the actions, the road to success and happiness is difficult and trying.
+If resistance and self-pity direct the actions, the road to success and happiness is
+difficult and trying.
 
-A well-developed individuality and successful use of the talents also overcome the test apperent here."""]
+A well-developed individuality and successful use of the talents also overcome
+the test apperent here."""]
 
-}
+},
 
 #Zero in Planes
-zero_in_plane = {
+'zero_in_plane' = {
 'p_plane':["""Lack of physical endurance or practical application."""],
 
 'm_plane':["""Finds it difficult to meet the cold, hard mental 
@@ -1139,9 +1149,9 @@ Each individual has the task of living up to the pattern oi
 Destiny and talent shown by his particular name in this lifetime. There have been many lives in ages past. There are many 
 still ahead in the great Eternal Plan to be lived and enjoyed."""
 ]
-}
+},
 #ONE in Planes
-one_in_plane = {
+'one_in_plane' = {
 'p_plane':["""Very active and enthusiastic. Outgoing. Not apt 
 to finish what is begun. Soon tiring of the plan or work. Leaders. Work hard to get what is desired. Original. Outstanding, 
 expecially if 10 numbers are shown."""],
@@ -1173,10 +1183,10 @@ and important positions. The number One Total on any plane
 gives good financial attractions. At times the number One may 
 cling to a personal plan or idea with bulldog determination, as 
 it does not accept subordination easily. """]
-}
+},
 
 #TWO in Planes
-two_in_plane = {
+'two_in_plane' = {
 'p_plane':["""Sensitive, very apt to lack self-confidence. Needs 
 to be with people. Gives attention to details. Charm and cleverness in gathering information. Often inwardly afraid of big 
 things without help or assistance or approval. Uncertain, and 
@@ -1208,10 +1218,10 @@ to the expected gentleness generally shown. Strong opinions along some particula
 point of becoming the "escapist" when the Two does not find others agreeing with its ideas. ""","""Musical talent is present.
 Illustration and painting may be a vocation or a hobby. Right environment and helpful companionship may correct many 
 personal problems. Ability to bring others together for a common purpose is a business asset."""]
-}
+},
 
 #THREE in Planes
-three_in_plane = {
+'three_in_plane' = {
 'p_plane':["""Demonstrates and expresses in an artistic manner on the material plane. Functions in a Three manner even in 
 practical matters. Does not like to face realities. Uses imagination to make things go. Talented and artistic in work and endeavor. Careless about order and system."""],
 
@@ -1253,10 +1263,10 @@ pleasure and fun characterizes the nature, but this should not
 be the real aim of life. The creative talent should be used to 
 strengthen the Plane of Expression upon which it is found. 
 Threes on any Plane may have presentiments or natural psychic prophecy. """]
-}
+},
 
 #FOUR in Planes
-four_in_plane = {
+'four_in_plane' = {
 'p_plane':["""Hard worker, organizer, manager. Carries out 
 ideas for others easily. Not an originator. Steady, sure, deep 
 concentration. Serious-minded, very capable. Tenacious. May 
@@ -1301,10 +1311,10 @@ Four is not happy unless occupied or putting something into
 form or order. It is warmhearted, generous to loved ones, likes 
 to stand well in the community and get things done. Protocol is 
 important to the number Four."""]
-}
+},
 
 #FIVE in Planes
-five_in_plane = {
+'five_in_plane' = {
 'p_plane':["""Contacts people, likes to travel. Succeeds 
 life. Adapts to change. Good salesman when interested. Versatile and resourceful,
 but restless under routine. Likes to regulate people and affairs."""],
@@ -1354,10 +1364,10 @@ the activities.
 ""","""
 It often ventures in where "angels fear to tread," both to 
 its advantage and sorrow."""]
-}
+},
 
 #SIX IN PLANE
-six_in_plane = {
+'six_in_plane' = {
 'p_plane':["""Works with things of beauty. Practical artists, 
 dieticians, professional service in practical manner. Helps others and takes responsibility. Artistic talent.
 Kindergarten teachers, contractors, architects, mining engineers."""],
@@ -1409,10 +1419,10 @@ lacks the feeling of usefulness and appreciation, it can scatter
 its forces and live in confusion and resentment. Many 
 problems come through the affairs of children. Family inheritance influences the life of the number Six on all planes.  
 """]
-}
+},
 
 #SEVEN IN PLANE
-sev_in_plane = {
+'sev_in_plane' = {
 'p_plane':["""
 Mathematician, broker, analyst, technical worker, doing excellent work in any field of scientific endeavor. 
 Delves into things. Should not be placed where there are crowds 
@@ -1460,10 +1470,10 @@ strings at other times. The number Seven on any plane should
 overcome the sense of separateness and personal complexes 
 and learn to meet life and the world as they are, for health and 
 well-being."""]
-}
+},
 
 #EIGHT IN PLANE
-eig_in_plane = {
+'eig_in_plane' = {
 'p_plane':["""
 Ambitious for power, position and authority. 
 Gains recognition. Has executive ability. Able to handle big 
@@ -1511,10 +1521,10 @@ of many people. As a counselor along the lines of the plane on
 which it is found, it can be very successful. It expects to be the 
 authority and does not take orders unless it respects the source 
 of the authority."""]
-}
+},
 
 #NINE IN PLANE
-nin_in_plane = {
+'nin_in_plane' = {
 'p_plane':["""
 Publisher, importer, writer, dramatic actor, instructor, director where the spectacular is required. In positions 
 where broad and universal contacts are important. Colors all 
@@ -1561,9 +1571,9 @@ attraction supports the endeavors of the number Nine. Its
 success is maintained when its efforts are appreciated and 
 its broad concepts o beauty and grandeur understood and 
 worked out for the good of many on a wide scope of attainment. Foreign travel broadens the scope of success."""]
-}
+},
 
-ones = {
+'ones' = {
 'average_1s':["""
 Average Ones - An average number of ones (3 to 4) gives 
 the necessary initiative, will power, executive ability, qualities 
@@ -1588,9 +1598,9 @@ lovely, more interested in others than the self. Before judging your
 character as lacking in ones, follow the rule - look to the major 
 number. There may be a one in the Birth number or Heart’s 
 Desire."""],
-}
+},
 
-twos = {
+'twos' = {
 'average_2s':["""
 Average Twos - Tact, diplomacy, and cooperation are not 
 too high in the makeup of human nature. The average person 
@@ -1624,10 +1634,10 @@ mother or father may do everything to protect the family and
 children but still not give true consideration to the real interest 
 and needs of the loved ones. Look for the missing two in the 
 major numbers. It may be present in other ways and not be entirely missing."""]
-}
+},
 
 
-threes = {
+'threes' = {
 'average_3s':["""
 Average Threes - The number Three represents imagination, enthusiasm, and creative talent.
 It gives the ability to express the ideas, feelings, and fancies in words written or spoken. 
@@ -1658,9 +1668,9 @@ ability to talk about what interests them, but, with the three,
 the "gift o; gab" and fancy is a natural talent and business asset. When there are no threes in the name, not even on the
 major positions, fanciful ideas, sentimental speech, romance, 
 and flights into imagination are not natural tendencies. """],
-}
+},
 
-fours = {
+'fours' = {
 'average_4s':["""
 Average Fours - The strong points of the Four are concentration, application, a good sense of practical values,
 and ability to stick to things. One four gives the ability to put work and 
@@ -1687,9 +1697,9 @@ come through others, but lack of application may be the weakness of the nature.
 Few people lack in the quality of the number Four. It is the foundation number of all endeavor. This 
 number will generally be found somewhere in the name or as a 
 future experience."""],
-}
+},
 
-fives = {
+'fives' = {
 'average_5s':["""
 Average Fives - It is human nature to enjoy the excitement 
 of public contact. Change and variety stand for progress and 
@@ -1716,9 +1726,9 @@ a dislike of crowds and a desire to be left alone. Often one is
 a 'raid to face the world in an aggressive manner, so it is very 
 important to study the major numbers and positions in order 
 to discover the real talents shown by the other Points o Intensification. Fixed—not easily adaptable."""],
-}
+},
 
-sixs = {
+'sixs' = {
 'average_6s':["""
 Average Sixes - Six is the humanitarian, the idealist, the 
 teacher, often the physician, the nurse or the one who is interested in children or welfare work; loves the home and the 
@@ -1748,9 +1758,9 @@ Others help and take care of things undone. No sixes in a name
 often indicates interesting situations and happenings. In the 
 home and marriage, both for men and women, the domestic 
 problems are apt to be taken lightly"""],
-}
+},
 
-sevens = {
+'sevens' = {
 'average_7s':["""
 Average Sevens - This is the number oi' analysis, technique, 
 accuracy, observation, investigation, and demanding to know 
@@ -1776,9 +1786,9 @@ No Sevens - The caution and analysis of the seven is not
 present. Often there is more inner happiness. Not inclined to 
 look under the surface for motives and reasons for the things 
 that happen, but is more open-minded."""],
-}
+},
 
-eights = {
+'eights' = {
 'average_8s':["""
 Average Eights - The number eight is a strong number, 
 self-sufficient and businesslike. It has the ability to direct, supervise, and control others, and is generally at the head of 
@@ -1808,13 +1818,14 @@ recognition and standing in the community."""],
 
 'no_8s':["""
 No Eights - There is not so much self-control when there 
-are no eights in the name. There is more dependence upon others, and often less strain about money in the long run, and 
+are no eights in the name. There is more dependence upon others, and often
+less strain about money in the long run, and 
 more help or luck from others. The individual with eights has a 
 more intense life to live and, even though very capable, may 
 have more problems than when there are no eights in the name."""],
-}
+},
 
-nines = {
+'nines' = {
 'average_9s':["""
 Average Nines - This is the number of the brotherhood of 
 man and is found three or four times in most names. Without 
@@ -1842,22 +1853,24 @@ habits of food and drink under periods of disappointment."""],
 'no_9s':["""
 No Nines - This is sometimes found in names, but is not 
 common. Nine is an outstanding characteristic, and, if this is 
-not made up or balanced by nines somewhere on the major positions, it can be an indication of lack of broadness, tolerance, 
-and compassion in the nature, even though sixes may be present. The number six is the humanitarian number and renders 
+not made up or balanced by nines somewhere on the major positions, it can be
+an indication of lack of broadness, tolerance, 
+and compassion in the nature, even though sixes may be present.
+The number six is the humanitarian number and renders 
 service to others. On the other hand, the number nine is the 
-philanthropist, giving without thought of return. No nines indicates a nature that is helpful, kind, and capable, but without 
-the feeling of universal forgiveness or giving which characterizes the number nine. A lack of nines may limit the extent of 
+philanthropist, giving without thought of return.
+No nines indicates a nature that is helpful, kind, and capable, but without 
+the feeling of universal forgiveness or giving which characterizes the number nine.
+A lack of nines may limit the extent of 
 the accomplishments. Studies of comparative religions and 
 character analysis will be helpful."""],
-}
+},
 
-
-
-vocation = {
+'vocation' = {
 'many_1s_and_8s':["""business interest and you are not carried away by emotion."""],
 
-'many_2s_and_3s_and_6s':["""artistic ability, opportunity along professional lines, inspirational service, and 
-instruction."""],
+'many_2s_and_3s_and_6s':["""artistic ability, opportunity along professional lines,
+inspirational service, and instruction."""],
 
 'many_4s_and_7s':["""scientific, mechanical, and mathematical tendencies."""],
 
@@ -1865,20 +1878,26 @@ instruction."""],
 
 'many_7s_and_9s':["""literary ability."""],
 
-'many_8s':["""philosophical feeling, expressed through printing and publishing, correspondence, and newspapers."""]
-}
+'many_8s':["""philosophical feeling, expressed through printing and publishing,
+correspondence, and newspapers."""]
+},
 
-cha = {
-1:["""When a One appears on the Challenge, the feeling of opposition, of being held down, often by relatives or those with 
-stronger wills, will be experienced. When the Challenge is a One, a steadier will must be cultivated, a finer determination 
+'cha' = {
+1:["""When a One appears on the Challenge, the feeling of opposition,
+of being held down, often by relatives or those with 
+stronger wills, will be experienced. When the Challenge is a One,
+a steadier will must be cultivated, a finer determination 
 expressed with dignity and self-respect. 
 ""","""
-Resentment should be avoided. Little is gained by placing the blame on others. Fighting against the hurts or headstrong action
-leads to mistakes and to unreasonableness. The quick wit, originality, and personal ideas should be valued and 
+Resentment should be avoided. Little is gained by placing the blame on others.
+Fighting against the hurts or headstrong action
+leads to mistakes and to unreasonableness. The quick wit, originality,
+and personal ideas should be valued and 
 trained. 
 ""","""
 Even though there may be many ones in the name at birth 
-and the character very positive and dominant, a broader expression of purpose must still be cultivated."""],
+and the character very positive and dominant, a broader expression of purpose must
+still be cultivated."""],
 2:["""The number Two Challenge is one of the most commonly 
 found, for the quality of sensitiveness is natural to the human 
 race. It is a very fine characteristic. Without it, response to the 
@@ -1889,21 +1908,31 @@ self-confidence and be a source of deep sut ering. A feeling of
 subordination often prevents success and gives a tendency to be 
 unduly influenced by what others think or say. Sensitiveness 
 represents intelligence and understanding of the finer relationships of life.""","""
-It is only when it is allowed to become hurt feelings, jealousies, and fear of people that it is negative. The 
-number Two Challenge should value its natural talent for relating facts, perfecting details, and for knowing what is correct 
-and right. The cultivation of harmony and decorum gives self-confidence and the feeling of usefulness. """],
-0:["""The Cipher Challenge is a very common Challenge—parttime, or for the entire life. It stands for naught or all.
-The universe is symbolized by the circle. It contains all things, but still can be emptiness, depending on the mentality or
+It is only when it is allowed to become hurt feelings, jealousies,
+and fear of people that it is negative. The 
+number Two Challenge should value its natural talent for relating facts,
+perfecting details, and for knowing what is correct 
+and right. The cultivation of harmony and decorum gives self-confidence and the
+feeling of usefulness. """],
+0:["""The Cipher Challenge is a very common Challenge—parttime, or for the entire life.
+It stands for naught or all.
+The universe is symbolized by the circle. It contains all things, but still can be
+emptiness, depending on the mentality or
 desire of the individual. Anyone having the Cipher Challenge has the right 
-of "choice": just to drift along in life; or to rise above the seeming problems to become truly great. ""","""
+of "choice": just to drift along in life; or to rise above the seeming problems to
+become truly great. ""","""
 Although big tests come, 
 many wonderful and understanding people have the complete 
 Cipher Challenge. The individual with the Cipher Challenge 
-has the right to create his own world, and if he fills his Challenge with love and compassion and true helpfulness to
+has the right to create his own world, and if he fills his Challenge with love and
+compassion and true helpfulness to
 mankind, his work and his undertakings will succeed surprisingly 
 well. When a period Cipher is present at any age or time of 
-life, it should not be taken lightly, for during that time a selection must be made which should be according to the Destiny 
+life, it should not be taken lightly, for during that time a selection must be made
+which should be according to the Destiny 
 and outstanding talents. """,""""A Cipher is similar to the number 
 Nine. With a Cipher Challenge, cultivate a desire to make the 
 world a better place."""]
+},
+
 }
